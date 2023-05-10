@@ -1,0 +1,20 @@
+{
+    "extends": "@substrate/dev/config/tsconfig.json",
+    "compilerOptions": {
+      "baseUrl": ".",
+      "outDir": "build",
+      "rootDirs": ["./src"],
+      "suppressImplicitAnyIndexErrors": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+    },
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "exclude": [
+      "node_modules"
+    ],
+    "include": [
+      "./src/**/*.ts",
+    ]
+  }

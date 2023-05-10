@@ -1,0 +1,21 @@
+{
+  "name": "asset-transfer-api-registry",
+  "version": "0.1.0",
+  "description": "Asset registry for asset-transfer-api",
+  "main": "registry.json",
+  "scripts": {
+    "build": "substrate-exec-rimraf build/ && substrate-exec-tsc",
+    "start": "yarn build && node ./build/createRegistry.js",
+    "lint": "substrate-dev-run-lint",
+    "lint:fix": "substrate-dev-run-lint --fix"
+  },
+  "keywords": [],
+  "author": "Parity Technologies <admin@parity.io>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@polkadot/api": "^10.5.1",
+    "@polkadot/apps-config": "^0.129.1",
+    "@substrate/dev": "^0.6.7"
+  },
+  "packageManager": "yarn@3.5.1"
+}
