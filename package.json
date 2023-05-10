@@ -11,7 +11,8 @@
     "build": "substrate-exec-rimraf build/ && substrate-exec-tsc",
     "start": "yarn build && node ./build/createRegistry.js",
     "lint": "substrate-dev-run-lint",
-    "lint:fix": "substrate-dev-run-lint --fix"
+    "lint:fix": "substrate-dev-run-lint --fix",
+    "deploy": "yarn build && npm publish"
   },
   "keywords": [],
   "author": "Parity Technologies <admin@parity.io>",
