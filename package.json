@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "Asset registry for asset-transfer-api",
   "main": "registry.json",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "scripts": {
     "build": "substrate-exec-rimraf build/ && substrate-exec-tsc",
     "start": "yarn build && node ./build/createRegistry.js",
