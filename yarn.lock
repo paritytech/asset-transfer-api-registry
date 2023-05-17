@@ -2706,6 +2706,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@substrate/asset-transfer-api-registry@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@substrate/asset-transfer-api-registry@workspace:."
+  dependencies:
+    "@polkadot/api": ^10.5.1
+    "@polkadot/apps-config": ^0.129.1
+    "@substrate/dev": ^0.6.7
+  languageName: unknown
+  linkType: soft
+
 "@substrate/connect-extension-protocol@npm:^1.0.0, @substrate/connect-extension-protocol@npm:^1.0.1":
   version: 1.0.1
   resolution: "@substrate/connect-extension-protocol@npm:1.0.1"
@@ -3322,16 +3332,6 @@ __metadata:
   checksum: 5bee12395cba82da674931df6d0fea23c4aa4660cb3b338ced9f828782a65caa232573e6bf3968f23e0c5eb301764a382cef2f128b170a9dc59de0e36c39f98d
   languageName: node
   linkType: hard
-
-"asset-transfer-api-registry@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "asset-transfer-api-registry@workspace:."
-  dependencies:
-    "@polkadot/api": ^10.5.1
-    "@polkadot/apps-config": ^0.129.1
-    "@substrate/dev": ^0.6.7
-  languageName: unknown
-  linkType: soft
 
 "asynckit@npm:^0.4.0":
   version: 0.4.0

@@ -14,6 +14,7 @@ import {
 	testParasWestendCommon,
 	testRelayWestend,
 } from '@polkadot/apps-config';
+// import type { PalletAssetsAssetMetadata } from '@polkadot/types/lookup';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 import fs from 'fs';
 
@@ -31,6 +32,8 @@ const unreliableIds = {
 		2090, // Oak Tech
 		2053, // omnibtc
 		2018, // subdao
+		2093, // hashed network
+		3333, // t3rn
 	],
 	kusama: [
 		2257, // aband
@@ -91,11 +94,10 @@ const fetchChainInfo = async (
 		: [];
 
 	const specNameStr = specName.toString();
-	const assetIds: number[] = [];
-
+	let assetIds = {};
 	if (specNameStr === 'statemine' || specNameStr === 'statemint') {
-		const commonGoodAssetIds = await fetchCommonGoodParachainAssetIds(api);
-		assetIds.push(...commonGoodAssetIds);
+		assetIds = await fetchCommonGoodParachainAssetInfo(api);
+		console.log('asset ids', assetIds);
 	}
 
 	await api.disconnect();
@@ -126,6 +128,7 @@ const createChainRegistryFromParas = async (
 		if (unreliable) {
 			continue;
 		}
+
 		const res = await fetchChainInfo(endpoint);
 		if (res !== null) {
 			registry[chainName][`${endpoint.paraId as number}`] = res;
@@ -185,11 +188,29 @@ const main = async () => {
 	writeJson(path, registry);
 };
 
-const fetchCommonGoodParachainAssetIds = async (
+const fetchCommonGoodParachainAssetInfo = async (
 	api: ApiPromise
-): Promise<number[]> => {
-	const keys = await api.query.assets.asset.keys();
-	return keys.map(({ args: [assetId] }) => assetId.toNumber());
+): Promise<any> => {
+	// const assetsInfo: Map<string, string> = new Map<
+	// 	string,
+	// 	string
+	// >();
+	const assetsInfo = {};
+
+	for (const [symbol] of await api.query.assets.asset.entries()) {
+		const id = symbol.toHuman()?.toString().trim().replace(/,/g, '');
+
+		if (id) {
+			const assetMetadata = await api.query.assets.metadata(id);
+			const assetSymbol = assetMetadata.symbol.toHuman()?.toString();
+
+			if (assetSymbol) {
+				assetsInfo[id] = assetSymbol;
+			}
+		}
+	}
+
+	return assetsInfo;
 };
 
 main()

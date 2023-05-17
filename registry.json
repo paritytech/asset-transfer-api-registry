@@ -4,56 +4,54 @@
       "tokens": [
         "DOT"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "polkadot"
     },
     "1000": {
       "tokens": [
         "DOT"
       ],
-      "assetIds": [
-        100,
-        123,
-        0,
-        10,
-        4,
-        21,
-        999,
-        101,
-        11,
-        6,
-        77,
-        2,
-        13,
-        868367,
-        5,
-        7,
-        1984,
-        20090103,
-        777,
-        8,
-        1000,
-        1,
-        3,
-        1337,
-        666,
-        9,
-        862812
-      ],
+      "assetIds": {
+        "1": "no1",
+        "2": "BTC",
+        "3": "DOT",
+        "4": "EFI",
+        "5": "PLX",
+        "6": "LPHP",
+        "7": "lucky7",
+        "8": "JOE",
+        "9": "PINT",
+        "10": "BEAST",
+        "11": "web3",
+        "21": "WBTC",
+        "77": "TRQ",
+        "100": "WETH",
+        "101": "DOTMA",
+        "123": "123",
+        "666": "DANGER",
+        "777": "777",
+        "999": "gold",
+        "1000": "BRZ",
+        "1337": "USDC",
+        "1984": "USDt",
+        "862812": "CUBO",
+        "868367": "VSC",
+        "20090103": "BTC"
+      },
       "specName": "statemint"
     },
     "1001": {
       "tokens": [
         "DOT"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "collectives"
     },
     "1002": {
       "tokens": [
         "DOT"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "bridge-hub-polkadot"
     },
     "2000": {
@@ -63,98 +61,98 @@
         "DOT",
         "LDOT"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "acala"
     },
     "2002": {
       "tokens": [
         "CLV"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "clover-mainnet"
     },
     "2004": {
       "tokens": [
         "GLMR"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "moonbeam"
     },
     "2006": {
       "tokens": [
         "ASTR"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "astar"
     },
     "2007": {
       "tokens": [
         "KPX"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "totem-parachain"
     },
     "2008": {
       "tokens": [
         "CRU"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "polkadot-crust-parachain"
     },
     "2011": {
       "tokens": [
         "TOKEN"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "Equilibrium-parachain"
     },
     "2012": {
       "tokens": [
         "PARA"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "parallel"
     },
     "2013": {
       "tokens": [
         "LIT"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "litentry-parachain"
     },
     "2019": {
       "tokens": [
         "LAYR"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "composable"
     },
     "2021": {
       "tokens": [
         "EFI"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "efinity"
     },
     "2026": {
       "tokens": [
         "NODL"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "nodle-para"
     },
     "2030": {
       "tokens": [
         "BNC"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "bifrost_polkadot"
     },
     "2031": {
       "tokens": [
         "CFG"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "centrifuge"
     },
     "2032": {
@@ -166,141 +164,127 @@
         "KBTC",
         "KSM"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "interlay-parachain"
     },
     "2034": {
       "tokens": [
         "HDX"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "hydradx"
     },
     "2035": {
       "tokens": [
         "PHA"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "phala"
     },
     "2037": {
       "tokens": [
         "UNQ"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "unique"
     },
     "2039": {
       "tokens": [
         "TEER"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "integritee-parachain"
     },
     "2040": {
       "tokens": [
         "PDEX"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "node"
     },
     "2043": {
       "tokens": [
         "OTP"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "origintrail-parachain"
     },
     "2046": {
       "tokens": [
         "RING"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "Darwinia2"
     },
     "2048": {
       "tokens": [
         "BBB"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "bitgreen-parachain"
     },
     "2051": {
       "tokens": [
         "AJUN"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "ajuna"
     },
     "2052": {
       "tokens": [
         "KYL"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "kylin"
     },
     "2056": {
       "tokens": [
         "AVT"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "avn-parachain"
     },
     "2086": {
       "tokens": [
         "KILT"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "kilt-spiritnet"
     },
     "2091": {
       "tokens": [
         "FRQCY"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "frequency"
     },
     "2092": {
       "tokens": [
         "ZTG"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "zeitgeist"
-    },
-    "2093": {
-      "tokens": [
-        "HASH"
-      ],
-      "assetIds": [],
-      "specName": "luhn"
     },
     "2094": {
       "tokens": [
         "PEN"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "pendulum"
     },
     "2101": {
       "tokens": [
         "SUB"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "subsocial-parachain"
     },
     "2104": {
       "tokens": [
         "MANTA"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "manta"
-    },
-    "3333": {
-      "tokens": [
-        "TRN"
-      ],
-      "assetIds": [],
-      "specName": "t3rn"
     }
   },
   "kusama": {
@@ -308,182 +292,178 @@
       "tokens": [
         "KSM"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "kusama"
     },
     "1000": {
       "tokens": [
         "KSM"
       ],
-      "assetIds": [
-        863012,
-        9999,
-        100,
-        123,
-        9000,
-        222,
-        1155,
-        69420,
-        47,
-        6789,
-        50,
-        420,
-        0,
-        10,
-        1111,
-        300,
-        4,
-        21,
-        333,
-        28,
-        20,
-        2048,
-        377,
-        95834,
-        999,
-        30,
-        677,
-        39,
-        101,
-        38,
-        46,
-        99,
-        34,
-        7777,
-        168,
-        2077,
-        16,
-        11,
-        224,
-        138,
-        75,
-        111,
-        66,
-        555,
-        14,
-        360,
-        6,
-        19,
-        1607,
-        383,
-        42069,
-        88888,
-        4206969,
-        2021,
-        1107,
-        77,
-        35,
-        36,
-        31,
-        33,
-        41,
-        71,
-        44,
-        11111,
-        15,
-        3721,
-        374,
-        61,
-        40,
-        2,
-        117,
-        70,
-        13,
-        2049,
-        32,
-        188,
-        27,
-        89,
-        49,
-        1999,
-        3943,
-        314159,
-        29,
-        42,
-        102,
-        80815,
-        43,
-        7777777,
-        365,
-        5,
-        18,
-        7,
-        26,
-        8848,
-        3077,
-        87,
-        1984,
-        233,
-        2050,
-        1688,
-        1123,
-        4294967291,
-        777777,
-        22,
-        777,
-        567,
-        68,
-        24,
-        90,
-        80,
-        8,
-        45,
-        841,
-        5201314,
-        6967,
-        1234,
-        404,
-        1420,
-        1000,
-        223,
-        60,
-        80817,
-        1,
-        12,
-        12345,
-        3,
-        55,
-        1337,
-        666,
-        88,
-        8888,
-        17,
-        220204,
-        598,
-        25,
-        69,
-        23,
-        19840,
-        37,
-        759,
-        91,
-        13000,
-        1225,
-        64,
-        520,
-        9,
-        862812,
-        888,
-        911,
-        214,
-        345,
-        1441,
-        80816
-      ],
+      "assetIds": {
+        "0": "DOG",
+        "1": "L T",
+        "2": "PNN",
+        "3": "Meow",
+        "4": "HAPPY",
+        "5": "BEER",
+        "6": "ZKPD",
+        "7": "DOS",
+        "8": "RMRK",
+        "9": "TOT",
+        "10": "USDC",
+        "11": "USDT",
+        "12": "BUSD",
+        "13": "LN",
+        "14": "DOT",
+        "15": "Web3",
+        "16": "ARIS",
+        "17": "MEME",
+        "18": "HEI",
+        "19": "SHOT",
+        "20": "BFKK",
+        "21": "ELEV",
+        "22": "STH",
+        "23": "KOJO",
+        "24": "test",
+        "25": "BABE",
+        "26": "BUNGA",
+        "27": "RUNE",
+        "28": "LAC",
+        "29": "CODES",
+        "30": "GOL",
+        "31": "ki",
+        "32": "FAV",
+        "33": "BUSSY",
+        "34": "PLX",
+        "35": "LUCKY",
+        "36": "RRT",
+        "37": "MNCH",
+        "38": "ENT",
+        "39": "DSCAN",
+        "40": "ERIC",
+        "41": "GOOSE",
+        "42": "NRNF",
+        "43": "TTT",
+        "44": "ADVNCE",
+        "45": "CRIB",
+        "46": "FAN",
+        "47": "EUR",
+        "49": "DIAN",
+        "50": "PROMO",
+        "55": "MTS",
+        "60": "GAV",
+        "61": "CRY",
+        "64": "oh!",
+        "66": "DAI",
+        "68": "ADVERT",
+        "69": "NICE",
+        "70": "MAR",
+        "71": "OAK",
+        "75": "cipher",
+        "77": "Crypto",
+        "80": "BIT",
+        "87": "XEXR",
+        "88": "BTC",
+        "90": "SATS",
+        "91": "TMJ",
+        "99": "BITCOIN",
+        "100": "Chralt",
+        "101": "---",
+        "102": "DRX",
+        "111": "NO1",
+        "117": "TNKR",
+        "123": "NFT",
+        "138": "Abc",
+        "168": "Tokens",
+        "188": "ZLK",
+        "214": "LOVE",
+        "222": "PNEO",
+        "223": "BILL",
+        "224": "SIK",
+        "300": "PWS",
+        "333": "Token",
+        "345": "345",
+        "360": "uni",
+        "365": "time",
+        "374": "wETH",
+        "377": "KAA",
+        "383": "KODA",
+        "404": "MAXI",
+        "420": "BLAZE",
+        "520": "0xe299a5e299a5e299a5",
+        "555": "GAME",
+        "567": "CHRWNA",
+        "598": "EREN",
+        "666": "BAD",
+        "677": "GRB",
+        "759": "bLd",
+        "777": "GOD",
+        "841": "YAYOI",
+        "888": "LUCK",
+        "911": "911",
+        "999": "CBDC",
+        "1000": "SPARK",
+        "1107": "HOLIC",
+        "1111": "MTVD",
+        "1123": "XEN",
+        "1155": "WITEK",
+        "1225": "GOD",
+        "1234": "KSM",
+        "1337": "TIP",
+        "1420": "HYDR",
+        "1441": "SPOT",
+        "1607": "STRGZN",
+        "1688": "ali",
+        "1984": "USDt",
+        "1999": "ADVERT2",
+        "2021": "WAVE",
+        "2048": "RWS",
+        "2049": "Android",
+        "2050": "CUT",
+        "2077": "XRT",
+        "3077": "ACT",
+        "3721": "fast",
+        "3943": "GMK",
+        "6789": "VHM",
+        "6967": "CHAOS",
+        "7777": "lucky7",
+        "8848": "top",
+        "9000": "KPOTS",
+        "9999": "BTC",
+        "11111": "KVC",
+        "12345": "DREX",
+        "19840": "USDt",
+        "42069": "INTRN",
+        "69420": "CHAOS",
+        "80815": "KSMFS",
+        "80816": "RUEPP",
+        "80817": "FRALEY",
+        "88888": "BAILEGO",
+        "95834": "LUL",
+        "220204": "STM",
+        "314159": "RTT",
+        "777777": "DEFI",
+        "862812": "CUBO",
+        "863012": "VCOP",
+        "4206969": "SHIB",
+        "5201314": "belove",
+        "7777777": "king",
+        "4294967291": "PRIME"
+      },
       "specName": "statemine"
     },
     "1001": {
       "tokens": [
         "KSM"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "encointer-parachain"
     },
     "1002": {
       "tokens": [
         "KSM"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "bridge-hub-kusama"
     },
     "2000": {
@@ -499,7 +479,7 @@
         "KBTC",
         "TAI"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "karura"
     },
     "2001": {
@@ -514,96 +494,96 @@
         "RMRK",
         "MOVR"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "bifrost"
     },
     "2004": {
       "tokens": [
         "PHA"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "khala"
     },
     "2007": {
       "tokens": [
         "SDN"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "shiden"
     },
     "2011": {
       "tokens": [],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "sora_ksm"
     },
     "2012": {
       "tokens": [
         "CSM"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "crust-collator"
     },
     "2015": {
       "tokens": [
         "TEER"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "integritee-parachain"
     },
     "2023": {
       "tokens": [
         "MOVR"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "moonriver"
     },
     "2024": {
       "tokens": [
         "TOKEN"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "Genshiro"
     },
     "2048": {
       "tokens": [
         "XRT"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "robonomics"
     },
     "2084": {
       "tokens": [
         "KMA"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "calamari"
     },
     "2085": {
       "tokens": [
         "HKO"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "heiko"
     },
     "2087": {
       "tokens": [
         "PICA"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "picasso"
     },
     "2088": {
       "tokens": [
         "AIR"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "altair"
     },
     "2090": {
       "tokens": [
         "BSX"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "basilisk"
     },
     "2092": {
@@ -615,126 +595,126 @@
         "IBTC",
         "DOT"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "kintsugi-parachain"
     },
     "2095": {
       "tokens": [
         "QTZ"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "quartz"
     },
     "2096": {
       "tokens": [
         "NEER"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "pioneer-runtime"
     },
     "2102": {
       "tokens": [
         "PCHU"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "pichiu"
     },
     "2105": {
       "tokens": [
         "CRAB"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "Crab2"
     },
     "2106": {
       "tokens": [
         "LIT"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "litmus-parachain"
     },
     "2110": {
       "tokens": [
         "MGX"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "mangata-parachain"
     },
     "2113": {
       "tokens": [
         "KAB"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "kabocha-parachain"
     },
     "2114": {
       "tokens": [
         "TUR"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "turing"
     },
     "2115": {
       "tokens": [
         "DORA"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "DORA KSM Parachain"
     },
     "2119": {
       "tokens": [
         "BAJU"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "bajun"
     },
     "2120": {
       "tokens": [
         "SDN"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "shiden"
     },
     "2123": {
       "tokens": [
         "FREN"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "gm_parachain"
     },
     "2124": {
       "tokens": [
         "AMPE"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "amplitude"
     },
     "2125": {
       "tokens": [
         "TNKR"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "tinkernet_node"
     },
     "2222": {
       "tokens": [
         "MITO"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "ipci"
     },
     "2226": {
       "tokens": [
         "TOKEN"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "Genshiro"
     },
     "2240": {
       "tokens": [
         "XRT"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "robonomics"
     }
   },
@@ -743,21 +723,21 @@
       "tokens": [
         "WND"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "westend"
     },
     "1000": {
       "tokens": [
         "WND"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "westmint"
     },
     "1001": {
       "tokens": [
         "WND"
       ],
-      "assetIds": [],
+      "assetIds": {},
       "specName": "collectives"
     }
   }
