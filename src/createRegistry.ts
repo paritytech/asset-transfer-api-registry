@@ -197,8 +197,8 @@ const fetchSystemParachainAssetInfo = async (
 ): Promise<AssetsInfo> => {
 	const assetsInfo: AssetsInfo = {};
 
-	for (const [symbol] of await api.query.assets.asset.entries()) {
-		const id = symbol.toHuman()?.toString().trim().replace(/,/g, '');
+	for (const [assetStorageKeyData] of await api.query.assets.asset.entries()) {
+		const id = assetStorageKeyData.toHuman()?.toString().trim().replace(/,/g, '');
 
 		if (id) {
 			const assetMetadata = await api.query.assets.metadata(id);
