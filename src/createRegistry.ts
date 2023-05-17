@@ -96,7 +96,7 @@ const fetchChainInfo = async (
 	const specNameStr = specName.toString();
 	let assetIds = {};
 	if (specNameStr === 'statemine' || specNameStr === 'statemint') {
-		assetIds = await fetchCommonGoodParachainAssetInfo(api);
+		assetIds = await fetchSystemParachainAssetInfo(api);
 		console.log('asset ids', assetIds);
 	}
 
@@ -188,7 +188,7 @@ const main = async () => {
 	writeJson(path, registry);
 };
 
-const fetchCommonGoodParachainAssetInfo = async (
+const fetchSystemParachainAssetInfo = async (
 	api: ApiPromise
 ): Promise<any> => {
 	// const assetsInfo: Map<string, string> = new Map<
