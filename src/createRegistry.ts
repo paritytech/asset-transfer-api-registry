@@ -14,7 +14,6 @@ import {
 	testParasWestendCommon,
 	testRelayWestend,
 } from '@polkadot/apps-config';
-// import type { PalletAssetsAssetMetadata } from '@polkadot/types/lookup';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 import fs from 'fs';
 
@@ -57,6 +56,10 @@ const writeJson = (path: string, data: TokenRegistry): void => {
 	fs.writeFileSync(path, JSON.stringify(data, null, 2));
 };
 
+interface AssetsInfo {
+	[key: string]: string;
+}
+
 /**
  * Fetch chain token and spec info.
  *
@@ -94,17 +97,18 @@ const fetchChainInfo = async (
 		: [];
 
 	const specNameStr = specName.toString();
-	let assetIds = {};
+
+	let assetsInfo: AssetsInfo = {};
+
 	if (specNameStr === 'statemine' || specNameStr === 'statemint') {
-		assetIds = await fetchSystemParachainAssetInfo(api);
-		console.log('asset ids', assetIds);
+		assetsInfo = await fetchSystemParachainAssetInfo(api);
 	}
 
 	await api.disconnect();
 
 	return {
 		tokens,
-		assetIds,
+		assetsInfo,
 		specName: specNameStr,
 	};
 };
@@ -190,12 +194,8 @@ const main = async () => {
 
 const fetchSystemParachainAssetInfo = async (
 	api: ApiPromise
-): Promise<any> => {
-	// const assetsInfo: Map<string, string> = new Map<
-	// 	string,
-	// 	string
-	// >();
-	const assetsInfo = {};
+): Promise<AssetsInfo> => {
+	const assetsInfo: AssetsInfo = {};
 
 	for (const [symbol] of await api.query.assets.asset.entries()) {
 		const id = symbol.toHuman()?.toString().trim().replace(/,/g, '');

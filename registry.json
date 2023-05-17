@@ -4,14 +4,14 @@
       "tokens": [
         "DOT"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "polkadot"
     },
     "1000": {
       "tokens": [
         "DOT"
       ],
-      "assetIds": {
+      "assetsInfo": {
         "1": "no1",
         "2": "BTC",
         "3": "DOT",
@@ -44,14 +44,14 @@
       "tokens": [
         "DOT"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "collectives"
     },
     "1002": {
       "tokens": [
         "DOT"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "bridge-hub-polkadot"
     },
     "2000": {
@@ -61,98 +61,98 @@
         "DOT",
         "LDOT"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "acala"
     },
     "2002": {
       "tokens": [
         "CLV"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "clover-mainnet"
     },
     "2004": {
       "tokens": [
         "GLMR"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "moonbeam"
     },
     "2006": {
       "tokens": [
         "ASTR"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "astar"
     },
     "2007": {
       "tokens": [
         "KPX"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "totem-parachain"
     },
     "2008": {
       "tokens": [
         "CRU"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "polkadot-crust-parachain"
     },
     "2011": {
       "tokens": [
         "TOKEN"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "Equilibrium-parachain"
     },
     "2012": {
       "tokens": [
         "PARA"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "parallel"
     },
     "2013": {
       "tokens": [
         "LIT"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "litentry-parachain"
     },
     "2019": {
       "tokens": [
         "LAYR"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "composable"
     },
     "2021": {
       "tokens": [
         "EFI"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "efinity"
     },
     "2026": {
       "tokens": [
         "NODL"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "nodle-para"
     },
     "2030": {
       "tokens": [
         "BNC"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "bifrost_polkadot"
     },
     "2031": {
       "tokens": [
         "CFG"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "centrifuge"
     },
     "2032": {
@@ -164,126 +164,126 @@
         "KBTC",
         "KSM"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "interlay-parachain"
     },
     "2034": {
       "tokens": [
         "HDX"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "hydradx"
     },
     "2035": {
       "tokens": [
         "PHA"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "phala"
     },
     "2037": {
       "tokens": [
         "UNQ"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "unique"
     },
     "2039": {
       "tokens": [
         "TEER"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "integritee-parachain"
     },
     "2040": {
       "tokens": [
         "PDEX"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "node"
     },
     "2043": {
       "tokens": [
         "OTP"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "origintrail-parachain"
     },
     "2046": {
       "tokens": [
         "RING"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "Darwinia2"
     },
     "2048": {
       "tokens": [
         "BBB"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "bitgreen-parachain"
     },
     "2051": {
       "tokens": [
         "AJUN"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "ajuna"
     },
     "2052": {
       "tokens": [
         "KYL"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "kylin"
     },
     "2056": {
       "tokens": [
         "AVT"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "avn-parachain"
     },
     "2086": {
       "tokens": [
         "KILT"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "kilt-spiritnet"
     },
     "2091": {
       "tokens": [
         "FRQCY"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "frequency"
     },
     "2092": {
       "tokens": [
         "ZTG"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "zeitgeist"
     },
     "2094": {
       "tokens": [
         "PEN"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "pendulum"
     },
     "2101": {
       "tokens": [
         "SUB"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "subsocial-parachain"
     },
     "2104": {
       "tokens": [
         "MANTA"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "manta"
     }
   },
@@ -292,14 +292,14 @@
       "tokens": [
         "KSM"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "kusama"
     },
     "1000": {
       "tokens": [
         "KSM"
       ],
-      "assetIds": {
+      "assetsInfo": {
         "0": "DOG",
         "1": "L T",
         "2": "PNN",
@@ -456,14 +456,14 @@
       "tokens": [
         "KSM"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "encointer-parachain"
     },
     "1002": {
       "tokens": [
         "KSM"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "bridge-hub-kusama"
     },
     "2000": {
@@ -479,7 +479,7 @@
         "KBTC",
         "TAI"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "karura"
     },
     "2001": {
@@ -494,96 +494,96 @@
         "RMRK",
         "MOVR"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "bifrost"
     },
     "2004": {
       "tokens": [
         "PHA"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "khala"
     },
     "2007": {
       "tokens": [
         "SDN"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "shiden"
     },
     "2011": {
       "tokens": [],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "sora_ksm"
     },
     "2012": {
       "tokens": [
         "CSM"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "crust-collator"
     },
     "2015": {
       "tokens": [
         "TEER"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "integritee-parachain"
     },
     "2023": {
       "tokens": [
         "MOVR"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "moonriver"
     },
     "2024": {
       "tokens": [
         "TOKEN"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "Genshiro"
     },
     "2048": {
       "tokens": [
         "XRT"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "robonomics"
     },
     "2084": {
       "tokens": [
         "KMA"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "calamari"
     },
     "2085": {
       "tokens": [
         "HKO"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "heiko"
     },
     "2087": {
       "tokens": [
         "PICA"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "picasso"
     },
     "2088": {
       "tokens": [
         "AIR"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "altair"
     },
     "2090": {
       "tokens": [
         "BSX"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "basilisk"
     },
     "2092": {
@@ -595,126 +595,126 @@
         "IBTC",
         "DOT"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "kintsugi-parachain"
     },
     "2095": {
       "tokens": [
         "QTZ"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "quartz"
     },
     "2096": {
       "tokens": [
         "NEER"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "pioneer-runtime"
     },
     "2102": {
       "tokens": [
         "PCHU"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "pichiu"
     },
     "2105": {
       "tokens": [
         "CRAB"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "Crab2"
     },
     "2106": {
       "tokens": [
         "LIT"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "litmus-parachain"
     },
     "2110": {
       "tokens": [
         "MGX"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "mangata-parachain"
     },
     "2113": {
       "tokens": [
         "KAB"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "kabocha-parachain"
     },
     "2114": {
       "tokens": [
         "TUR"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "turing"
     },
     "2115": {
       "tokens": [
         "DORA"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "DORA KSM Parachain"
     },
     "2119": {
       "tokens": [
         "BAJU"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "bajun"
     },
     "2120": {
       "tokens": [
         "SDN"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "shiden"
     },
     "2123": {
       "tokens": [
         "FREN"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "gm_parachain"
     },
     "2124": {
       "tokens": [
         "AMPE"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "amplitude"
     },
     "2125": {
       "tokens": [
         "TNKR"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "tinkernet_node"
     },
     "2222": {
       "tokens": [
         "MITO"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "ipci"
     },
     "2226": {
       "tokens": [
         "TOKEN"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "Genshiro"
     },
     "2240": {
       "tokens": [
         "XRT"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "robonomics"
     }
   },
@@ -723,21 +723,21 @@
       "tokens": [
         "WND"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "westend"
     },
     "1000": {
       "tokens": [
         "WND"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "westmint"
     },
     "1001": {
       "tokens": [
         "WND"
       ],
-      "assetIds": {},
+      "assetsInfo": {},
       "specName": "collectives"
     }
   }
