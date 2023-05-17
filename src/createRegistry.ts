@@ -31,6 +31,8 @@ const unreliableIds = {
 		2090, // Oak Tech
 		2053, // omnibtc
 		2018, // subdao
+		2093, // hashed network
+		3333, // t3rn
 	],
 	kusama: [
 		2257, // aband
@@ -53,6 +55,10 @@ const unreliableIds = {
 const writeJson = (path: string, data: TokenRegistry): void => {
 	fs.writeFileSync(path, JSON.stringify(data, null, 2));
 };
+
+interface AssetsInfo {
+	[key: string]: string;
+}
 
 /**
  * Fetch chain token and spec info.
@@ -91,18 +97,18 @@ const fetchChainInfo = async (
 		: [];
 
 	const specNameStr = specName.toString();
-	const assetIds: number[] = [];
+
+	let assetsInfo: AssetsInfo = {};
 
 	if (specNameStr === 'statemine' || specNameStr === 'statemint') {
-		const commonGoodAssetIds = await fetchCommonGoodParachainAssetIds(api);
-		assetIds.push(...commonGoodAssetIds);
+		assetsInfo = await fetchSystemParachainAssetInfo(api);
 	}
 
 	await api.disconnect();
 
 	return {
 		tokens,
-		assetIds,
+		assetsInfo,
 		specName: specNameStr,
 	};
 };
@@ -126,6 +132,7 @@ const createChainRegistryFromParas = async (
 		if (unreliable) {
 			continue;
 		}
+
 		const res = await fetchChainInfo(endpoint);
 		if (res !== null) {
 			registry[chainName][`${endpoint.paraId as number}`] = res;
@@ -185,11 +192,25 @@ const main = async () => {
 	writeJson(path, registry);
 };
 
-const fetchCommonGoodParachainAssetIds = async (
+const fetchSystemParachainAssetInfo = async (
 	api: ApiPromise
-): Promise<number[]> => {
-	const keys = await api.query.assets.asset.keys();
-	return keys.map(({ args: [assetId] }) => assetId.toNumber());
+): Promise<AssetsInfo> => {
+	const assetsInfo: AssetsInfo = {};
+
+	for (const [assetStorageKeyData] of await api.query.assets.asset.entries()) {
+		const id = assetStorageKeyData.toHuman()?.toString().trim().replace(/,/g, '');
+
+		if (id) {
+			const assetMetadata = await api.query.assets.metadata(id);
+			const assetSymbol = assetMetadata.symbol.toHuman()?.toString();
+
+			if (assetSymbol) {
+				assetsInfo[id] = assetSymbol;
+			}
+		}
+	}
+
+	return assetsInfo;
 };
 
 main()
