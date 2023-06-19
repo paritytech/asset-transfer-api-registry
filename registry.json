@@ -25,6 +25,7 @@
         "11": "web3",
         "21": "WBTC",
         "77": "TRQ",
+        "99": "Cypress",
         "100": "WETH",
         "101": "DOTMA",
         "123": "123",
@@ -272,13 +273,6 @@
       "assetsInfo": {},
       "specName": "pendulum"
     },
-    "2101": {
-      "tokens": [
-        "SUB"
-      ],
-      "assetsInfo": {},
-      "specName": "subsocial-parachain"
-    },
     "2104": {
       "tokens": [
         "MANTA"
@@ -398,9 +392,11 @@
         "677": "GRB",
         "759": "bLd",
         "777": "GOD",
+        "813": "TBUX",
         "841": "YAYOI",
         "888": "LUCK",
         "911": "911",
+        "969": "WGTL",
         "999": "CBDC",
         "1000": "SPARK",
         "1107": "HOLIC",
@@ -426,6 +422,7 @@
         "3943": "GMK",
         "6789": "VHM",
         "6967": "CHAOS",
+        "7373": "PEPE",
         "7777": "lucky7",
         "8848": "top",
         "9000": "KPOTS",
@@ -539,10 +536,16 @@
     },
     "2024": {
       "tokens": [
-        "TOKEN"
+        "Unknown",
+        "EQD",
+        "GENS",
+        "ETH",
+        "BTC",
+        "KSM",
+        "CRV"
       ],
       "assetsInfo": {},
-      "specName": "Genshiro"
+      "specName": "Gens-parachain"
     },
     "2048": {
       "tokens": [
@@ -611,13 +614,6 @@
       ],
       "assetsInfo": {},
       "specName": "pioneer-runtime"
-    },
-    "2102": {
-      "tokens": [
-        "PCHU"
-      ],
-      "assetsInfo": {},
-      "specName": "pichiu"
     },
     "2105": {
       "tokens": [
@@ -702,13 +698,6 @@
       ],
       "assetsInfo": {},
       "specName": "ipci"
-    },
-    "2226": {
-      "tokens": [
-        "TOKEN"
-      ],
-      "assetsInfo": {},
-      "specName": "Genshiro"
     },
     "2240": {
       "tokens": [

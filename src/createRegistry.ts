@@ -42,6 +42,8 @@ const unreliableIds = {
 		2018, // subgame
 		2236, // zero
 		2129, // Ice Network
+		2226, // genshiro
+		2102, // pichiu
 	],
 	westend: [],
 };
@@ -198,7 +200,11 @@ const fetchSystemParachainAssetInfo = async (
 	const assetsInfo: AssetsInfo = {};
 
 	for (const [assetStorageKeyData] of await api.query.assets.asset.entries()) {
-		const id = assetStorageKeyData.toHuman()?.toString().trim().replace(/,/g, '');
+		const id = assetStorageKeyData
+			.toHuman()
+			?.toString()
+			.trim()
+			.replace(/,/g, '');
 
 		if (id) {
 			const assetMetadata = await api.query.assets.metadata(id);
