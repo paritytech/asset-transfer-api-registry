@@ -128,13 +128,6 @@
       "assetsInfo": {},
       "specName": "composable"
     },
-    "2021": {
-      "tokens": [
-        "EFI"
-      ],
-      "assetsInfo": {},
-      "specName": "efinity"
-    },
     "2026": {
       "tokens": [
         "NODL"
@@ -272,6 +265,13 @@
       ],
       "assetsInfo": {},
       "specName": "pendulum"
+    },
+    "2101": {
+      "tokens": [
+        "SUB"
+      ],
+      "assetsInfo": {},
+      "specName": "subsocial-parachain"
     },
     "2104": {
       "tokens": [
@@ -705,6 +705,13 @@
       ],
       "assetsInfo": {},
       "specName": "robonomics"
+    },
+    "2241": {
+      "tokens": [
+        "KREST"
+      ],
+      "assetsInfo": {},
+      "specName": "peaq-node-krest"
     }
   },
   "westend": {
