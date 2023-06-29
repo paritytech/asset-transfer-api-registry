@@ -56,6 +56,7 @@ const unreliableIds = {
  */
 const writeJson = (path: string, data: TokenRegistry): void => {
 	fs.writeFileSync(path, JSON.stringify(data, null, 2));
+	fs.appendFileSync(path, '\n', 'utf-8');
 };
 
 interface AssetsInfo {
