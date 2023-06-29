@@ -56,6 +56,7 @@ const unreliableIds = {
  */
 const writeJson = (path: string, data: TokenRegistry): void => {
 	fs.writeFileSync(path, JSON.stringify(data, null, 2));
+	fs.appendFileSync(path, '\n', 'utf-8');
 };
 
 interface AssetsInfo {
@@ -89,6 +90,9 @@ const fetchChainInfo = async (
 
 	await api.isReady;
 
+	const assetsPallet = api.registry.metadata.pallets.filter(
+		(pallet) => pallet.name.toString().toLowerCase() === 'assets'
+	)[0];
 	const { tokenSymbol } = await api.rpc.system.properties();
 	const { specName } = await api.rpc.state.getRuntimeVersion();
 	const tokens = tokenSymbol.isSome
@@ -112,6 +116,7 @@ const fetchChainInfo = async (
 		tokens,
 		assetsInfo,
 		specName: specNameStr,
+		assetsPalletInstance: assetsPallet ? assetsPallet.index.toString() : null,
 	};
 };
 
