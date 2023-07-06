@@ -5,6 +5,7 @@
         "DOT"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "polkadot"
     },
     "1000": {
@@ -23,6 +24,7 @@
         "9": "PINT",
         "10": "BEAST",
         "11": "web3",
+        "15": "Meme",
         "21": "WBTC",
         "77": "TRQ",
         "99": "Cypress",
@@ -39,6 +41,7 @@
         "868367": "VSC",
         "20090103": "BTC"
       },
+      "foreignAssetsInfo": {},
       "specName": "statemint"
     },
     "1001": {
@@ -46,6 +49,7 @@
         "DOT"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "collectives"
     },
     "1002": {
@@ -53,6 +57,7 @@
         "DOT"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "bridge-hub-polkadot"
     },
     "2000": {
@@ -63,6 +68,7 @@
         "LDOT"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "acala"
     },
     "2002": {
@@ -70,6 +76,7 @@
         "CLV"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "clover-mainnet"
     },
     "2004": {
@@ -77,6 +84,7 @@
         "GLMR"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "moonbeam"
     },
     "2006": {
@@ -84,6 +92,7 @@
         "ASTR"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "astar"
     },
     "2007": {
@@ -91,6 +100,7 @@
         "KPX"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "totem-parachain"
     },
     "2008": {
@@ -98,6 +108,7 @@
         "CRU"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "polkadot-crust-parachain"
     },
     "2011": {
@@ -105,6 +116,7 @@
         "TOKEN"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "Equilibrium-parachain"
     },
     "2012": {
@@ -112,6 +124,7 @@
         "PARA"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "parallel"
     },
     "2013": {
@@ -119,6 +132,7 @@
         "LIT"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "litentry-parachain"
     },
     "2019": {
@@ -126,13 +140,23 @@
         "LAYR"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "composable"
+    },
+    "2021": {
+      "tokens": [
+        "EFI"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "specName": "efinity"
     },
     "2026": {
       "tokens": [
         "NODL"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "nodle-para"
     },
     "2030": {
@@ -140,6 +164,7 @@
         "BNC"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "bifrost_polkadot"
     },
     "2031": {
@@ -147,6 +172,7 @@
         "CFG"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "centrifuge"
     },
     "2032": {
@@ -159,6 +185,7 @@
         "KSM"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "interlay-parachain"
     },
     "2034": {
@@ -166,6 +193,7 @@
         "HDX"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "hydradx"
     },
     "2035": {
@@ -173,6 +201,7 @@
         "PHA"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "phala"
     },
     "2037": {
@@ -180,6 +209,7 @@
         "UNQ"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "unique"
     },
     "2039": {
@@ -187,6 +217,7 @@
         "TEER"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "integritee-parachain"
     },
     "2040": {
@@ -194,6 +225,7 @@
         "PDEX"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "node"
     },
     "2043": {
@@ -201,6 +233,7 @@
         "OTP"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "origintrail-parachain"
     },
     "2046": {
@@ -208,6 +241,7 @@
         "RING"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "Darwinia2"
     },
     "2048": {
@@ -215,6 +249,7 @@
         "BBB"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "bitgreen-parachain"
     },
     "2051": {
@@ -222,6 +257,7 @@
         "AJUN"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "ajuna"
     },
     "2052": {
@@ -229,6 +265,7 @@
         "KYL"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "kylin"
     },
     "2056": {
@@ -236,6 +273,7 @@
         "AVT"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "avn-parachain"
     },
     "2086": {
@@ -243,6 +281,7 @@
         "KILT"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "kilt-spiritnet"
     },
     "2091": {
@@ -250,6 +289,7 @@
         "FRQCY"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "frequency"
     },
     "2092": {
@@ -257,6 +297,7 @@
         "ZTG"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "zeitgeist"
     },
     "2094": {
@@ -264,20 +305,15 @@
         "PEN"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "pendulum"
-    },
-    "2101": {
-      "tokens": [
-        "SUB"
-      ],
-      "assetsInfo": {},
-      "specName": "subsocial-parachain"
     },
     "2104": {
       "tokens": [
         "MANTA"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "manta"
     }
   },
@@ -287,6 +323,7 @@
         "KSM"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "kusama"
     },
     "1000": {
@@ -408,6 +445,7 @@
         "1337": "TIP",
         "1420": "HYDR",
         "1441": "SPOT",
+        "1526": "bcd",
         "1607": "STRGZN",
         "1688": "ali",
         "1984": "USDt",
@@ -447,6 +485,26 @@
         "7777777": "king",
         "4294967291": "PRIME"
       },
+      "foreignAssetsInfo": {
+        "0": {
+          "symbol": "",
+          "multiLocation": [
+            {
+              "parents": "1",
+              "interior": {
+                "X2": [
+                  {
+                    "Parachain": "2,125"
+                  },
+                  {
+                    "GeneralIndex": "0"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
       "specName": "statemine"
     },
     "1001": {
@@ -454,6 +512,7 @@
         "KSM"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "encointer-parachain"
     },
     "1002": {
@@ -461,6 +520,7 @@
         "KSM"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "bridge-hub-kusama"
     },
     "2000": {
@@ -477,6 +537,7 @@
         "TAI"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "karura"
     },
     "2001": {
@@ -492,6 +553,7 @@
         "MOVR"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "bifrost"
     },
     "2004": {
@@ -499,6 +561,7 @@
         "PHA"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "khala"
     },
     "2007": {
@@ -506,11 +569,13 @@
         "SDN"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "shiden"
     },
     "2011": {
       "tokens": [],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "sora_ksm"
     },
     "2012": {
@@ -518,6 +583,7 @@
         "CSM"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "crust-collator"
     },
     "2015": {
@@ -525,6 +591,7 @@
         "TEER"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "integritee-parachain"
     },
     "2023": {
@@ -532,6 +599,7 @@
         "MOVR"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "moonriver"
     },
     "2024": {
@@ -545,6 +613,7 @@
         "CRV"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "Gens-parachain"
     },
     "2048": {
@@ -552,6 +621,7 @@
         "XRT"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "robonomics"
     },
     "2084": {
@@ -559,6 +629,7 @@
         "KMA"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "calamari"
     },
     "2085": {
@@ -566,6 +637,7 @@
         "HKO"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "heiko"
     },
     "2087": {
@@ -573,6 +645,7 @@
         "PICA"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "picasso"
     },
     "2088": {
@@ -580,6 +653,7 @@
         "AIR"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "altair"
     },
     "2090": {
@@ -587,6 +661,7 @@
         "BSX"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "basilisk"
     },
     "2092": {
@@ -599,6 +674,7 @@
         "DOT"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "kintsugi-parachain"
     },
     "2095": {
@@ -606,6 +682,7 @@
         "QTZ"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "quartz"
     },
     "2096": {
@@ -613,6 +690,7 @@
         "NEER"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "pioneer-runtime"
     },
     "2105": {
@@ -620,6 +698,7 @@
         "CRAB"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "Crab2"
     },
     "2106": {
@@ -627,6 +706,7 @@
         "LIT"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "litmus-parachain"
     },
     "2110": {
@@ -634,6 +714,7 @@
         "MGX"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "mangata-parachain"
     },
     "2113": {
@@ -641,6 +722,7 @@
         "KAB"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "kabocha-parachain"
     },
     "2114": {
@@ -648,6 +730,7 @@
         "TUR"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "turing"
     },
     "2115": {
@@ -655,6 +738,7 @@
         "DORA"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "DORA KSM Parachain"
     },
     "2119": {
@@ -662,6 +746,7 @@
         "BAJU"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "bajun"
     },
     "2120": {
@@ -669,6 +754,7 @@
         "SDN"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "shiden"
     },
     "2123": {
@@ -676,6 +762,7 @@
         "FREN"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "gm_parachain"
     },
     "2124": {
@@ -683,6 +770,7 @@
         "AMPE"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "amplitude"
     },
     "2125": {
@@ -690,6 +778,7 @@
         "TNKR"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "tinkernet_node"
     },
     "2222": {
@@ -697,6 +786,7 @@
         "MITO"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "ipci"
     },
     "2240": {
@@ -704,14 +794,8 @@
         "XRT"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "robonomics"
-    },
-    "2241": {
-      "tokens": [
-        "KREST"
-      ],
-      "assetsInfo": {},
-      "specName": "peaq-node-krest"
     }
   },
   "westend": {
@@ -720,13 +804,126 @@
         "WND"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "westend"
     },
     "1000": {
       "tokens": [
         "WND"
       ],
-      "assetsInfo": {},
+      "assetsInfo": {
+        "0": "OSNT",
+        "1": "CHV TKN",
+        "2": "BIB",
+        "3": "(null)",
+        "4": "0xe282b5414c",
+        "5": "MLK",
+        "6": "BILL",
+        "7": "XAU",
+        "8": "JOE",
+        "9": "xxx",
+        "10": "CAT",
+        "11": "SWD",
+        "13": "RMRK",
+        "14": "NGNC",
+        "15": "JJS",
+        "16": "TEST",
+        "17": "LOL",
+        "19": "TMJ",
+        "20": "WETH",
+        "21": "BETH",
+        "22": "KO",
+        "23": "UDT",
+        "24": "AAA",
+        "42": "HG2G",
+        "55": "PER",
+        "60": "AAA",
+        "66": "USDT",
+        "67": "USDT",
+        "68": "TTT",
+        "69": "TIDE",
+        "81": "SIRI",
+        "84": "ASTRA",
+        "85": "ITC",
+        "88": "AEC",
+        "95": "HACK",
+        "99": "hcc",
+        "100": "tlj",
+        "101": "WIL",
+        "102": "cPHP",
+        "103": "cPHP",
+        "123": "INXTSW1",
+        "126": "TAT",
+        "145": "dsu",
+        "146": "FRAC",
+        "222": "BBB",
+        "223": "BILL",
+        "301": "RYUD",
+        "420": "SKER",
+        "434": "cool",
+        "482": "PVSE",
+        "535": "KEL",
+        "666": "FTT",
+        "676": "nbnbnbn",
+        "900": "VOD",
+        "950": "HBCOIN",
+        "987": "JVT",
+        "988": "VTT",
+        "999": "CCW",
+        "1000": "EDU",
+        "1001": "VOW",
+        "1002": "VOW",
+        "1003": "VOW",
+        "1004": "VOW",
+        "1005": "VOW",
+        "1021": "NFT",
+        "1022": "nfttst",
+        "1023": "qqnihao",
+        "1024": "qqnihao",
+        "1111": "TESTY",
+        "1122": "dmd",
+        "1234": "TEST",
+        "1337": "NACHO",
+        "1977": "SQL",
+        "1988": "HBB",
+        "1994": "SOU",
+        "1995": "LUSD",
+        "2000": "USDT",
+        "2022": "weUSDT",
+        "2048": "CUT",
+        "2122": "SVE",
+        "3000": "DEV",
+        "4000": "DES",
+        "4123": "DWND2",
+        "8888": "USDT",
+        "8937": "test",
+        "9898": "FTT",
+        "9999": "WND",
+        "12345": "DRR2",
+        "13337": "DEV",
+        "15240": "KOKOS",
+        "31337": "USDC",
+        "54221": "wTEST",
+        "100112": "FLK",
+        "123456": "BATTY",
+        "313370": "WBTC",
+        "313371": "WETH",
+        "321123": "aWNDb",
+        "793910": "CIDR",
+        "862105": "USDTT",
+        "862812": "CUBOT",
+        "863012": "VCOPT",
+        "21000000": "PKTB",
+        "40000001": "ETH",
+        "123456789": "PUSH",
+        "900990087": "SPOT",
+        "1000000000": "CZX",
+        "1233344433": "BQE",
+        "2000000000": "weUSDT",
+        "3999999999": "BETH",
+        "4000000000": "dde"
+      },
+      "foreignAssetsInfo": {},
       "specName": "westmint"
     },
     "1001": {
@@ -734,6 +931,7 @@
         "WND"
       ],
       "assetsInfo": {},
+      "foreignAssetsInfo": {},
       "specName": "collectives"
     }
   }

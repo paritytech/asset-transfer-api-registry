@@ -62,6 +62,19 @@ interface AssetsInfo {
 	[key: string]: string;
 }
 
+type ForeignAssetStorageKeyData = [
+	{ parents: number, interior: { X2: [{ Parachain: string | undefined }, { GeneralIndex: string }] } }
+];
+type ForeignAssetMetadata =  { deposit: string, name: string, symbol: string, decimals: string, isFrozen: boolean };
+
+
+interface ForeignAssetsInfo {
+	[key: string]: {
+		symbol: string,
+		multiLocation: string
+	}
+}
+
 /**
  * Fetch chain token and spec info.
  *
@@ -101,9 +114,11 @@ const fetchChainInfo = async (
 	const specNameStr = specName.toString();
 
 	let assetsInfo: AssetsInfo = {};
+	let foreignAssetsInfo: ForeignAssetsInfo = {};
 
-	if (specNameStr === 'statemine' || specNameStr === 'statemint') {
+	if (specNameStr === 'westmint' || specNameStr === 'statemine' || specNameStr === 'statemint') {
 		assetsInfo = await fetchSystemParachainAssetInfo(api);
+		foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(api);
 	}
 
 	await api.disconnect();
@@ -111,6 +126,7 @@ const fetchChainInfo = async (
 	return {
 		tokens,
 		assetsInfo,
+		foreignAssetsInfo,
 		specName: specNameStr,
 	};
 };
@@ -156,7 +172,6 @@ const createChainRegistryFromRelay = async (
 	registry: TokenRegistry
 ): Promise<void> => {
 	const res = await fetchChainInfo(endpoint, true);
-	console.log('Res result: ', res);
 	if (res !== null) {
 		registry[chainName]['0'] = res;
 	}
@@ -217,6 +232,39 @@ const fetchSystemParachainAssetInfo = async (
 	}
 
 	return assetsInfo;
+};
+
+const fetchSystemParachainForeignAssetInfo = async (
+	api: ApiPromise
+): Promise<ForeignAssetsInfo> => {
+	const foreignAssetsInfo: ForeignAssetsInfo = {};
+
+	if (api.query.foreignAssets !== undefined) {
+		for (const [assetStorageKeyData] of await api.query.foreignAssets.asset.entries()) {
+			const assetData = assetStorageKeyData.toHuman();
+
+			if (assetData) {
+				const foreignAssetData = assetData as ForeignAssetStorageKeyData;
+
+				const id = parseInt(foreignAssetData[0].interior.X2[1].GeneralIndex);
+				const assetMetadata = (await api.query.foreignAssets.metadata(id)).toHuman();
+
+				if (assetMetadata) {
+					const metadata = assetMetadata as ForeignAssetMetadata;
+					const assetSymbol = metadata.symbol;
+	
+					if (assetSymbol != undefined) {
+						foreignAssetsInfo[id] = {
+							symbol: assetSymbol,
+							multiLocation: assetData as string
+						}
+					}
+				}
+			}
+		}
+	}
+
+	return foreignAssetsInfo;
 };
 
 main()
