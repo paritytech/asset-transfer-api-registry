@@ -64,16 +64,51 @@ interface AssetsInfo {
 }
 
 type ForeignAssetStorageKeyData = [
-	{ parents: number, interior: { X2: [{ Parachain: string | undefined }, { GeneralIndex: string }] } }
+	{
+		parents: number;
+		interior: {
+			X2: [{ Parachain: string | undefined }, { GeneralIndex: string }];
+		};
+	}
 ];
-type ForeignAssetMetadata =  { deposit: string, name: string, symbol: string, decimals: string, isFrozen: boolean };
+type ForeignAssetMetadata = {
+	deposit: string;
+	name: string;
+	symbol: string;
+	decimals: string;
+	isFrozen: boolean;
+};
 
 interface ForeignAssetsInfo {
 	[key: string]: {
-		symbol: string,
-		multiLocation: string
-	}
+		symbol: string;
+		multiLocation: string;
+	};
 }
+
+interface PoolInfo {
+	lpToken: string;
+}
+interface PoolNativeAsset {
+	parents: number;
+	interior: string;
+}
+
+interface PoolNonNativeAsset {
+	parents: number;
+	interior: {
+		X2: [{ PalletInstance: string }, { GeneralIndex: string }];
+	};
+}
+
+type PoolPairInfo = [[PoolNativeAsset, PoolNonNativeAsset]];
+
+type PoolPairsInfo = {
+	[key: string]: {
+		lpToken: string;
+		pairInfo: string;
+	};
+};
 
 /**
  * Fetch chain token and spec info.
@@ -118,10 +153,16 @@ const fetchChainInfo = async (
 
 	let assetsInfo: AssetsInfo = {};
 	let foreignAssetsInfo: ForeignAssetsInfo = {};
+	let poolPairsInfo: PoolPairsInfo = {};
 
-	if (specNameStr === 'westmint' || specNameStr === 'statemine' || specNameStr === 'statemint') {
+	if (
+		specNameStr === 'westmint' ||
+		specNameStr === 'statemine' ||
+		specNameStr === 'statemint'
+	) {
 		assetsInfo = await fetchSystemParachainAssetInfo(api);
 		foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(api);
+		poolPairsInfo = await fetchSystemParachainPoolAssetInfo(api);
 	}
 
 	await api.disconnect();
@@ -130,6 +171,7 @@ const fetchChainInfo = async (
 		tokens,
 		assetsInfo,
 		foreignAssetsInfo,
+		poolPairsInfo,
 		specName: specNameStr,
 		assetsPalletInstance: assetsPallet ? assetsPallet.index.toString() : null,
 	};
@@ -244,23 +286,27 @@ const fetchSystemParachainForeignAssetInfo = async (
 	const foreignAssetsInfo: ForeignAssetsInfo = {};
 
 	if (api.query.foreignAssets !== undefined) {
-		for (const [assetStorageKeyData] of await api.query.foreignAssets.asset.entries()) {
+		for (const [
+			assetStorageKeyData,
+		] of await api.query.foreignAssets.asset.entries()) {
 			const assetData = assetStorageKeyData.toHuman();
 
 			if (assetData) {
 				const foreignAssetData = assetData as ForeignAssetStorageKeyData;
 				const id = parseInt(foreignAssetData[0].interior.X2[1].GeneralIndex);
-				const assetMetadata = (await api.query.foreignAssets.metadata(id)).toHuman();
+				const assetMetadata = (
+					await api.query.foreignAssets.metadata(id)
+				).toHuman();
 
 				if (assetMetadata) {
 					const metadata = assetMetadata as ForeignAssetMetadata;
 					const assetSymbol = metadata.symbol;
-	
+
 					if (assetSymbol != undefined) {
 						foreignAssetsInfo[id] = {
 							symbol: assetSymbol,
-							multiLocation: assetData as string
-						}
+							multiLocation: assetData as string,
+						};
 					}
 				}
 			}
@@ -268,6 +314,34 @@ const fetchSystemParachainForeignAssetInfo = async (
 	}
 
 	return foreignAssetsInfo;
+};
+
+const fetchSystemParachainPoolAssetInfo = async (
+	api: ApiPromise
+): Promise<PoolPairsInfo> => {
+	const poolPairsInfo: PoolPairsInfo = {};
+
+	if (api.query.assetConversion !== undefined) {
+		for (const [
+			poolKeyStorageData,
+			PoolInfo,
+		] of await api.query.assetConversion.pools.entries()) {
+			const maybePoolData = poolKeyStorageData.toHuman();
+			const maybePoolInfo = PoolInfo.toHuman();
+
+			if (maybePoolData && maybePoolInfo) {
+				const poolData = maybePoolData as unknown as PoolPairInfo;
+
+				const pool = maybePoolInfo as unknown as PoolInfo;
+				poolPairsInfo[pool.lpToken] = {
+					lpToken: pool.lpToken,
+					pairInfo: poolData as unknown as string,
+				};
+			}
+		}
+	}
+
+	return poolPairsInfo;
 };
 
 main()
