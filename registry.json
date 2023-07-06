@@ -6,7 +6,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "polkadot"
+      "specName": "polkadot",
+      "assetsPalletInstance": null
     },
     "1000": {
       "tokens": [
@@ -42,7 +43,8 @@
         "20090103": "BTC"
       },
       "foreignAssetsInfo": {},
-      "specName": "statemint"
+      "specName": "statemint",
+      "assetsPalletInstance": "50"
     },
     "1001": {
       "tokens": [
@@ -50,7 +52,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "collectives"
+      "specName": "collectives",
+      "assetsPalletInstance": null
     },
     "1002": {
       "tokens": [
@@ -58,7 +61,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "bridge-hub-polkadot"
+      "specName": "bridge-hub-polkadot",
+      "assetsPalletInstance": null
     },
     "2000": {
       "tokens": [
@@ -69,7 +73,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "acala"
+      "specName": "acala",
+      "assetsPalletInstance": null
     },
     "2002": {
       "tokens": [
@@ -77,7 +82,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "clover-mainnet"
+      "specName": "clover-mainnet",
+      "assetsPalletInstance": "50"
     },
     "2004": {
       "tokens": [
@@ -85,7 +91,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "moonbeam"
+      "specName": "moonbeam",
+      "assetsPalletInstance": "104"
     },
     "2006": {
       "tokens": [
@@ -93,7 +100,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "astar"
+      "specName": "astar",
+      "assetsPalletInstance": "36"
     },
     "2007": {
       "tokens": [
@@ -101,7 +109,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "totem-parachain"
+      "specName": "totem-parachain",
+      "assetsPalletInstance": null
     },
     "2008": {
       "tokens": [
@@ -109,7 +118,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "polkadot-crust-parachain"
+      "specName": "polkadot-crust-parachain",
+      "assetsPalletInstance": "124"
     },
     "2011": {
       "tokens": [
@@ -117,7 +127,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "Equilibrium-parachain"
+      "specName": "Equilibrium-parachain",
+      "assetsPalletInstance": null
     },
     "2012": {
       "tokens": [
@@ -125,7 +136,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "parallel"
+      "specName": "parallel",
+      "assetsPalletInstance": "6"
     },
     "2013": {
       "tokens": [
@@ -133,7 +145,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "litentry-parachain"
+      "specName": "litentry-parachain",
+      "assetsPalletInstance": null
     },
     "2019": {
       "tokens": [
@@ -141,7 +154,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "composable"
+      "specName": "composable",
+      "assetsPalletInstance": "57"
     },
     "2021": {
       "tokens": [
@@ -149,7 +163,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "efinity"
+      "specName": "efinity",
+      "assetsPalletInstance": null
     },
     "2026": {
       "tokens": [
@@ -157,7 +172,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "nodle-para"
+      "specName": "nodle-para",
+      "assetsPalletInstance": null
     },
     "2030": {
       "tokens": [
@@ -165,7 +181,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "bifrost_polkadot"
+      "specName": "bifrost_polkadot",
+      "assetsPalletInstance": null
     },
     "2031": {
       "tokens": [
@@ -173,7 +190,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "centrifuge"
+      "specName": "centrifuge",
+      "assetsPalletInstance": null
     },
     "2032": {
       "tokens": [
@@ -186,7 +204,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "interlay-parachain"
+      "specName": "interlay-parachain",
+      "assetsPalletInstance": null
     },
     "2034": {
       "tokens": [
@@ -194,7 +213,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "hydradx"
+      "specName": "hydradx",
+      "assetsPalletInstance": null
     },
     "2035": {
       "tokens": [
@@ -202,7 +222,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "phala"
+      "specName": "phala",
+      "assetsPalletInstance": "42"
     },
     "2037": {
       "tokens": [
@@ -210,7 +231,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "unique"
+      "specName": "unique",
+      "assetsPalletInstance": null
     },
     "2039": {
       "tokens": [
@@ -218,7 +240,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "integritee-parachain"
+      "specName": "integritee-parachain",
+      "assetsPalletInstance": null
     },
     "2040": {
       "tokens": [
@@ -226,7 +249,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "node"
+      "specName": "node",
+      "assetsPalletInstance": "34"
     },
     "2043": {
       "tokens": [
@@ -234,7 +258,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "origintrail-parachain"
+      "specName": "origintrail-parachain",
+      "assetsPalletInstance": "14"
     },
     "2046": {
       "tokens": [
@@ -242,7 +267,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "Darwinia2"
+      "specName": "Darwinia2",
+      "assetsPalletInstance": "7"
     },
     "2048": {
       "tokens": [
@@ -250,7 +276,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "bitgreen-parachain"
+      "specName": "bitgreen-parachain",
+      "assetsPalletInstance": "52"
     },
     "2051": {
       "tokens": [
@@ -258,7 +285,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "ajuna"
+      "specName": "ajuna",
+      "assetsPalletInstance": null
     },
     "2052": {
       "tokens": [
@@ -266,7 +294,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "kylin"
+      "specName": "kylin",
+      "assetsPalletInstance": "12"
     },
     "2056": {
       "tokens": [
@@ -274,7 +303,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "avn-parachain"
+      "specName": "avn-parachain",
+      "assetsPalletInstance": "60"
     },
     "2086": {
       "tokens": [
@@ -282,7 +312,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "kilt-spiritnet"
+      "specName": "kilt-spiritnet",
+      "assetsPalletInstance": null
     },
     "2091": {
       "tokens": [
@@ -290,7 +321,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "frequency"
+      "specName": "frequency",
+      "assetsPalletInstance": null
     },
     "2092": {
       "tokens": [
@@ -298,7 +330,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "zeitgeist"
+      "specName": "zeitgeist",
+      "assetsPalletInstance": null
     },
     "2094": {
       "tokens": [
@@ -306,7 +339,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "pendulum"
+      "specName": "pendulum",
+      "assetsPalletInstance": null
     },
     "2104": {
       "tokens": [
@@ -314,7 +348,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "manta"
+      "specName": "manta",
+      "assetsPalletInstance": "45"
     }
   },
   "kusama": {
@@ -324,7 +359,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "kusama"
+      "specName": "kusama",
+      "assetsPalletInstance": null
     },
     "1000": {
       "tokens": [
@@ -505,7 +541,8 @@
           ]
         }
       },
-      "specName": "statemine"
+      "specName": "statemine",
+      "assetsPalletInstance": "50"
     },
     "1001": {
       "tokens": [
@@ -513,7 +550,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "encointer-parachain"
+      "specName": "encointer-parachain",
+      "assetsPalletInstance": null
     },
     "1002": {
       "tokens": [
@@ -521,7 +559,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "bridge-hub-kusama"
+      "specName": "bridge-hub-kusama",
+      "assetsPalletInstance": null
     },
     "2000": {
       "tokens": [
@@ -538,7 +577,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "karura"
+      "specName": "karura",
+      "assetsPalletInstance": null
     },
     "2001": {
       "tokens": [
@@ -554,7 +594,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "bifrost"
+      "specName": "bifrost",
+      "assetsPalletInstance": null
     },
     "2004": {
       "tokens": [
@@ -562,7 +603,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "khala"
+      "specName": "khala",
+      "assetsPalletInstance": "89"
     },
     "2007": {
       "tokens": [
@@ -570,13 +612,15 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "shiden"
+      "specName": "shiden",
+      "assetsPalletInstance": "36"
     },
     "2011": {
       "tokens": [],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "sora_ksm"
+      "specName": "sora_ksm",
+      "assetsPalletInstance": null
     },
     "2012": {
       "tokens": [
@@ -584,7 +628,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "crust-collator"
+      "specName": "crust-collator",
+      "assetsPalletInstance": "124"
     },
     "2015": {
       "tokens": [
@@ -592,7 +637,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "integritee-parachain"
+      "specName": "integritee-parachain",
+      "assetsPalletInstance": null
     },
     "2023": {
       "tokens": [
@@ -600,7 +646,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "moonriver"
+      "specName": "moonriver",
+      "assetsPalletInstance": "104"
     },
     "2024": {
       "tokens": [
@@ -614,7 +661,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "Gens-parachain"
+      "specName": "Gens-parachain",
+      "assetsPalletInstance": null
     },
     "2048": {
       "tokens": [
@@ -622,7 +670,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "robonomics"
+      "specName": "robonomics",
+      "assetsPalletInstance": "34"
     },
     "2084": {
       "tokens": [
@@ -630,7 +679,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "calamari"
+      "specName": "calamari",
+      "assetsPalletInstance": "45"
     },
     "2085": {
       "tokens": [
@@ -638,7 +688,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "heiko"
+      "specName": "heiko",
+      "assetsPalletInstance": "6"
     },
     "2087": {
       "tokens": [
@@ -646,7 +697,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "picasso"
+      "specName": "picasso",
+      "assetsPalletInstance": null
     },
     "2088": {
       "tokens": [
@@ -654,7 +706,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "altair"
+      "specName": "altair",
+      "assetsPalletInstance": null
     },
     "2090": {
       "tokens": [
@@ -662,7 +715,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "basilisk"
+      "specName": "basilisk",
+      "assetsPalletInstance": null
     },
     "2092": {
       "tokens": [
@@ -675,7 +729,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "kintsugi-parachain"
+      "specName": "kintsugi-parachain",
+      "assetsPalletInstance": null
     },
     "2095": {
       "tokens": [
@@ -683,7 +738,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "quartz"
+      "specName": "quartz",
+      "assetsPalletInstance": null
     },
     "2096": {
       "tokens": [
@@ -691,7 +747,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "pioneer-runtime"
+      "specName": "pioneer-runtime",
+      "assetsPalletInstance": null
     },
     "2105": {
       "tokens": [
@@ -699,7 +756,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "Crab2"
+      "specName": "Crab2",
+      "assetsPalletInstance": "7"
     },
     "2106": {
       "tokens": [
@@ -707,7 +765,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "litmus-parachain"
+      "specName": "litmus-parachain",
+      "assetsPalletInstance": null
     },
     "2110": {
       "tokens": [
@@ -715,7 +774,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "mangata-parachain"
+      "specName": "mangata-parachain",
+      "assetsPalletInstance": null
     },
     "2113": {
       "tokens": [
@@ -723,7 +783,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "kabocha-parachain"
+      "specName": "kabocha-parachain",
+      "assetsPalletInstance": null
     },
     "2114": {
       "tokens": [
@@ -731,7 +792,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "turing"
+      "specName": "turing",
+      "assetsPalletInstance": null
     },
     "2115": {
       "tokens": [
@@ -739,7 +801,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "DORA KSM Parachain"
+      "specName": "DORA KSM Parachain",
+      "assetsPalletInstance": null
     },
     "2119": {
       "tokens": [
@@ -747,7 +810,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "bajun"
+      "specName": "bajun",
+      "assetsPalletInstance": null
     },
     "2120": {
       "tokens": [
@@ -755,7 +819,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "shiden"
+      "specName": "shiden",
+      "assetsPalletInstance": "36"
     },
     "2123": {
       "tokens": [
@@ -763,7 +828,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "gm_parachain"
+      "specName": "gm_parachain",
+      "assetsPalletInstance": null
     },
     "2124": {
       "tokens": [
@@ -771,7 +837,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "amplitude"
+      "specName": "amplitude",
+      "assetsPalletInstance": null
     },
     "2125": {
       "tokens": [
@@ -779,7 +846,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "tinkernet_node"
+      "specName": "tinkernet_node",
+      "assetsPalletInstance": null
     },
     "2222": {
       "tokens": [
@@ -787,7 +855,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "ipci"
+      "specName": "ipci",
+      "assetsPalletInstance": "9"
     },
     "2240": {
       "tokens": [
@@ -795,7 +864,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "robonomics"
+      "specName": "robonomics",
+      "assetsPalletInstance": "34"
     }
   },
   "westend": {
@@ -805,7 +875,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "westend"
+      "specName": "westend",
+      "assetsPalletInstance": null
     },
     "1000": {
       "tokens": [
@@ -924,7 +995,8 @@
         "4000000000": "dde"
       },
       "foreignAssetsInfo": {},
-      "specName": "westmint"
+      "specName": "westmint",
+      "assetsPalletInstance": "50"
     },
     "1001": {
       "tokens": [
@@ -932,7 +1004,8 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
-      "specName": "collectives"
+      "specName": "collectives",
+      "assetsPalletInstance": null
     }
   }
 }
