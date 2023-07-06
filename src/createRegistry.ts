@@ -68,7 +68,6 @@ type ForeignAssetStorageKeyData = [
 ];
 type ForeignAssetMetadata =  { deposit: string, name: string, symbol: string, decimals: string, isFrozen: boolean };
 
-
 interface ForeignAssetsInfo {
 	[key: string]: {
 		symbol: string,
