@@ -64,56 +64,51 @@ interface AssetsInfo {
 }
 
 type ForeignAssetStorageKeyData = [
-	{ parents: number, interior: { X2: [{ Parachain: string | undefined }, { GeneralIndex: string }] } }
+	{
+		parents: number;
+		interior: {
+			X2: [{ Parachain: string | undefined }, { GeneralIndex: string }];
+		};
+	}
 ];
-type ForeignAssetMetadata =  { deposit: string, name: string, symbol: string, decimals: string, isFrozen: boolean };
+type AssetMetadata = {
+	deposit: string;
+	name: string;
+	symbol: string;
+	decimals: string;
+	isFrozen: boolean;
+};
 
 interface ForeignAssetsInfo {
 	[key: string]: {
-		symbol: string,
-		multiLocation: string
-	}
+		symbol: string;
+		multiLocation: string;
+	};
 }
 
-
-// interface PoolAssetType {
-// 	Map: { hashers: [] },
-// 	key: string,
-// 	value: string
-// }
-
-// interface PoolAssetMeta  {
-// 	name: string,
-// 	modifier: string,
-// 	type: PoolAssetType,
-// 	fallback: string,
-// 	docs : string[]
-// }
-
 interface PoolStorageKeyData {
-	owner: string,
-	issuer: string,
-	admin: string,
-	freezer: string,
-	supply: string,
-	deposit: string,
-	minBalance: string,
-	isSufficient: boolean,
-	accounts: string,
-	sufficients: string,
-	approvals: string,
-	status: string
+	owner: string;
+	issuer: string;
+	admin: string;
+	freezer: string;
+	supply: string;
+	deposit: string;
+	minBalance: string;
+	isSufficient: boolean;
+	accounts: string;
+	sufficients: string;
+	approvals: string;
+	status: string;
 }
 
 interface PoolAssetInfo {
-	symbol: string,
-	info: string
+	symbol: string;
+	info: string;
 }
 
 interface PoolAssetsInfo {
-	[key: string]: PoolAssetInfo
+	[key: string]: PoolAssetInfo;
 }
-
 
 /**
  * Fetch chain token and spec info.
@@ -158,10 +153,16 @@ const fetchChainInfo = async (
 
 	let assetsInfo: AssetsInfo = {};
 	let foreignAssetsInfo: ForeignAssetsInfo = {};
+	let poolAssetsInfo: PoolAssetsInfo = {};
 
-	if (specNameStr === 'westmint' || specNameStr === 'statemine' || specNameStr === 'statemint') {
+	if (
+		specNameStr === 'westmint' ||
+		specNameStr === 'statemine' ||
+		specNameStr === 'statemint'
+	) {
 		assetsInfo = await fetchSystemParachainAssetInfo(api);
 		foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(api);
+		poolAssetsInfo = await fetchSystemParachainPoolAssetInfo(api);
 	}
 
 	await api.disconnect();
@@ -170,6 +171,7 @@ const fetchChainInfo = async (
 		tokens,
 		assetsInfo,
 		foreignAssetsInfo,
+		poolAssetsInfo,
 		specName: specNameStr,
 		assetsPalletInstance: assetsPallet ? assetsPallet.index.toString() : null,
 	};
@@ -284,23 +286,27 @@ const fetchSystemParachainForeignAssetInfo = async (
 	const foreignAssetsInfo: ForeignAssetsInfo = {};
 
 	if (api.query.foreignAssets !== undefined) {
-		for (const [assetStorageKeyData] of await api.query.foreignAssets.asset.entries()) {
+		for (const [
+			assetStorageKeyData,
+		] of await api.query.foreignAssets.asset.entries()) {
 			const assetData = assetStorageKeyData.toHuman();
 
 			if (assetData) {
 				const foreignAssetData = assetData as ForeignAssetStorageKeyData;
 				const id = parseInt(foreignAssetData[0].interior.X2[1].GeneralIndex);
-				const assetMetadata = (await api.query.foreignAssets.metadata(id)).toHuman();
+				const assetMetadata = (
+					await api.query.foreignAssets.metadata(id)
+				).toHuman();
 
 				if (assetMetadata) {
-					const metadata = assetMetadata as ForeignAssetMetadata;
+					const metadata = assetMetadata as AssetMetadata;
 					const assetSymbol = metadata.symbol;
-	
+
 					if (assetSymbol != undefined) {
 						foreignAssetsInfo[id] = {
 							symbol: assetSymbol,
-							multiLocation: assetData as string
-						}
+							multiLocation: assetData as string,
+						};
 					}
 				}
 			}
@@ -315,31 +321,38 @@ const fetchSystemParachainPoolAssetInfo = async (
 ): Promise<PoolAssetsInfo> => {
 	const poolAssetsInfo: PoolAssetsInfo = {};
 
-	if (api.query.foreignAssets !== undefined) {
-		for (const [assetStorageKeyData] of await api.query.foreignAssets.asset.entries()) {
-			const assetData = assetStorageKeyData.toHuman();
+	if (api.query.poolAssets !== undefined) {
+		for (const [
+			poolAssetStorageKeyData,
+			poolInfo,
+		] of await api.query.poolAssets.asset.entries()) {
+			const maybePoolAssetData = poolAssetStorageKeyData.toHuman();
+			const maybePoolInfo = poolInfo.toHuman();
 
-			if (assetData) {
-				const foreignAssetData = assetData as ForeignAssetStorageKeyData;
-				const id = parseInt(foreignAssetData[0].interior.X2[1].GeneralIndex);
-				const assetMetadata = (await api.query.foreignAssets.metadata(id)).toHuman();
+			if (maybePoolAssetData && maybePoolInfo) {
+				const poolAssetId = (maybePoolAssetData as string[])[0];
+				const poolAssetInfo = maybePoolInfo as unknown as PoolStorageKeyData;
+				const id = parseInt(poolAssetId);
+				const poolAssetMetadata = (
+					await api.query.poolAssets.metadata(id)
+				).toHuman();
 
-				if (assetMetadata) {
-					const metadata = assetMetadata as ForeignAssetMetadata;
+				if (poolAssetMetadata) {
+					const metadata = poolAssetMetadata as AssetMetadata;
 					const assetSymbol = metadata.symbol;
-	
+
 					if (assetSymbol != undefined) {
-						foreignAssetsInfo[id] = {
+						poolAssetsInfo[id] = {
 							symbol: assetSymbol,
-							multiLocation: assetData as string
-						}
+							info: poolAssetInfo as unknown as string,
+						};
 					}
 				}
 			}
 		}
 	}
 
-	return foreignAssetsInfo;
+	return poolAssetsInfo;
 };
 
 main()
