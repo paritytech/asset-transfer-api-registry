@@ -75,6 +75,46 @@ interface ForeignAssetsInfo {
 	}
 }
 
+
+// interface PoolAssetType {
+// 	Map: { hashers: [] },
+// 	key: string,
+// 	value: string
+// }
+
+// interface PoolAssetMeta  {
+// 	name: string,
+// 	modifier: string,
+// 	type: PoolAssetType,
+// 	fallback: string,
+// 	docs : string[]
+// }
+
+interface PoolStorageKeyData {
+	owner: string,
+	issuer: string,
+	admin: string,
+	freezer: string,
+	supply: string,
+	deposit: string,
+	minBalance: string,
+	isSufficient: boolean,
+	accounts: string,
+	sufficients: string,
+	approvals: string,
+	status: string
+}
+
+interface PoolAssetInfo {
+	symbol: string,
+	info: string
+}
+
+interface PoolAssetsInfo {
+	[key: string]: PoolAssetInfo
+}
+
+
 /**
  * Fetch chain token and spec info.
  *
@@ -242,6 +282,38 @@ const fetchSystemParachainForeignAssetInfo = async (
 	api: ApiPromise
 ): Promise<ForeignAssetsInfo> => {
 	const foreignAssetsInfo: ForeignAssetsInfo = {};
+
+	if (api.query.foreignAssets !== undefined) {
+		for (const [assetStorageKeyData] of await api.query.foreignAssets.asset.entries()) {
+			const assetData = assetStorageKeyData.toHuman();
+
+			if (assetData) {
+				const foreignAssetData = assetData as ForeignAssetStorageKeyData;
+				const id = parseInt(foreignAssetData[0].interior.X2[1].GeneralIndex);
+				const assetMetadata = (await api.query.foreignAssets.metadata(id)).toHuman();
+
+				if (assetMetadata) {
+					const metadata = assetMetadata as ForeignAssetMetadata;
+					const assetSymbol = metadata.symbol;
+	
+					if (assetSymbol != undefined) {
+						foreignAssetsInfo[id] = {
+							symbol: assetSymbol,
+							multiLocation: assetData as string
+						}
+					}
+				}
+			}
+		}
+	}
+
+	return foreignAssetsInfo;
+};
+
+const fetchSystemParachainPoolAssetInfo = async (
+	api: ApiPromise
+): Promise<PoolAssetsInfo> => {
+	const poolAssetsInfo: PoolAssetsInfo = {};
 
 	if (api.query.foreignAssets !== undefined) {
 		for (const [assetStorageKeyData] of await api.query.foreignAssets.asset.entries()) {
