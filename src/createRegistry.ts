@@ -272,7 +272,7 @@ const fetchSystemParachainForeignAssetInfo = async (
 			const foreignAssetData = assetStorageKeyData.toHuman();
 
 			if (foreignAssetData) {
-				// remove any commas from key values e.g. Parachain: 2,125 -> Parachain: 2125
+				// remove any commas from multilocation key values e.g. Parachain: 2,125 -> Parachain: 2125
 				const foreignAssetMultiLocationStr = JSON.stringify(
 					foreignAssetData[0]
 				).replace(/(\d),/g, '$1');
@@ -290,10 +290,10 @@ const fetchSystemParachainForeignAssetInfo = async (
 					const assetSymbol = metadata.symbol;
 					const assetName = metadata.name;
 
-					// if the symbol exists in metadate use it, otherwise uses the hex of the multilocation as the key
-					const foreignAssetsInfoKey = assetSymbol ? assetSymbol : hexId;
+					// if the symbol exists in metadata use it, otherwise uses the hex of the multilocation as the key
+					const foreignAssetInfoKey = assetSymbol ? assetSymbol : hexId;
 
-					foreignAssetsInfo[foreignAssetsInfoKey] = {
+					foreignAssetsInfo[foreignAssetInfoKey] = {
 						symbol: assetSymbol,
 						name: assetName,
 						multiLocation: JSON.stringify(foreignAssetMultiLocation.toJSON()),
