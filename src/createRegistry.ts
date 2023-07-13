@@ -64,15 +64,45 @@ interface AssetsInfo {
 }
 
 // type ForeignAssetStorageKeyData = MultiLocation[];
-type ForeignAssetMetadata =  { deposit: string, name: string, symbol: string, decimals: string, isFrozen: boolean };
+type ForeignAssetMetadata = {
+	deposit: string;
+	name: string;
+	symbol: string;
+	decimals: string;
+	isFrozen: boolean;
+};
 
 interface ForeignAssetsInfo {
 	[key: string]: {
-		symbol: string,
-		name: string,
-		multiLocation: string
-	}
+		symbol: string;
+		name: string;
+		multiLocation: string;
+	};
 }
+
+interface PoolInfo {
+	lpToken: string;
+}
+interface PoolNativeAsset {
+	parents: number;
+	interior: string;
+}
+
+interface PoolNonNativeAsset {
+	parents: number;
+	interior: {
+		X2: [{ PalletInstance: string }, { GeneralIndex: string }];
+	};
+}
+
+type PoolPairInfo = [[PoolNativeAsset, PoolNonNativeAsset]];
+
+type PoolPairsInfo = {
+	[key: string]: {
+		lpToken: string;
+		pairInfo: string;
+	};
+};
 
 /**
  * Fetch chain token and spec info.
@@ -117,10 +147,16 @@ const fetchChainInfo = async (
 
 	let assetsInfo: AssetsInfo = {};
 	let foreignAssetsInfo: ForeignAssetsInfo = {};
+	let poolPairsInfo: PoolPairsInfo = {};
 
-	if (specNameStr === 'westmint' || specNameStr === 'statemine' || specNameStr === 'statemint') {
+	if (
+		specNameStr === 'westmint' ||
+		specNameStr === 'statemine' ||
+		specNameStr === 'statemint'
+	) {
 		assetsInfo = await fetchSystemParachainAssetInfo(api);
 		foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(api);
+		poolPairsInfo = await fetchSystemParachainPoolAssetInfo(api);
 	}
 
 	await api.disconnect();
@@ -129,6 +165,7 @@ const fetchChainInfo = async (
 		tokens,
 		assetsInfo,
 		foreignAssetsInfo,
+		poolPairsInfo,
 		specName: specNameStr,
 		assetsPalletInstance: assetsPallet ? assetsPallet.index.toString() : null,
 	};
@@ -243,18 +280,24 @@ const fetchSystemParachainForeignAssetInfo = async (
 	const foreignAssetsInfo: ForeignAssetsInfo = {};
 
 	if (api.query.foreignAssets !== undefined) {
-		for (const [assetStorageKeyData] of await api.query.foreignAssets.asset.entries()) {
+		for (const [
+			assetStorageKeyData,
+		] of await api.query.foreignAssets.asset.entries()) {
 			const foreignAssetData = assetStorageKeyData.toHuman();
 
 			if (foreignAssetData) {
 				// remove any commas from key values e.g. Parachain: 2,125 -> Parachain: 2125
-				const foreignAssetMultiLocationStr = JSON.stringify(foreignAssetData[0]).replace(
-					/(\d),/g,
-					'$1'
+				const foreignAssetMultiLocationStr = JSON.stringify(
+					foreignAssetData[0]
+				).replace(/(\d),/g, '$1');
+				const foreignAssetMultiLocation = api.registry.createType(
+					'MultiLocation',
+					JSON.parse(foreignAssetMultiLocationStr)
 				);
-				const foreignAssetMultiLocation = api.registry.createType('MultiLocation', JSON.parse(foreignAssetMultiLocationStr));
 				const hexId = foreignAssetMultiLocation.toHex();
-				const assetMetadata = (await api.query.foreignAssets.metadata(foreignAssetMultiLocation)).toHuman();
+				const assetMetadata = (
+					await api.query.foreignAssets.metadata(foreignAssetMultiLocation)
+				).toHuman();
 
 				if (assetMetadata) {
 					const metadata = assetMetadata as ForeignAssetMetadata;
@@ -262,21 +305,47 @@ const fetchSystemParachainForeignAssetInfo = async (
 					const assetName = metadata.name;
 
 					// if the symbol exists in metadate use it, otherwise uses the hex of the multilocation as the key
-					const foreignAssetsInfoKey = assetSymbol
-					? assetSymbol 
-					: hexId;
+					const foreignAssetsInfoKey = assetSymbol ? assetSymbol : hexId;
 
 					foreignAssetsInfo[foreignAssetsInfoKey] = {
 						symbol: assetSymbol,
 						name: assetName,
-						multiLocation: JSON.stringify(foreignAssetMultiLocation.toJSON())
-					}
+						multiLocation: JSON.stringify(foreignAssetMultiLocation.toJSON()),
+					};
 				}
 			}
 		}
 	}
 
 	return foreignAssetsInfo;
+};
+
+const fetchSystemParachainPoolAssetInfo = async (
+	api: ApiPromise
+): Promise<PoolPairsInfo> => {
+	const poolPairsInfo: PoolPairsInfo = {};
+
+	if (api.query.assetConversion !== undefined) {
+		for (const [
+			poolKeyStorageData,
+			PoolInfo,
+		] of await api.query.assetConversion.pools.entries()) {
+			const maybePoolData = poolKeyStorageData.toHuman();
+			const maybePoolInfo = PoolInfo.toHuman();
+
+			if (maybePoolData && maybePoolInfo) {
+				const poolData = maybePoolData as unknown as PoolPairInfo;
+
+				const pool = maybePoolInfo as unknown as PoolInfo;
+				poolPairsInfo[pool.lpToken] = {
+					lpToken: pool.lpToken,
+					pairInfo: poolData as unknown as string,
+				};
+			}
+		}
+	}
+
+	return poolPairsInfo;
 };
 
 main()

@@ -6,6 +6,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "polkadot",
       "assetsPalletInstance": null
     },
@@ -44,6 +45,7 @@
         "20090103": "BTC"
       },
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "statemint",
       "assetsPalletInstance": "50"
     },
@@ -53,6 +55,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "collectives",
       "assetsPalletInstance": null
     },
@@ -62,6 +65,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "bridge-hub-polkadot",
       "assetsPalletInstance": null
     },
@@ -74,6 +78,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "acala",
       "assetsPalletInstance": null
     },
@@ -83,6 +88,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "clover-mainnet",
       "assetsPalletInstance": "50"
     },
@@ -92,6 +98,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "moonbeam",
       "assetsPalletInstance": "104"
     },
@@ -101,6 +108,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "astar",
       "assetsPalletInstance": "36"
     },
@@ -110,6 +118,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "totem-parachain",
       "assetsPalletInstance": null
     },
@@ -119,6 +128,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "polkadot-crust-parachain",
       "assetsPalletInstance": "124"
     },
@@ -128,6 +138,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "Equilibrium-parachain",
       "assetsPalletInstance": null
     },
@@ -137,6 +148,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "parallel",
       "assetsPalletInstance": "6"
     },
@@ -146,6 +158,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "litentry-parachain",
       "assetsPalletInstance": null
     },
@@ -155,6 +168,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "composable",
       "assetsPalletInstance": "57"
     },
@@ -164,6 +178,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "nodle-para",
       "assetsPalletInstance": null
     },
@@ -173,6 +188,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "bifrost_polkadot",
       "assetsPalletInstance": null
     },
@@ -182,6 +198,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "centrifuge",
       "assetsPalletInstance": null
     },
@@ -196,6 +213,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "interlay-parachain",
       "assetsPalletInstance": null
     },
@@ -205,6 +223,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "hydradx",
       "assetsPalletInstance": null
     },
@@ -214,6 +233,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "phala",
       "assetsPalletInstance": "42"
     },
@@ -223,6 +243,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "unique",
       "assetsPalletInstance": null
     },
@@ -232,6 +253,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "integritee-parachain",
       "assetsPalletInstance": null
     },
@@ -241,6 +263,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "node",
       "assetsPalletInstance": "34"
     },
@@ -250,6 +273,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "origintrail-parachain",
       "assetsPalletInstance": "14"
     },
@@ -259,6 +283,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "Darwinia2",
       "assetsPalletInstance": "7"
     },
@@ -268,6 +293,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "bitgreen-parachain",
       "assetsPalletInstance": "52"
     },
@@ -277,6 +303,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "ajuna",
       "assetsPalletInstance": null
     },
@@ -286,6 +313,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "kylin",
       "assetsPalletInstance": "12"
     },
@@ -295,6 +323,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "avn-parachain",
       "assetsPalletInstance": "60"
     },
@@ -304,6 +333,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "kilt-spiritnet",
       "assetsPalletInstance": null
     },
@@ -313,6 +343,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "frequency",
       "assetsPalletInstance": null
     },
@@ -322,6 +353,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "zeitgeist",
       "assetsPalletInstance": null
     },
@@ -331,6 +363,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "pendulum",
       "assetsPalletInstance": null
     },
@@ -340,6 +373,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "subsocial-parachain",
       "assetsPalletInstance": null
     },
@@ -349,6 +383,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "manta",
       "assetsPalletInstance": "45"
     }
@@ -360,6 +395,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "kusama",
       "assetsPalletInstance": null
     },
@@ -529,6 +565,7 @@
           "multiLocation": "{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2125},{\"generalIndex\":0}]}}"
         }
       },
+      "poolPairsInfo": {},
       "specName": "statemine",
       "assetsPalletInstance": "50"
     },
@@ -538,6 +575,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "encointer-parachain",
       "assetsPalletInstance": null
     },
@@ -547,6 +585,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "bridge-hub-kusama",
       "assetsPalletInstance": null
     },
@@ -565,6 +604,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "karura",
       "assetsPalletInstance": null
     },
@@ -582,6 +622,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "bifrost",
       "assetsPalletInstance": null
     },
@@ -591,6 +632,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "khala",
       "assetsPalletInstance": "89"
     },
@@ -600,6 +642,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "shiden",
       "assetsPalletInstance": "36"
     },
@@ -607,6 +650,7 @@
       "tokens": [],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "sora_ksm",
       "assetsPalletInstance": null
     },
@@ -616,6 +660,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "crust-collator",
       "assetsPalletInstance": "124"
     },
@@ -625,6 +670,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "integritee-parachain",
       "assetsPalletInstance": null
     },
@@ -634,6 +680,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "moonriver",
       "assetsPalletInstance": "104"
     },
@@ -649,6 +696,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "Gens-parachain",
       "assetsPalletInstance": null
     },
@@ -658,6 +706,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "robonomics",
       "assetsPalletInstance": "34"
     },
@@ -667,6 +716,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "calamari",
       "assetsPalletInstance": "45"
     },
@@ -676,6 +726,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "heiko",
       "assetsPalletInstance": "6"
     },
@@ -685,6 +736,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "picasso",
       "assetsPalletInstance": null
     },
@@ -694,6 +746,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "altair",
       "assetsPalletInstance": null
     },
@@ -703,6 +756,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "basilisk",
       "assetsPalletInstance": null
     },
@@ -717,6 +771,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "kintsugi-parachain",
       "assetsPalletInstance": null
     },
@@ -726,6 +781,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "quartz",
       "assetsPalletInstance": null
     },
@@ -735,6 +791,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "pioneer-runtime",
       "assetsPalletInstance": null
     },
@@ -744,6 +801,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "Crab2",
       "assetsPalletInstance": "7"
     },
@@ -753,6 +811,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "litmus-parachain",
       "assetsPalletInstance": null
     },
@@ -762,6 +821,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "mangata-parachain",
       "assetsPalletInstance": null
     },
@@ -771,6 +831,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "kabocha-parachain",
       "assetsPalletInstance": null
     },
@@ -780,6 +841,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "turing",
       "assetsPalletInstance": null
     },
@@ -789,6 +851,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "DORA KSM Parachain",
       "assetsPalletInstance": null
     },
@@ -798,6 +861,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "bajun",
       "assetsPalletInstance": null
     },
@@ -807,6 +871,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "shiden",
       "assetsPalletInstance": "36"
     },
@@ -818,6 +883,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "gm_parachain",
       "assetsPalletInstance": null
     },
@@ -827,6 +893,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "amplitude",
       "assetsPalletInstance": null
     },
@@ -836,6 +903,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "tinkernet_node",
       "assetsPalletInstance": null
     },
@@ -845,6 +913,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "ipci",
       "assetsPalletInstance": "9"
     },
@@ -854,6 +923,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "robonomics",
       "assetsPalletInstance": "34"
     },
@@ -863,6 +933,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "peaq-node-krest",
       "assetsPalletInstance": null
     }
@@ -874,6 +945,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "westend",
       "assetsPalletInstance": null
     },
@@ -996,6 +1068,80 @@
         "4000000000": "dde"
       },
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {
+        "0": {
+          "lpToken": "0",
+          "pairInfo": [
+            [
+              {
+                "parents": "0",
+                "interior": "Here"
+              },
+              {
+                "parents": "0",
+                "interior": {
+                  "X2": [
+                    {
+                      "PalletInstance": "50"
+                    },
+                    {
+                      "GeneralIndex": "1,977"
+                    }
+                  ]
+                }
+              }
+            ]
+          ]
+        },
+        "1": {
+          "lpToken": "1",
+          "pairInfo": [
+            [
+              {
+                "parents": "0",
+                "interior": "Here"
+              },
+              {
+                "parents": "0",
+                "interior": {
+                  "X2": [
+                    {
+                      "PalletInstance": "50"
+                    },
+                    {
+                      "GeneralIndex": "8"
+                    }
+                  ]
+                }
+              }
+            ]
+          ]
+        },
+        "2": {
+          "lpToken": "2",
+          "pairInfo": [
+            [
+              {
+                "parents": "0",
+                "interior": "Here"
+              },
+              {
+                "parents": "0",
+                "interior": {
+                  "X2": [
+                    {
+                      "PalletInstance": "50"
+                    },
+                    {
+                      "GeneralIndex": "1,114"
+                    }
+                  ]
+                }
+              }
+            ]
+          ]
+        }
+      },
       "specName": "westmint",
       "assetsPalletInstance": "50"
     },
@@ -1005,6 +1151,7 @@
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
       "specName": "collectives",
       "assetsPalletInstance": null
     }
