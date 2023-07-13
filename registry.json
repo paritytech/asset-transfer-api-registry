@@ -26,6 +26,7 @@
         "9": "PINT",
         "10": "BEAST",
         "11": "web3",
+        "12": "USDcp",
         "15": "Meme",
         "21": "WBTC",
         "77": "TRQ",
@@ -170,16 +171,6 @@
       "poolPairsInfo": {},
       "specName": "composable",
       "assetsPalletInstance": "57"
-    },
-    "2021": {
-      "tokens": [
-        "EFI"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "efinity",
-      "assetsPalletInstance": null
     },
     "2026": {
       "tokens": [
@@ -376,6 +367,16 @@
       "specName": "pendulum",
       "assetsPalletInstance": null
     },
+    "2101": {
+      "tokens": [
+        "SUB"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "subsocial-parachain",
+      "assetsPalletInstance": null
+    },
     "2104": {
       "tokens": [
         "MANTA"
@@ -558,23 +559,10 @@
         "4294967291": "PRIME"
       },
       "foreignAssetsInfo": {
-        "0": {
-          "symbol": "",
-          "multiLocation": [
-            {
-              "parents": "1",
-              "interior": {
-                "X2": [
-                  {
-                    "Parachain": "2,125"
-                  },
-                  {
-                    "GeneralIndex": "0"
-                  }
-                ]
-              }
-            }
-          ]
+        "TNKR": {
+          "symbol": "TNKR",
+          "name": "Tinkernet",
+          "multiLocation": "{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2125},{\"generalIndex\":0}]}}"
         }
       },
       "poolPairsInfo": {},
@@ -889,7 +877,9 @@
     },
     "2123": {
       "tokens": [
-        "FREN"
+        "FREN",
+        "GM",
+        "GN"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
@@ -936,6 +926,16 @@
       "poolPairsInfo": {},
       "specName": "robonomics",
       "assetsPalletInstance": "34"
+    },
+    "2241": {
+      "tokens": [
+        "KREST"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "peaq-node-krest",
+      "assetsPalletInstance": null
     }
   },
   "westend": {
@@ -977,6 +977,7 @@
         "22": "KO",
         "23": "UDT",
         "24": "AAA",
+        "25": "BTC",
         "42": "HG2G",
         "55": "PER",
         "60": "AAA",
@@ -1023,6 +1024,7 @@
         "1023": "qqnihao",
         "1024": "qqnihao",
         "1111": "TESTY",
+        "1114": "USDC",
         "1122": "dmd",
         "1234": "TEST",
         "1337": "NACHO",
@@ -1069,51 +1071,15 @@
       "poolPairsInfo": {
         "0": {
           "lpToken": "0",
-          "pairInfo": [
-            [
-              {
-                "parents": "0",
-                "interior": "Here"
-              },
-              {
-                "parents": "0",
-                "interior": {
-                  "X2": [
-                    {
-                      "PalletInstance": "50"
-                    },
-                    {
-                      "GeneralIndex": "1,977"
-                    }
-                  ]
-                }
-              }
-            ]
-          ]
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":1977}]}}]]"
         },
         "1": {
           "lpToken": "1",
-          "pairInfo": [
-            [
-              {
-                "parents": "0",
-                "interior": "Here"
-              },
-              {
-                "parents": "0",
-                "interior": {
-                  "X2": [
-                    {
-                      "PalletInstance": "50"
-                    },
-                    {
-                      "GeneralIndex": "8"
-                    }
-                  ]
-                }
-              }
-            ]
-          ]
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":8}]}}]]"
+        },
+        "2": {
+          "lpToken": "2",
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":1114}]}}]]"
         }
       },
       "specName": "westmint",

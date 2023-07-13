@@ -63,14 +63,6 @@ interface AssetsInfo {
 	[key: string]: string;
 }
 
-type ForeignAssetStorageKeyData = [
-	{
-		parents: number;
-		interior: {
-			X2: [{ Parachain: string | undefined }, { GeneralIndex: string }];
-		};
-	}
-];
 type ForeignAssetMetadata = {
 	deposit: string;
 	name: string;
@@ -82,6 +74,7 @@ type ForeignAssetMetadata = {
 interface ForeignAssetsInfo {
 	[key: string]: {
 		symbol: string;
+		name: string;
 		multiLocation: string;
 	};
 }
@@ -89,19 +82,6 @@ interface ForeignAssetsInfo {
 interface PoolInfo {
 	lpToken: string;
 }
-interface PoolNativeAsset {
-	parents: number;
-	interior: string;
-}
-
-interface PoolNonNativeAsset {
-	parents: number;
-	interior: {
-		X2: [{ PalletInstance: string }, { GeneralIndex: string }];
-	};
-}
-
-type PoolPairInfo = [[PoolNativeAsset, PoolNonNativeAsset]];
 
 type PoolPairsInfo = {
 	[key: string]: {
@@ -162,7 +142,7 @@ const fetchChainInfo = async (
 	) {
 		assetsInfo = await fetchSystemParachainAssetInfo(api);
 		foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(api);
-		poolPairsInfo = await fetchSystemParachainPoolAssetInfo(api);
+		poolPairsInfo = await fetchSystemParachainAssetConversionPoolInfo(api);
 	}
 
 	await api.disconnect();
@@ -289,25 +269,35 @@ const fetchSystemParachainForeignAssetInfo = async (
 		for (const [
 			assetStorageKeyData,
 		] of await api.query.foreignAssets.asset.entries()) {
-			const assetData = assetStorageKeyData.toHuman();
+			const foreignAssetData = assetStorageKeyData.toHuman();
 
-			if (assetData) {
-				const foreignAssetData = assetData as ForeignAssetStorageKeyData;
-				const id = parseInt(foreignAssetData[0].interior.X2[1].GeneralIndex);
+			if (foreignAssetData) {
+				// remove any commas from key values e.g. Parachain: 2,125 -> Parachain: 2125
+				const foreignAssetMultiLocationStr = JSON.stringify(
+					foreignAssetData[0]
+				).replace(/(\d),/g, '$1');
+				const foreignAssetMultiLocation = api.registry.createType(
+					'MultiLocation',
+					JSON.parse(foreignAssetMultiLocationStr)
+				);
+				const hexId = foreignAssetMultiLocation.toHex();
 				const assetMetadata = (
-					await api.query.foreignAssets.metadata(id)
+					await api.query.foreignAssets.metadata(foreignAssetMultiLocation)
 				).toHuman();
 
 				if (assetMetadata) {
 					const metadata = assetMetadata as ForeignAssetMetadata;
 					const assetSymbol = metadata.symbol;
+					const assetName = metadata.name;
 
-					if (assetSymbol != undefined) {
-						foreignAssetsInfo[id] = {
-							symbol: assetSymbol,
-							multiLocation: assetData as string,
-						};
-					}
+					// if the symbol exists in metadate use it, otherwise uses the hex of the multilocation as the key
+					const foreignAssetsInfoKey = assetSymbol ? assetSymbol : hexId;
+
+					foreignAssetsInfo[foreignAssetsInfoKey] = {
+						symbol: assetSymbol,
+						name: assetName,
+						multiLocation: JSON.stringify(foreignAssetMultiLocation.toJSON()),
+					};
 				}
 			}
 		}
@@ -316,7 +306,7 @@ const fetchSystemParachainForeignAssetInfo = async (
 	return foreignAssetsInfo;
 };
 
-const fetchSystemParachainPoolAssetInfo = async (
+const fetchSystemParachainAssetConversionPoolInfo = async (
 	api: ApiPromise
 ): Promise<PoolPairsInfo> => {
 	const poolPairsInfo: PoolPairsInfo = {};
@@ -330,12 +320,24 @@ const fetchSystemParachainPoolAssetInfo = async (
 			const maybePoolInfo = PoolInfo.toHuman();
 
 			if (maybePoolData && maybePoolInfo) {
-				const poolData = maybePoolData as unknown as PoolPairInfo;
+				// remove any commas from multilocation key values e.g. Parachain: 2,125 -> Parachain: 2125
+				const poolAssetDataStr = JSON.stringify(maybePoolData).replace(
+					/(\d),/g,
+					'$1'
+				);
 
+				const palletAssetConversionNativeOrAssetIdData =
+					api.registry.createType(
+						'Vec<Vec<MultiLocation>>',
+						JSON.parse(poolAssetDataStr)
+					);
 				const pool = maybePoolInfo as unknown as PoolInfo;
+
 				poolPairsInfo[pool.lpToken] = {
 					lpToken: pool.lpToken,
-					pairInfo: poolData as unknown as string,
+					pairInfo: JSON.stringify(
+						palletAssetConversionNativeOrAssetIdData.toJSON()
+					),
 				};
 			}
 		}
