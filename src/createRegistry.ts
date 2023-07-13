@@ -63,7 +63,6 @@ interface AssetsInfo {
 	[key: string]: string;
 }
 
-// type ForeignAssetStorageKeyData = MultiLocation[];
 type ForeignAssetMetadata = {
 	deposit: string;
 	name: string;
@@ -83,19 +82,6 @@ interface ForeignAssetsInfo {
 interface PoolInfo {
 	lpToken: string;
 }
-interface PoolNativeAsset {
-	parents: number;
-	interior: string;
-}
-
-interface PoolNonNativeAsset {
-	parents: number;
-	interior: {
-		X2: [{ PalletInstance: string }, { GeneralIndex: string }];
-	};
-}
-
-type PoolPairInfo = [[PoolNativeAsset, PoolNonNativeAsset]];
 
 type PoolPairsInfo = {
 	[key: string]: {
@@ -156,7 +142,7 @@ const fetchChainInfo = async (
 	) {
 		assetsInfo = await fetchSystemParachainAssetInfo(api);
 		foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(api);
-		poolPairsInfo = await fetchSystemParachainPoolAssetInfo(api);
+		poolPairsInfo = await fetchSystemParachainAssetConversionPoolInfo(api);
 	}
 
 	await api.disconnect();
@@ -320,7 +306,7 @@ const fetchSystemParachainForeignAssetInfo = async (
 	return foreignAssetsInfo;
 };
 
-const fetchSystemParachainPoolAssetInfo = async (
+const fetchSystemParachainAssetConversionPoolInfo = async (
 	api: ApiPromise
 ): Promise<PoolPairsInfo> => {
 	const poolPairsInfo: PoolPairsInfo = {};
@@ -334,12 +320,24 @@ const fetchSystemParachainPoolAssetInfo = async (
 			const maybePoolInfo = PoolInfo.toHuman();
 
 			if (maybePoolData && maybePoolInfo) {
-				const poolData = maybePoolData as unknown as PoolPairInfo;
+				// remove any commas from multilocation key values e.g. Parachain: 2,125 -> Parachain: 2125
+				const poolAssetDataStr = JSON.stringify(maybePoolData).replace(
+					/(\d),/g,
+					'$1'
+				);
 
+				const palletAssetConversionNativeOrAssetIdData =
+					api.registry.createType(
+						'Vec<Vec<MultiLocation>>',
+						JSON.parse(poolAssetDataStr)
+					);
 				const pool = maybePoolInfo as unknown as PoolInfo;
+
 				poolPairsInfo[pool.lpToken] = {
 					lpToken: pool.lpToken,
-					pairInfo: poolData as unknown as string,
+					pairInfo: JSON.stringify(
+						palletAssetConversionNativeOrAssetIdData.toJSON()
+					),
 				};
 			}
 		}
