@@ -1075,59 +1075,11 @@
         },
         "1": {
           "lpToken": "1",
-<<<<<<< HEAD
-          "pairInfo": [
-            [
-              {
-                "parents": "0",
-                "interior": "Here"
-              },
-              {
-                "parents": "0",
-                "interior": {
-                  "X2": [
-                    {
-                      "PalletInstance": "50"
-                    },
-                    {
-                      "GeneralIndex": "8"
-                    }
-                  ]
-                }
-              }
-            ]
-          ]
-        },
-        "2": {
-          "lpToken": "2",
-          "pairInfo": [
-            [
-              {
-                "parents": "0",
-                "interior": "Here"
-              },
-              {
-                "parents": "0",
-                "interior": {
-                  "X2": [
-                    {
-                      "PalletInstance": "50"
-                    },
-                    {
-                      "GeneralIndex": "1,114"
-                    }
-                  ]
-                }
-              }
-            ]
-          ]
-=======
           "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":8}]}}]]"
         },
         "2": {
           "lpToken": "2",
           "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":1114}]}}]]"
->>>>>>> main
         }
       },
       "specName": "westmint",
