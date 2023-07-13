@@ -63,14 +63,13 @@ interface AssetsInfo {
 	[key: string]: string;
 }
 
-type ForeignAssetStorageKeyData = [
-	{ parents: number, interior: { X2: [{ Parachain: string | undefined }, { GeneralIndex: string }] } }
-];
+// type ForeignAssetStorageKeyData = MultiLocation[];
 type ForeignAssetMetadata =  { deposit: string, name: string, symbol: string, decimals: string, isFrozen: boolean };
 
 interface ForeignAssetsInfo {
 	[key: string]: {
 		symbol: string,
+		name: string,
 		multiLocation: string
 	}
 }
@@ -245,22 +244,32 @@ const fetchSystemParachainForeignAssetInfo = async (
 
 	if (api.query.foreignAssets !== undefined) {
 		for (const [assetStorageKeyData] of await api.query.foreignAssets.asset.entries()) {
-			const assetData = assetStorageKeyData.toHuman();
+			const foreignAssetData = assetStorageKeyData.toHuman();
 
-			if (assetData) {
-				const foreignAssetData = assetData as ForeignAssetStorageKeyData;
-				const id = parseInt(foreignAssetData[0].interior.X2[1].GeneralIndex);
-				const assetMetadata = (await api.query.foreignAssets.metadata(id)).toHuman();
+			if (foreignAssetData) {
+				// remove any commas from key values e.g. Parachain: 2,125 -> Parachain: 2125
+				const foreignAssetMultiLocationStr = JSON.stringify(foreignAssetData[0]).replace(
+					/(\d),/g,
+					'$1'
+				);
+				const foreignAssetMultiLocation = api.registry.createType('MultiLocation', JSON.parse(foreignAssetMultiLocationStr));
+				const hexId = foreignAssetMultiLocation.toHex();
+				const assetMetadata = (await api.query.foreignAssets.metadata(foreignAssetMultiLocation)).toHuman();
 
 				if (assetMetadata) {
 					const metadata = assetMetadata as ForeignAssetMetadata;
 					const assetSymbol = metadata.symbol;
-	
-					if (assetSymbol != undefined) {
-						foreignAssetsInfo[id] = {
-							symbol: assetSymbol,
-							multiLocation: assetData as string
-						}
+					const assetName = metadata.name;
+
+					// if the symbol exists in metadate use it, otherwise uses the hex of the multilocation as the key
+					const foreignAssetsInfoKey = assetSymbol
+					? assetSymbol 
+					: hexId;
+
+					foreignAssetsInfo[foreignAssetsInfoKey] = {
+						symbol: assetSymbol,
+						name: assetName,
+						multiLocation: JSON.stringify(foreignAssetMultiLocation.toJSON())
 					}
 				}
 			}
