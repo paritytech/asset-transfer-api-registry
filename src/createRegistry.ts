@@ -40,7 +40,13 @@ interface AssetsInfo {
 	[key: string]: string;
 }
 
-type ForeignAssetMetadata =  { deposit: string, name: string, symbol: string, decimals: string, isFrozen: boolean };
+type ForeignAssetMetadata = {
+	deposit: string;
+	name: string;
+	symbol: string;
+	decimals: string;
+	isFrozen: boolean;
+};
 
 interface ForeignAssetsInfo {
 	[key: string]: {
@@ -78,15 +84,14 @@ const fetchChainInfo = async (
 	endpointOpts: EndpointOption,
 	isRelay?: boolean
 ) => {
-	// console.log("fetching info")
+	console.log('fetching info');
 	const api = await getApi(endpointOpts, isRelay);
-	// console.log("is api connected?", api?.isConnected)
+	console.log('is api connected?', api?.isConnected);
 
-	// console.log("info", endpointOpts.info)
-	// console.log("providers", endpointOpts.providers)
-	
+	console.log('info', endpointOpts.info);
+	console.log('providers', endpointOpts.providers);
+
 	if (api !== null && api !== undefined) {
-		
 		const assetsPallet = api.registry.metadata.pallets.filter(
 			(pallet) => pallet.name.toString().toLowerCase() === 'assets'
 		)[0];
@@ -128,7 +133,7 @@ const fetchChainInfo = async (
 	} else {
 		return null;
 	}
-}; 
+};
 
 /**
  * This adds to the chain registry for each chain that is passed in.
@@ -141,12 +146,12 @@ const createChainRegistryFromParas = async (
 	chainName: ChainName,
 	endpoints: Omit<EndpointOption, 'teleport'>[],
 	registry: TokenRegistry,
-	reliable: ParaIds,
+	reliable: ParaIds
 ): Promise<void> => {
-	// console.log("creating chain registry from paras");
+	console.log('creating chain registry from paras');
 	for (const endpoint of endpoints) {
-		// console.log("paraid", endpoint.paraId)
-		const unreliable: boolean = (reliable[chainName] as number[]).includes(
+		console.log('paraid', endpoint.paraId);
+		const unreliable: boolean = reliable[chainName].includes(
 			endpoint.paraId as number
 		);
 		// console.log("unreliable is", unreliable);
@@ -174,7 +179,7 @@ const createChainRegistryFromRelay = async (
 	endpoint: EndpointOption,
 	registry: TokenRegistry
 ): Promise<void> => {
-	// console.log("creating chain registry from relay");
+	console.log('creating chain registry from relay');
 	const res = await fetchChainInfo(endpoint, true);
 	if (res !== null) {
 		registry[chainName]['0'] = res;
@@ -188,7 +193,7 @@ const main = async () => {
 		westend: {},
 	};
 
-	let reliable: ParaIds = {};
+	const reliable: ParaIds = {};
 
 	const polkadotEndpoints = [prodParasPolkadot, prodParasPolkadotCommon];
 	const kusamaEndpoints = [prodParasKusama, prodParasKusamaCommon];
@@ -205,7 +210,12 @@ const main = async () => {
 
 	// Set the paras info to the registry
 	for (const endpoints of polkadotEndpoints) {
-		await createChainRegistryFromParas('polkadot', endpoints, registry, reliable);
+		await createChainRegistryFromParas(
+			'polkadot',
+			endpoints,
+			registry,
+			reliable
+		);
 	}
 
 	for (const endpoints of kusamaEndpoints) {
@@ -213,7 +223,12 @@ const main = async () => {
 	}
 
 	for (const endpoints of westendEndpoints) {
-		await createChainRegistryFromParas('westend', endpoints, registry, reliable);
+		await createChainRegistryFromParas(
+			'westend',
+			endpoints,
+			registry,
+			reliable
+		);
 	}
 
 	const path = __dirname + '/../registry.json';
@@ -224,8 +239,7 @@ const fetchSystemParachainAssetInfo = async (
 	api: ApiPromise
 ): Promise<AssetsInfo> => {
 	const assetsInfo: AssetsInfo = {};
-	// console.log("fetchSystemParasInfo");
-
+	console.log('fetchSystemParasInfo');
 
 	for (const [assetStorageKeyData] of await api.query.assets.asset.entries()) {
 		const id = assetStorageKeyData
@@ -269,8 +283,6 @@ const fetchSystemParachainForeignAssetInfo = async (
 				);
 				const hexId = foreignAssetMultiLocation.toHex();
 
-
-
 				// const id = parseInt(foreignAssetData[0].interior.X2[1].GeneralIndex);
 				const assetMetadata = (
 					await api.query.foreignAssets.metadata(foreignAssetMultiLocation)
@@ -283,7 +295,7 @@ const fetchSystemParachainForeignAssetInfo = async (
 
 					// if the symbol exists in metadata use it, otherwise uses the hex of the multilocation as the key
 					const foreignAssetInfoKey = assetSymbol ? assetSymbol : hexId;
-	
+
 					foreignAssetsInfo[foreignAssetInfoKey] = {
 						symbol: assetSymbol,
 						name: assetName,
@@ -340,116 +352,109 @@ const fetchSystemParachainAssetConversionPoolInfo = async (
 const getParaIds = async (
 	chain: string,
 	endpointOpts: EndpointOption,
-	reliable: ParaIds,
+	reliable: ParaIds
 ): Promise<ParaIds> => {
 	const api = await getApi(endpointOpts, true);
 	if (api !== null && api !== undefined) {
 		const paras = await api.query.paras.parachains();
 		const paraIdsJson = paras.toJSON();
-		reliable[chain] = paraIdsJson as number[]
+		reliable[chain] = paraIdsJson as number[];
 		await api.disconnect();
 	}
-	// console.log("got paraId", chain);
-	// console.log(reliable);
+	console.log('got paraId', chain);
+	console.log(reliable);
 
 	return reliable;
-}
+};
 
 export const sleep = (ms: number): Promise<void> => {
-	
 	return new Promise((resolve) => {
 		setTimeout(() => resolve(), ms);
 	});
 };
 
-const getApi = async(
-	endpointOpts: EndpointOption,
-	isRelay?: boolean
-	) => {
-		const { providers, paraId } = endpointOpts;
+const getApi = async (endpointOpts: EndpointOption, isRelay?: boolean) => {
+	const { providers, paraId } = endpointOpts;
 
-		// If no providers are present return an empty object
-		if (Object.keys(endpointOpts.providers).length === 0) return null;
-		// If a paraId is not present return an empty object;
-		if (!paraId && !isRelay) return null;
+	// If no providers are present return an empty object
+	if (Object.keys(endpointOpts.providers).length === 0) return null;
+	// If a paraId is not present return an empty object;
+	if (!paraId && !isRelay) return null;
 
-		const endpoints = Object.values(providers).filter(
-			(url) => !url.startsWith('light')
-		);
-		// console.log("ENDPOINTS",endpoints)
+	const endpoints = Object.values(providers).filter(
+		(url) => !url.startsWith('light')
+	);
+	console.log('ENDPOINTS', endpoints);
 
-		const api = await startApi(endpoints);
-		return api
-
+	const api = await startApi(endpoints);
+	return api;
 };
 
-const startApi = async(endpoints: string[]):Promise<ApiPromise | undefined> => {
-	const wsProviders = await getProvider(endpoints)
+const startApi = async (
+	endpoints: string[]
+): Promise<ApiPromise | undefined> => {
+	const wsProviders = await getProvider(endpoints);
 	if (wsProviders === undefined) {
 		return;
 	}
-	// console.log("PROVIDERS",wsProviders)
+	console.log('PROVIDERS', wsProviders);
 
-	const providers = new WsProvider(wsProviders)
-
+	const providers = new WsProvider(wsProviders);
 
 	const api = await ApiPromise.create({
-		
 		provider: providers,
 		noInitWarn: true,
 	});
 	await api.isReady;
 
-	api.on('error', (): void => {
-		api.disconnect();
-	})
+	api.on('error', async () => {
+		await api.disconnect();
+	});
 
 	return api;
-	
-}
-
+};
 
 const getProvider = async (wsEndpoints: string[]) => {
-	let enpdointArray: string[] = [];
+	const enpdointArray: string[] = [];
 	let retry = 0;
-	for (const wsEndpoint in wsEndpoints) {
-		let wsProvider = new WsProvider(wsEndpoints[wsEndpoint]);
+	for (const [i, wsEndpoint] of wsEndpoints.entries()) {
+		console.log('FOR LOOP', wsEndpoint);
+		const wsProvider = new WsProvider(wsEndpoints[i]);
 		// healthCheckInProgress = true;
 		if (wsProvider.isConnected) {
-			enpdointArray.push(wsEndpoints[wsEndpoint]);
+			enpdointArray.push(wsEndpoints[i]);
 			// healthCheckInProgress = false;
-			wsProvider.disconnect();
+			await wsProvider.disconnect();
 			console.log(enpdointArray);
 		} else {
 			// if (retry < MAX_RETRIES)
 			//  {
-				// console.log("connected?", wsProvider.isConnected);
-				while (!wsProvider.isConnected && (retry < MAX_RETRIES)) {
-					await sleep(WS_DISCONNECT_TIMEOUT_SECONDS * 1000);
-					retry++;
-					// console.log("retries: ", retry);
-				}
-				wsProvider.disconnect();
-				// console.log("ws disconnected");
+			console.log('connected?', wsProvider.isConnected);
+			while (!wsProvider.isConnected && retry < MAX_RETRIES) {
+				await sleep(WS_DISCONNECT_TIMEOUT_SECONDS * 1000);
+				retry++;
+				// console.log("retries: ", retry);
+			}
+			await wsProvider.disconnect();
+			console.log('ws disconnected');
 			// };
 			if (!(retry < MAX_RETRIES)) {
-				
 				// healthCheckInProgress = false;
-				wsProvider.disconnect();
+				await wsProvider.disconnect();
 				retry = 0;
 				continue;
 			} else if (wsProvider.isConnected) {
-				enpdointArray.push(wsEndpoints[wsEndpoint]);
+				enpdointArray.push(wsEndpoints[i]);
 				// healthCheckInProgress = false;
-				// console.log("array", enpdointArray);
+				console.log('array', enpdointArray);
 
-				wsProvider.disconnect();
+				await wsProvider.disconnect();
 				retry = 0;
 			}
 		}
 	}
 	if (enpdointArray.length === 0) {
-		return
+		return;
 	} else {
 		return enpdointArray;
 	}
