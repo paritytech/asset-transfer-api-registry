@@ -11,3 +11,6 @@
 
 # Tsc Build
 **/build
+
+# Registry
+registry.json
