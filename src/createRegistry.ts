@@ -436,7 +436,7 @@ const getProvider = async (wsEndpoints: string[]) => {
 				// console.log("retries: ", retry);
 			}
 			await wsProvider.disconnect();
-			console.log('ws disconnected');
+			// console.log('ws disconnected');
 			// };
 			if (!(retry < MAX_RETRIES)) {
 				// healthCheckInProgress = false;
