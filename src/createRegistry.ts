@@ -74,6 +74,15 @@ interface ParaIds {
 const MAX_RETRIES = 5;
 const WS_DISCONNECT_TIMEOUT_SECONDS = 3;
 
+const twirlTimer = function () {
+	const P = ['\\', '|', '/', '-'];
+	let x = 0;
+	return setInterval(function () {
+		process.stdout.write('\r' + P[x++]);
+		x &= 3;
+	}, 250);
+};
+
 /**
  * Fetch chain token and spec info.
  *
@@ -84,12 +93,8 @@ const fetchChainInfo = async (
 	endpointOpts: EndpointOption,
 	isRelay?: boolean
 ) => {
-	console.log('fetching info');
 	const api = await getApi(endpointOpts, isRelay);
-	console.log('is api connected?', api?.isConnected);
-
-	console.log('info', endpointOpts.info);
-	console.log('providers', endpointOpts.providers);
+	console.log('Api ', api?.isConnected);
 
 	if (api !== null && api !== undefined) {
 		const assetsPallet = api.registry.metadata.pallets.filter(
@@ -148,17 +153,15 @@ const createChainRegistryFromParas = async (
 	registry: TokenRegistry,
 	reliable: ParaIds
 ): Promise<void> => {
-	console.log('creating chain registry from paras');
+	console.log('Creating chain registry from parachains');
+	twirlTimer();
 	for (const endpoint of endpoints) {
-		console.log('paraid', endpoint.paraId);
 		const unreliable: boolean = reliable[chainName].includes(
 			endpoint.paraId as number
 		);
-		// console.log("unreliable is", unreliable);
 		if (!unreliable) {
 			continue;
 		}
-		// console.log("starting fetching info")
 		const res = await fetchChainInfo(endpoint);
 		if (res !== null) {
 			registry[chainName][`${endpoint.paraId as number}`] = res;
@@ -179,7 +182,8 @@ const createChainRegistryFromRelay = async (
 	endpoint: EndpointOption,
 	registry: TokenRegistry
 ): Promise<void> => {
-	console.log('creating chain registry from relay');
+	console.log('Creating chain registry from relay');
+	twirlTimer();
 	const res = await fetchChainInfo(endpoint, true);
 	if (res !== null) {
 		registry[chainName]['0'] = res;
@@ -239,7 +243,6 @@ const fetchSystemParachainAssetInfo = async (
 	api: ApiPromise
 ): Promise<AssetsInfo> => {
 	const assetsInfo: AssetsInfo = {};
-	console.log('fetchSystemParasInfo');
 
 	for (const [assetStorageKeyData] of await api.query.assets.asset.entries()) {
 		const id = assetStorageKeyData
@@ -361,7 +364,7 @@ const getParaIds = async (
 		reliable[chain] = paraIdsJson as number[];
 		await api.disconnect();
 	}
-	console.log('got paraId', chain);
+	console.log('Got Parachain Id: ', chain);
 	console.log(reliable);
 
 	return reliable;
@@ -384,7 +387,6 @@ const getApi = async (endpointOpts: EndpointOption, isRelay?: boolean) => {
 	const endpoints = Object.values(providers).filter(
 		(url) => !url.startsWith('light')
 	);
-	console.log('ENDPOINTS', endpoints);
 
 	const api = await startApi(endpoints);
 	return api;
@@ -415,38 +417,31 @@ const startApi = async (
 };
 
 const getProvider = async (wsEndpoints: string[]) => {
+	console.log('Getting providers');
+	twirlTimer();
 	const enpdointArray: string[] = [];
 	let retry = 0;
-	for (const [i, wsEndpoint] of wsEndpoints.entries()) {
-		console.log('FOR LOOP', wsEndpoint);
+	for (const [i] of wsEndpoints.entries()) {
 		const wsProvider = new WsProvider(wsEndpoints[i]);
 		// healthCheckInProgress = true;
 		if (wsProvider.isConnected) {
 			enpdointArray.push(wsEndpoints[i]);
 			// healthCheckInProgress = false;
 			await wsProvider.disconnect();
-			console.log(enpdointArray);
 		} else {
-			// if (retry < MAX_RETRIES)
-			//  {
-			console.log('connected?', wsProvider.isConnected);
 			while (!wsProvider.isConnected && retry < MAX_RETRIES) {
 				await sleep(WS_DISCONNECT_TIMEOUT_SECONDS * 1000);
 				retry++;
-				// console.log("retries: ", retry);
 			}
+
 			await wsProvider.disconnect();
-			// console.log('ws disconnected');
-			// };
+
 			if (!(retry < MAX_RETRIES)) {
-				// healthCheckInProgress = false;
 				await wsProvider.disconnect();
 				retry = 0;
 				continue;
 			} else if (wsProvider.isConnected) {
 				enpdointArray.push(wsEndpoints[i]);
-				// healthCheckInProgress = false;
-				console.log('array', enpdointArray);
 
 				await wsProvider.disconnect();
 				retry = 0;
@@ -456,6 +451,7 @@ const getProvider = async (wsEndpoints: string[]) => {
 	if (enpdointArray.length === 0) {
 		return;
 	} else {
+		console.log('array', enpdointArray);
 		return enpdointArray;
 	}
 };
