@@ -99,7 +99,7 @@ const fetchChainInfo = async (
 	isRelay?: boolean
 ) => {
 	const api = await getApi(endpointOpts, isRelay);
-	console.log('Api ', api?.isConnected);
+	console.log('Api connected: ', api?.isConnected);
 
 	if (api !== null && api !== undefined) {
 		const assetsPallet = api.registry.metadata.pallets.filter(
@@ -421,7 +421,7 @@ const startApi = async (
 		return;
 	}
 
-	console.log('PROVIDERS', wsProviders);
+	console.log('Endpoint providers: ', wsProviders);
 
 	const providers = new WsProvider(wsProviders);
 	const api = await ApiPromise.create({
@@ -449,7 +449,7 @@ const startApi = async (
  */
 
 const getProvider = async (wsEndpoints: string[]) => {
-	console.log('Getting providers');
+	console.log('Getting endpoint providers');
 
 	twirlTimer();
 
@@ -487,8 +487,6 @@ const getProvider = async (wsEndpoints: string[]) => {
 	if (enpdointArray.length === 0) {
 		return;
 	} else {
-		console.log('array', enpdointArray);
-
 		return enpdointArray;
 	}
 };
