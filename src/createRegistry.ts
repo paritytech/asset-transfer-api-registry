@@ -25,29 +25,6 @@ type TokenRegistry = {
 
 type ChainName = 'polkadot' | 'kusama' | 'westend';
 
-const unreliableIds = {
-	polkadot: [
-		2038, // geminis
-		2090, // Oak Tech
-		2053, // omnibtc
-		2018, // subdao
-		2093, // hashed network
-		3333, // t3rn
-	],
-	kusama: [
-		2257, // aband
-		2019, // kpron,
-		2080, // loomNetwork
-		2016, // sakura
-		2018, // subgame
-		2236, // zero
-		2129, // Ice Network
-		2226, // genshiro
-		2102, // pichiu
-	],
-	westend: [],
-};
-
 /**
  * Write Json to a file path.
  *
@@ -57,6 +34,15 @@ const unreliableIds = {
 const writeJson = (path: string, data: TokenRegistry): void => {
 	fs.writeFileSync(path, JSON.stringify(data, null, 2));
 	fs.appendFileSync(path, '\n', 'utf-8');
+};
+
+const twirlTimer = function () {
+	const P = ['\\', '|', '/', '-'];
+	let x = 0;
+	return setInterval(function () {
+		process.stdout.write('\r' + P[x++]);
+		x &= 3;
+	}, 250);
 };
 
 interface AssetsInfo {
@@ -90,6 +76,18 @@ type PoolPairsInfo = {
 	};
 };
 
+interface ParaIds {
+	[key: string]: number[];
+}
+
+/**
+ * @const MAX_RETRIES Maximum amount of connection attempts
+ * @const WS_DISCONNECT_TIMEOUT_SECONDS time to wait between attempts, in seconds
+ */
+
+const MAX_RETRIES = 5;
+const WS_DISCONNECT_TIMEOUT_SECONDS = 3;
+
 /**
  * Fetch chain token and spec info.
  *
@@ -100,61 +98,51 @@ const fetchChainInfo = async (
 	endpointOpts: EndpointOption,
 	isRelay?: boolean
 ) => {
-	const { providers, paraId } = endpointOpts;
-	// If no providers are present return an empty object
-	if (Object.keys(endpointOpts.providers).length === 0) return null;
-	// If a paraId is not present return an empty object;
-	if (!paraId && !isRelay) return null;
+	const api = await getApi(endpointOpts, isRelay);
+	console.log('Api connected: ', api?.isConnected);
 
-	const wsUrls = Object.values(providers).filter(
-		(url) => !url.startsWith('light')
-	);
+	if (api !== null && api !== undefined) {
+		const assetsPallet = api.registry.metadata.pallets.filter(
+			(pallet) => pallet.name.toString().toLowerCase() === 'assets'
+		)[0];
+		const { tokenSymbol } = await api.rpc.system.properties();
+		const { specName } = await api.rpc.state.getRuntimeVersion();
+		const tokens = tokenSymbol.isSome
+			? tokenSymbol
+					.unwrap()
+					.toArray()
+					.map((token) => token.toString())
+			: [];
 
-	const api = await ApiPromise.create({
-		provider: new WsProvider(wsUrls),
-		noInitWarn: true,
-	});
+		const specNameStr = specName.toString();
 
-	await api.isReady;
+		let assetsInfo: AssetsInfo = {};
+		let foreignAssetsInfo: ForeignAssetsInfo = {};
+		let poolPairsInfo: PoolPairsInfo = {};
 
-	const assetsPallet = api.registry.metadata.pallets.filter(
-		(pallet) => pallet.name.toString().toLowerCase() === 'assets'
-	)[0];
-	const { tokenSymbol } = await api.rpc.system.properties();
-	const { specName } = await api.rpc.state.getRuntimeVersion();
-	const tokens = tokenSymbol.isSome
-		? tokenSymbol
-				.unwrap()
-				.toArray()
-				.map((token) => token.toString())
-		: [];
+		if (
+			specNameStr === 'westmint' ||
+			specNameStr === 'statemine' ||
+			specNameStr === 'statemint'
+		) {
+			assetsInfo = await fetchSystemParachainAssetInfo(api);
+			foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(api);
+			poolPairsInfo = await fetchSystemParachainAssetConversionPoolInfo(api);
+		}
 
-	const specNameStr = specName.toString();
+		await api.disconnect();
 
-	let assetsInfo: AssetsInfo = {};
-	let foreignAssetsInfo: ForeignAssetsInfo = {};
-	let poolPairsInfo: PoolPairsInfo = {};
-
-	if (
-		specNameStr === 'westmint' ||
-		specNameStr === 'statemine' ||
-		specNameStr === 'statemint'
-	) {
-		assetsInfo = await fetchSystemParachainAssetInfo(api);
-		foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(api);
-		poolPairsInfo = await fetchSystemParachainAssetConversionPoolInfo(api);
+		return {
+			tokens,
+			assetsInfo,
+			foreignAssetsInfo,
+			poolPairsInfo,
+			specName: specNameStr,
+			assetsPalletInstance: assetsPallet ? assetsPallet.index.toString() : null,
+		};
+	} else {
+		return null;
 	}
-
-	await api.disconnect();
-
-	return {
-		tokens,
-		assetsInfo,
-		foreignAssetsInfo,
-		poolPairsInfo,
-		specName: specNameStr,
-		assetsPalletInstance: assetsPallet ? assetsPallet.index.toString() : null,
-	};
 };
 
 /**
@@ -167,16 +155,20 @@ const fetchChainInfo = async (
 const createChainRegistryFromParas = async (
 	chainName: ChainName,
 	endpoints: Omit<EndpointOption, 'teleport'>[],
-	registry: TokenRegistry
+	registry: TokenRegistry,
+	paraIds: ParaIds
 ): Promise<void> => {
+	console.log('Creating chain registry from parachains');
+
+	twirlTimer();
+
 	for (const endpoint of endpoints) {
-		const unreliable: boolean = (unreliableIds[chainName] as number[]).includes(
+		const reliable: boolean = paraIds[chainName].includes(
 			endpoint.paraId as number
 		);
-		if (unreliable) {
+		if (!reliable) {
 			continue;
 		}
-
 		const res = await fetchChainInfo(endpoint);
 		if (res !== null) {
 			registry[chainName][`${endpoint.paraId as number}`] = res;
@@ -190,13 +182,15 @@ const createChainRegistryFromParas = async (
  *
  * @param chainName Relay chain name
  * @param endpoint Endpoint we are going to fetch the info from
- * @param registry Registry we want to add the info too
+ * @param registry Registry we want to add the info to
  */
 const createChainRegistryFromRelay = async (
 	chainName: ChainName,
 	endpoint: EndpointOption,
 	registry: TokenRegistry
 ): Promise<void> => {
+	console.log('Creating chain registry from relay');
+	twirlTimer();
 	const res = await fetchChainInfo(endpoint, true);
 	if (res !== null) {
 		registry[chainName]['0'] = res;
@@ -209,9 +203,17 @@ const main = async () => {
 		kusama: {},
 		westend: {},
 	};
+
+	const paraIds: ParaIds = {};
+
 	const polkadotEndpoints = [prodParasPolkadot, prodParasPolkadotCommon];
 	const kusamaEndpoints = [prodParasKusama, prodParasKusamaCommon];
 	const westendEndpoints = [testParasWestend, testParasWestendCommon];
+
+	// Set the Parachains Ids to the corresponding registry
+	await fetchParaIds('polkadot', prodRelayPolkadot, paraIds);
+	await fetchParaIds('kusama', prodRelayKusama, paraIds);
+	await fetchParaIds('westend', testRelayWestend, paraIds);
 
 	// Set the relay chain info to the registry
 	await createChainRegistryFromRelay('polkadot', prodRelayPolkadot, registry);
@@ -220,15 +222,20 @@ const main = async () => {
 
 	// Set the paras info to the registry
 	for (const endpoints of polkadotEndpoints) {
-		await createChainRegistryFromParas('polkadot', endpoints, registry);
+		await createChainRegistryFromParas(
+			'polkadot',
+			endpoints,
+			registry,
+			paraIds
+		);
 	}
 
 	for (const endpoints of kusamaEndpoints) {
-		await createChainRegistryFromParas('kusama', endpoints, registry);
+		await createChainRegistryFromParas('kusama', endpoints, registry, paraIds);
 	}
 
 	for (const endpoints of westendEndpoints) {
-		await createChainRegistryFromParas('westend', endpoints, registry);
+		await createChainRegistryFromParas('westend', endpoints, registry, paraIds);
 	}
 
 	const path = __dirname + '/../registry.json';
@@ -281,6 +288,7 @@ const fetchSystemParachainForeignAssetInfo = async (
 					JSON.parse(foreignAssetMultiLocationStr)
 				);
 				const hexId = foreignAssetMultiLocation.toHex();
+
 				const assetMetadata = (
 					await api.query.foreignAssets.metadata(foreignAssetMultiLocation)
 				).toHuman();
@@ -344,6 +352,143 @@ const fetchSystemParachainAssetConversionPoolInfo = async (
 	}
 
 	return poolPairsInfo;
+};
+
+/**
+ * This will create a registry of Parachain Ids.
+ *
+ * @param chain Relay chain name
+ * @param endpointOpts Endpoint we are going to fetch the info from
+ * @param paraIds Registry we want to add the info to
+ */
+
+const fetchParaIds = async (
+	chain: string,
+	endpointOpts: EndpointOption,
+	paraIds: ParaIds
+): Promise<ParaIds> => {
+	const api = await getApi(endpointOpts, true);
+
+	if (api !== null && api !== undefined) {
+		const paras = await api.query.paras.parachains();
+		const paraIdsJson = paras.toJSON();
+		paraIds[chain] = paraIdsJson as number[];
+		await api.disconnect();
+	}
+
+	console.log('Got Parachain Id: ', chain);
+	console.log(paraIds);
+
+	return paraIds;
+};
+
+const sleep = (ms: number): Promise<void> => {
+	return new Promise((resolve) => {
+		setTimeout(() => resolve(), ms);
+	});
+};
+
+const getApi = async (endpointOpts: EndpointOption, isRelay?: boolean) => {
+	const { providers, paraId } = endpointOpts;
+
+	// If no providers are present return an empty object
+	if (Object.keys(endpointOpts.providers).length === 0) return null;
+	// If a paraId is not present return an empty object;
+	if (!paraId && !isRelay) return null;
+
+	const endpoints = Object.values(providers).filter(
+		(url) => !url.startsWith('light')
+	);
+
+	const api = await startApi(endpoints);
+
+	return api;
+};
+
+/**
+ * This intakes an array of endpoints and returns a list of viable endpoints
+ * ready to be connected to.
+ *
+ * @param endpoints Endpoint we are going to try to connect to.
+ */
+
+const startApi = async (
+	endpoints: string[]
+): Promise<ApiPromise | undefined> => {
+	const wsProviders = await getProvider(endpoints);
+
+	if (wsProviders === undefined) {
+		return;
+	}
+
+	console.log('Endpoint providers: ', wsProviders);
+
+	const providers = new WsProvider(wsProviders);
+	const api = await ApiPromise.create({
+		provider: providers,
+		noInitWarn: true,
+	});
+
+	await api.isReady;
+
+	api.on('error', async () => {
+		await api.disconnect();
+	});
+
+	return api;
+};
+
+/**
+ * This tests the available endpoints to check which are responsive
+ * and return an array of providers. It makes a call using WS_DISCONNECT_TIMEOUT_SECONDS
+ * to determine the time between attempts. If unsuccessful, it retries MAX_RETRIES
+ * amount of times. If successful in that period, the endpoint is included in the
+ * return array, otherwise it is discarded and the function moves on to the next candidate.
+ *
+ * @param wsEndpoints Endpoint we are going to fetch the info from
+ */
+
+const getProvider = async (wsEndpoints: string[]) => {
+	console.log('Getting endpoint providers');
+
+	twirlTimer();
+
+	const enpdointArray: string[] = [];
+
+	let retry = 0;
+
+	for (const [i] of wsEndpoints.entries()) {
+		const wsProvider = new WsProvider(wsEndpoints[i]);
+
+		if (wsProvider.isConnected) {
+			enpdointArray.push(wsEndpoints[i]);
+			await wsProvider.disconnect();
+		} else {
+			while (!wsProvider.isConnected && retry < MAX_RETRIES) {
+				await sleep(WS_DISCONNECT_TIMEOUT_SECONDS * 1000);
+				retry++;
+			}
+
+			await wsProvider.disconnect();
+
+			if (!(retry < MAX_RETRIES)) {
+				await wsProvider.disconnect();
+				retry = 0;
+				continue;
+			} else if (wsProvider.isConnected) {
+				enpdointArray.push(wsEndpoints[i]);
+
+				await wsProvider.disconnect();
+				retry = 0;
+			}
+		}
+	}
+
+	if (enpdointArray.length === 0) {
+		return;
+	} else {
+		return enpdointArray;
+	}
 };
 
 main()

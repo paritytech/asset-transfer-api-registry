@@ -357,6 +357,16 @@
       "specName": "zeitgeist",
       "assetsPalletInstance": null
     },
+    "2093": {
+      "tokens": [
+        "HASH"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "luhn",
+      "assetsPalletInstance": "64"
+    },
     "2094": {
       "tokens": [
         "PEN"
@@ -386,6 +396,16 @@
       "poolPairsInfo": {},
       "specName": "manta",
       "assetsPalletInstance": "45"
+    },
+    "3333": {
+      "tokens": [
+        "TRN"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "t3rn",
+      "assetsPalletInstance": null
     }
   },
   "kusama": {
@@ -533,7 +553,6 @@
         "3943": "GMK",
         "6789": "VHM",
         "6967": "CHAOS",
-        "7373": "PEPE",
         "7777": "lucky7",
         "8848": "top",
         "9000": "KPOTS",
@@ -845,6 +864,8 @@
       "specName": "turing",
       "assetsPalletInstance": null
     },
+<<<<<<< HEAD
+=======
     "2115": {
       "tokens": [
         "DORA"
@@ -855,6 +876,7 @@
       "specName": "DORA KSM Parachain",
       "assetsPalletInstance": null
     },
+>>>>>>> main
     "2119": {
       "tokens": [
         "BAJU"
@@ -865,6 +887,8 @@
       "specName": "bajun",
       "assetsPalletInstance": null
     },
+<<<<<<< HEAD
+=======
     "2120": {
       "tokens": [
         "SDN"
@@ -887,6 +911,7 @@
       "specName": "gm_parachain",
       "assetsPalletInstance": null
     },
+>>>>>>> main
     "2124": {
       "tokens": [
         "AMPE"
@@ -917,13 +942,19 @@
       "specName": "ipci",
       "assetsPalletInstance": "9"
     },
-    "2240": {
+    "2236": {
       "tokens": [
-        "XRT"
+        "ZERO",
+        "PLAY",
+        "GAME",
+        "DOT"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
+<<<<<<< HEAD
+      "specName": "subzero",
+=======
       "specName": "robonomics",
       "assetsPalletInstance": "34"
     },
@@ -935,6 +966,7 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "peaq-node-krest",
+>>>>>>> main
       "assetsPalletInstance": null
     }
   },
@@ -1057,7 +1089,9 @@
         "862105": "USDTT",
         "862812": "CUBOT",
         "863012": "VCOPT",
+        "19801204": "KHT",
         "21000000": "PKTB",
+        "21000001": "PKCR",
         "40000001": "ETH",
         "123456789": "PUSH",
         "900990087": "SPOT",
@@ -1080,6 +1114,13 @@
         "2": {
           "lpToken": "2",
           "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":1114}]}}]]"
+<<<<<<< HEAD
+        },
+        "3": {
+          "lpToken": "3",
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":19801204}]}}]]"
+=======
+>>>>>>> main
         }
       },
       "specName": "westmint",
