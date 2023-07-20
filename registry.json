@@ -864,6 +864,19 @@
       "specName": "turing",
       "assetsPalletInstance": null
     },
+<<<<<<< HEAD
+=======
+    "2115": {
+      "tokens": [
+        "DORA"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "DORA KSM Parachain",
+      "assetsPalletInstance": null
+    },
+>>>>>>> main
     "2119": {
       "tokens": [
         "BAJU"
@@ -874,6 +887,31 @@
       "specName": "bajun",
       "assetsPalletInstance": null
     },
+<<<<<<< HEAD
+=======
+    "2120": {
+      "tokens": [
+        "SDN"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "shiden",
+      "assetsPalletInstance": "36"
+    },
+    "2123": {
+      "tokens": [
+        "FREN",
+        "GM",
+        "GN"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "gm_parachain",
+      "assetsPalletInstance": null
+    },
+>>>>>>> main
     "2124": {
       "tokens": [
         "AMPE"
@@ -914,7 +952,21 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
+<<<<<<< HEAD
       "specName": "subzero",
+=======
+      "specName": "robonomics",
+      "assetsPalletInstance": "34"
+    },
+    "2241": {
+      "tokens": [
+        "KREST"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "peaq-node-krest",
+>>>>>>> main
       "assetsPalletInstance": null
     }
   },
@@ -1062,10 +1114,13 @@
         "2": {
           "lpToken": "2",
           "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":1114}]}}]]"
+<<<<<<< HEAD
         },
         "3": {
           "lpToken": "3",
           "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":19801204}]}}]]"
+=======
+>>>>>>> main
         }
       },
       "specName": "westmint",
