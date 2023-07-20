@@ -864,8 +864,6 @@
       "specName": "turing",
       "assetsPalletInstance": null
     },
-<<<<<<< HEAD
-=======
     "2115": {
       "tokens": [
         "DORA"
@@ -876,7 +874,6 @@
       "specName": "DORA KSM Parachain",
       "assetsPalletInstance": null
     },
->>>>>>> main
     "2119": {
       "tokens": [
         "BAJU"
@@ -887,8 +884,6 @@
       "specName": "bajun",
       "assetsPalletInstance": null
     },
-<<<<<<< HEAD
-=======
     "2120": {
       "tokens": [
         "SDN"
@@ -911,7 +906,6 @@
       "specName": "gm_parachain",
       "assetsPalletInstance": null
     },
->>>>>>> main
     "2124": {
       "tokens": [
         "AMPE"
