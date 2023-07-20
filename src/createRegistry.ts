@@ -36,6 +36,15 @@ const writeJson = (path: string, data: TokenRegistry): void => {
 	fs.appendFileSync(path, '\n', 'utf-8');
 };
 
+const twirlTimer = function () {
+	const P = ['\\', '|', '/', '-'];
+	let x = 0;
+	return setInterval(function () {
+		process.stdout.write('\r' + P[x++]);
+		x &= 3;
+	}, 250);
+};
+
 interface AssetsInfo {
 	[key: string]: string;
 }
@@ -71,17 +80,13 @@ interface ParaIds {
 	[key: string]: number[];
 }
 
+/**
+ * @const MAX_RETRIES Maximum amount of connection attempts
+ * @const WS_DISCONNECT_TIMEOUT_SECONDS time to wait between attempts, in seconds
+ */
+
 const MAX_RETRIES = 5;
 const WS_DISCONNECT_TIMEOUT_SECONDS = 3;
-
-const twirlTimer = function () {
-	const P = ['\\', '|', '/', '-'];
-	let x = 0;
-	return setInterval(function () {
-		process.stdout.write('\r' + P[x++]);
-		x &= 3;
-	}, 250);
-};
 
 /**
  * Fetch chain token and spec info.
@@ -151,15 +156,17 @@ const createChainRegistryFromParas = async (
 	chainName: ChainName,
 	endpoints: Omit<EndpointOption, 'teleport'>[],
 	registry: TokenRegistry,
-	reliable: ParaIds
+	paraIds: ParaIds
 ): Promise<void> => {
 	console.log('Creating chain registry from parachains');
+
 	twirlTimer();
+
 	for (const endpoint of endpoints) {
-		const unreliable: boolean = reliable[chainName].includes(
+		const reliable: boolean = paraIds[chainName].includes(
 			endpoint.paraId as number
 		);
-		if (!unreliable) {
+		if (!reliable) {
 			continue;
 		}
 		const res = await fetchChainInfo(endpoint);
@@ -175,7 +182,7 @@ const createChainRegistryFromParas = async (
  *
  * @param chainName Relay chain name
  * @param endpoint Endpoint we are going to fetch the info from
- * @param registry Registry we want to add the info too
+ * @param registry Registry we want to add the info to
  */
 const createChainRegistryFromRelay = async (
 	chainName: ChainName,
@@ -197,15 +204,16 @@ const main = async () => {
 		westend: {},
 	};
 
-	const reliable: ParaIds = {};
+	const paraIds: ParaIds = {};
 
 	const polkadotEndpoints = [prodParasPolkadot, prodParasPolkadotCommon];
 	const kusamaEndpoints = [prodParasKusama, prodParasKusamaCommon];
 	const westendEndpoints = [testParasWestend, testParasWestendCommon];
 
-	await getParaIds('polkadot', prodRelayPolkadot, reliable);
-	await getParaIds('kusama', prodRelayKusama, reliable);
-	await getParaIds('westend', testRelayWestend, reliable);
+	// Set the Parachains Ids to the corresponding registry
+	await fetchParaIds('polkadot', prodRelayPolkadot, paraIds);
+	await fetchParaIds('kusama', prodRelayKusama, paraIds);
+	await fetchParaIds('westend', testRelayWestend, paraIds);
 
 	// Set the relay chain info to the registry
 	await createChainRegistryFromRelay('polkadot', prodRelayPolkadot, registry);
@@ -218,21 +226,16 @@ const main = async () => {
 			'polkadot',
 			endpoints,
 			registry,
-			reliable
+			paraIds
 		);
 	}
 
 	for (const endpoints of kusamaEndpoints) {
-		await createChainRegistryFromParas('kusama', endpoints, registry, reliable);
+		await createChainRegistryFromParas('kusama', endpoints, registry, paraIds);
 	}
 
 	for (const endpoints of westendEndpoints) {
-		await createChainRegistryFromParas(
-			'westend',
-			endpoints,
-			registry,
-			reliable
-		);
+		await createChainRegistryFromParas('westend', endpoints, registry, paraIds);
 	}
 
 	const path = __dirname + '/../registry.json';
@@ -268,7 +271,7 @@ const fetchSystemParachainForeignAssetInfo = async (
 	api: ApiPromise
 ): Promise<ForeignAssetsInfo> => {
 	const foreignAssetsInfo: ForeignAssetsInfo = {};
-	// console.log("fetchSystemParasInfo foreign assets");
+
 	if (api.query.foreignAssets !== undefined) {
 		for (const [
 			assetStorageKeyData,
@@ -286,7 +289,6 @@ const fetchSystemParachainForeignAssetInfo = async (
 				);
 				const hexId = foreignAssetMultiLocation.toHex();
 
-				// const id = parseInt(foreignAssetData[0].interior.X2[1].GeneralIndex);
 				const assetMetadata = (
 					await api.query.foreignAssets.metadata(foreignAssetMultiLocation)
 				).toHuman();
@@ -352,25 +354,35 @@ const fetchSystemParachainAssetConversionPoolInfo = async (
 	return poolPairsInfo;
 };
 
-const getParaIds = async (
+/**
+ * This will create a registry of Parachain Ids.
+ *
+ * @param chain Relay chain name
+ * @param endpointOpts Endpoint we are going to fetch the info from
+ * @param paraIds Registry we want to add the info to
+ */
+
+const fetchParaIds = async (
 	chain: string,
 	endpointOpts: EndpointOption,
-	reliable: ParaIds
+	paraIds: ParaIds
 ): Promise<ParaIds> => {
 	const api = await getApi(endpointOpts, true);
+
 	if (api !== null && api !== undefined) {
 		const paras = await api.query.paras.parachains();
 		const paraIdsJson = paras.toJSON();
-		reliable[chain] = paraIdsJson as number[];
+		paraIds[chain] = paraIdsJson as number[];
 		await api.disconnect();
 	}
-	console.log('Got Parachain Id: ', chain);
-	console.log(reliable);
 
-	return reliable;
+	console.log('Got Parachain Id: ', chain);
+	console.log(paraIds);
+
+	return paraIds;
 };
 
-export const sleep = (ms: number): Promise<void> => {
+const sleep = (ms: number): Promise<void> => {
 	return new Promise((resolve) => {
 		setTimeout(() => resolve(), ms);
 	});
@@ -389,24 +401,34 @@ const getApi = async (endpointOpts: EndpointOption, isRelay?: boolean) => {
 	);
 
 	const api = await startApi(endpoints);
+
 	return api;
 };
+
+/**
+ * This intakes an array of endpoints and returns a list of viable endpoints
+ * ready to be connected to.
+ *
+ * @param endpoints Endpoint we are going to try to connect to.
+ */
 
 const startApi = async (
 	endpoints: string[]
 ): Promise<ApiPromise | undefined> => {
 	const wsProviders = await getProvider(endpoints);
+
 	if (wsProviders === undefined) {
 		return;
 	}
+
 	console.log('PROVIDERS', wsProviders);
 
 	const providers = new WsProvider(wsProviders);
-
 	const api = await ApiPromise.create({
 		provider: providers,
 		noInitWarn: true,
 	});
+
 	await api.isReady;
 
 	api.on('error', async () => {
@@ -416,17 +438,30 @@ const startApi = async (
 	return api;
 };
 
+/**
+ * This tests the available endpoints to check which are responsive
+ * and return an array of providers. It makes a call using WS_DISCONNECT_TIMEOUT_SECONDS
+ * to determine the time between attempts. If unsuccessful, it retries MAX_RETRIES
+ * amount of times. If successful in that period, the endpoint is included in the
+ * return array, otherwise it is discarded and the function moves on to the next candidate.
+ *
+ * @param wsEndpoints Endpoint we are going to fetch the info from
+ */
+
 const getProvider = async (wsEndpoints: string[]) => {
 	console.log('Getting providers');
+
 	twirlTimer();
+
 	const enpdointArray: string[] = [];
+
 	let retry = 0;
+
 	for (const [i] of wsEndpoints.entries()) {
 		const wsProvider = new WsProvider(wsEndpoints[i]);
-		// healthCheckInProgress = true;
+
 		if (wsProvider.isConnected) {
 			enpdointArray.push(wsEndpoints[i]);
-			// healthCheckInProgress = false;
 			await wsProvider.disconnect();
 		} else {
 			while (!wsProvider.isConnected && retry < MAX_RETRIES) {
@@ -448,10 +483,12 @@ const getProvider = async (wsEndpoints: string[]) => {
 			}
 		}
 	}
+
 	if (enpdointArray.length === 0) {
 		return;
 	} else {
 		console.log('array', enpdointArray);
+
 		return enpdointArray;
 	}
 };
