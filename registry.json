@@ -357,16 +357,6 @@
       "specName": "zeitgeist",
       "assetsPalletInstance": null
     },
-    "2093": {
-      "tokens": [
-        "HASH"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "luhn",
-      "assetsPalletInstance": "64"
-    },
     "2094": {
       "tokens": [
         "PEN"
@@ -864,16 +854,6 @@
       "specName": "turing",
       "assetsPalletInstance": null
     },
-    "2115": {
-      "tokens": [
-        "DORA"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "DORA KSM Parachain",
-      "assetsPalletInstance": null
-    },
     "2119": {
       "tokens": [
         "BAJU"
@@ -882,28 +862,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "bajun",
-      "assetsPalletInstance": null
-    },
-    "2120": {
-      "tokens": [
-        "SDN"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "shiden",
-      "assetsPalletInstance": "36"
-    },
-    "2123": {
-      "tokens": [
-        "FREN",
-        "GM",
-        "GN"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "gm_parachain",
       "assetsPalletInstance": null
     },
     "2124": {
@@ -946,11 +904,8 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-<<<<<<< HEAD
       "specName": "subzero",
-=======
-      "specName": "robonomics",
-      "assetsPalletInstance": "34"
+      "assetsPalletInstance": null
     },
     "2241": {
       "tokens": [
@@ -960,7 +915,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "peaq-node-krest",
->>>>>>> main
       "assetsPalletInstance": null
     }
   },
@@ -1108,13 +1062,10 @@
         "2": {
           "lpToken": "2",
           "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":1114}]}}]]"
-<<<<<<< HEAD
         },
         "3": {
           "lpToken": "3",
           "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":19801204}]}}]]"
-=======
->>>>>>> main
         }
       },
       "specName": "westmint",
