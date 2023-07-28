@@ -105,6 +105,10 @@ const fetchChainInfo = async (
 		const assetsPallet = api.registry.metadata.pallets.filter(
 			(pallet) => pallet.name.toString().toLowerCase() === 'assets'
 		)[0];
+		const foreignAssetsPallet = api.registry.metadata.pallets.filter(
+			(pallet) => pallet.name.toString().toLowerCase() === 'foreignassets'
+		)[0];
+	
 		const { tokenSymbol } = await api.rpc.system.properties();
 		const { specName } = await api.rpc.state.getRuntimeVersion();
 		const tokens = tokenSymbol.isSome
@@ -139,6 +143,7 @@ const fetchChainInfo = async (
 			poolPairsInfo,
 			specName: specNameStr,
 			assetsPalletInstance: assetsPallet ? assetsPallet.index.toString() : null,
+			foreignAssetsPalletInstance: foreignAssetsPallet ? foreignAssetsPallet.index.toString(): null,
 		};
 	} else {
 		return null;
