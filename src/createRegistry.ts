@@ -152,6 +152,7 @@ const createChainRegistryFromRelay = async (
 };
 
 /**
+ * Fetch Asset info for system parachains.
  *
  * @param api
  */
