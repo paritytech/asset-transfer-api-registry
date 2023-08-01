@@ -15,76 +15,23 @@ import {
 	testRelayWestend,
 } from '@polkadot/apps-config';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
-import fs from 'fs';
 
-type TokenRegistry = {
-	polkadot: {};
-	kusama: {};
-	westend: {};
-};
-
-type ChainName = 'polkadot' | 'kusama' | 'westend';
-
-/**
- * Write Json to a file path.
- *
- * @param path Path to write the json file too
- * @param data Data that will be written to file.
- */
-const writeJson = (path: string, data: TokenRegistry): void => {
-	fs.writeFileSync(path, JSON.stringify(data, null, 2));
-	fs.appendFileSync(path, '\n', 'utf-8');
-};
-
-const twirlTimer = function () {
-	const P = ['\\', '|', '/', '-'];
-	let x = 0;
-	return setInterval(function () {
-		process.stdout.write('\r' + P[x++]);
-		x &= 3;
-	}, 250);
-};
-
-interface AssetsInfo {
-	[key: string]: string;
-}
-
-type ForeignAssetMetadata = {
-	deposit: string;
-	name: string;
-	symbol: string;
-	decimals: string;
-	isFrozen: boolean;
-};
-
-interface ForeignAssetsInfo {
-	[key: string]: {
-		symbol: string;
-		name: string;
-		multiLocation: string;
-	};
-}
-
-interface PoolInfo {
-	lpToken: string;
-}
-
-type PoolPairsInfo = {
-	[key: string]: {
-		lpToken: string;
-		pairInfo: string;
-	};
-};
-
-interface ParaIds {
-	[key: string]: number[];
-}
+import type {
+	AssetsInfo,
+	ChainName,
+	ForeignAssetMetadata,
+	ForeignAssetsInfo,
+	ParaIds,
+	PoolInfo,
+	PoolPairsInfo,
+	TokenRegistry,
+} from './types';
+import { sleep, twirlTimer, writeJson } from './util';
 
 /**
  * @const MAX_RETRIES Maximum amount of connection attempts
  * @const WS_DISCONNECT_TIMEOUT_SECONDS time to wait between attempts, in seconds
  */
-
 const MAX_RETRIES = 5;
 const WS_DISCONNECT_TIMEOUT_SECONDS = 3;
 
@@ -108,7 +55,7 @@ const fetchChainInfo = async (
 		const foreignAssetsPallet = api.registry.metadata.pallets.filter(
 			(pallet) => pallet.name.toString().toLowerCase() === 'foreignassets'
 		)[0];
-	
+
 		const { tokenSymbol } = await api.rpc.system.properties();
 		const { specName } = await api.rpc.state.getRuntimeVersion();
 		const tokens = tokenSymbol.isSome
@@ -143,7 +90,9 @@ const fetchChainInfo = async (
 			poolPairsInfo,
 			specName: specNameStr,
 			assetsPalletInstance: assetsPallet ? assetsPallet.index.toString() : null,
-			foreignAssetsPalletInstance: foreignAssetsPallet ? foreignAssetsPallet.index.toString(): null,
+			foreignAssetsPalletInstance: foreignAssetsPallet
+				? foreignAssetsPallet.index.toString()
+				: null,
 		};
 	} else {
 		return null;
@@ -202,51 +151,11 @@ const createChainRegistryFromRelay = async (
 	}
 };
 
-const main = async () => {
-	const registry = {
-		polkadot: {},
-		kusama: {},
-		westend: {},
-	};
-
-	const paraIds: ParaIds = {};
-
-	const polkadotEndpoints = [prodParasPolkadot, prodParasPolkadotCommon];
-	const kusamaEndpoints = [prodParasKusama, prodParasKusamaCommon];
-	const westendEndpoints = [testParasWestend, testParasWestendCommon];
-
-	// Set the Parachains Ids to the corresponding registry
-	await fetchParaIds('polkadot', prodRelayPolkadot, paraIds);
-	await fetchParaIds('kusama', prodRelayKusama, paraIds);
-	await fetchParaIds('westend', testRelayWestend, paraIds);
-
-	// Set the relay chain info to the registry
-	await createChainRegistryFromRelay('polkadot', prodRelayPolkadot, registry);
-	await createChainRegistryFromRelay('kusama', prodRelayKusama, registry);
-	await createChainRegistryFromRelay('westend', testRelayWestend, registry);
-
-	// Set the paras info to the registry
-	for (const endpoints of polkadotEndpoints) {
-		await createChainRegistryFromParas(
-			'polkadot',
-			endpoints,
-			registry,
-			paraIds
-		);
-	}
-
-	for (const endpoints of kusamaEndpoints) {
-		await createChainRegistryFromParas('kusama', endpoints, registry, paraIds);
-	}
-
-	for (const endpoints of westendEndpoints) {
-		await createChainRegistryFromParas('westend', endpoints, registry, paraIds);
-	}
-
-	const path = __dirname + '/../registry.json';
-	writeJson(path, registry);
-};
-
+/**
+ * Fetch Asset info for system parachains.
+ *
+ * @param api
+ */
 const fetchSystemParachainAssetInfo = async (
 	api: ApiPromise
 ): Promise<AssetsInfo> => {
@@ -272,15 +181,21 @@ const fetchSystemParachainAssetInfo = async (
 	return assetsInfo;
 };
 
+/**
+ * This will fetch all the foreign asset entries in storage and return an object
+ * with each key as the id, and then the info as the nested keys.
+ *
+ * @param api ApiPromise
+ */
 const fetchSystemParachainForeignAssetInfo = async (
 	api: ApiPromise
 ): Promise<ForeignAssetsInfo> => {
 	const foreignAssetsInfo: ForeignAssetsInfo = {};
 
 	if (api.query.foreignAssets !== undefined) {
-		for (const [
-			assetStorageKeyData,
-		] of await api.query.foreignAssets.asset.entries()) {
+		const assetEntries = await api.query.foreignAssets.asset.entries();
+
+		for (const [assetStorageKeyData] of assetEntries) {
 			const foreignAssetData = assetStorageKeyData.toHuman();
 
 			if (foreignAssetData) {
@@ -319,6 +234,12 @@ const fetchSystemParachainForeignAssetInfo = async (
 	return foreignAssetsInfo;
 };
 
+/**
+ * Fetch asset conversion pool info from storage. This will return an object where
+ * the keys are the token, and the objects within contain info about the token.
+ *
+ * @param api ApiPromise
+ */
 const fetchSystemParachainAssetConversionPoolInfo = async (
 	api: ApiPromise
 ): Promise<PoolPairsInfo> => {
@@ -366,7 +287,6 @@ const fetchSystemParachainAssetConversionPoolInfo = async (
  * @param endpointOpts Endpoint we are going to fetch the info from
  * @param paraIds Registry we want to add the info to
  */
-
 const fetchParaIds = async (
 	chain: string,
 	endpointOpts: EndpointOption,
@@ -387,18 +307,19 @@ const fetchParaIds = async (
 	return paraIds;
 };
 
-const sleep = (ms: number): Promise<void> => {
-	return new Promise((resolve) => {
-		setTimeout(() => resolve(), ms);
-	});
-};
-
+/**
+ * This will attempt to retrieve an active api that has succesfully connected to a node.
+ * It will return null if no connection is made.
+ *
+ * @param endpointOpts
+ * @param isRelay
+ */
 const getApi = async (endpointOpts: EndpointOption, isRelay?: boolean) => {
 	const { providers, paraId } = endpointOpts;
 
-	// If no providers are present return an empty object
+	// If no providers are present return null.
 	if (Object.keys(endpointOpts.providers).length === 0) return null;
-	// If a paraId is not present return an empty object;
+	// If a paraId is not present return null.
 	if (!paraId && !isRelay) return null;
 
 	const endpoints = Object.values(providers).filter(
@@ -416,7 +337,6 @@ const getApi = async (endpointOpts: EndpointOption, isRelay?: boolean) => {
  *
  * @param endpoints Endpoint we are going to try to connect to.
  */
-
 const startApi = async (
 	endpoints: string[]
 ): Promise<ApiPromise | undefined> => {
@@ -452,7 +372,6 @@ const startApi = async (
  *
  * @param wsEndpoints Endpoint we are going to fetch the info from
  */
-
 const getProvider = async (wsEndpoints: string[]) => {
 	console.log('Getting endpoint providers');
 
@@ -494,6 +413,51 @@ const getProvider = async (wsEndpoints: string[]) => {
 	} else {
 		return enpdointArray;
 	}
+};
+
+const main = async () => {
+	const registry = {
+		polkadot: {},
+		kusama: {},
+		westend: {},
+	};
+
+	const paraIds: ParaIds = {};
+
+	const polkadotEndpoints = [prodParasPolkadot, prodParasPolkadotCommon];
+	const kusamaEndpoints = [prodParasKusama, prodParasKusamaCommon];
+	const westendEndpoints = [testParasWestend, testParasWestendCommon];
+
+	// Set the Parachains Ids to the corresponding registry
+	await fetchParaIds('polkadot', prodRelayPolkadot, paraIds);
+	await fetchParaIds('kusama', prodRelayKusama, paraIds);
+	await fetchParaIds('westend', testRelayWestend, paraIds);
+
+	// Set the relay chain info to the registry
+	await createChainRegistryFromRelay('polkadot', prodRelayPolkadot, registry);
+	await createChainRegistryFromRelay('kusama', prodRelayKusama, registry);
+	await createChainRegistryFromRelay('westend', testRelayWestend, registry);
+
+	// Set the paras info to the registry
+	for (const endpoints of polkadotEndpoints) {
+		await createChainRegistryFromParas(
+			'polkadot',
+			endpoints,
+			registry,
+			paraIds
+		);
+	}
+
+	for (const endpoints of kusamaEndpoints) {
+		await createChainRegistryFromParas('kusama', endpoints, registry, paraIds);
+	}
+
+	for (const endpoints of westendEndpoints) {
+		await createChainRegistryFromParas('westend', endpoints, registry, paraIds);
+	}
+
+	const path = __dirname + '/../registry.json';
+	writeJson(path, registry);
 };
 
 main()
