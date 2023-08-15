@@ -16,6 +16,8 @@ import {
 } from '@polkadot/apps-config';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
+import fetch from 'node-fetch';
+
 import type {
 	AssetsInfo,
 	ChainName,
@@ -34,6 +36,7 @@ import { sleep, twirlTimer, writeJson } from './util';
  */
 const MAX_RETRIES = 5;
 const WS_DISCONNECT_TIMEOUT_SECONDS = 3;
+const XC_ASSET_CDN_URL = 'https://cdn.jsdelivr.net/gh/colorfulnotion/xcm-global-registry/metadata/xcmgar.json';
 
 /**
  * Fetch chain token and spec info.
@@ -415,6 +418,13 @@ const getProvider = async (wsEndpoints: string[]) => {
 	}
 };
 
+const fetchXcAssetsRegistryInfo = async (registry: TokenRegistry): Promise<void> => {
+	const xcAssetsRegistry: any = await (await fetch(XC_ASSET_CDN_URL)).json();
+	const xcAssets = xcAssetsRegistry['xcAssets'];
+	
+	registry['xcAssets'] = xcAssets;
+}
+
 const main = async () => {
 	const registry = {
 		polkadot: {},
@@ -455,6 +465,9 @@ const main = async () => {
 	for (const endpoints of westendEndpoints) {
 		await createChainRegistryFromParas('westend', endpoints, registry, paraIds);
 	}
+
+	// fetch xcAssets and add them to the registry
+	await fetchXcAssetsRegistryInfo(registry);
 
 	const path = __dirname + '/../registry.json';
 	writeJson(path, registry);
