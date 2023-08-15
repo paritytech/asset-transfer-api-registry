@@ -17,4 +17,4 @@
 
 ## Summary
 
-This library focuses on generating a asset registry for parachains on `polkadot`, `kusama`, and `westend`.
+This library focuses on generating an asset registry for parachains on `polkadot`, `kusama`, and `westend`.
