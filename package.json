@@ -23,5 +23,5 @@
     "@substrate/dev": "^0.6.7",
     "node-fetch": "2.6.7"
   },
-  "packageManager": "yarn@3.5.1"
+  "packageManager": "yarn@3.6.2"
 }
