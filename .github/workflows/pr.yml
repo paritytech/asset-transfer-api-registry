@@ -26,6 +26,9 @@ jobs:
           cmd: install # will run `yarn install` command
           
       - name: Build production bundle
-        uses: borales/actions-yarn@v4
+      
+        uses: test-room-7/action-update-file@v1
         with:
+          file-path: ../registry.json
           cmd: start
+          
