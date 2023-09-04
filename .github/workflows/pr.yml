@@ -1,22 +1,16 @@
 name: pr
 
 on:
-  pull_request:
-    branches:
-      - master
-    types:
-      - opened
-      - edited
-      - synchronize
-  pull_request_target:
-    types:
-      - opened
-      - edited
-      - synchronize
+    push:
+      branches:
+        - main
+    pull_request:
+      branches:
+        - main
   
 jobs:
   build:
-    name: Test
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
