@@ -19,14 +19,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-
-      - uses: actions/checkout@master
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+          
       - name: Build Registry
-        run: |
-          yarn start
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+          
+      - name: Build production bundle
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: start
+          
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
