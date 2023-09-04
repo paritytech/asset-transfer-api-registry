@@ -33,7 +33,7 @@ jobs:
       - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
-            file-path: $GITHUB_WORKSPACE/registry.json
+            file-path: ${{github.workspace}}/asset-transfer-api-registry/registry.json
             allow-removing: true
             commit-msg: Update registry
             github-token: ${{ secrets.GITHUB_TOKEN }}
