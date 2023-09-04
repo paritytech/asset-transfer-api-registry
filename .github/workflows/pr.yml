@@ -19,20 +19,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          
+    
+      - name: Install deps
+        run: yarn install
+
       - name: Build Registry
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install # will run `yarn install` command
-          
-      - name: Build production bundle
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: start
-          
-      - name: Commit & Push changes
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: cameron-registy-ci
-          message: update asset registry
+        run: yarn start
+    
+      - name: Add Changes
+        run: git add .
+      - name: Commit Changed Files
+        run: git commit -m "Auto Update Asset Registry"
+
