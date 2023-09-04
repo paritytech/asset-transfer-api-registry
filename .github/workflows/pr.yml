@@ -26,9 +26,14 @@ jobs:
           cmd: install # will run `yarn install` command
           
       - name: Build production bundle
-      
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: start
+
+      - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
-          file-path: ../registry.json
-          cmd: start
+            file-path: ../registry.json
+            commit-msg: Update registry
+            github-token: ${{ secrets.GITHUB_TOKEN }}
           
