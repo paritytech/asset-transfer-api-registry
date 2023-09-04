@@ -12,8 +12,16 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
+      contents: write
+
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref}}
+
 
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
