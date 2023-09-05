@@ -34,9 +34,6 @@ jobs:
       - run: rm registry.json
       - run: touch registry_file.json
 
-        # #   - name: Build Registry
-        # #     run: yarn start
-
       - uses: stefanzweifel/git-auto-commit-action@v4
         with: 
             commit_message: Automated Registry Update
