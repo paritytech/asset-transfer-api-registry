@@ -37,4 +37,6 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with: 
             commit_message: Automated Registry Update
+            file_pattern: '*.json'
+            disable_globbing: true
 
