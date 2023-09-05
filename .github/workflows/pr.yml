@@ -33,8 +33,9 @@ jobs:
 
       - run: rm registry.json
 
-      - name: Build Registry
-        run: yarn start
+        # #   - name: Build Registry
+        # #     run: yarn start
+
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with: 
