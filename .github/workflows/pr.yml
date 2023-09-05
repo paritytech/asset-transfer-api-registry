@@ -16,7 +16,7 @@ jobs:
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
       contents: write
-
+    
     steps:
       - uses: actions/checkout@v3
         with:
@@ -31,6 +31,8 @@ jobs:
       - name: Install deps
         run: yarn install
 
+      - run: rm ../registry.json
+      
       - name: Build Registry
         run: yarn start
 
