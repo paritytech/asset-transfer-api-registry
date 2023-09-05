@@ -31,8 +31,12 @@ jobs:
       - name: Install deps
         run: yarn install
 
+      # remove previous assets registry
       - run: rm registry.json
-      - run: touch registry_file.json
+
+      # rebuild assets registry
+      - name: Build Registry
+        run: yarn start
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with: 

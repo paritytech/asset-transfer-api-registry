@@ -206,10 +206,12 @@ const fetchSystemParachainForeignAssetInfo = async (
 				const foreignAssetMultiLocationStr = JSON.stringify(
 					foreignAssetData[0]
 				).replace(/(\d),/g, '$1');
+	
 				const foreignAssetMultiLocation = api.registry.createType(
-					'MultiLocation',
+					'XcmV3MultiLocation',
 					JSON.parse(foreignAssetMultiLocationStr)
 				);
+
 				const hexId = foreignAssetMultiLocation.toHex();
 
 				const assetMetadata = (
@@ -265,7 +267,7 @@ const fetchSystemParachainAssetConversionPoolInfo = async (
 
 				const palletAssetConversionNativeOrAssetIdData =
 					api.registry.createType(
-						'Vec<Vec<MultiLocation>>',
+						'Vec<Vec<XcmV3MultiLocation>>',
 						JSON.parse(poolAssetDataStr)
 					);
 				const pool = maybePoolInfo as unknown as PoolInfo;
