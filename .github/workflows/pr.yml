@@ -31,8 +31,8 @@ jobs:
       - name: Install deps
         run: yarn install
 
-      - run: rm ../registry.json
-      
+      - run: rm ../../registry.json
+
       - name: Build Registry
         run: yarn start
 
