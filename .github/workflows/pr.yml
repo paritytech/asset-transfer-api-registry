@@ -30,14 +30,28 @@ jobs:
       - name: Install deps
         run: yarn install
 
-      # remove previous assets registry
-      - run: rm registry.json
+      - run: echo ${{github.actor}}
 
-      # rebuild assets registry
-      - run: yarn start
+      # remove previous assets registry
+    #   - run: rm registry.json
+
+    #   # rebuild assets registry
+    #   - run: yarn start
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with: 
             commit_message: Automated Registry Update
             file_pattern: '*.json'
             disable_globbing: true
+
+  auto-approve:
+    name: 'Auto Approval'
+    needs: build-registry
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    
+    steps:
+    - uses: hmarr/auto-approve-action@v3
+      with:
+        review-message: "Auto approved automated PR"
