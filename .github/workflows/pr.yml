@@ -9,8 +9,8 @@ on:
         - main
   
 jobs:
-  build:
-    name: Build
+  build-registry:
+    name: 'Build Asset Registry'
     runs-on: ubuntu-latest
     
     permissions:
@@ -21,7 +21,6 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
-
 
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
@@ -35,8 +34,7 @@ jobs:
       - run: rm registry.json
 
       # rebuild assets registry
-      - name: Build Registry
-        run: yarn start
+      - run: yarn start
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with: 
@@ -44,3 +42,14 @@ jobs:
             file_pattern: '*.json'
             disable_globbing: true
 
+  auto-approve:
+    name: 'Auto Approval'
+    needs: build-registry
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    if: github.actor == 'dependabot[bot]' || github.actor == 'marshacb'
+    steps:
+    - uses: hmarr/auto-approve-action@v3
+      with:
+        review-message: "Auto approved automated PR"
