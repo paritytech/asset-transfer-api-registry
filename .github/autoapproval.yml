@@ -1,0 +1,11 @@
+_extends: github-settings
+
+from_owner: 
+  - dependabot[bot]
+
+required_labels: []
+
+blacklisted_labels:
+  - wip
+
+apply_labels: []
