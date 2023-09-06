@@ -41,15 +41,3 @@ jobs:
             commit_message: Automated Registry Update
             file_pattern: '*.json'
             disable_globbing: true
-
-  auto-approve:
-    name: 'Auto Approval'
-    needs: build-registry
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    if: github.actor == 'dependabot[bot]' || github.actor == 'marshacb'
-    steps:
-    - uses: hmarr/auto-approve-action@v3
-      with:
-        review-message: "Auto approved automated PR"
