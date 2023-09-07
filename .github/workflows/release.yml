@@ -4,11 +4,7 @@ on:
   pull_request:
     branches: 
       - main
-<<<<<<< HEAD
     types: closed
-=======
-    types: [closed]
->>>>>>> main
         
 jobs:
   publish:
