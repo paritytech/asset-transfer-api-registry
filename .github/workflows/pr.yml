@@ -27,6 +27,12 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
+      - name: add label
+        uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ startsWith(github.event.comment.body, '/add-labels') }}
+        with:
+          labels: automerge
+
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
         with:
