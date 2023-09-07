@@ -530,7 +530,6 @@
         "71": "OAK",
         "75": "cipher",
         "77": "Crypto",
-        "80": "BIT",
         "87": "XEXR",
         "88": "BTC",
         "90": "SATS",
@@ -627,6 +626,11 @@
         "4294967291": "PRIME"
       },
       "foreignAssetsInfo": {
+        "0x02010902": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":2,\"interior\":{\"x1\":{\"globalConsensus\":{\"polkadot\":null}}}}"
+        },
         "TNKR": {
           "symbol": "TNKR",
           "name": "Tinkernet",
@@ -1075,6 +1079,8 @@
         "48": "MOj",
         "49": "RAN",
         "50": "GRM",
+        "51": "kule",
+        "52": "kule1",
         "55": "PER",
         "60": "AAA",
         "66": "USDT",
@@ -1100,6 +1106,7 @@
         "222": "BBB",
         "223": "BILL",
         "301": "RYUD",
+        "381": "ALC",
         "404": "JET",
         "420": "SKER",
         "434": "cool",
@@ -1128,6 +1135,7 @@
         "1122": "dmd",
         "1233": "ACAB",
         "1234": "TEST",
+        "1309": "KLO",
         "1312": "NG1312",
         "1337": "NACHO",
         "1977": "SQL",
@@ -1274,6 +1282,14 @@
         "21": {
           "lpToken": "21",
           "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":28}]}}]]"
+        },
+        "22": {
+          "lpToken": "22",
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":51}]}}]]"
+        },
+        "23": {
+          "lpToken": "23",
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":1309}]}}]]"
         }
       },
       "specName": "westmint",
