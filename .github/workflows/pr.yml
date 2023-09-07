@@ -9,6 +9,9 @@ on:
     pull_request:
       branches:
         - main
+    pull_request_review:
+      types:
+         - submitted
   
 jobs:
   build-registry:
@@ -20,7 +23,7 @@ jobs:
       contents: write
     
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
 
@@ -32,13 +35,11 @@ jobs:
       - name: Install deps
         run: yarn install
 
-      - run: echo ${{github.actor}}
-
       # remove previous assets registry
-    #   - run: rm registry.json
+      - run: rm registry.json
 
     #   # rebuild assets registry
-    #   - run: yarn start
+      - run: yarn start
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with: 
@@ -47,7 +48,7 @@ jobs:
             disable_globbing: true
 
   auto-approve:
-    name: 'Auto Approval'
+    name: 'Auto Approve PR'
     needs: build-registry
     runs-on: ubuntu-latest
     permissions:
@@ -56,4 +57,17 @@ jobs:
     steps:
     - uses: hmarr/auto-approve-action@v3
       with:
-        review-message: "Auto approved automated PR"
+        review-message: 'Auto approved automated PR'
+
+  automerge:
+    name: 'Auto Merge PR'
+    runs-on: ubuntu-latest
+    needs: auto-approve
+    steps:
+      - id: automerge
+        name: automerge
+        uses: "pascalgn/automerge-action@v0.15.6"
+        env:
+            GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        
+    
