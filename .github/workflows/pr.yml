@@ -1,6 +1,8 @@
 name: pr
 
 on:
+    schedule:
+        - cron:  '20 0 * * *'
     push:
       branches:
         - main
