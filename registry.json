@@ -7,9 +7,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "polkadot",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "polkadot"
     },
     "1000": {
       "tokens": [
@@ -54,9 +52,7 @@
         }
       },
       "poolPairsInfo": {},
-      "specName": "statemint",
-      "assetsPalletInstance": "50",
-      "foreignAssetsPalletInstance": "53"
+      "specName": "statemint"
     },
     "1001": {
       "tokens": [
@@ -65,9 +61,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "collectives",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "collectives"
     },
     "1002": {
       "tokens": [
@@ -76,9 +70,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "bridge-hub-polkadot",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "bridge-hub-polkadot"
     },
     "2000": {
       "tokens": [
@@ -90,9 +82,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "acala",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "acala"
     },
     "2002": {
       "tokens": [
@@ -101,9 +91,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "clover-mainnet",
-      "assetsPalletInstance": "50",
-      "foreignAssetsPalletInstance": null
+      "specName": "clover-mainnet"
     },
     "2004": {
       "tokens": [
@@ -112,9 +100,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "moonbeam",
-      "assetsPalletInstance": "104",
-      "foreignAssetsPalletInstance": null
+      "specName": "moonbeam"
     },
     "2006": {
       "tokens": [
@@ -123,9 +109,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "astar",
-      "assetsPalletInstance": "36",
-      "foreignAssetsPalletInstance": null
+      "specName": "astar"
     },
     "2007": {
       "tokens": [
@@ -134,9 +118,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "totem-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "totem-parachain"
     },
     "2008": {
       "tokens": [
@@ -145,9 +127,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "polkadot-crust-parachain",
-      "assetsPalletInstance": "124",
-      "foreignAssetsPalletInstance": null
+      "specName": "polkadot-crust-parachain"
     },
     "2011": {
       "tokens": [
@@ -156,9 +136,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "Equilibrium-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "Equilibrium-parachain"
     },
     "2012": {
       "tokens": [
@@ -167,9 +145,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "parallel",
-      "assetsPalletInstance": "6",
-      "foreignAssetsPalletInstance": null
+      "specName": "parallel"
     },
     "2013": {
       "tokens": [
@@ -178,9 +154,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "litentry-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "litentry-parachain"
     },
     "2019": {
       "tokens": [
@@ -189,9 +163,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "composable",
-      "assetsPalletInstance": "57",
-      "foreignAssetsPalletInstance": null
+      "specName": "composable"
     },
     "2026": {
       "tokens": [
@@ -200,9 +172,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "nodle-para",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "nodle-para"
     },
     "2030": {
       "tokens": [
@@ -211,9 +181,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "bifrost_polkadot",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "bifrost_polkadot"
     },
     "2031": {
       "tokens": [
@@ -222,9 +190,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "centrifuge",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "centrifuge"
     },
     "2032": {
       "tokens": [
@@ -238,9 +204,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "interlay-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "interlay-parachain"
     },
     "2034": {
       "tokens": [
@@ -249,9 +213,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "hydradx",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "hydradx"
     },
     "2035": {
       "tokens": [
@@ -260,9 +222,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "phala",
-      "assetsPalletInstance": "42",
-      "foreignAssetsPalletInstance": null
+      "specName": "phala"
     },
     "2037": {
       "tokens": [
@@ -271,9 +231,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "unique",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": "80"
+      "specName": "unique"
     },
     "2039": {
       "tokens": [
@@ -282,9 +240,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "integritee-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "integritee-parachain"
     },
     "2040": {
       "tokens": [
@@ -293,9 +249,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "node",
-      "assetsPalletInstance": "34",
-      "foreignAssetsPalletInstance": null
+      "specName": "node"
     },
     "2043": {
       "tokens": [
@@ -304,9 +258,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "origintrail-parachain",
-      "assetsPalletInstance": "14",
-      "foreignAssetsPalletInstance": null
+      "specName": "origintrail-parachain"
     },
     "2046": {
       "tokens": [
@@ -315,9 +267,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "Darwinia2",
-      "assetsPalletInstance": "7",
-      "foreignAssetsPalletInstance": null
+      "specName": "Darwinia2"
     },
     "2048": {
       "tokens": [
@@ -326,9 +276,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "bitgreen-parachain",
-      "assetsPalletInstance": "52",
-      "foreignAssetsPalletInstance": null
+      "specName": "bitgreen-parachain"
     },
     "2051": {
       "tokens": [
@@ -337,9 +285,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "ajuna",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "ajuna"
     },
     "2052": {
       "tokens": [
@@ -348,9 +294,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "kylin",
-      "assetsPalletInstance": "12",
-      "foreignAssetsPalletInstance": null
+      "specName": "kylin"
     },
     "2056": {
       "tokens": [
@@ -359,9 +303,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "avn-parachain",
-      "assetsPalletInstance": "60",
-      "foreignAssetsPalletInstance": null
+      "specName": "avn-parachain"
     },
     "2086": {
       "tokens": [
@@ -370,9 +312,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "kilt-spiritnet",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "kilt-spiritnet"
     },
     "2091": {
       "tokens": [
@@ -381,9 +321,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "frequency",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "frequency"
     },
     "2092": {
       "tokens": [
@@ -392,9 +330,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "zeitgeist",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "zeitgeist"
     },
     "2093": {
       "tokens": [
@@ -403,9 +339,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "luhn",
-      "assetsPalletInstance": "64",
-      "foreignAssetsPalletInstance": null
+      "specName": "luhn"
     },
     "2094": {
       "tokens": [
@@ -414,9 +348,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "pendulum",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "pendulum"
     },
     "2101": {
       "tokens": [
@@ -425,9 +357,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "subsocial-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "subsocial-parachain"
     },
     "2104": {
       "tokens": [
@@ -436,9 +366,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "manta",
-      "assetsPalletInstance": "45",
-      "foreignAssetsPalletInstance": null
+      "specName": "manta"
     },
     "3333": {
       "tokens": [
@@ -447,9 +375,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "t3rn",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "t3rn"
     }
   },
   "kusama": {
@@ -460,9 +386,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "kusama",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "kusama"
     },
     "1000": {
       "tokens": [
@@ -638,9 +562,7 @@
         }
       },
       "poolPairsInfo": {},
-      "specName": "statemine",
-      "assetsPalletInstance": "50",
-      "foreignAssetsPalletInstance": "53"
+      "specName": "statemine"
     },
     "1001": {
       "tokens": [
@@ -649,9 +571,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "encointer-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "encointer-parachain"
     },
     "1002": {
       "tokens": [
@@ -660,9 +580,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "bridge-hub-kusama",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "bridge-hub-kusama"
     },
     "2000": {
       "tokens": [
@@ -680,9 +598,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "karura",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "karura"
     },
     "2001": {
       "tokens": [
@@ -699,9 +615,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "bifrost",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "bifrost"
     },
     "2004": {
       "tokens": [
@@ -710,9 +624,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "khala",
-      "assetsPalletInstance": "89",
-      "foreignAssetsPalletInstance": null
+      "specName": "khala"
     },
     "2007": {
       "tokens": [
@@ -721,18 +633,14 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "shiden",
-      "assetsPalletInstance": "36",
-      "foreignAssetsPalletInstance": null
+      "specName": "shiden"
     },
     "2011": {
       "tokens": [],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "sora_ksm",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "sora_ksm"
     },
     "2012": {
       "tokens": [
@@ -741,9 +649,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "crust-collator",
-      "assetsPalletInstance": "124",
-      "foreignAssetsPalletInstance": null
+      "specName": "crust-collator"
     },
     "2015": {
       "tokens": [
@@ -752,9 +658,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "integritee-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "integritee-parachain"
     },
     "2023": {
       "tokens": [
@@ -763,9 +667,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "moonriver",
-      "assetsPalletInstance": "104",
-      "foreignAssetsPalletInstance": null
+      "specName": "moonriver"
     },
     "2024": {
       "tokens": [
@@ -780,9 +682,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "Gens-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "Gens-parachain"
     },
     "2048": {
       "tokens": [
@@ -791,9 +691,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "robonomics",
-      "assetsPalletInstance": "34",
-      "foreignAssetsPalletInstance": null
+      "specName": "robonomics"
     },
     "2084": {
       "tokens": [
@@ -802,9 +700,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "calamari",
-      "assetsPalletInstance": "45",
-      "foreignAssetsPalletInstance": null
+      "specName": "calamari"
     },
     "2085": {
       "tokens": [
@@ -813,9 +709,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "heiko",
-      "assetsPalletInstance": "6",
-      "foreignAssetsPalletInstance": null
+      "specName": "heiko"
     },
     "2087": {
       "tokens": [
@@ -824,9 +718,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "picasso",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "picasso"
     },
     "2088": {
       "tokens": [
@@ -835,9 +727,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "altair",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "altair"
     },
     "2090": {
       "tokens": [
@@ -846,9 +736,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "basilisk",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "basilisk"
     },
     "2092": {
       "tokens": [
@@ -862,9 +750,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "kintsugi-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "kintsugi-parachain"
     },
     "2095": {
       "tokens": [
@@ -873,9 +759,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "quartz",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": "80"
+      "specName": "quartz"
     },
     "2096": {
       "tokens": [
@@ -884,9 +768,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "pioneer-runtime",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "pioneer-runtime"
     },
     "2105": {
       "tokens": [
@@ -895,9 +777,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "Crab2",
-      "assetsPalletInstance": "7",
-      "foreignAssetsPalletInstance": null
+      "specName": "Crab2"
     },
     "2106": {
       "tokens": [
@@ -906,9 +786,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "litmus-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "litmus-parachain"
     },
     "2110": {
       "tokens": [
@@ -917,9 +795,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "mangata-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "mangata-parachain"
     },
     "2113": {
       "tokens": [
@@ -928,9 +804,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "kabocha-parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "kabocha-parachain"
     },
     "2114": {
       "tokens": [
@@ -939,9 +813,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "turing",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "turing"
     },
     "2119": {
       "tokens": [
@@ -950,9 +822,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "bajun",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "bajun"
     },
     "2123": {
       "tokens": [
@@ -963,9 +833,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "gm_parachain",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "gm_parachain"
     },
     "2124": {
       "tokens": [
@@ -974,9 +842,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "amplitude",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "amplitude"
     },
     "2125": {
       "tokens": [
@@ -985,9 +851,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "tinkernet_node",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "tinkernet_node"
     },
     "2222": {
       "tokens": [
@@ -996,9 +860,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "ipci",
-      "assetsPalletInstance": "9",
-      "foreignAssetsPalletInstance": null
+      "specName": "ipci"
     },
     "2236": {
       "tokens": [
@@ -1010,9 +872,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "subzero",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "subzero"
     },
     "2241": {
       "tokens": [
@@ -1021,9 +881,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "peaq-node-krest",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "peaq-node-krest"
     }
   },
   "westend": {
@@ -1034,9 +892,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "westend",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "westend"
     },
     "1000": {
       "tokens": [
@@ -1098,6 +954,7 @@
         "101": "WIL",
         "102": "cPHP",
         "103": "cPHP",
+        "122": "TESTC",
         "123": "INXTSW1",
         "126": "TAT",
         "145": "dsu",
@@ -1290,11 +1147,13 @@
         "23": {
           "lpToken": "23",
           "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":1309}]}}]]"
+        },
+        "24": {
+          "lpToken": "24",
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":122}]}}]]"
         }
       },
-      "specName": "westmint",
-      "assetsPalletInstance": "50",
-      "foreignAssetsPalletInstance": "53"
+      "specName": "westmint"
     },
     "1001": {
       "tokens": [
@@ -1303,9 +1162,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "collectives",
-      "assetsPalletInstance": null,
-      "foreignAssetsPalletInstance": null
+      "specName": "collectives"
     }
   },
   "xcAssets": {
