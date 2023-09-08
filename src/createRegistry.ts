@@ -15,7 +15,6 @@ import {
 	testRelayWestend,
 } from '@polkadot/apps-config';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
-
 import fetch from 'node-fetch';
 
 import type {
@@ -36,7 +35,8 @@ import { sleep, twirlTimer, writeJson } from './util';
  */
 const MAX_RETRIES = 5;
 const WS_DISCONNECT_TIMEOUT_SECONDS = 3;
-const XC_ASSET_CDN_URL = 'https://cdn.jsdelivr.net/gh/colorfulnotion/xcm-global-registry/metadata/xcmgar.json';
+const XC_ASSET_CDN_URL =
+	'https://cdn.jsdelivr.net/gh/colorfulnotion/xcm-global-registry/metadata/xcmgar.json';
 
 /**
  * Fetch chain token and spec info.
@@ -52,13 +52,6 @@ const fetchChainInfo = async (
 	console.log('Api connected: ', api?.isConnected);
 
 	if (api !== null && api !== undefined) {
-		const assetsPallet = api.registry.metadata.pallets.filter(
-			(pallet) => pallet.name.toString().toLowerCase() === 'assets'
-		)[0];
-		const foreignAssetsPallet = api.registry.metadata.pallets.filter(
-			(pallet) => pallet.name.toString().toLowerCase() === 'foreignassets'
-		)[0];
-
 		const { tokenSymbol } = await api.rpc.system.properties();
 		const { specName } = await api.rpc.state.getRuntimeVersion();
 		const tokens = tokenSymbol.isSome
@@ -92,10 +85,6 @@ const fetchChainInfo = async (
 			foreignAssetsInfo,
 			poolPairsInfo,
 			specName: specNameStr,
-			assetsPalletInstance: assetsPallet ? assetsPallet.index.toString() : null,
-			foreignAssetsPalletInstance: foreignAssetsPallet
-				? foreignAssetsPallet.index.toString()
-				: null,
 		};
 	} else {
 		return null;
@@ -420,12 +409,14 @@ const getProvider = async (wsEndpoints: string[]) => {
 	}
 };
 
-const fetchXcAssetsRegistryInfo = async (registry: TokenRegistry): Promise<void> => {
+const fetchXcAssetsRegistryInfo = async (
+	registry: TokenRegistry
+): Promise<void> => {
 	const xcAssetsRegistry: any = await (await fetch(XC_ASSET_CDN_URL)).json();
 	const xcAssets = xcAssetsRegistry['xcAssets'];
-	
+
 	registry['xcAssets'] = xcAssets;
-}
+};
 
 const main = async () => {
 	const registry = {
