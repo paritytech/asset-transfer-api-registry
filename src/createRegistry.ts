@@ -15,7 +15,6 @@ import {
 	testRelayWestend,
 } from '@polkadot/apps-config';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
-
 import fetch from 'node-fetch';
 
 import type {
@@ -36,7 +35,8 @@ import { sleep, twirlTimer, writeJson } from './util';
  */
 const MAX_RETRIES = 5;
 const WS_DISCONNECT_TIMEOUT_SECONDS = 3;
-const XC_ASSET_CDN_URL = 'https://cdn.jsdelivr.net/gh/colorfulnotion/xcm-global-registry/metadata/xcmgar.json';
+const XC_ASSET_CDN_URL =
+	'https://cdn.jsdelivr.net/gh/colorfulnotion/xcm-global-registry/metadata/xcmgar.json';
 
 /**
  * Fetch chain token and spec info.
@@ -196,7 +196,7 @@ const fetchSystemParachainForeignAssetInfo = async (
 					foreignAssetData[0]
 				).replace(/(\d),/g, '$1');
 				const foreignAssetMultiLocation = api.registry.createType(
-					'MultiLocation',
+					'XcmV3MultiLocation',
 					JSON.parse(foreignAssetMultiLocationStr)
 				);
 				const hexId = foreignAssetMultiLocation.toHex();
@@ -254,7 +254,7 @@ const fetchSystemParachainAssetConversionPoolInfo = async (
 
 				const palletAssetConversionNativeOrAssetIdData =
 					api.registry.createType(
-						'Vec<Vec<MultiLocation>>',
+						'Vec<Vec<XcmV3MultiLocation>>',
 						JSON.parse(poolAssetDataStr)
 					);
 				const pool = maybePoolInfo as unknown as PoolInfo;
@@ -407,12 +407,14 @@ const getProvider = async (wsEndpoints: string[]) => {
 	}
 };
 
-const fetchXcAssetsRegistryInfo = async (registry: TokenRegistry): Promise<void> => {
+const fetchXcAssetsRegistryInfo = async (
+	registry: TokenRegistry
+): Promise<void> => {
 	const xcAssetsRegistry: any = await (await fetch(XC_ASSET_CDN_URL)).json();
 	const xcAssets = xcAssetsRegistry['xcAssets'];
-	
+
 	registry['xcAssets'] = xcAssets;
-}
+};
 
 const main = async () => {
 	const registry = {
