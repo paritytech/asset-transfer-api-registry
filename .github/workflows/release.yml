@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  pull_request:
+    branches: 
+      - main
+    types: closed
+        
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - run: npm ci
+      - run: npm test
+      - uses: JS-DevTools/npm-publish@v2
+        with:
+          token: ${{ secrets.ASSET_TRANSFER_API_NPM_PUBLISH_AUTOMATION_TOKEN }}
+        
+      - if: ${{ steps.publish.outputs.type }}
+        run: echo "Version changed!"
+
+  tagged-release:
+        name: "Tagged Release"
+        needs: publish
+        runs-on: "ubuntu-latest"
+    
+        steps:
+          - uses: "marvinpinto/action-automatic-releases@latest"
+            with:
+              repo_token: "${{ secrets.GITHUB_TOKEN }}"
+              prerelease: false
+              automatic_release_tag: latest

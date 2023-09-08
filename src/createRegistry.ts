@@ -195,10 +195,12 @@ const fetchSystemParachainForeignAssetInfo = async (
 				const foreignAssetMultiLocationStr = JSON.stringify(
 					foreignAssetData[0]
 				).replace(/(\d),/g, '$1');
+	
 				const foreignAssetMultiLocation = api.registry.createType(
 					'XcmV3MultiLocation',
 					JSON.parse(foreignAssetMultiLocationStr)
 				);
+
 				const hexId = foreignAssetMultiLocation.toHex();
 
 				const assetMetadata = (
