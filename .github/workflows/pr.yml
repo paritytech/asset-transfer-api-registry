@@ -24,5 +24,3 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ncipollo/release-action@v1
-        with:
-          tag: "latest"
