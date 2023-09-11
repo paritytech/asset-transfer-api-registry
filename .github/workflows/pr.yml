@@ -14,81 +14,12 @@ on:
          - submitted
   
 jobs:
-  build-registry:
-    name: 'Build Asset Registry'
-    runs-on: ubuntu-latest
-    
-    permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
-      contents: write
-      pull-requests: write
-    
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-
-      - name: add label
-        uses: actions-ecosystem/action-add-labels@v1
-        with:
-          labels: automerge
-
-      - name: Set Node.js 16.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-    
-      - name: Install deps
-        run: yarn install
-
-      # remove previous assets registry
-      - run: rm registry.json
-      - run: echo event name is ${{github.event_name}}
-
-
-    #   # rebuild assets registry
-      - run: yarn start
-
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with: 
-            commit_message: Automated Registry Update
-            file_pattern: '*.json'
-            disable_globbing: true
-
-  auto-approve:
-    name: 'Auto Approve PR'
-    needs: build-registry
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    if: github.actor == 'dependabot[bot]' || github.actor == 'TarikGul' || github.actor == 'marshacb'
-    steps:
-    - uses: hmarr/auto-approve-action@v3
-      with:
-        review-message: 'Auto approved PR'
-
-  automerge:
-    name: 'Auto Merge PR'
-    runs-on: ubuntu-latest
-    needs: auto-approve
-    steps:
-      - id: automerge
-        name: automerge
-        uses: "pascalgn/automerge-action@v0.15.6"
-        env:
-            GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-            MERGE_METHOD: "squash"
-            MERGE_COMMIT_MESSAGE: "chore: scheduled registry update"
-            MERGE_RETRY_SLEEP: "10000"
-            MERGE_REQUIRED_APPROVALS: "0"
-
   github-release:
     permissions:
       contents: write
 
     name: "Github Release"
     runs-on: "ubuntu-latest"
-    needs: automerge
 
     steps:
       - uses: actions/checkout@v3
