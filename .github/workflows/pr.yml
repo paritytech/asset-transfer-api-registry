@@ -27,4 +27,5 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with: 
           prerelease: false
+          tag_name: "latest"
       
