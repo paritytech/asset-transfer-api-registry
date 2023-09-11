@@ -17,10 +17,14 @@ jobs:
   delete-latest:
     permissions:
       contents: write
-      
-    uses: liudonghua123/delete-release-action@v1
-    with:
-     release_name: 'latest'
+
+
+    name: "Remove Latest Release"
+    runs-on: "ubuntu-latest"
+    steps: 
+      - uses: liudonghua123/delete-release-action@v1
+        with:
+         release_name: 'latest'
 
   github-release:
     permissions:
