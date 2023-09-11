@@ -83,7 +83,7 @@ jobs:
             MERGE_REQUIRED_APPROVALS: "0"
   
   github-release:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true
     permissions:
       contents: write
 
