@@ -287,6 +287,15 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
+    "2052": {
+      "tokens": [
+        "KYL"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "kylin"
+    },
     "2056": {
       "tokens": [
         "AVT"
@@ -843,15 +852,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "tinkernet_node"
-    },
-    "2222": {
-      "tokens": [
-        "MITO"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "ipci"
     },
     "2236": {
       "tokens": [
