@@ -43,6 +43,8 @@ jobs:
 
       # remove previous assets registry
       - run: rm registry.json
+      - run: echo event name is ${{github.event_name}}
+
 
     #   # rebuild assets registry
       - run: yarn start
@@ -79,7 +81,7 @@ jobs:
             MERGE_COMMIT_MESSAGE: "chore: scheduled registry update"
             MERGE_RETRY_SLEEP: "10000"
             MERGE_REQUIRED_APPROVALS: "0"
-
+  
   github-release:
     if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
     permissions:
