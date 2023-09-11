@@ -287,6 +287,15 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
+    "2052": {
+      "tokens": [
+        "KYL"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "kylin"
+    },
     "2056": {
       "tokens": [
         "AVT"
