@@ -1,9 +1,8 @@
 name: pr
 
 on:
-    schedule:
-        # - cron:  '20 0 * * *'
-        - cron: '45 12 * * *'
+  schedule:
+  - cron: '0 1 * * *'
   
 jobs:
   build-registry:
