@@ -76,7 +76,7 @@ jobs:
         env:
             GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
             MERGE_METHOD: "squash"
-            MERGE_COMMIT_MESSAGE: "scheduled registry update"
+            MERGE_COMMIT_MESSAGE: "chore: scheduled registry update"
             MERGE_RETRY_SLEEP: "10000"
             MERGE_REQUIRED_APPROVALS: "0"
 
