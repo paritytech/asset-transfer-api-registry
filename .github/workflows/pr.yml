@@ -2,25 +2,107 @@ name: pr
 
 on:
   schedule:
-   - cron: '30 13 * * *'
+   - cron: '45 14 * * *'
 
   
 jobs:
-  create-pr:
-      name: Create PR
-      runs-on: ubuntu-latest
-
-      permissions:
-        contents: write
-        pull-requests: write
-      steps:     
+  build-registry:
+    name: 'Build Asset Registry'
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
-        # Make changes to pull request here
+
+      - name: add label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: automerge
+
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+    
+      - name: Install deps
+        run: yarn install
+
+      # remove previous assets registry
+      - run: rm registry.json
+
+    #   # rebuild assets registry
+      - run: yarn start
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
           branch: bot-auto-update-registry
           title: 'chore: update asset registry'
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with: 
+            commit_message: Automated Registry Update
+            file_pattern: '*.json'
+            disable_globbing: true
+
+  auto-approve:
+    name: 'Auto Approve PR'
+    needs: build-registry
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    if: github.actor == 'dependabot[bot]' || github.actor == 'TarikGul' || github.actor == 'marshacb'
+    steps:
+    - uses: hmarr/auto-approve-action@v3
+      with:
+        review-message: 'Auto approved PR'
+
+  automerge:
+    name: 'Auto Merge PR'
+    runs-on: ubuntu-latest
+    needs: auto-approve
+    steps:
+      - id: automerge
+        name: automerge
+        uses: "pascalgn/automerge-action@v0.15.6"
+        env:
+            GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+            MERGE_METHOD: "squash"
+            MERGE_COMMIT_MESSAGE: "chore: scheduled registry update"
+            MERGE_RETRY_SLEEP: "10000"
+            MERGE_REQUIRED_APPROVALS: "0"
+
+  delete-latest-release:
+    permissions:
+      contents: write
+
+    name: "Remove Latest Release"
+    runs-on: "ubuntu-latest"
+    needs: automerge
+
+    steps: 
+      - uses: dev-drprasad/delete-tag-and-release@v1.0 # PRERELEASE is v1.0 and can also be used to test and give us feedback
+        with:
+          tag_name: latest #(required) tag name to delete 
+          github_token: ${{ secrets.GITHUB_TOKEN }} # (required) a GitHub token with write access to the repo that needs to be modified
+          delete_release: true #(optional) default: true 
+
+  publish-latest-release:
+    permissions:
+      contents: write
+
+    name: "Github Release"
+    runs-on: "ubuntu-latest"
+    needs: delete-latest-release
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ncipollo/release-action@v1
+        with:
+          tag: "latest"
+          commit: "main"
