@@ -2,11 +2,11 @@ name: pr
 
 on:
   schedule:
-   - cron: '40 18 * * *'
+   - cron: '50 19 * * *'
   
 jobs:
   build-registry:
-    name: 'Create PR'
+    name: 'Check Registry Diff'
     runs-on: ubuntu-latest
     
     permissions:
@@ -14,8 +14,9 @@ jobs:
       pull-requests: write
     
     steps:
-
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
