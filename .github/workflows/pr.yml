@@ -2,7 +2,7 @@ name: pr
 
 on:
   schedule:
-   - cron: '50 19 * * *'
+   - cron: '40 20 * * *'
   
 jobs:
   build-registry:
@@ -34,73 +34,3 @@ jobs:
         with:
           branch: bot-auto-update-registry
           title: 'chore: update asset registry'
-
-      - name: add automerge label
-        uses: actions-ecosystem/action-add-labels@v1
-        with:
-           labels: automerge
-      
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with: 
-          commit_message: Automated Registry Update
-          file_pattern: '*.json'
-          disable_globbing: true
-
-  auto-approve:
-    name: 'Auto Approve PR'
-    needs: build-registry
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    if: github.actor == 'dependabot[bot]' || github.actor == 'TarikGul' || github.actor == 'marshacb'
-    steps:
-    - uses: hmarr/auto-approve-action@v3
-      with:
-        review-message: 'Auto approved PR'
-
-  automerge:
-    name: 'Auto Merge PR'
-    runs-on: ubuntu-latest
-    needs: auto-approve
-    steps:
-      - id: automerge
-        name: automerge
-        uses: "pascalgn/automerge-action@v0.15.6"
-        env:
-            GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-            MERGE_METHOD: "squash"
-            MERGE_COMMIT_MESSAGE: "chore: scheduled registry update"
-            MERGE_RETRY_SLEEP: "10000"
-            MERGE_REQUIRED_APPROVALS: "0"
-
-  delete-latest-release:
-    permissions:
-      contents: write
-
-    name: "Remove Latest Release"
-    runs-on: "ubuntu-latest"
-    needs: automerge
-
-    steps: 
-      - uses: dev-drprasad/delete-tag-and-release@v1.0 # PRERELEASE is v1.0 and can also be used to test and give us feedback
-        with:
-          tag_name: latest #(required) tag name to delete 
-          github_token: ${{ secrets.GITHUB_TOKEN }} # (required) a GitHub token with write access to the repo that needs to be modified
-          delete_release: true #(optional) default: true 
-
-  publish-latest-release:
-    permissions:
-      contents: write
-
-    name: "Github Release"
-    runs-on: "ubuntu-latest"
-    needs: delete-latest-release
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ncipollo/release-action@v1
-        with:
-          tag: "latest"
-          commit: "main"
-        
-        
