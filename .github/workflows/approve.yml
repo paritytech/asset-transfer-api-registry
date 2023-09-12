@@ -4,6 +4,15 @@ on:
  pull_request:
     branches:
       - main
+    types:
+        - opened
+        - edited
+        - synchronize
+ pull_request_target:
+      types:
+        - opened
+        - edited
+        - synchronize
 
 jobs:  
   commit-and-approve:
@@ -13,6 +22,8 @@ jobs:
         pull-requests: write
 
     steps:
+    
+    - run: echo actor is ${{github.actor}}
     - uses: actions/checkout@v4
       with:
         ref: ${{ github.head_ref }}
