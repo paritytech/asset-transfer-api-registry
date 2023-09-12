@@ -2,11 +2,11 @@ name: pr
 
 on:
   schedule:
-   - cron: '45 15 * * *'
+   - cron: '45 16 * * *'
   
 jobs:
   build-registry:
-    name: 'Build Asset Registry'
+    name: 'Create PR'
     runs-on: ubuntu-latest
     
     permissions:
@@ -14,29 +14,13 @@ jobs:
       pull-requests: write
     
     steps:
-        - name: Check out repository code
-          uses: actions/checkout@v4
-          with:
-            ref: ${{ github.head_ref }}
-        
-        - name: Set Node.js 16.x
-          uses: actions/setup-node@v3
-          with:
-            node-version: 16.x
-        
-        - name: Install deps
-          run: yarn install
-    
-        # remove previous assets registry
-        - run: rm registry.json
-    
-        # rebuild assets registry
-        - run: yarn start
-    
-        - name: pull-request
-          uses: repo-sync/pull-request@v2
-          with:
-            destination_branch: "develop"
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            pr_label: "feature, automated pr"
-            pr_title: "[Example] Simple demo"
+      
+      - uses: actions/checkout@v4
+
+      - run: touch test.txt
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          branch: bot-auto-update-registry
+          title: 'chore: update asset registry'
