@@ -2,7 +2,7 @@ name: pr
 
 on:
   schedule:
-   - cron: '20 15 * * *'
+   - cron: '35 15 * * *'
   
 jobs:
   build-registry:
@@ -14,7 +14,13 @@ jobs:
       pull-requests: write
     
     steps:
-      - name: create pull request
-        run: gh pr create -B main -H test_pr_branch --title 'Merge test_pr_branch into main' --body 'Created by Github action'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - name: Check out repository code
+          uses: actions/checkout@v4
+
+        - name: pull-request
+          uses: repo-sync/pull-request@v2
+          with:
+            destination_branch: "develop"
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            pr_label: "feature, automated pr"
+            pr_title: "[Example] Simple demo"
