@@ -2,7 +2,7 @@ name: pr
 
 on:
   schedule:
-   - cron: '35 15 * * *'
+   - cron: '45 15 * * *'
   
 jobs:
   build-registry:
@@ -16,7 +16,23 @@ jobs:
     steps:
         - name: Check out repository code
           uses: actions/checkout@v4
-
+          with:
+            ref: ${{ github.head_ref }}
+        
+        - name: Set Node.js 16.x
+          uses: actions/setup-node@v3
+          with:
+            node-version: 16.x
+        
+        - name: Install deps
+          run: yarn install
+    
+        # remove previous assets registry
+        - run: rm registry.json
+    
+        # rebuild assets registry
+        - run: yarn start
+    
         - name: pull-request
           uses: repo-sync/pull-request@v2
           with:
