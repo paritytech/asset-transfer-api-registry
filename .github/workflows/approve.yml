@@ -8,6 +8,7 @@ on:
       - unlabeled
       - assigned
       - unassigned
+      - edited
   
 jobs:  
   commit-changes:
