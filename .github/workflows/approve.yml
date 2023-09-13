@@ -46,7 +46,7 @@ jobs:
     - uses: hmarr/auto-approve-action@v3
       with:
         review-message: 'Auto approved PR'
-
+        github-token: ${{ secrets.GITHUB_TOKEN}}
 #   automerge:
 #     name: 'Auto Merge PR'
 #     runs-on: ubuntu-latest
