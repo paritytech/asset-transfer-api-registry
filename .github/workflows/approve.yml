@@ -1,41 +1,15 @@
-name: approve
+name: Auto approve PRs by dependabot
 
-on:
-  pull_request_target:
-    branches:
-      - master
-    types:
-      - opened
-      - reopened
-      - edited
-      - synchronize
-        
-jobs:  
-  commit-changes:
-    name: Commit Changes
+# Trigger the workflow on pull request
+on: pull_request_target
+
+jobs:
+  autoapprove:
+    name: Auto-Approve a PR by dependabot
     runs-on: ubuntu-latest
     steps:
-      - name: add automerge label
-        uses: actions-ecosystem/action-add-labels@v1
+      - name: Auto approve
+        uses: cognitedata/auto-approve-dependabot-action@v3.0.1
+        if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
         with:
-         labels: automerge
-
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with: 
-         commit_message: Automated Registry Update
-         file_pattern: '*.json'
-         disable_globbing: true
-
-  auto-approve:
-    name: 'Auto Approve PR'
-    runs-on: ubuntu-latest
-    needs: commit-changes
-    permissions:
-      pull-requests: write
-    if: github.actor == 'dependabot[bot]' || github.actor == 'TarikGul' || github.actor == 'marshacb'
-    steps:
-      - run: echo github actor is ${{github.actor}}
-      - uses: hmarr/auto-approve-action@v3
-        with:
-          review-message: 'Auto approved PR'
           github-token: ${{ secrets.GITHUB_TOKEN }}
