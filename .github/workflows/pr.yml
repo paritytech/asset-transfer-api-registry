@@ -2,7 +2,7 @@ name: pr
 
 on:
   schedule:
-   - cron: '00 23 * * *'
+   - cron: '20 4 * * *'
   
 jobs:
   build-registry:
@@ -18,18 +18,16 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      # - name: Set Node.js 16.x
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 16.x
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
     
-      # - name: Install deps
-      #   run: yarn install
+      - name: Install deps
+        run: yarn install
 
-      # # rebuild assets registry
-      # - run: yarn start
-
-      - run: touch test.txt
+      # rebuild assets registry
+      - run: yarn start
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
