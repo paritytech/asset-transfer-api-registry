@@ -16,14 +16,9 @@ on:
         
 jobs:  
   commit-changes:
+    name: Commit Changes
     runs-on: ubuntu-latest
-    permissions:
-        contents: write
-        pull-requests: write
-
     steps:
-      - run: echo actor is ${{github.actor}}
-
       - name: add automerge label
         uses: actions-ecosystem/action-add-labels@v1
         with:
