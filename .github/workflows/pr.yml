@@ -2,7 +2,7 @@ name: pr
 
 on:
   schedule:
-   - cron: '40 20 * * *'
+   - cron: '20 4 * * *'
   
 jobs:
   build-registry:

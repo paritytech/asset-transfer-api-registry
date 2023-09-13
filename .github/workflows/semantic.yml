@@ -21,7 +21,6 @@ jobs:
     name: Validate PR Title
     runs-on: ubuntu-latest
     steps:
-      - run: echo event name ${{github.event_name}}
       - name: semantic-pull-request
         uses: amannn/action-semantic-pull-request@v5
         env:
