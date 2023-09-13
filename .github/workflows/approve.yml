@@ -1,0 +1,33 @@
+name: approve
+
+on: pull_request
+
+jobs:  
+  commit-changes:
+    name: Commit Changes
+    runs-on: ubuntu-latest
+    steps:
+      - name: add automerge label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+         labels: automerge
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with: 
+         commit_message: Automated Registry Update
+         file_pattern: '*.json'
+         disable_globbing: true
+
+  auto-approve:
+    name: 'Auto Approve PR'
+    runs-on: ubuntu-latest
+    needs: commit-changes
+    permissions:
+      pull-requests: write
+    if: github.actor == 'dependabot[bot]' || github.actor == 'TarikGul' || github.actor == 'marshacb'
+    steps:
+      - run: echo github actor is ${{github.actor}}
+      - uses: hmarr/auto-approve-action@v3
+        with:
+          review-message: 'Auto approved PR'
+          github-token: ${{ secrets.ASSET_TRANSFER_API_REGISTRY_CI_AUTOMATION_TOKEN }}
