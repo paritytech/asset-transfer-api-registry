@@ -1,13 +1,18 @@
 name: pr
 
 on:
- pull_request:
-    branches:
-      - main
-    types:
-        - opened
-        - edited
-        - synchronize
+    pull_request:
+        branches:
+          - main
+        types:
+            - opened
+            - edited
+            - synchronize
+    pull_request_target:
+          types:
+            - opened
+            - edited
+            - synchronize
 
 jobs:  
   commit-changes:
@@ -46,7 +51,7 @@ jobs:
     - uses: hmarr/auto-approve-action@v3
       with:
         review-message: 'Auto approved PR'
-        github-token: ${{ secrets.GITHUB_TOKEN}}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
 #   automerge:
 #     name: 'Auto Merge PR'
 #     runs-on: ubuntu-latest
