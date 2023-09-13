@@ -8,11 +8,6 @@ on:
         - opened
         - edited
         - synchronize
- pull_request_target:
-      types:
-        - opened
-        - edited
-        - synchronize
 
 jobs:  
   commit-and-approve:
