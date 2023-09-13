@@ -18,7 +18,6 @@ jobs:
   validate-title:
     permissions:
       pull-requests: read  # for amannn/action-semantic-pull-request to analyze PRs
-      
     name: Validate PR Title
     runs-on: ubuntu-latest
     steps:
@@ -26,11 +25,3 @@ jobs:
         uses: amannn/action-semantic-pull-request@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-      - run: echo github actor is ${{github.actor}}
-      
-      - name: 'Auto Approve PR'
-        uses: hmarr/auto-approve-action@v3
-        with:
-            review-message: 'Auto approved PR'
-            github-token: ${{ secrets.GITHUB_TOKEN }}
