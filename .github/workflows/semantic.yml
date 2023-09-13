@@ -25,3 +25,15 @@ jobs:
         uses: amannn/action-semantic-pull-request@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  auto-approve:
+    name: 'Auto Approve PR'
+    runs-on: ubuntu-latest
+    permissions:
+        pull-requests: write
+    if: github.actor == 'dependabot[bot]' || github.actor == 'TarikGul' || github.actor == 'marshacb'
+    steps:
+      - run: echo github actor is ${{github.actor}}
+      - uses: hmarr/auto-approve-action@v3
+        with:
+            review-message: 'Auto approved PR'
+            github-token: ${{ secrets.GITHUB_TOKEN }}
