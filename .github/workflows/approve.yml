@@ -26,7 +26,7 @@ jobs:
       pull-requests: write
     if: github.actor == 'dependabot[bot]' || github.actor == 'TarikGul' || github.actor == 'marshacb'
     steps:
-      - run: echo github actor is ${{github.actor}}
+      - run: echo current github actor is ${{github.actor}}
       - uses: hmarr/auto-approve-action@v3
         with:
           review-message: 'Auto approved PR'
