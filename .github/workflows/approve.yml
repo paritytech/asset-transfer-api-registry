@@ -1,6 +1,18 @@
 name: approve
 
-on: pull_request_target
+on:
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - edited
+      - synchronize
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
         
 jobs:  
   commit-changes:
@@ -23,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: commit-changes
     permissions:
-      pull-requests: read
+      pull-requests: write
     if: github.actor == 'dependabot[bot]' || github.actor == 'TarikGul' || github.actor == 'marshacb'
     steps:
       - run: echo github actor is ${{github.actor}}
