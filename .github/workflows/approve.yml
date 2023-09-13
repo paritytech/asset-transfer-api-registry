@@ -17,9 +17,9 @@ jobs:
     steps:
     
     - run: echo actor is ${{github.actor}}
-    - uses: actions/checkout@v4
-      with:
-        ref: ${{ github.head_ref }}
+    # - uses: actions/checkout@v4
+    #   with:
+    #     ref: ${{ github.head_ref }}
 
     - name: add automerge label
       uses: actions-ecosystem/action-add-labels@v1
