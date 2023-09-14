@@ -25,7 +25,10 @@ import type {
 	ParaIds,
 	PoolInfo,
 	PoolPairsInfo,
+	SanitizedXcAssetsData,
 	TokenRegistry,
+	XcAssets,
+	XcAssetsData,
 } from './types';
 import { sleep, twirlTimer, writeJson } from './util';
 
@@ -195,7 +198,7 @@ const fetchSystemParachainForeignAssetInfo = async (
 				const foreignAssetMultiLocationStr = JSON.stringify(
 					foreignAssetData[0]
 				).replace(/(\d),/g, '$1');
-	
+
 				const foreignAssetMultiLocation = api.registry.createType(
 					'XcmV3MultiLocation',
 					JSON.parse(foreignAssetMultiLocationStr)
@@ -412,10 +415,45 @@ const getProvider = async (wsEndpoints: string[]) => {
 const fetchXcAssetsRegistryInfo = async (
 	registry: TokenRegistry
 ): Promise<void> => {
-	const xcAssetsRegistry: any = await (await fetch(XC_ASSET_CDN_URL)).json();
-	const xcAssets = xcAssetsRegistry['xcAssets'];
+	const xcAssetsRegistry = (await (await fetch(XC_ASSET_CDN_URL)).json()) as {
+		xcAssets: XcAssets;
+	};
+	const { xcAssets } = xcAssetsRegistry;
 
-	registry['xcAssets'] = xcAssets;
+	assignXcAssetsToRelay(registry, xcAssets, 'polkadot');
+	assignXcAssetsToRelay(registry, xcAssets, 'kusama');
+};
+
+const assignXcAssetsToRelay = (
+	registry: TokenRegistry,
+	xcAssets: XcAssets,
+	chain: 'polkadot' | 'kusama'
+): void => {
+	const chainAssetInfo = xcAssets[chain];
+	for (const paraInfo of chainAssetInfo) {
+		const { paraId } = paraInfo;
+		const para = registry[chain][paraId];
+
+		if (para) {
+			const sanitizedData = sanitizeXcAssetData(paraInfo.data);
+			para['xcAssetsData'] = sanitizedData;
+		}
+	}
+};
+
+const sanitizeXcAssetData = (data: XcAssetsData[]): SanitizedXcAssetsData[] => {
+	const mappedData = data.map((info) => {
+		return {
+			paraId: info.paraId,
+			nativeChainId: info.nativeChainId,
+			symbol: info.symbol,
+			decimals: info.decimals,
+			xcmV1MultiLocation: JSON.stringify(info.xcmV1MultiLocation),
+			asset: info.asset,
+		};
+	});
+
+	return mappedData;
 };
 
 const main = async () => {
