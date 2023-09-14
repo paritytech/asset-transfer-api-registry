@@ -48,21 +48,6 @@ jobs:
         MERGE_COMMIT_MESSAGE: "chore: scheduled registry update"
         MERGE_RETRY_SLEEP: "10000"
         MERGE_REQUIRED_APPROVALS: "0"
-    
-  npm-publish:
-    runs-on: ubuntu-latest
-    needs: automerge
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "18"
-      - uses: JS-DevTools/npm-publish@v2
-        with:
-          token: ${{ secrets.ASSET_TRANSFER_API_NPM_PUBLISH_AUTOMATION_TOKEN }}
-        
-      - if: ${{ steps.publish.outputs.type }}
-        run: echo "Asset Transfer API Registry Latest Updated!"
 
   delete-latest-release:
     permissions:
@@ -70,7 +55,7 @@ jobs:
 
     name: "Remove Latest Release"
     runs-on: "ubuntu-latest"
-    needs: npm-publish
+    needs: automerge
 
     steps: 
     - uses: dev-drprasad/delete-tag-and-release@v1.0 # PRERELEASE is v1.0 and can also be used to test and give us feedback
