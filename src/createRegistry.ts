@@ -431,8 +431,8 @@ const assignXcAssetsToRelay = (
 ): void => {
 	const chainAssetInfo = xcAssets[chain];
 	for (const paraInfo of chainAssetInfo) {
-		const { paraId } = paraInfo;
-		const para = registry[chain][paraId];
+		const { paraID } = paraInfo;
+		const para = registry[chain][paraID];
 
 		if (para) {
 			const sanitizedData = sanitizeXcAssetData(paraInfo.data);
@@ -444,7 +444,7 @@ const assignXcAssetsToRelay = (
 const sanitizeXcAssetData = (data: XcAssetsData[]): SanitizedXcAssetsData[] => {
 	const mappedData = data.map((info) => {
 		return {
-			paraId: info.paraId,
+			paraID: info.paraID,
 			nativeChainId: info.nativeChainId,
 			symbol: info.symbol,
 			decimals: info.decimals,

@@ -61,14 +61,14 @@ export type XcAssets = {
 
 export type XcAssetsInfo = {
 	relayChain: string;
-	paraId: number;
+	paraID: number;
 	id: string;
 	xcAssetCnt: string;
 	data: XcAssetsData[];
 };
 
 export type XcAssetsData = {
-	paraId: number;
+	paraID: number;
 	relayChain: string;
 	nativeChainId: string;
 	symbol: string;
@@ -82,7 +82,7 @@ export type XcAssetsData = {
 };
 
 export type SanitizedXcAssetsData = {
-	paraId: number;
+	paraID: number;
 	nativeChainId: string;
 	symbol: string;
 	decimals: number;
