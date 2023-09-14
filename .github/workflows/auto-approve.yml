@@ -50,7 +50,6 @@ jobs:
         MERGE_REQUIRED_APPROVALS: "0"
     
   npm-publish:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     needs: automerge
     steps:
