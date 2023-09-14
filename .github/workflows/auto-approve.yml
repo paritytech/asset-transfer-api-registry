@@ -1,11 +1,15 @@
 name: auto-approve
 
-on: pull_request_target
+on: 
+  pull_request_target:
+    branches: 
+      - bot-auto-update-registry
 
 jobs:  
   commit-changes:
     name: Commit Changes
     runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
     steps:
       - name: add automerge label
         uses: actions-ecosystem/action-add-labels@v1
@@ -24,7 +28,6 @@ jobs:
     needs: commit-changes
     permissions:
       pull-requests: write
-    if: github.actor == 'dependabot[bot]'
     steps:
       - uses: hmarr/auto-approve-action@v3
         with:
@@ -75,3 +78,4 @@ jobs:
       with:
         tag: "latest"
         commit: "main"
+
