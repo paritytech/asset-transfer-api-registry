@@ -6,7 +6,7 @@ on:
   
 jobs:
   build-registry:
-    name: 'Check Registry Diff'
+    name: 'Build Registry'
     runs-on: ubuntu-latest
     
     permissions:
@@ -26,7 +26,7 @@ jobs:
       - name: Install deps
         run: yarn install
 
-      # rebuild assets registry
+      # build registry
       - run: yarn start
 
       - name: Create Pull Request
