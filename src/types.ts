@@ -14,6 +14,7 @@ export type ChainInfo = {
 		specName: string;
 		foreignAssetsInfo: ForeignAssetsInfo;
 		poolPairsInfo: PoolPairsInfo;
+		xcAssetsData?: SanitizedXcAssetsData[];
 	};
 };
 
