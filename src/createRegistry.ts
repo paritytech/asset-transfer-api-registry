@@ -10,8 +10,11 @@ import {
 	prodParasPolkadotCommon,
 	prodRelayKusama,
 	prodRelayPolkadot,
+	testParasRococo,
+	testParasRococoCommon,
 	testParasWestend,
 	testParasWestendCommon,
+	testRelayRococo,
 	testRelayWestend,
 } from '@polkadot/apps-config';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
@@ -461,6 +464,7 @@ const main = async () => {
 		polkadot: {},
 		kusama: {},
 		westend: {},
+		rococo: {},
 	};
 
 	const paraIds: ParaIds = {};
@@ -468,16 +472,19 @@ const main = async () => {
 	const polkadotEndpoints = [prodParasPolkadot, prodParasPolkadotCommon];
 	const kusamaEndpoints = [prodParasKusama, prodParasKusamaCommon];
 	const westendEndpoints = [testParasWestend, testParasWestendCommon];
+	const rococoEndpoints = [testParasRococo, testParasRococoCommon];
 
 	// Set the Parachains Ids to the corresponding registry
 	await fetchParaIds('polkadot', prodRelayPolkadot, paraIds);
 	await fetchParaIds('kusama', prodRelayKusama, paraIds);
 	await fetchParaIds('westend', testRelayWestend, paraIds);
+	await fetchParaIds('rococo', testRelayRococo, paraIds);
 
 	// Set the relay chain info to the registry
 	await createChainRegistryFromRelay('polkadot', prodRelayPolkadot, registry);
 	await createChainRegistryFromRelay('kusama', prodRelayKusama, registry);
 	await createChainRegistryFromRelay('westend', testRelayWestend, registry);
+	await createChainRegistryFromRelay('rococo', testRelayRococo, registry);
 
 	// Set the paras info to the registry
 	for (const endpoints of polkadotEndpoints) {
@@ -495,6 +502,10 @@ const main = async () => {
 
 	for (const endpoints of westendEndpoints) {
 		await createChainRegistryFromParas('westend', endpoints, registry, paraIds);
+	}
+
+	for (const endpoints of rococoEndpoints) {
+		await createChainRegistryFromParas('rococo', endpoints, registry, paraIds);
 	}
 
 	// fetch xcAssets and add them to the registry

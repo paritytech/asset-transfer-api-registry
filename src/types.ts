@@ -6,6 +6,7 @@ export type TokenRegistry = {
 	polkadot: ChainInfo;
 	kusama: ChainInfo;
 	westend: ChainInfo;
+	rococo: ChainInfo;
 };
 
 export type ChainInfo = {
@@ -25,7 +26,7 @@ export type PoolPairsInfo = {
 	};
 };
 
-export type ChainName = 'polkadot' | 'kusama' | 'westend';
+export type ChainName = 'polkadot' | 'kusama' | 'westend' | 'rococo';
 
 export type ForeignAssetMetadata = {
 	deposit: string;
