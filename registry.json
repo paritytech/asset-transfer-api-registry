@@ -2870,15 +2870,6 @@
       "poolPairsInfo": {},
       "specName": "pioneer-runtime"
     },
-    "2105": {
-      "tokens": [
-        "CRAB"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "Crab2"
-    },
     "2106": {
       "tokens": [
         "LIT"
@@ -3399,6 +3390,320 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "collectives"
+    }
+  },
+  "rococo": {
+    "0": {
+      "tokens": [
+        "ROC"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "rococo"
+    },
+    "1000": {
+      "tokens": [
+        "ROC"
+      ],
+      "assetsInfo": {
+        "1": "QQ22",
+        "2": "DDTA",
+        "3": "NGNC",
+        "4": "RMRK",
+        "5": "TROC",
+        "6": "XTS",
+        "7": "CTS",
+        "8": "TCS",
+        "9": "CCoin",
+        "10": "RTST",
+        "12": "TST",
+        "13": "dtc",
+        "14": "TTT",
+        "15": "RAT",
+        "16": "LVTAST",
+        "21": "TT21",
+        "27": "MTA",
+        "77": "shicoin",
+        "99": "PBA",
+        "100": "ACRST",
+        "108": "GURU",
+        "111": "PBAC",
+        "123": "RBT",
+        "139": "PHNX",
+        "140": "USDT",
+        "228": "bebra",
+        "377": "KAA",
+        "420": "SWED",
+        "500": "TRN",
+        "666": "HOGE",
+        "689": "YPT",
+        "777": "FUGA",
+        "786": "AMT",
+        "824": "gbk",
+        "888": "FFF",
+        "988": "BABY",
+        "999": "YAKIO",
+        "1000": "TWC",
+        "1212": "bob",
+        "1337": "rUSD",
+        "1984": "USDt",
+        "1985": "XCMSDK",
+        "2000": "bcdt",
+        "2727": "PRES",
+        "4040": "ROSTIK",
+        "4110": "DDA",
+        "5000": "xdtb",
+        "6900": "LSPA",
+        "7777": "USDT",
+        "9394": "SMEAD",
+        "12345": "USDT",
+        "20001": "TSTT",
+        "42069": "PEB",
+        "50001": "jelou",
+        "111112": "SQRLTKN",
+        "456789": "LDO",
+        "666666": "ISH",
+        "862105": "USDTT",
+        "862812": "CUBOT",
+        "863012": "vCOPT"
+      },
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {
+        "0": {
+          "lpToken": "0",
+          "pairInfo": "[[{\"parents\":1,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":140}]}}]]"
+        },
+        "1": {
+          "lpToken": "1",
+          "pairInfo": "[[{\"parents\":1,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":420}]}}]]"
+        }
+      },
+      "specName": "statemine"
+    },
+    "1002": {
+      "tokens": [
+        "ROC"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "contracts-rococo"
+    },
+    "1003": {
+      "tokens": [
+        "ROC"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "encointer-parachain"
+    },
+    "1013": {
+      "tokens": [
+        "ROC"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "bridge-hub-rococo"
+    },
+    "2004": {
+      "tokens": [
+        "PHA"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "rhala"
+    },
+    "2011": {
+      "tokens": [
+        "RXOR"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "sora_ksm"
+    },
+    "2026": {
+      "tokens": [
+        "notNODL"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "nodle-para"
+    },
+    "2030": {
+      "tokens": [
+        "BNC",
+        "KUSD",
+        "DOT",
+        "KSM",
+        "KAR",
+        "ZLK",
+        "PHA",
+        "RMRK",
+        "MOVR"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "bifrost_polkadot"
+    },
+    "2031": {
+      "tokens": [
+        "NCFG"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "centrifuge"
+    },
+    "2043": {
+      "tokens": [
+        "OTP"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "origintrail-parachain"
+    },
+    "2056": {
+      "tokens": [
+        "AVT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "avn-parachain"
+    },
+    "2058": {
+      "tokens": [
+        "WATRD"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "watr-devnet"
+    },
+    "2087": {
+      "tokens": [
+        "PICA"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "picasso"
+    },
+    "2090": {
+      "tokens": [
+        "BSX"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "basilisk"
+    },
+    "2093": {
+      "tokens": [
+        "MD5"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "hashed"
+    },
+    "2095": {
+      "tokens": [
+        "JUR"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "jur-chain"
+    },
+    "2100": {
+      "tokens": [
+        "SOON"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "soonsocial-parachain"
+    },
+    "2101": {
+      "tokens": [
+        "ZBS"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "zeitgeist"
+    },
+    "2105": {
+      "tokens": [
+        "PRING"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "Pangolin2"
+    },
+    "2106": {
+      "tokens": [
+        "LIT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "rococo-parachain"
+    },
+    "2110": {
+      "tokens": [
+        "MGAT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "mangata-parachain"
+    },
+    "2114": {
+      "tokens": [
+        "TUR"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "turing"
+    },
+    "2124": {
+      "tokens": [
+        "AMPE"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "foucoco"
+    },
+    "3333": {
+      "tokens": [
+        "T0RN"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "t0rn"
+    },
+    "4044": {
+      "tokens": [
+        "XRQCY"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "frequency-rococo"
     }
   }
 }
