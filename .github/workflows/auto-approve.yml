@@ -1,6 +1,9 @@
 name: auto-approve
 
 on: 
+  pull_request:
+    branches:
+      - main
   pull_request_target:
     branches: 
       - bot-auto-update-registry
@@ -9,7 +12,7 @@ jobs:
   commit-changes:
     name: Commit Changes
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]'
+    if: github.actor == 'dependabot[bot]' && github.ref_name == 'bot-auto-update-registry'
     steps:
       - name: add automerge label
         uses: actions-ecosystem/action-add-labels@v1
