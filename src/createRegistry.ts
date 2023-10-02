@@ -10,8 +10,11 @@ import {
 	prodParasPolkadotCommon,
 	prodRelayKusama,
 	prodRelayPolkadot,
+	testParasRococo,
+	testParasRococoCommon,
 	testParasWestend,
 	testParasWestendCommon,
+	testRelayRococo,
 	testRelayWestend,
 } from '@polkadot/apps-config';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
@@ -25,7 +28,10 @@ import type {
 	ParaIds,
 	PoolInfo,
 	PoolPairsInfo,
+	SanitizedXcAssetsData,
 	TokenRegistry,
+	XcAssets,
+	XcAssetsData,
 } from './types';
 import { sleep, twirlTimer, writeJson } from './util';
 
@@ -195,7 +201,7 @@ const fetchSystemParachainForeignAssetInfo = async (
 				const foreignAssetMultiLocationStr = JSON.stringify(
 					foreignAssetData[0]
 				).replace(/(\d),/g, '$1');
-	
+
 				const foreignAssetMultiLocation = api.registry.createType(
 					'XcmV3MultiLocation',
 					JSON.parse(foreignAssetMultiLocationStr)
@@ -412,10 +418,45 @@ const getProvider = async (wsEndpoints: string[]) => {
 const fetchXcAssetsRegistryInfo = async (
 	registry: TokenRegistry
 ): Promise<void> => {
-	const xcAssetsRegistry: any = await (await fetch(XC_ASSET_CDN_URL)).json();
-	const xcAssets = xcAssetsRegistry['xcAssets'];
+	const xcAssetsRegistry = (await (await fetch(XC_ASSET_CDN_URL)).json()) as {
+		xcAssets: XcAssets;
+	};
+	const { xcAssets } = xcAssetsRegistry;
 
-	registry['xcAssets'] = xcAssets;
+	assignXcAssetsToRelay(registry, xcAssets, 'polkadot');
+	assignXcAssetsToRelay(registry, xcAssets, 'kusama');
+};
+
+const assignXcAssetsToRelay = (
+	registry: TokenRegistry,
+	xcAssets: XcAssets,
+	chain: 'polkadot' | 'kusama'
+): void => {
+	const chainAssetInfo = xcAssets[chain];
+	for (const paraInfo of chainAssetInfo) {
+		const { paraID } = paraInfo;
+		const para = registry[chain][paraID];
+
+		if (para) {
+			const sanitizedData = sanitizeXcAssetData(paraInfo.data);
+			para['xcAssetsData'] = sanitizedData;
+		}
+	}
+};
+
+const sanitizeXcAssetData = (data: XcAssetsData[]): SanitizedXcAssetsData[] => {
+	const mappedData = data.map((info) => {
+		return {
+			paraID: info.paraID,
+			nativeChainId: info.nativeChainId,
+			symbol: info.symbol,
+			decimals: info.decimals,
+			xcmV1MultiLocation: JSON.stringify(info.xcmV1MultiLocation),
+			asset: info.asset,
+		};
+	});
+
+	return mappedData;
 };
 
 const main = async () => {
@@ -423,6 +464,7 @@ const main = async () => {
 		polkadot: {},
 		kusama: {},
 		westend: {},
+		rococo: {},
 	};
 
 	const paraIds: ParaIds = {};
@@ -430,16 +472,19 @@ const main = async () => {
 	const polkadotEndpoints = [prodParasPolkadot, prodParasPolkadotCommon];
 	const kusamaEndpoints = [prodParasKusama, prodParasKusamaCommon];
 	const westendEndpoints = [testParasWestend, testParasWestendCommon];
+	const rococoEndpoints = [testParasRococo, testParasRococoCommon];
 
 	// Set the Parachains Ids to the corresponding registry
 	await fetchParaIds('polkadot', prodRelayPolkadot, paraIds);
 	await fetchParaIds('kusama', prodRelayKusama, paraIds);
 	await fetchParaIds('westend', testRelayWestend, paraIds);
+	await fetchParaIds('rococo', testRelayRococo, paraIds);
 
 	// Set the relay chain info to the registry
 	await createChainRegistryFromRelay('polkadot', prodRelayPolkadot, registry);
 	await createChainRegistryFromRelay('kusama', prodRelayKusama, registry);
 	await createChainRegistryFromRelay('westend', testRelayWestend, registry);
+	await createChainRegistryFromRelay('rococo', testRelayRococo, registry);
 
 	// Set the paras info to the registry
 	for (const endpoints of polkadotEndpoints) {
@@ -457,6 +502,10 @@ const main = async () => {
 
 	for (const endpoints of westendEndpoints) {
 		await createChainRegistryFromParas('westend', endpoints, registry, paraIds);
+	}
+
+	for (const endpoints of rococoEndpoints) {
+		await createChainRegistryFromParas('rococo', endpoints, registry, paraIds);
 	}
 
 	// fetch xcAssets and add them to the registry
