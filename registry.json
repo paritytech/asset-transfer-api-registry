@@ -45,10 +45,20 @@
         "20090103": "BTC"
       },
       "foreignAssetsInfo": {
+        "EQ": {
+          "symbol": "EQ",
+          "name": "Equilibrium",
+          "multiLocation": "{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2011}}}"
+        },
         "0x02010903": {
           "symbol": "",
           "name": "",
           "multiLocation": "{\"parents\":2,\"interior\":{\"x1\":{\"globalConsensus\":{\"kusama\":null}}}}"
+        },
+        "EQD": {
+          "symbol": "EQD",
+          "name": "Equilibrium Dollar",
+          "multiLocation": "{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2011},{\"generalKey\":{\"length\":3,\"data\":\"0x6571640000000000000000000000000000000000000000000000000000000000\"}}]}}"
         }
       },
       "poolPairsInfo": {},
@@ -2870,6 +2880,15 @@
       "poolPairsInfo": {},
       "specName": "pioneer-runtime"
     },
+    "2105": {
+      "tokens": [
+        "CRAB"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "Crab2"
+    },
     "2106": {
       "tokens": [
         "LIT"
@@ -3051,17 +3070,6 @@
       "poolPairsInfo": {},
       "specName": "bajun"
     },
-    "2123": {
-      "tokens": [
-        "FREN",
-        "GM",
-        "GN"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "gm_parachain"
-    },
     "2124": {
       "tokens": [
         "AMPE"
@@ -3154,6 +3162,7 @@
         "27": "AMIR",
         "28": "NSS",
         "30": "TRTI",
+        "31": "GTT",
         "32": "TRTO",
         "42": "HG2G",
         "45": "RASTA",
@@ -3170,6 +3179,7 @@
         "67": "USDT",
         "68": "TTT",
         "69": "TIDE",
+        "77": "MVP1",
         "81": "SIRI",
         "84": "ASTRA",
         "85": "ITC",
@@ -3181,6 +3191,8 @@
         "101": "WIL",
         "102": "cPHP",
         "103": "cPHP",
+        "104": "NewT",
+        "109": "assetT",
         "122": "TESTC",
         "123": "INXTSW1",
         "126": "TAT",
@@ -3189,6 +3201,7 @@
         "200": "CRT",
         "222": "BBB",
         "223": "BILL",
+        "233": "NTT",
         "301": "RYUD",
         "381": "ALC",
         "404": "JET",
@@ -3248,6 +3261,7 @@
         "15240": "KOKOS",
         "31337": "USDC",
         "54221": "wTEST",
+        "61337": "USDC",
         "100112": "FLK",
         "123456": "BATTY",
         "313370": "WBTC",
@@ -3378,6 +3392,26 @@
         "24": {
           "lpToken": "24",
           "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":122}]}}]]"
+        },
+        "25": {
+          "lpToken": "25",
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":31}]}}]]"
+        },
+        "26": {
+          "lpToken": "26",
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":77}]}}]]"
+        },
+        "27": {
+          "lpToken": "27",
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":381}]}}]]"
+        },
+        "28": {
+          "lpToken": "28",
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":81}]}}]]"
+        },
+        "29": {
+          "lpToken": "29",
+          "pairInfo": "[[{\"parents\":0,\"interior\":{\"here\":null}},{\"parents\":0,\"interior\":{\"x2\":[{\"palletInstance\":50},{\"generalIndex\":104}]}}]]"
         }
       },
       "specName": "westmint"
@@ -3417,22 +3451,32 @@
         "8": "TCS",
         "9": "CCoin",
         "10": "RTST",
+        "11": "SVI",
         "12": "TST",
         "13": "dtc",
         "14": "TTT",
         "15": "RAT",
         "16": "LVTAST",
         "21": "TT21",
+        "23": "LART",
+        "24": "SPT",
         "27": "MTA",
+        "28": "ZMS",
+        "50": "ZTK",
+        "69": "SRT",
+        "74": "GID",
         "77": "shicoin",
+        "88": "MEM",
         "99": "PBA",
         "100": "ACRST",
         "108": "GURU",
         "111": "PBAC",
+        "112": "TTam",
         "123": "RBT",
         "139": "PHNX",
         "140": "USDT",
         "228": "bebra",
+        "233": "NTT",
         "377": "KAA",
         "420": "SWED",
         "500": "TRN",
@@ -3445,7 +3489,9 @@
         "988": "BABY",
         "999": "YAKIO",
         "1000": "TWC",
+        "1112": "TTam",
         "1212": "bob",
+        "1234": "PPV",
         "1337": "rUSD",
         "1984": "USDt",
         "1985": "XCMSDK",
@@ -3462,11 +3508,16 @@
         "42069": "PEB",
         "50001": "jelou",
         "111112": "SQRLTKN",
+        "228228": "TEST",
+        "411299": "any",
         "456789": "LDO",
         "666666": "ISH",
         "862105": "USDTT",
         "862812": "CUBOT",
-        "863012": "vCOPT"
+        "863012": "vCOPT",
+        "22332244": "ZoV",
+        "123456789": "ZeAs",
+        "143228832": "tasset"
       },
       "foreignAssetsInfo": {},
       "poolPairsInfo": {
@@ -3677,6 +3728,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "turing"
+    },
+    "2119": {
+      "tokens": [
+        "BAJU"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "bajun"
     },
     "2124": {
       "tokens": [
