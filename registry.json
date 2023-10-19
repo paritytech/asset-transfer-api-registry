@@ -3461,8 +3461,10 @@
         "19": "ITC",
         "20": "ICC",
         "21": "TT21",
+        "22": "SAF",
         "23": "LART",
         "24": "SPT",
+        "25": "TAT",
         "27": "MTA",
         "28": "ZMS",
         "46": "RocRa",
@@ -3470,8 +3472,6 @@
         "49": "Shark",
         "50": "ZTK",
         "51": "RCM",
-        "52": "RoNo",
-        "55": "ROS",
         "56": "PSP",
         "69": "SRT",
         "74": "GID",
@@ -3506,6 +3506,7 @@
         "1000": "TWC",
         "1111": "RCL",
         "1112": "TTam",
+        "1113": "KCT",
         "1212": "bob",
         "1234": "PPV",
         "1337": "rUSD",
@@ -3527,6 +3528,8 @@
         "20001": "TSTT",
         "42069": "PEB",
         "50001": "jelou",
+        "66666": "KST",
+        "77777": "SHREK",
         "111111": "11111",
         "111112": "SQRLTKN",
         "228228": "TEST",
@@ -3648,6 +3651,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "sora_ksm"
+    },
+    "2026": {
+      "tokens": [
+        "notNODL"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "nodle-para"
     },
     "2030": {
       "tokens": [
@@ -3791,15 +3803,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "turing"
-    },
-    "2119": {
-      "tokens": [
-        "BAJU"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "bajun"
     },
     "2124": {
       "tokens": [
