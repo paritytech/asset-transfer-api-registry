@@ -20,8 +20,10 @@ import {
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 import fetch from 'node-fetch';
 
+import FinalRegistry from '../registry.json';
 import type {
 	AssetsInfo,
+	ChainInfoKeys,
 	ChainName,
 	ForeignAssetMetadata,
 	ForeignAssetsInfo,
@@ -119,6 +121,12 @@ const createChainRegistryFromParas = async (
 			endpoint.paraId as number
 		);
 		if (!reliable) {
+			// Add to registry if it exists
+			if (FinalRegistry[chainName][endpoint.paraId as number]) {
+				registry[chainName][`${endpoint.paraId as number}`] = FinalRegistry[
+					chainName
+				][endpoint.paraId as number] as ChainInfoKeys;
+			}
 			continue;
 		}
 		const res = await fetchChainInfo(endpoint);

@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "substrate-exec-rimraf build/ && substrate-exec-tsc",
-    "start": "yarn build && node ./build/createRegistry.js",
+    "start": "yarn build && node ./build/src/createRegistry.js",
     "lint": "substrate-dev-run-lint",
     "lint:fix": "substrate-dev-run-lint --fix",
     "deploy": "yarn build && npm publish"
