@@ -121,7 +121,7 @@ const createChainRegistryFromParas = async (
 			endpoint.paraId as number
 		);
 		if (!reliable) {
-			// Add to registry is it exists
+			// Add to registry if it exists
 			if (FinalRegistry[chainName][endpoint.paraId as number]) {
 				registry[chainName][`${endpoint.paraId as number}`] = FinalRegistry[
 					chainName
