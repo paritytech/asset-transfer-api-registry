@@ -9,14 +9,17 @@ export type TokenRegistry = {
 	rococo: ChainInfo;
 };
 
+export type ChainInfoKeys = {
+	tokens: string[];
+	assetsInfo: AssetsInfo;
+	specName: string;
+	foreignAssetsInfo: ForeignAssetsInfo;
+	poolPairsInfo: PoolPairsInfo;
+	xcAssetsData?: SanitizedXcAssetsData[];
+};
+
 export type ChainInfo = {
-	[key: string]: {
-		assetsInfo: AssetsInfo;
-		specName: string;
-		foreignAssetsInfo: ForeignAssetsInfo;
-		poolPairsInfo: PoolPairsInfo;
-		xcAssetsData?: SanitizedXcAssetsData[];
-	};
+	[key: string]: ChainInfoKeys;
 };
 
 export type PoolPairsInfo = {
