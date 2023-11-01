@@ -1,4 +1,4 @@
-name: pr
+name: registry
 
 on:
   schedule:
@@ -29,8 +29,15 @@ jobs:
       # build registry
       - run: yarn start
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+      - name: Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with: 
+          commit_message: Automated Registry Update
+          file_pattern: '*.json'
+          disable_globbing: true
+
+      - name: Merge Registry Changes to main
+        uses: ad-m/github-push-action@master
         with:
-          branch: bot-auto-update-registry
-          title: 'chore: update asset registry'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
