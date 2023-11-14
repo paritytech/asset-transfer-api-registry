@@ -78,8 +78,6 @@ const skipProcessingEndpoint = (endpoint: string): boolean => {
  */
 const fetchChainInfo = async (
 	endpointOpts: EndpointOption,
-	chainName: ChainName,
-	paraId?: number,
 	isRelay?: boolean
 ) => {
 	const api = await getApi(endpointOpts, isRelay);
@@ -97,19 +95,6 @@ const fetchChainInfo = async (
 
 		const specNameStr = specName.toString();
 
-		const existingAssetsInfo =
-			paraId && FinalRegistry[chainName] && FinalRegistry[chainName][paraId]
-				? (FinalRegistry[chainName][paraId] as ChainInfoKeys).assetsInfo
-				: undefined;
-		const existingForeignAssetsInfo =
-			paraId && FinalRegistry[chainName] && FinalRegistry[chainName][paraId]
-				? (FinalRegistry[chainName][paraId] as ChainInfoKeys).foreignAssetsInfo
-				: undefined;
-		const existingPoolPairsInfo =
-			paraId && FinalRegistry[chainName] && FinalRegistry[chainName][paraId]
-				? (FinalRegistry[chainName][paraId] as ChainInfoKeys).poolPairsInfo
-				: undefined;
-
 		let assetsInfo: AssetsInfo = {};
 		let foreignAssetsInfo: ForeignAssetsInfo = {};
 		let poolPairsInfo: PoolPairsInfo = {};
@@ -119,15 +104,9 @@ const fetchChainInfo = async (
 			specNameStr === 'statemine' ||
 			specNameStr === 'statemint'
 		) {
-			assetsInfo = await fetchSystemParachainAssetInfo(api, existingAssetsInfo);
-			foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(
-				api,
-				existingForeignAssetsInfo
-			);
-			poolPairsInfo = await fetchSystemParachainAssetConversionPoolInfo(
-				api,
-				existingPoolPairsInfo
-			);
+			assetsInfo = await fetchSystemParachainAssetInfo(api);
+			foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(api);
+			poolPairsInfo = await fetchSystemParachainAssetConversionPoolInfo(api);
 		}
 
 		await api.disconnect();
@@ -180,13 +159,11 @@ const createChainRegistryFromParas = async (
 			continue;
 		}
 		fetchChainInfoPromises.push(
-			fetchChainInfo(endpoint, chainName, endpoint.paraId as number).then(
-				(res) => {
-					if (res !== null) {
-						registry[chainName][`${endpoint.paraId as number}`] = res;
-					}
+			fetchChainInfo(endpoint).then((res) => {
+				if (res !== null) {
+					registry[chainName][`${endpoint.paraId as number}`] = res;
 				}
-			)
+			})
 		);
 	}
 
@@ -208,7 +185,7 @@ const createChainRegistryFromRelay = async (
 ): Promise<void> => {
 	console.log(`Creating chain registry from ${chainName} relay`);
 	twirlTimer();
-	const res = await fetchChainInfo(endpoint, chainName, undefined, true);
+	const res = await fetchChainInfo(endpoint, true);
 	if (res !== null) {
 		registry[chainName]['0'] = res;
 	}
@@ -220,13 +197,9 @@ const createChainRegistryFromRelay = async (
  * @param api
 //  */
 const fetchSystemParachainAssetInfo = async (
-	api: ApiPromise,
-	assetsRegistryInfo?: AssetsInfo
+	api: ApiPromise
 ): Promise<AssetsInfo> => {
-	// if assetsInfo data exists in current registry, preserve it
-	const assetsInfo: AssetsInfo = assetsRegistryInfo
-		? { ...assetsRegistryInfo }
-		: {};
+	const assetsInfo: AssetsInfo = {};
 
 	for (const [assetStorageKeyData] of await api.query.assets.asset.entries()) {
 		const id = assetStorageKeyData
@@ -255,13 +228,9 @@ const fetchSystemParachainAssetInfo = async (
  * @param api ApiPromise
  */
 const fetchSystemParachainForeignAssetInfo = async (
-	api: ApiPromise,
-	foreignAssetsRegistryInfo?: ForeignAssetsInfo
+	api: ApiPromise
 ): Promise<ForeignAssetsInfo> => {
-	// if foreignAssetsInfo data exists in current registry, preserve it
-	const foreignAssetsInfo: ForeignAssetsInfo = foreignAssetsRegistryInfo
-		? { ...foreignAssetsRegistryInfo }
-		: {};
+	const foreignAssetsInfo: ForeignAssetsInfo = {};
 
 	if (api.query.foreignAssets !== undefined) {
 		const assetEntries = await api.query.foreignAssets.asset.entries();
@@ -312,13 +281,9 @@ const fetchSystemParachainForeignAssetInfo = async (
  * @param api ApiPromise
  */
 const fetchSystemParachainAssetConversionPoolInfo = async (
-	api: ApiPromise,
-	poolAssetsRegistryInfo?: PoolPairsInfo
+	api: ApiPromise
 ): Promise<PoolPairsInfo> => {
-	// if poolPairsInfo data exists in current registry, preserve it
-	const poolPairsInfo: PoolPairsInfo = poolAssetsRegistryInfo
-		? { ...poolAssetsRegistryInfo }
-		: {};
+	const poolPairsInfo: PoolPairsInfo = {};
 
 	if (api.query.assetConversion !== undefined) {
 		for (const [

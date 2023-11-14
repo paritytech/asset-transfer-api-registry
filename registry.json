@@ -44,8 +44,6 @@
         "1984": "USDt",
         "862812": "CUBO",
         "868367": "VSC",
-        "19120101": "NTDC",
-        "19760401": "APPL",
         "20090103": "BTC"
       },
       "foreignAssetsInfo": {
@@ -54,20 +52,15 @@
           "name": "Equilibrium",
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2011\"}}}"
         },
-        "0x02010903": {
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a224b7573616d61227d7d7d": {
           "symbol": "",
           "name": "",
-          "multiLocation": "{\"parents\":2,\"interior\":{\"x1\":{\"globalConsensus\":{\"kusama\":null}}}}"
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Kusama\"}}}"
         },
         "EQD": {
           "symbol": "EQD",
           "name": "Equilibrium Dollar",
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2011\"},{\"GeneralKey\":{\"length\":\"3\",\"data\":\"0x6571640000000000000000000000000000000000000000000000000000000000\"}}]}}"
-        },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a224b7573616d61227d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Kusama\"}}}"
         }
       },
       "poolPairsInfo": {},
@@ -1478,15 +1471,6 @@
       "poolPairsInfo": {},
       "specName": "zeitgeist"
     },
-    "2093": {
-      "tokens": [
-        "HASH"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "luhn"
-    },
     "2094": {
       "tokens": [
         "PEN"
@@ -1697,20 +1681,15 @@
         "4294967291": "PRIME"
       },
       "foreignAssetsInfo": {
-        "0x02010902": {
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a22506f6c6b61646f74227d7d7d": {
           "symbol": "",
           "name": "",
-          "multiLocation": "{\"parents\":2,\"interior\":{\"x1\":{\"globalConsensus\":{\"polkadot\":null}}}}"
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Polkadot\"}}}"
         },
         "TNKR": {
           "symbol": "TNKR",
           "name": "Tinkernet",
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2125\"},{\"GeneralIndex\":\"0\"}]}}"
-        },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a22506f6c6b61646f74227d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Polkadot\"}}}"
         }
       },
       "poolPairsInfo": {
@@ -3391,7 +3370,6 @@
         "103": "cPHP",
         "104": "NewT",
         "109": "assetT",
-        "120": "NRD",
         "121": "TAL",
         "122": "TESTC",
         "123": "INXTSW1",
@@ -3405,7 +3383,6 @@
         "233": "NTT",
         "301": "RYUD",
         "318": "SAT",
-        "323": "TTK",
         "368": "KLING",
         "369": "WIN",
         "370": "SUM",
@@ -3431,18 +3408,14 @@
         "1004": "VOW",
         "1005": "VOW",
         "1010": "POL",
-        "1011": "TTT",
         "1021": "NFT",
         "1022": "nfttst",
         "1023": "qqnihao",
         "1024": "qqnihao",
         "1111": "TESTY",
-        "1112": "JJT",
         "1113": "JTT",
         "1114": "USDC",
         "1122": "dmd",
-        "1123": "DTT",
-        "1133": "TTT",
         "1233": "QTY",
         "1234": "TEST",
         "1309": "KLO",
@@ -3469,7 +3442,6 @@
         "8937": "test",
         "9898": "FTT",
         "9999": "WND",
-        "10000": "NTT",
         "10111": "ETH",
         "12344": "tst",
         "12345": "DRR2",
@@ -3507,11 +3479,6 @@
         "4000000000": "dde"
       },
       "foreignAssetsInfo": {
-        "0x02010902": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":2,\"interior\":{\"x1\":{\"globalConsensus\":{\"polkadot\":null}}}}"
-        },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a22506f6c6b61646f74227d7d7d": {
           "symbol": "",
           "name": "",
