@@ -20,7 +20,7 @@ import {
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 import fetch from 'node-fetch';
 
-import FinalRegistry from '../registry.json';
+import FinalRegistry from '../assetTransferAPI/registry.json';
 import type {
 	AssetsInfo,
 	ChainInfoKeys,
@@ -519,7 +519,7 @@ const main = async () => {
 	// fetch xcAssets and add them to the registry
 	await fetchXcAssetsRegistryInfo(registry);
 
-	const path = __dirname + '/../registry.json';
+	const path = __dirname + '/../assetTransferAPI/registry.json';
 	writeJson(path, registry);
 };
 
