@@ -43,11 +43,17 @@ import { sleep, twirlTimer, writeJson } from './util';
 /**
  * @const MAX_RETRIES Maximum amount of connection attempts
  * @const WS_DISCONNECT_TIMEOUT_SECONDS time to wait between attempts, in seconds
+ * @const RCP_BLACK_LIST RPCs emitting errors or abnormal closures
  */
 const MAX_RETRIES = 5;
 const WS_DISCONNECT_TIMEOUT_SECONDS = 3;
 const XC_ASSET_CDN_URL =
 	'https://cdn.jsdelivr.net/gh/colorfulnotion/xcm-global-registry/metadata/xcmgar.json';
+const RCP_BLACK_LIST = [
+	'wss://polkadot-public-rpc.blockops.network/ws',
+	'wss://kusama-public-rpc.blockops.network/ws',
+	'wss://westend-rpc.blockops.network/ws',
+];
 
 /**
  * Determines when endpoint processing should be skipped.
@@ -55,12 +61,7 @@ const XC_ASSET_CDN_URL =
  * @param endpoint
  */
 const skipProcessingEndpoint = (endpoint: string): boolean => {
-	if (
-		endpoint.includes('onfinality') ||
-		endpoint === 'wss://polkadot-public-rpc.blockops.network/ws' ||
-		endpoint === 'wss://kusama-public-rpc.blockops.network/ws' ||
-		endpoint === 'wss://westend-rpc.blockops.network/ws'
-	) {
+	if (endpoint.includes('onfinality') || RCP_BLACK_LIST.includes(endpoint)) {
 		return true;
 	}
 
@@ -180,7 +181,7 @@ const createChainRegistryFromRelay = async (
 	endpoint: EndpointOption,
 	registry: TokenRegistry
 ): Promise<void> => {
-	console.log(`Creating chain registry from ${chainName} relay`);
+	console.log(`Creating chain registry for ${chainName} relay`);
 	twirlTimer();
 	const res = await fetchChainInfo(endpoint, true);
 	if (res !== null) {
@@ -192,7 +193,7 @@ const createChainRegistryFromRelay = async (
  * Fetch Asset info for system parachains.
  *
  * @param api
-//  */
+ */
 const fetchSystemParachainAssetInfo = async (
 	api: ApiPromise
 ): Promise<AssetsInfo> => {
