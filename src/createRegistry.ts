@@ -71,9 +71,6 @@ const skipProcessingEndpoint = (endpoint: string): boolean => {
  * Fetch chain token and spec info.
  *
  * @param endpointOpts
- * @param chainName
- * @param paraId
- * @param registry
  * @param isRelay
  */
 const fetchChainInfo = async (
