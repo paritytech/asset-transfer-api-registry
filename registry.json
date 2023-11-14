@@ -1435,15 +1435,6 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
-    "2056": {
-      "tokens": [
-        "AVT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "avn-parachain"
-    },
     "2086": {
       "tokens": [
         "KILT"
@@ -1470,6 +1461,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "zeitgeist"
+    },
+    "2093": {
+      "tokens": [
+        "HASH"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "luhn"
     },
     "2094": {
       "tokens": [
