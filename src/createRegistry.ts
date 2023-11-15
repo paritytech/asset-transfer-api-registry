@@ -22,7 +22,7 @@ import { stringToHex } from '@polkadot/util';
 import fetch from 'node-fetch';
 import path from 'path';
 
-import FinalRegistry from '../registry.json';
+import FinalRegistry from '../docs/registry.json';
 import type {
 	AssetsInfo,
 	ChainInfoKeys,
@@ -574,7 +574,7 @@ const main = async () => {
 	// fetch xcAssets and add them to the registry
 	await fetchXcAssetsRegistryInfo(registry);
 
-	const filePath = path.join(__dirname, '..', '..', 'registry.json');
+	const filePath = path.join(__dirname, '..', '..','docs', 'registry.json');
 	writeJson(filePath, registry);
 };
 

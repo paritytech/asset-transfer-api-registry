@@ -1453,6 +1453,15 @@
       "poolPairsInfo": {},
       "specName": "zeitgeist"
     },
+    "2093": {
+      "tokens": [
+        "HASH"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "luhn"
+    },
     "2094": {
       "tokens": [
         "PEN"
@@ -3261,15 +3270,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "amplitude"
-    },
-    "2222": {
-      "tokens": [
-        "MITO"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "ipci"
     },
     "2236": {
       "tokens": [
