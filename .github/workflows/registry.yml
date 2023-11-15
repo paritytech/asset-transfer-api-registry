@@ -37,4 +37,3 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git commit -a -m "Add changes"
           git merge main
-
