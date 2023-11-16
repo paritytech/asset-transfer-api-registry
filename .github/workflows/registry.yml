@@ -18,12 +18,6 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
-      - uses: dorny/paths-filter@v2
-        id: changes
-        with:
-          filters: |
-            docs:
-              - 'docs/**'
     
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
@@ -37,7 +31,6 @@ jobs:
       - run: yarn start
 
       - name: Commit and Push Changes
-        if: steps.changes.outputs.docs == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
