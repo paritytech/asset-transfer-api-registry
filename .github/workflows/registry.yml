@@ -18,7 +18,6 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
-          run: echo "head ref ${{ github.head_ref}} - ref ${{github.ref}}"
       - uses: dorny/paths-filter@v2
         id: filter
         with:
