@@ -29,6 +29,7 @@
         "15": "Meme",
         "20": "StabCP",
         "21": "WBTC",
+        "23": "PINK",
         "77": "TRQ",
         "79": "PGOLD",
         "99": "Cypress",
@@ -1416,6 +1417,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "ajuna"
+    },
+    "2056": {
+      "tokens": [
+        "AVT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "avn-parachain"
     },
     "2086": {
       "tokens": [
