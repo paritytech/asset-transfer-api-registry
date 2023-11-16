@@ -1417,6 +1417,15 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
+    "2056": {
+      "tokens": [
+        "AVT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "avn-parachain"
+    },
     "2086": {
       "tokens": [
         "KILT"
@@ -1443,15 +1452,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "zeitgeist"
-    },
-    "2093": {
-      "tokens": [
-        "HASH"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "luhn"
     },
     "2094": {
       "tokens": [
@@ -1617,6 +1617,7 @@
         "1155": "WITEK",
         "1225": "GOD",
         "1234": "KSM",
+        "1313": "TACP",
         "1337": "TIP",
         "1420": "HYDR",
         "1441": "SPOT",
@@ -1682,6 +1683,10 @@
         "1": {
           "lpToken": "1",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1984\"}]}}]]"
+        },
+        "2": {
+          "lpToken": "2",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1313\"}]}}]]"
         }
       },
       "specName": "statemine"
@@ -3261,15 +3266,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "amplitude"
-    },
-    "2222": {
-      "tokens": [
-        "MITO"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "ipci"
     },
     "2236": {
       "tokens": [
