@@ -1417,15 +1417,6 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
-    "2056": {
-      "tokens": [
-        "AVT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "avn-parachain"
-    },
     "2086": {
       "tokens": [
         "KILT"
@@ -1626,6 +1617,7 @@
         "1155": "WITEK",
         "1225": "GOD",
         "1234": "KSM",
+        "1313": "TACP",
         "1337": "TIP",
         "1420": "HYDR",
         "1441": "SPOT",
@@ -1691,6 +1683,10 @@
         "1": {
           "lpToken": "1",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1984\"}]}}]]"
+        },
+        "2": {
+          "lpToken": "2",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1313\"}]}}]]"
         }
       },
       "specName": "statemine"
@@ -3271,15 +3267,6 @@
       "poolPairsInfo": {},
       "specName": "amplitude"
     },
-    "2222": {
-      "tokens": [
-        "MITO"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "ipci"
-    },
     "2236": {
       "tokens": [
         "ZERO",
@@ -3459,6 +3446,7 @@
         "54221": "wTEST",
         "61337": "USDC",
         "100112": "FLK",
+        "100500": "KEKPEK",
         "123456": "BATTY",
         "313370": "WBTC",
         "313371": "WETH",
@@ -3487,9 +3475,9 @@
           "name": "",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Polkadot\"}}}"
         },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a22526f636f636f227d7d7d": {
-          "symbol": "",
-          "name": "",
+        "ROC": {
+          "symbol": "ROC",
+          "name": "Rococo",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Rococo\"}}}"
         }
       },
@@ -3761,6 +3749,8 @@
         "143": "XIN",
         "144": "TTT",
         "145": "UMG",
+        "200": "nUSDT",
+        "201": "VNST",
         "224": "creagen",
         "228": "bebra",
         "233": "NTT",
@@ -3862,9 +3852,9 @@
           "name": "Trappist Hop",
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1836\"}}}"
         },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a2257657374656e64227d7d7d": {
-          "symbol": "",
-          "name": "",
+        "WND": {
+          "symbol": "WND",
+          "name": "Westend",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Westend\"}}}"
         }
       },
