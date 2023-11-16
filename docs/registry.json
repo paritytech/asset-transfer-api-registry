@@ -1418,15 +1418,6 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
-    "2056": {
-      "tokens": [
-        "AVT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "avn-parachain"
-    },
     "2086": {
       "tokens": [
         "KILT"
@@ -3276,6 +3267,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "amplitude"
+    },
+    "2222": {
+      "tokens": [
+        "MITO"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "ipci"
     },
     "2236": {
       "tokens": [
