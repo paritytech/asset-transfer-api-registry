@@ -1418,6 +1418,15 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
+    "2056": {
+      "tokens": [
+        "AVT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "avn-parachain"
+    },
     "2086": {
       "tokens": [
         "KILT"
@@ -1699,6 +1708,10 @@
         "4": {
           "lpToken": "4",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"3328\"}]}}]]"
+        },
+        "5": {
+          "lpToken": "5",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"131313\"}]}}]]"
         }
       },
       "specName": "statemine"
