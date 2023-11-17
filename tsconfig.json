@@ -5,6 +5,7 @@
       "outDir": "build",
       "rootDirs": ["./src"],
       "suppressImplicitAnyIndexErrors": true,
+      "ignoreDeprecations": "5.0",
       "resolveJsonModule": true,
       "esModuleInterop": true,
     },

@@ -76,7 +76,7 @@ const skipProcessingEndpoint = (endpoint: string): boolean => {
  */
 const fetchChainInfo = async (
 	endpointOpts: EndpointOption,
-	isRelay?: boolean
+	isRelay?: boolean,
 ) => {
 	const api = await getApi(endpointOpts, isRelay);
 	console.log('Api connected: ', api?.isConnected);
@@ -132,7 +132,7 @@ const createChainRegistryFromParas = async (
 	chainName: ChainName,
 	endpoints: Omit<EndpointOption, 'teleport'>[],
 	registry: TokenRegistry,
-	paraIds: ParaIds
+	paraIds: ParaIds,
 ): Promise<void> => {
 	console.log('Creating chain registry from parachains');
 
@@ -142,7 +142,7 @@ const createChainRegistryFromParas = async (
 
 	for (const endpoint of endpoints) {
 		const reliable: boolean = paraIds[chainName].includes(
-			endpoint.paraId as number
+			endpoint.paraId as number,
 		);
 		if (!reliable) {
 			// Add to registry if it exists
@@ -161,7 +161,7 @@ const createChainRegistryFromParas = async (
 				if (res !== null) {
 					registry[chainName][`${endpoint.paraId as number}`] = res;
 				}
-			})
+			}),
 		);
 	}
 
@@ -179,7 +179,7 @@ const createChainRegistryFromParas = async (
 const createChainRegistryFromRelay = async (
 	chainName: ChainName,
 	endpoint: EndpointOption,
-	registry: TokenRegistry
+	registry: TokenRegistry,
 ): Promise<void> => {
 	console.log(`Creating chain registry for ${chainName} relay`);
 	twirlTimer();
@@ -195,7 +195,7 @@ const createChainRegistryFromRelay = async (
  * @param api
  */
 const fetchSystemParachainAssetInfo = async (
-	api: ApiPromise
+	api: ApiPromise,
 ): Promise<AssetsInfo> => {
 	const assetsInfo: AssetsInfo = {};
 
@@ -226,7 +226,7 @@ const fetchSystemParachainAssetInfo = async (
  * @param api ApiPromise
  */
 const fetchSystemParachainForeignAssetInfo = async (
-	api: ApiPromise
+	api: ApiPromise,
 ): Promise<ForeignAssetsInfo> => {
 	const foreignAssetsInfo: ForeignAssetsInfo = {};
 
@@ -239,11 +239,11 @@ const fetchSystemParachainForeignAssetInfo = async (
 			if (foreignAssetData) {
 				// remove any commas from multilocation key values e.g. Parachain: 2,125 -> Parachain: 2125
 				const foreignAssetMultiLocationStr = JSON.stringify(
-					foreignAssetData[0]
+					foreignAssetData[0],
 				).replace(/(\d),/g, '$1');
 
 				const foreignAssetMultiLocation = JSON.parse(
-					foreignAssetMultiLocationStr
+					foreignAssetMultiLocationStr,
 				) as UnionXcmMultiLocation;
 
 				const hexId = stringToHex(JSON.stringify(foreignAssetMultiLocation));
@@ -279,7 +279,7 @@ const fetchSystemParachainForeignAssetInfo = async (
  * @param api ApiPromise
  */
 const fetchSystemParachainAssetConversionPoolInfo = async (
-	api: ApiPromise
+	api: ApiPromise,
 ): Promise<PoolPairsInfo> => {
 	const poolPairsInfo: PoolPairsInfo = {};
 
@@ -295,11 +295,11 @@ const fetchSystemParachainAssetConversionPoolInfo = async (
 				// remove any commas from multilocation key values e.g. Parachain: 2,125 -> Parachain: 2125
 				const poolAssetDataStr = JSON.stringify(maybePoolData).replace(
 					/(\d),/g,
-					'$1'
+					'$1',
 				);
 
 				const palletAssetConversionNativeOrAssetIdData = JSON.parse(
-					poolAssetDataStr
+					poolAssetDataStr,
 				) as UnionXcmMultiLocation[][];
 
 				const pool = maybePoolInfo as unknown as PoolInfo;
@@ -325,7 +325,7 @@ const fetchSystemParachainAssetConversionPoolInfo = async (
 const fetchParaIds = async (
 	chain: string,
 	endpointOpts: EndpointOption,
-	paraIds: ParaIds
+	paraIds: ParaIds,
 ): Promise<ParaIds> => {
 	const api = await getApi(endpointOpts, true);
 
@@ -355,7 +355,7 @@ const getApi = async (endpointOpts: EndpointOption, isRelay?: boolean) => {
 	if (!paraId && !isRelay) return null;
 
 	const endpoints = Object.values(providers).filter(
-		(url) => !url.startsWith('light')
+		(url) => !url.startsWith('light'),
 	);
 
 	const api = await startApi(endpoints);
@@ -370,7 +370,7 @@ const getApi = async (endpointOpts: EndpointOption, isRelay?: boolean) => {
  * @param endpoints Endpoint we are going to try to connect to.
  */
 const startApi = async (
-	endpoints: string[]
+	endpoints: string[],
 ): Promise<ApiPromise | undefined> => {
 	const wsProviders = await getProvider(endpoints);
 
@@ -452,7 +452,7 @@ const getProvider = async (wsEndpoints: string[]) => {
 };
 
 const fetchXcAssetsRegistryInfo = async (
-	registry: TokenRegistry
+	registry: TokenRegistry,
 ): Promise<void> => {
 	const xcAssetsRegistry = (await (await fetch(XC_ASSET_CDN_URL)).json()) as {
 		xcAssets: XcAssets;
@@ -466,7 +466,7 @@ const fetchXcAssetsRegistryInfo = async (
 const assignXcAssetsToRelay = (
 	registry: TokenRegistry,
 	xcAssets: XcAssets,
-	chain: 'polkadot' | 'kusama'
+	chain: 'polkadot' | 'kusama',
 ): void => {
 	const chainAssetInfo = xcAssets[chain];
 	for (const paraInfo of chainAssetInfo) {
@@ -513,7 +513,7 @@ const main = async () => {
 	const fetchParaIdsPromises: Promise<ParaIds>[] = [];
 
 	fetchParaIdsPromises.push(
-		fetchParaIds('polkadot', prodRelayPolkadot, paraIds)
+		fetchParaIds('polkadot', prodRelayPolkadot, paraIds),
 	);
 	fetchParaIdsPromises.push(fetchParaIds('kusama', prodRelayKusama, paraIds));
 	fetchParaIdsPromises.push(fetchParaIds('westend', testRelayWestend, paraIds));
@@ -526,16 +526,16 @@ const main = async () => {
 	const createChainRegistryFromRelayPromises: Promise<void>[] = [];
 
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay('polkadot', prodRelayPolkadot, registry)
+		createChainRegistryFromRelay('polkadot', prodRelayPolkadot, registry),
 	);
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay('kusama', prodRelayKusama, registry)
+		createChainRegistryFromRelay('kusama', prodRelayKusama, registry),
 	);
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay('westend', testRelayWestend, registry)
+		createChainRegistryFromRelay('westend', testRelayWestend, registry),
 	);
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay('rococo', testRelayRococo, registry)
+		createChainRegistryFromRelay('rococo', testRelayRococo, registry),
 	);
 
 	// Set the relay chain info to the registry
@@ -546,25 +546,25 @@ const main = async () => {
 
 	for (const endpoints of polkadotEndpoints) {
 		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas('polkadot', endpoints, registry, paraIds)
+			createChainRegistryFromParas('polkadot', endpoints, registry, paraIds),
 		);
 	}
 
 	for (const endpoints of kusamaEndpoints) {
 		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas('kusama', endpoints, registry, paraIds)
+			createChainRegistryFromParas('kusama', endpoints, registry, paraIds),
 		);
 	}
 
 	for (const endpoints of westendEndpoints) {
 		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas('westend', endpoints, registry, paraIds)
+			createChainRegistryFromParas('westend', endpoints, registry, paraIds),
 		);
 	}
 
 	for (const endpoints of rococoEndpoints) {
 		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas('rococo', endpoints, registry, paraIds)
+			createChainRegistryFromParas('rococo', endpoints, registry, paraIds),
 		);
 	}
 
@@ -574,7 +574,7 @@ const main = async () => {
 	// fetch xcAssets and add them to the registry
 	await fetchXcAssetsRegistryInfo(registry);
 
-	const filePath = path.join(__dirname, '..', '..','docs', 'registry.json');
+	const filePath = path.join(__dirname, '..', '..', 'docs', 'registry.json');
 	writeJson(filePath, registry);
 };
 
