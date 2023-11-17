@@ -1418,15 +1418,6 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
-    "2056": {
-      "tokens": [
-        "AVT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "avn-parachain"
-    },
     "2086": {
       "tokens": [
         "KILT"
@@ -1644,6 +1635,7 @@
         "3000": "GRAIN",
         "3001": "DUCK",
         "3077": "ACT",
+        "3327": "MVPW",
         "3721": "fast",
         "3943": "GMK",
         "6789": "VHM",
@@ -1698,6 +1690,10 @@
         "2": {
           "lpToken": "2",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1313\"}]}}]]"
+        },
+        "3": {
+          "lpToken": "3",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"3327\"}]}}]]"
         }
       },
       "specName": "statemine"
@@ -2630,15 +2626,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "Gens-parachain"
-    },
-    "2048": {
-      "tokens": [
-        "XRT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "robonomics"
     },
     "2084": {
       "tokens": [
