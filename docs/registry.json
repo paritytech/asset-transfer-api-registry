@@ -2645,6 +2645,15 @@
       "poolPairsInfo": {},
       "specName": "Gens-parachain"
     },
+    "2048": {
+      "tokens": [
+        "XRT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "robonomics"
+    },
     "2084": {
       "tokens": [
         "KMA"
