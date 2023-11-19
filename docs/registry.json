@@ -2645,6 +2645,15 @@
       "poolPairsInfo": {},
       "specName": "Gens-parachain"
     },
+    "2048": {
+      "tokens": [
+        "XRT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "robonomics"
+    },
     "2084": {
       "tokens": [
         "KMA"
@@ -3282,15 +3291,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "amplitude"
-    },
-    "2222": {
-      "tokens": [
-        "MITO"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "ipci"
     },
     "2236": {
       "tokens": [
