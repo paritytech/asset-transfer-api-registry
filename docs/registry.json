@@ -3958,6 +3958,10 @@
         "14": {
           "lpToken": "14",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22064\"}]}}]]"
+        },
+        "15": {
+          "lpToken": "15",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"19801204\"}]}}]]"
         }
       },
       "specName": "statemine"
