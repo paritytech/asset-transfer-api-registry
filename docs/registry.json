@@ -3283,6 +3283,15 @@
       "poolPairsInfo": {},
       "specName": "amplitude"
     },
+    "2222": {
+      "tokens": [
+        "MITO"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "ipci"
+    },
     "2236": {
       "tokens": [
         "ZERO",
@@ -4045,6 +4054,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "watr-devnet"
+    },
+    "2087": {
+      "tokens": [
+        "PICA"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "picasso"
     },
     "2090": {
       "tokens": [
