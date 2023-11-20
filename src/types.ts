@@ -124,7 +124,7 @@ export interface XcmV2Junctions {
 		XcmV2Junction,
 		XcmV2Junction,
 		XcmV2Junction,
-		XcmV2Junction
+		XcmV2Junction,
 	];
 	X6: [
 		XcmV2Junction,
@@ -132,7 +132,7 @@ export interface XcmV2Junctions {
 		XcmV2Junction,
 		XcmV2Junction,
 		XcmV2Junction,
-		XcmV2Junction
+		XcmV2Junction,
 	];
 	X7: [
 		XcmV2Junction,
@@ -141,7 +141,7 @@ export interface XcmV2Junctions {
 		XcmV2Junction,
 		XcmV2Junction,
 		XcmV2Junction,
-		XcmV2Junction
+		XcmV2Junction,
 	];
 	X8: [
 		XcmV2Junction,
@@ -151,7 +151,7 @@ export interface XcmV2Junctions {
 		XcmV2Junction,
 		XcmV2Junction,
 		XcmV2Junction,
-		XcmV2Junction
+		XcmV2Junction,
 	];
 }
 
@@ -187,7 +187,7 @@ export interface XcmV3Junctions {
 		XcmV3Junction,
 		XcmV3Junction,
 		XcmV3Junction,
-		XcmV3Junction
+		XcmV3Junction,
 	];
 	X6: [
 		XcmV3Junction,
@@ -195,7 +195,7 @@ export interface XcmV3Junctions {
 		XcmV3Junction,
 		XcmV3Junction,
 		XcmV3Junction,
-		XcmV3Junction
+		XcmV3Junction,
 	];
 	X7: [
 		XcmV3Junction,
@@ -204,7 +204,7 @@ export interface XcmV3Junctions {
 		XcmV3Junction,
 		XcmV3Junction,
 		XcmV3Junction,
-		XcmV3Junction
+		XcmV3Junction,
 	];
 	X8: [
 		XcmV3Junction,
@@ -214,7 +214,7 @@ export interface XcmV3Junctions {
 		XcmV3Junction,
 		XcmV3Junction,
 		XcmV3Junction,
-		XcmV3Junction
+		XcmV3Junction,
 	];
 }
 
