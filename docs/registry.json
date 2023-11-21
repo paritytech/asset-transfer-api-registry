@@ -4055,15 +4055,6 @@
       "poolPairsInfo": {},
       "specName": "avn-parachain"
     },
-    "2058": {
-      "tokens": [
-        "WATRD"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "watr-devnet"
-    },
     "2087": {
       "tokens": [
         "PICA"
