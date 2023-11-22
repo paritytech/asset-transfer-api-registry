@@ -1454,6 +1454,15 @@
       "poolPairsInfo": {},
       "specName": "zeitgeist"
     },
+    "2093": {
+      "tokens": [
+        "HASH"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "luhn"
+    },
     "2094": {
       "tokens": [
         "PEN"
@@ -1462,15 +1471,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "pendulum"
-    },
-    "2101": {
-      "tokens": [
-        "SUB"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "subsocial-parachain"
     },
     "2104": {
       "tokens": [
@@ -3283,6 +3283,15 @@
       "poolPairsInfo": {},
       "specName": "amplitude"
     },
+    "2222": {
+      "tokens": [
+        "MITO"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "ipci"
+    },
     "2236": {
       "tokens": [
         "ZERO",
@@ -4077,15 +4086,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "hashed"
-    },
-    "2100": {
-      "tokens": [
-        "SOON"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "soonsocial-parachain"
     },
     "2101": {
       "tokens": [
