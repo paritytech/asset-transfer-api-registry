@@ -4141,6 +4141,15 @@
       "poolPairsInfo": {},
       "specName": "turing"
     },
+    "2119": {
+      "tokens": [
+        "BAJU"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "bajun"
+    },
     "2124": {
       "tokens": [
         "AMPE"
