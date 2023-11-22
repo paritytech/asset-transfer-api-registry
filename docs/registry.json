@@ -3292,15 +3292,6 @@
       "poolPairsInfo": {},
       "specName": "amplitude"
     },
-    "2222": {
-      "tokens": [
-        "MITO"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "ipci"
-    },
     "2236": {
       "tokens": [
         "ZERO",
