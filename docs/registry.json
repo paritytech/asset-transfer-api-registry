@@ -3185,15 +3185,6 @@
         }
       ]
     },
-    "2113": {
-      "tokens": [
-        "KAB"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "kabocha-parachain"
-    },
     "2114": {
       "tokens": [
         "TUR"
