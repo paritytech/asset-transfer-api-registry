@@ -3971,15 +3971,6 @@
       "poolPairsInfo": {},
       "specName": "contracts-rococo"
     },
-    "1003": {
-      "tokens": [
-        "ROC"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "encointer-parachain"
-    },
     "1013": {
       "tokens": [
         "ROC"
