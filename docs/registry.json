@@ -1418,15 +1418,6 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
-    "2056": {
-      "tokens": [
-        "AVT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "avn-parachain"
-    },
     "2086": {
       "tokens": [
         "KILT"
@@ -3283,6 +3274,15 @@
       "poolPairsInfo": {},
       "specName": "amplitude"
     },
+    "2222": {
+      "tokens": [
+        "MITO"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "ipci"
+    },
     "2236": {
       "tokens": [
         "ZERO",
@@ -3671,6 +3671,10 @@
         "42": {
           "lpToken": "42",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22064\"}]}}]]"
+        },
+        "43": {
+          "lpToken": "43",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22065\"}]}}]]"
         }
       },
       "specName": "westmint"
@@ -3991,7 +3995,7 @@
     },
     "2011": {
       "tokens": [
-        "RXOR"
+        "XOR"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
