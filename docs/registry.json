@@ -1418,6 +1418,15 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
+    "2056": {
+      "tokens": [
+        "AVT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "avn-parachain"
+    },
     "2086": {
       "tokens": [
         "KILT"
@@ -3175,6 +3184,15 @@
           "asset": "11"
         }
       ]
+    },
+    "2113": {
+      "tokens": [
+        "KAB"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "kabocha-parachain"
     },
     "2114": {
       "tokens": [
