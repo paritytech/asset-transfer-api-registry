@@ -1418,6 +1418,15 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
+    "2056": {
+      "tokens": [
+        "AVT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "avn-parachain"
+    },
     "2086": {
       "tokens": [
         "KILT"
@@ -3787,6 +3796,7 @@
         "420": "SWED",
         "444": "SASS",
         "500": "TRN",
+        "501": "KCK",
         "555": "bambam",
         "609": "HMT",
         "666": "HOGE",
