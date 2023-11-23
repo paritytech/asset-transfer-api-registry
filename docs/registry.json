@@ -3185,15 +3185,6 @@
         }
       ]
     },
-    "2113": {
-      "tokens": [
-        "KAB"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "kabocha-parachain"
-    },
     "2114": {
       "tokens": [
         "TUR"
@@ -3291,15 +3282,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "amplitude"
-    },
-    "2222": {
-      "tokens": [
-        "MITO"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "ipci"
     },
     "2236": {
       "tokens": [
