@@ -3185,6 +3185,15 @@
         }
       ]
     },
+    "2113": {
+      "tokens": [
+        "KAB"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "kabocha-parachain"
+    },
     "2114": {
       "tokens": [
         "TUR"
@@ -3970,6 +3979,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "contracts-rococo"
+    },
+    "1003": {
+      "tokens": [
+        "ROC"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "encointer-parachain"
     },
     "1013": {
       "tokens": [
