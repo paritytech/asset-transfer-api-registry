@@ -3185,15 +3185,6 @@
         }
       ]
     },
-    "2113": {
-      "tokens": [
-        "KAB"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "kabocha-parachain"
-    },
     "2114": {
       "tokens": [
         "TUR"
@@ -3459,6 +3450,7 @@
         "2131": "Wnd",
         "2511": "TTY",
         "3000": "DEV",
+        "3327": "3327",
         "4000": "DES",
         "4123": "DWND2",
         "4200": "KLM",
@@ -3693,6 +3685,10 @@
         "43": {
           "lpToken": "43",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22065\"}]}}]]"
+        },
+        "44": {
+          "lpToken": "44",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"3327\"}]}}]]"
         }
       },
       "specName": "westmint"
@@ -3842,6 +3838,7 @@
         "4040": "ROSTIK",
         "4110": "DDA",
         "5000": "xdtb",
+        "5353": "FNLY",
         "6900": "LSPA",
         "6969": "STNLY",
         "7777": "USDT",
@@ -3972,6 +3969,10 @@
         "16": {
           "lpToken": "16",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"131313\"}]}}]]"
+        },
+        "17": {
+          "lpToken": "17",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"5353\"}]}}]]"
         }
       },
       "specName": "statemine"
