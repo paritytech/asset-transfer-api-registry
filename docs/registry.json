@@ -3480,6 +3480,7 @@
         "22063": "PIVO",
         "22064": "DKT",
         "22065": "MIN",
+        "22066": "MVPW",
         "31337": "USDC",
         "54221": "wTEST",
         "61337": "USDC",
@@ -3710,7 +3711,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "collectives"
+      "specName": "collectives-westend"
     }
   },
   "rococo": {
@@ -3863,6 +3864,7 @@
         "22062": "DEM",
         "22063": "DKT",
         "22064": "XPPEN",
+        "22065": "TREM",
         "26845": "TTT",
         "41217": "KFTP",
         "42069": "PEB",
@@ -3983,6 +3985,10 @@
         "17": {
           "lpToken": "17",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"5353\"}]}}]]"
+        },
+        "18": {
+          "lpToken": "18",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22065\"}]}}]]"
         }
       },
       "specName": "statemine"
