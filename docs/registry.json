@@ -3995,6 +3995,10 @@
         "18": {
           "lpToken": "18",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22065\"}]}}]]"
+        },
+        "19": {
+          "lpToken": "19",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22061\"}]}}]]"
         }
       },
       "specName": "statemine"
