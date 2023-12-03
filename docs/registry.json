@@ -1489,15 +1489,6 @@
       "poolPairsInfo": {},
       "specName": "subsocial-parachain"
     },
-    "2104": {
-      "tokens": [
-        "MANTA"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "manta"
-    },
     "3333": {
       "tokens": [
         "TRN"
