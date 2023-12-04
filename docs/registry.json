@@ -2382,7 +2382,9 @@
       ]
     },
     "2011": {
-      "tokens": [],
+      "tokens": [
+        "XOR"
+      ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
@@ -3884,6 +3886,7 @@
         "413801": "PPV",
         "456789": "LDO",
         "666666": "ISH",
+        "766768": "jghg",
         "862105": "USDTT",
         "862812": "CUBOT",
         "863012": "vCOPT",
