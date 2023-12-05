@@ -1462,15 +1462,6 @@
       "poolPairsInfo": {},
       "specName": "zeitgeist"
     },
-    "2093": {
-      "tokens": [
-        "HASH"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "luhn"
-    },
     "2094": {
       "tokens": [
         "PEN"
