@@ -1462,6 +1462,15 @@
       "poolPairsInfo": {},
       "specName": "zeitgeist"
     },
+    "2093": {
+      "tokens": [
+        "HASH"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "luhn"
+    },
     "2094": {
       "tokens": [
         "PEN"
@@ -1479,6 +1488,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "subsocial-parachain"
+    },
+    "2104": {
+      "tokens": [
+        "MANTA"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "manta"
     },
     "3333": {
       "tokens": [
