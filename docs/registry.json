@@ -2459,15 +2459,6 @@
         }
       ]
     },
-    "2015": {
-      "tokens": [
-        "TEER"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "integritee-parachain"
-    },
     "2023": {
       "tokens": [
         "MOVR"
@@ -3863,6 +3854,7 @@
         "7777": "USDT",
         "9394": "SMEAD",
         "9991": "SPT",
+        "10000": "AST",
         "11111": "RLC",
         "11123": "AAE",
         "12345": "USDT",
@@ -4002,6 +3994,10 @@
         "19": {
           "lpToken": "19",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22061\"}]}}]]"
+        },
+        "20": {
+          "lpToken": "20",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"10000\"}]}}]]"
         }
       },
       "specName": "statemine"
