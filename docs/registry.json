@@ -2459,6 +2459,15 @@
         }
       ]
     },
+    "2015": {
+      "tokens": [
+        "TEER"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "integritee-parachain"
+    },
     "2023": {
       "tokens": [
         "MOVR"
