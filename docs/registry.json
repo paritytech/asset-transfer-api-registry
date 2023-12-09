@@ -1580,7 +1580,6 @@
         "66": "DAI",
         "68": "ADVERT",
         "69": "NICE",
-        "70": "MAR",
         "71": "OAK",
         "75": "cipher",
         "77": "Crypto",
@@ -4162,15 +4161,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "Pangolin2"
-    },
-    "2106": {
-      "tokens": [
-        "LIT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "rococo-parachain"
     },
     "2114": {
       "tokens": [
