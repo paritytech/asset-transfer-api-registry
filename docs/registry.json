@@ -402,6 +402,13 @@
           "asset": "150874409661081770150564009349448205842"
         },
         {
+          "paraID": 2094,
+          "symbol": "PEN",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2094},{\"palletInstance\":10}]}}}",
+          "asset": "45647473099451451833602657905356404688"
+        },
+        {
           "paraID": 2101,
           "symbol": "SUB",
           "decimals": 10,
@@ -4045,15 +4052,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "rhala"
-    },
-    "2011": {
-      "tokens": [
-        "XOR"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "sora_ksm"
     },
     "2030": {
       "tokens": [
