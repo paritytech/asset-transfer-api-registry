@@ -1433,6 +1433,15 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
+    "2056": {
+      "tokens": [
+        "AVT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "avn-parachain"
+    },
     "2086": {
       "tokens": [
         "KILT"
@@ -3192,6 +3201,15 @@
         }
       ]
     },
+    "2113": {
+      "tokens": [
+        "KAB"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "kabocha-parachain"
+    },
     "2114": {
       "tokens": [
         "TUR"
@@ -3696,6 +3714,10 @@
         "44": {
           "lpToken": "44",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"3327\"}]}}]]"
+        },
+        "45": {
+          "lpToken": "45",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"31337\"}]}}]]"
         }
       },
       "specName": "westmint"
@@ -4035,6 +4057,15 @@
       "poolPairsInfo": {},
       "specName": "rhala"
     },
+    "2011": {
+      "tokens": [
+        "XOR"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "sora_ksm"
+    },
     "2030": {
       "tokens": [
         "BNC",
@@ -4087,15 +4118,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "watr-devnet"
-    },
-    "2087": {
-      "tokens": [
-        "PICA"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "picasso"
     },
     "2090": {
       "tokens": [
