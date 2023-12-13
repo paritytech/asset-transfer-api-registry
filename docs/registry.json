@@ -3308,15 +3308,6 @@
       "poolPairsInfo": {},
       "specName": "amplitude"
     },
-    "2222": {
-      "tokens": [
-        "MITO"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "ipci"
-    },
     "2236": {
       "tokens": [
         "ZERO",
@@ -3515,6 +3506,7 @@
         "21000001": "PKCR",
         "40000001": "ETH",
         "123456789": "PUSH",
+        "333333333": "PRIM",
         "900990087": "SPOT",
         "1000000000": "CZX",
         "1233344433": "BQE",
@@ -3718,6 +3710,10 @@
         "45": {
           "lpToken": "45",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"31337\"}]}}]]"
+        },
+        "46": {
+          "lpToken": "46",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"333333333\"}]}}]]"
         }
       },
       "specName": "westmint"
@@ -3918,6 +3914,7 @@
         "76657621": "gaa",
         "123456789": "ZeAs",
         "143228832": "tasset",
+        "333333333": "PRIM",
         "1234567890": "giraffe",
         "2430784328": "TMW"
       },
@@ -4017,6 +4014,10 @@
         "20": {
           "lpToken": "20",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"10000\"}]}}]]"
+        },
+        "21": {
+          "lpToken": "21",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"333333333\"}]}}]]"
         }
       },
       "specName": "statemine"
@@ -4163,6 +4164,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "Pangolin2"
+    },
+    "2106": {
+      "tokens": [
+        "LIT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "rococo-parachain"
     },
     "2114": {
       "tokens": [
