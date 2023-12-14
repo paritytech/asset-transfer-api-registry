@@ -1,10 +1,11 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
 import { prodRelayKusama, prodRelayPolkadot } from '@polkadot/apps-config';
+import { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import { createChainRegistryFromRelay } from './createChainRegistryFromRelay';
 import { fetchChainInfo } from './fetchChainInfo';
-import { TokenRegistry } from './types';
+import { ChainInfoKeys, TokenRegistry } from './types';
 import { twirlTimer } from './util';
 
 jest.mock('./util');
@@ -13,14 +14,25 @@ jest.mock('./fetchParaIds');
 
 describe('createChainRegistryFromRelay', () => {
 	it('Should correctly create the registry for kusama', async () => {
-		(twirlTimer as jest.MockedFunction<any>).mockResolvedValueOnce();
-		(fetchChainInfo as jest.MockedFunction<any>).mockReturnValueOnce({
-			tokens: ['KSM'],
-			assetsInfo: {},
-			foreignAssetsInfo: {},
-			poolPairsInfo: {},
-			specName: 'kusama',
-		});
+		(
+			twirlTimer as jest.MockedFunction<() => NodeJS.Timeout>
+		).mockReturnValueOnce(setTimeout(() => {}, 0));
+		(
+			fetchChainInfo as jest.MockedFunction<
+				(
+					endpointOpts: EndpointOption,
+					isRelay?: boolean,
+				) => Promise<ChainInfoKeys | null>
+			>
+		).mockReturnValueOnce(
+			Promise.resolve({
+				tokens: ['KSM'],
+				assetsInfo: {},
+				foreignAssetsInfo: {},
+				poolPairsInfo: {},
+				specName: 'kusama',
+			}),
+		);
 
 		const registry: TokenRegistry = {
 			polkadot: {},
@@ -46,14 +58,25 @@ describe('createChainRegistryFromRelay', () => {
 		});
 	});
 	it('Should correctly create the registry for polkadot', async () => {
-		(twirlTimer as jest.MockedFunction<any>).mockResolvedValueOnce();
-		(fetchChainInfo as jest.MockedFunction<any>).mockReturnValueOnce({
-			tokens: ['DOT'],
-			assetsInfo: {},
-			foreignAssetsInfo: {},
-			poolPairsInfo: {},
-			specName: 'polkadot',
-		});
+		(
+			twirlTimer as jest.MockedFunction<() => NodeJS.Timeout>
+		).mockReturnValueOnce(setTimeout(() => {}, 0));
+		(
+			fetchChainInfo as jest.MockedFunction<
+				(
+					endpointOpts: EndpointOption,
+					isRelay?: boolean,
+				) => Promise<ChainInfoKeys | null>
+			>
+		).mockReturnValueOnce(
+			Promise.resolve({
+				tokens: ['DOT'],
+				assetsInfo: {},
+				foreignAssetsInfo: {},
+				poolPairsInfo: {},
+				specName: 'polkadot',
+			}),
+		);
 
 		const registry: TokenRegistry = {
 			polkadot: {},

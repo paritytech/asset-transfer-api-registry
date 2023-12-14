@@ -23,6 +23,7 @@
     "@polkadot/apps-config": "0.132.1",
     "@substrate/dev": "0.7.1",
     "@types/jest-when": "3.5.5",
+    "jest-mock": "29.7.0",
     "jest-when": "3.6.0",
     "node-fetch": "2.6.7"
   },

@@ -3,7 +3,7 @@
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import { fetchChainInfo } from './fetchChainInfo';
-import type { ChainInfoKeys, ChainName, ParaIds, TokenRegistry } from './types';
+import type { ChainName, ParaIds, TokenRegistry } from './types';
 import { twirlTimer } from './util';
 
 /**

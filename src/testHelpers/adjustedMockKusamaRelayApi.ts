@@ -35,7 +35,7 @@ const getHeader = (): Promise<Header> =>
 
 const accountNextIndex = () =>
 	mockKusamaRelayApi.registry.createType('u32', 10);
-const parachains = async () => {
+const parachains = () => {
 	return mockKusamaRelayApi.registry.createType(
 		'Vec<u32>',
 		[
@@ -46,7 +46,7 @@ const parachains = async () => {
 		],
 	);
 };
-const disconnect = async () => {
+const disconnect = () => {
 	return;
 };
 

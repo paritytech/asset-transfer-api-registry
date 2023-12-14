@@ -1,6 +1,8 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
+import type { ApiPromise } from '@polkadot/api';
 import { prodRelayKusama } from '@polkadot/apps-config';
+import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import { fetchParaIds } from './fetchParaIds';
 import { getApi } from './getApi';
@@ -11,9 +13,14 @@ jest.mock('./getApi');
 
 describe('fetchParaIds', () => {
 	it('Correctly fetches the parachain Ids for a given relay chain', async () => {
-		(getApi as jest.MockedFunction<any>).mockResolvedValueOnce(
-			adjustedMockKusamaRelayApi,
-		);
+		(
+			getApi as jest.MockedFunction<
+				(
+					endpointOpts: EndpointOption,
+					isRelay?: boolean,
+				) => Promise<ApiPromise | null | undefined>
+			>
+		).mockResolvedValueOnce(adjustedMockKusamaRelayApi);
 
 		const paraIds: ParaIds = {};
 		await expect(

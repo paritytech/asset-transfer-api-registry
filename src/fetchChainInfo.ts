@@ -33,7 +33,7 @@ export const fetchChainInfo = async (
 			? tokenSymbol
 					.unwrap()
 					.toArray()
-					.map((token: any) => token.toString())
+					.map((token) => token.toString())
 			: [];
 
 		const specNameStr = specName.toString();

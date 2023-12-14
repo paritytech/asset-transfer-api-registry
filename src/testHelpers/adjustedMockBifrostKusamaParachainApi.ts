@@ -41,7 +41,7 @@ const getHeader = (): Promise<Header> =>
 const accountNextIndex = () =>
 	mockBifrostKusamaParachainApi.registry.createType('u32', 10);
 
-const disconnect = async () => {
+const disconnect = () => {
 	return;
 };
 

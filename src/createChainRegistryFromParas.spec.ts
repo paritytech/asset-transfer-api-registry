@@ -1,13 +1,14 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
 import { prodParasKusamaCommon } from '@polkadot/apps-config';
+import { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import {
 	appendFetchChainInfoPromise,
 	createChainRegistryFromParas,
 } from './createChainRegistryFromParas';
 import { fetchParaIds } from './fetchParaIds';
-import { ParaIds, TokenRegistry } from './types';
+import { ChainName, ParaIds, TokenRegistry } from './types';
 import { twirlTimer } from './util';
 
 jest.mock('./util');
@@ -15,10 +16,34 @@ jest.mock('./createChainRegistryFromParas');
 jest.mock('./fetchChainInfo');
 jest.mock('./fetchParaIds');
 
+const newRegistry: TokenRegistry = {
+	polkadot: {},
+	kusama: {},
+	westend: {},
+	rococo: {},
+};
+const currentRegistry: TokenRegistry = {
+	polkadot: {},
+	kusama: {},
+	westend: {},
+	rococo: {},
+};
+
 describe('CreateRegistryFromParas', () => {
 	it('Should correctly add the registries for paras when found', async () => {
-		(twirlTimer as jest.MockedFunction<Object>).mockResolvedValueOnce();
-		(appendFetchChainInfoPromise as jest.MockedFunction<any>)
+		(
+			twirlTimer as jest.MockedFunction<() => NodeJS.Timeout>
+		).mockReturnValueOnce(setTimeout(() => {}, 0));
+		(
+			appendFetchChainInfoPromise as jest.MockedFunction<
+				(
+					fetchChainInfoPromises: Promise<void>[],
+					endpoint: EndpointOption,
+					registry: TokenRegistry,
+					chainName: ChainName,
+				) => Promise<void>[]
+			>
+		)
 			.mockReturnValueOnce([
 				Promise.resolve({
 					tokens: ['KSM'],
@@ -54,22 +79,17 @@ describe('CreateRegistryFromParas', () => {
 			]);
 
 		const paraIds: ParaIds = { kusama: [1000, 1001, 1002] };
-		(fetchParaIds as jest.MockedFunction<any>).mockResolvedValueOnce({
+		(
+			fetchParaIds as jest.MockedFunction<
+				(
+					chain: string,
+					endpointOpts: EndpointOption,
+					paraIds: ParaIds,
+				) => Promise<ParaIds>
+			>
+		).mockResolvedValueOnce({
 			kusama: [1000, 1001, 1002],
 		});
-
-		const newRegistry: TokenRegistry = {
-			polkadot: {},
-			kusama: {},
-			westend: {},
-			rococo: {},
-		};
-		const currentRegistry: TokenRegistry = {
-			polkadot: {},
-			kusama: {},
-			westend: {},
-			rococo: {},
-		};
 
 		//NOTE: use return value
 		await createChainRegistryFromParas(

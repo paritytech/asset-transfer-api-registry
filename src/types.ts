@@ -75,20 +75,20 @@ export type XcAssetsInfo = {
 export type XcAssetsData = {
 	paraID: number;
 	relayChain: string;
-	nativeChainID: string;
+	nativeChainID: string | null;
 	symbol: string;
 	decimals: number;
 	interiorType: string;
-	xcmV1Standardized: XcAssetXcmStandardized[];
-	xcmV1MultiLocationByte: boolean;
+	xcmV1Standardized: (XcAssetXcmStandardized | string)[];
 	xcmV1MultiLocation: AnyJson;
 	asset: Object | string;
 	source: string[];
+	xcmV1MultiLocationByte?: `0x${string}`;
 };
 
 export type SanitizedXcAssetsData = {
 	paraID: number;
-	nativeChainID: string;
+	nativeChainID: string | null;
 	symbol: string;
 	decimals: number;
 	xcmV1MultiLocation: string;
@@ -96,7 +96,7 @@ export type SanitizedXcAssetsData = {
 };
 
 export type XcAssetXcmStandardized = {
-	[x: string]: string | number;
+	[x: string]: string | number | undefined;
 };
 
 type RequireOnlyOne<T, Keys extends keyof T = keyof T> = Pick<

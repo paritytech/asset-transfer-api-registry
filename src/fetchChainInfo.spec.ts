@@ -1,6 +1,8 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
+import { ApiPromise } from '@polkadot/api';
 import { prodRelayKusama } from '@polkadot/apps-config';
+import { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import { fetchChainInfo } from './fetchChainInfo';
 import { fetchSystemParachainAssetConversionPoolInfo } from './fetchSystemParachainAssetConversionPoolInfo';
@@ -11,6 +13,7 @@ import { adjustedmockAssetHubKusamaApi } from './testHelpers/adjustedMockAssetHu
 import { adjustedMockBifrostKusamaParachainApi } from './testHelpers/adjustedMockBifrostKusamaParachainApi';
 import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRelayApi';
 import { mockAssetHubKusamaParachainAssetsInfo } from './testHelpers/mockSystemParachainAssetInfo';
+import { AssetsInfo, ForeignAssetsInfo, PoolPairsInfo } from './types';
 
 jest.mock('./getApi');
 jest.mock('./fetchSystemParachainAssetInfo');
@@ -20,17 +23,28 @@ jest.mock('./fetchSystemParachainAssetConversionPoolInfo');
 describe('fetchChainInfo', () => {
 	describe('Kusama', () => {
 		it('Correctly fetches Kusama ChainInfo', async () => {
-			(getApi as jest.MockedFunction<any>).mockResolvedValueOnce(
-				adjustedMockKusamaRelayApi,
-			);
 			(
-				fetchSystemParachainAssetInfo as jest.MockedFunction<any>
+				getApi as jest.MockedFunction<
+					(
+						endpointOpts: EndpointOption,
+						isRelay?: boolean,
+					) => Promise<ApiPromise | null | undefined>
+				>
+			).mockResolvedValueOnce(adjustedMockKusamaRelayApi);
+			(
+				fetchSystemParachainAssetInfo as jest.MockedFunction<
+					(api: ApiPromise) => Promise<AssetsInfo>
+				>
 			).mockResolvedValueOnce({});
 			(
-				fetchSystemParachainForeignAssetInfo as jest.MockedFunction<any>
+				fetchSystemParachainForeignAssetInfo as jest.MockedFunction<
+					(api: ApiPromise) => Promise<ForeignAssetsInfo>
+				>
 			).mockResolvedValueOnce({});
 			(
-				fetchSystemParachainAssetConversionPoolInfo as jest.MockedFunction<any>
+				fetchSystemParachainAssetConversionPoolInfo as jest.MockedFunction<
+					(api: ApiPromise) => Promise<PoolPairsInfo>
+				>
 			).mockResolvedValueOnce({});
 
 			await expect(fetchChainInfo(prodRelayKusama, true)).resolves.toEqual({
@@ -45,17 +59,28 @@ describe('fetchChainInfo', () => {
 
 	describe('AssetHub Kusama', () => {
 		it('Correctly fetches AssetHub Kusama ChainInfo', async () => {
-			(getApi as jest.MockedFunction<any>).mockResolvedValueOnce(
-				adjustedmockAssetHubKusamaApi,
-			);
 			(
-				fetchSystemParachainAssetInfo as jest.MockedFunction<any>
+				getApi as jest.MockedFunction<
+					(
+						endpointOpts: EndpointOption,
+						isRelay?: boolean,
+					) => Promise<ApiPromise | null | undefined>
+				>
+			).mockResolvedValueOnce(adjustedmockAssetHubKusamaApi);
+			(
+				fetchSystemParachainAssetInfo as jest.MockedFunction<
+					(api: ApiPromise) => Promise<AssetsInfo>
+				>
 			).mockResolvedValueOnce(mockAssetHubKusamaParachainAssetsInfo);
 			(
-				fetchSystemParachainForeignAssetInfo as jest.MockedFunction<any>
+				fetchSystemParachainForeignAssetInfo as jest.MockedFunction<
+					(api: ApiPromise) => Promise<ForeignAssetsInfo>
+				>
 			).mockResolvedValueOnce({});
 			(
-				fetchSystemParachainAssetConversionPoolInfo as jest.MockedFunction<any>
+				fetchSystemParachainAssetConversionPoolInfo as jest.MockedFunction<
+					(api: ApiPromise) => Promise<PoolPairsInfo>
+				>
 			).mockResolvedValueOnce({});
 
 			await expect(fetchChainInfo(prodRelayKusama, false)).resolves.toEqual({
@@ -231,17 +256,28 @@ describe('fetchChainInfo', () => {
 
 	describe('Bifrost', () => {
 		it('Correctly fetches Bifrost Kusama ChainInfo', async () => {
-			(getApi as jest.MockedFunction<any>).mockResolvedValueOnce(
-				adjustedMockBifrostKusamaParachainApi,
-			);
 			(
-				fetchSystemParachainAssetInfo as jest.MockedFunction<any>
+				getApi as jest.MockedFunction<
+					(
+						endpointOpts: EndpointOption,
+						isRelay?: boolean,
+					) => Promise<ApiPromise | null | undefined>
+				>
+			).mockResolvedValueOnce(adjustedMockBifrostKusamaParachainApi);
+			(
+				fetchSystemParachainAssetInfo as jest.MockedFunction<
+					(api: ApiPromise) => Promise<AssetsInfo>
+				>
 			).mockResolvedValueOnce({});
 			(
-				fetchSystemParachainForeignAssetInfo as jest.MockedFunction<any>
+				fetchSystemParachainForeignAssetInfo as jest.MockedFunction<
+					(api: ApiPromise) => Promise<ForeignAssetsInfo>
+				>
 			).mockResolvedValueOnce({});
 			(
-				fetchSystemParachainAssetConversionPoolInfo as jest.MockedFunction<any>
+				fetchSystemParachainAssetConversionPoolInfo as jest.MockedFunction<
+					(api: ApiPromise) => Promise<PoolPairsInfo>
+				>
 			).mockResolvedValueOnce({});
 
 			await expect(fetchChainInfo(prodRelayKusama, true)).resolves.toEqual({

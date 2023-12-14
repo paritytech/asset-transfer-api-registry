@@ -49,7 +49,7 @@ export const main = async (
 	await Promise.all(fetchParaIdsPromises);
 
 	// store all create chain newRegistry relay promises
-	const createChainRegistryFromRelayPromises: Promise<TokenRegistry>[] = [];
+	const createChainRegistryFromRelayPromises: Promise<void>[] = [];
 
 	createChainRegistryFromRelayPromises.push(
 		createChainRegistryFromRelay('polkadot', prodRelayPolkadot, newRegistry),

@@ -18,13 +18,11 @@ export const createChainRegistryFromRelay = async (
 	chainName: ChainName,
 	endpoint: EndpointOption,
 	registry: TokenRegistry,
-): Promise<TokenRegistry> => {
+) => {
 	console.log(`Creating chain registry for ${chainName} relay`);
 	twirlTimer();
 	const res = await fetchChainInfo(endpoint, true);
 	if (res !== null) {
 		registry[chainName]['0'] = res;
 	}
-
-	return registry;
 };

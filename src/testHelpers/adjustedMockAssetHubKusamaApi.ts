@@ -95,7 +95,7 @@ const createType = mockAssetHubKusamaApi.registry.createType.bind(
 const accountNextIndex = () =>
 	mockAssetHubKusamaApi.registry.createType('u32', 10);
 
-const disconnect = async () => {
+const disconnect = () => {
 	return;
 };
 
@@ -496,8 +496,11 @@ export const adjustedmockAssetHubKusamaApi = {
 		},
 		foreignAssets: {
 			asset: Object.assign(foreignAsset, {
-				entries: (): [StorageKey<AnyTuple>, any][] => {
-					const metadata: Map<StorageKey<AnyTuple>, any> = new Map();
+				entries: (): [StorageKey<AnyTuple>, PalletAssetsAssetDetails][] => {
+					const metadata: Map<
+						StorageKey<AnyTuple>,
+						PalletAssetsAssetDetails
+					> = new Map();
 					const storageKey = {
 						parents: '1',
 						interior: { X2: [{ Parachain: '2125' }, { GeneralIndex: '0' }] },
@@ -514,23 +517,26 @@ export const adjustedmockAssetHubKusamaApi = {
 							];
 						},
 					});
-					const codec = {
-						owner: '13cKp89Q5jiLjhvTEqAGy2DmEpVf52BvaQePoiN5Eavx7oKB',
-						issuer: '13cKp89Q5jiLjhvTEqAGy2DmEpVf52BvaQePoiN5Eavx7oKB',
-						admin: '13cKp89Q5jiLjhvTEqAGy2DmEpVf52BvaQePoiN5Eavx7oKB',
-						freezer: '13cKp89Q5jiLjhvTEqAGy2DmEpVf52BvaQePoiN5Eavx7oKB',
-						supply: 0,
-						deposit: 100000000000,
-						minBalance: 100000000000,
-						isSufficient: false,
-						accounts: 0,
-						sufficients: 0,
-						approvals: 0,
-						status: 'Live',
-					};
+					const codec = mockAssetHubKusamaApi.registry.createType(
+						'PalletAssetsAssetDetails',
+						{
+							owner: '13cKp89Q5jiLjhvTEqAGy2DmEpVf52BvaQePoiN5Eavx7oKB',
+							issuer: '13cKp89Q5jiLjhvTEqAGy2DmEpVf52BvaQePoiN5Eavx7oKB',
+							admin: '13cKp89Q5jiLjhvTEqAGy2DmEpVf52BvaQePoiN5Eavx7oKB',
+							freezer: '13cKp89Q5jiLjhvTEqAGy2DmEpVf52BvaQePoiN5Eavx7oKB',
+							supply: 0,
+							deposit: 100000000000,
+							minBalance: 100000000000,
+							isSufficient: false,
+							accounts: 0,
+							sufficients: 0,
+							approvals: 0,
+							status: 'Live',
+						},
+					);
 					metadata.set(storageKey, codec);
 
-					const result: [StorageKey<AnyTuple>, any][] = [];
+					const result: [StorageKey<AnyTuple>, PalletAssetsAssetDetails][] = [];
 					metadata.forEach((val, key) => {
 						result.push([key, val]);
 					});

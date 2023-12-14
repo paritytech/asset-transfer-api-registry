@@ -1837,6 +1837,7 @@ __metadata:
     "@polkadot/apps-config": 0.132.1
     "@substrate/dev": 0.7.1
     "@types/jest-when": 3.5.5
+    jest-mock: 29.7.0
     jest-when: 3.6.0
     node-fetch: 2.6.7
   languageName: unknown
@@ -4200,7 +4201,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-mock@npm:^29.7.0":
+"jest-mock@npm:29.7.0, jest-mock@npm:^29.7.0":
   version: 29.7.0
   resolution: "jest-mock@npm:29.7.0"
   dependencies:
