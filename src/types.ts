@@ -75,24 +75,24 @@ export type XcAssetsInfo = {
 export type XcAssetsData = {
 	paraID: number;
 	relayChain: string;
-	nativeChainId: string;
+	nativeChainID: string;
 	symbol: string;
 	decimals: number;
 	interiorType: string;
 	xcmV1Standardized: XcAssetXcmStandardized[];
 	xcmV1MultiLocationByte: boolean;
 	xcmV1MultiLocation: AnyJson;
-	asset: { ForeignAsset: string } | string;
+	asset: Object | string;
 	source: string[];
 };
 
 export type SanitizedXcAssetsData = {
 	paraID: number;
-	nativeChainId: string;
+	nativeChainID: string;
 	symbol: string;
 	decimals: number;
 	xcmV1MultiLocation: string;
-	asset: { ForeignAsset: string } | string;
+	asset: Object | string;
 };
 
 export type XcAssetXcmStandardized = {

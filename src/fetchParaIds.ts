@@ -1,0 +1,30 @@
+// Copyright 2023 Parity Technologies (UK) Ltd.
+
+import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
+
+import { getApi } from './getApi';
+import type { ParaIds } from './types';
+
+/**
+ * This will create a registry of Parachain Ids.
+ *
+ * @param chain Relay chain name
+ * @param endpointOpts Endpoint we are going to fetch the info from
+ * @param paraIds Registry we want to add the info to
+ */
+export const fetchParaIds = async (
+	chain: string,
+	endpointOpts: EndpointOption,
+	paraIds: ParaIds,
+): Promise<ParaIds> => {
+	const api = await getApi(endpointOpts, true);
+
+	if (api !== null && api !== undefined) {
+		const paras = await api.query.paras.parachains();
+		const paraIdsJson = paras.toJSON();
+		paraIds[chain] = paraIdsJson as number[];
+		await api.disconnect();
+	}
+
+	return paraIds;
+};

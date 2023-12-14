@@ -1,0 +1,256 @@
+// Copyright 2023 Parity Technologies (UK) Ltd.
+
+import { prodRelayKusama } from '@polkadot/apps-config';
+
+import { fetchChainInfo } from './fetchChainInfo';
+import { fetchSystemParachainAssetConversionPoolInfo } from './fetchSystemParachainAssetConversionPoolInfo';
+import { fetchSystemParachainAssetInfo } from './fetchSystemParachainAssetInfo';
+import { fetchSystemParachainForeignAssetInfo } from './fetchSystemParachainForeignAssetInfo';
+import { getApi } from './getApi';
+import { adjustedmockAssetHubKusamaApi } from './testHelpers/adjustedMockAssetHubKusamaApi';
+import { adjustedMockBifrostKusamaParachainApi } from './testHelpers/adjustedMockBifrostKusamaParachainApi';
+import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRelayApi';
+import { mockAssetHubKusamaParachainAssetsInfo } from './testHelpers/mockSystemParachainAssetInfo';
+
+jest.mock('./getApi');
+jest.mock('./fetchSystemParachainAssetInfo');
+jest.mock('./fetchSystemParachainForeignAssetInfo');
+jest.mock('./fetchSystemParachainAssetConversionPoolInfo');
+
+describe('fetchChainInfo', () => {
+	describe('Kusama', () => {
+		it('Correctly fetches Kusama ChainInfo', async () => {
+			(getApi as jest.MockedFunction<any>).mockResolvedValueOnce(
+				adjustedMockKusamaRelayApi,
+			);
+			(
+				fetchSystemParachainAssetInfo as jest.MockedFunction<any>
+			).mockResolvedValueOnce({});
+			(
+				fetchSystemParachainForeignAssetInfo as jest.MockedFunction<any>
+			).mockResolvedValueOnce({});
+			(
+				fetchSystemParachainAssetConversionPoolInfo as jest.MockedFunction<any>
+			).mockResolvedValueOnce({});
+
+			await expect(fetchChainInfo(prodRelayKusama, true)).resolves.toEqual({
+				tokens: ['KSM'],
+				specName: 'kusama',
+				assetsInfo: {},
+				foreignAssetsInfo: {},
+				poolPairsInfo: {},
+			});
+		});
+	});
+
+	describe('AssetHub Kusama', () => {
+		it('Correctly fetches AssetHub Kusama ChainInfo', async () => {
+			(getApi as jest.MockedFunction<any>).mockResolvedValueOnce(
+				adjustedmockAssetHubKusamaApi,
+			);
+			(
+				fetchSystemParachainAssetInfo as jest.MockedFunction<any>
+			).mockResolvedValueOnce(mockAssetHubKusamaParachainAssetsInfo);
+			(
+				fetchSystemParachainForeignAssetInfo as jest.MockedFunction<any>
+			).mockResolvedValueOnce({});
+			(
+				fetchSystemParachainAssetConversionPoolInfo as jest.MockedFunction<any>
+			).mockResolvedValueOnce({});
+
+			await expect(fetchChainInfo(prodRelayKusama, false)).resolves.toEqual({
+				tokens: ['KSM'],
+				specName: 'asset-hub-kusama',
+				assetsInfo: {
+					'0': 'DOG',
+					'1': 'L T',
+					'2': 'PNN',
+					'3': 'Meow',
+					'4': 'HAPPY',
+					'5': 'BEER',
+					'6': 'ZKPD',
+					'7': 'DOS',
+					'8': 'RMRK',
+					'9': 'TOT',
+					'10': 'USDC',
+					'11': 'USDT',
+					'12': 'BUSD',
+					'13': 'LN',
+					'14': 'DOT',
+					'15': 'Web3',
+					'16': 'ARIS',
+					'17': 'MEME',
+					'18': 'HEI',
+					'19': 'SHOT',
+					'20': 'BFKK',
+					'21': 'ELEV',
+					'22': 'STH',
+					'23': 'KOJO',
+					'24': 'test',
+					'25': 'BABE',
+					'26': 'BUNGA',
+					'27': 'RUNE',
+					'28': 'LAC',
+					'29': 'CODES',
+					'30': 'GOL',
+					'31': 'ki',
+					'32': 'FAV',
+					'33': 'BUSSY',
+					'34': 'PLX',
+					'35': 'LUCKY',
+					'36': 'RRT',
+					'37': 'MNCH',
+					'38': 'ENT',
+					'39': 'DSCAN',
+					'40': 'ERIC',
+					'41': 'GOOSE',
+					'42': 'NRNF',
+					'43': 'TTT',
+					'44': 'ADVNCE',
+					'45': 'CRIB',
+					'46': 'FAN',
+					'47': 'EUR',
+					'49': 'DIAN',
+					'50': 'PROMO',
+					'55': 'MTS',
+					'60': 'GAV',
+					'61': 'CRY',
+					'64': 'oh!',
+					'66': 'DAI',
+					'68': 'ADVERT',
+					'69': 'NICE',
+					'70': 'MAR',
+					'71': 'OAK',
+					'75': 'cipher',
+					'77': 'Crypto',
+					'87': 'XEXR',
+					'88': 'BTC',
+					'90': 'SATS',
+					'91': 'TMJ',
+					'99': 'BITCOIN',
+					'100': 'Chralt',
+					'101': '---',
+					'102': 'DRX',
+					'111': 'NO1',
+					'117': 'TNKR',
+					'123': 'NFT',
+					'138': 'Abc',
+					'168': 'Tokens',
+					'188': 'ZLK',
+					'200': 'SIX',
+					'214': 'LOVE',
+					'222': 'PNEO',
+					'223': 'BILL',
+					'224': 'SIK',
+					'300': 'PWS',
+					'333': 'Token',
+					'345': '345',
+					'360': 'uni',
+					'365': 'time',
+					'374': 'wETH',
+					'377': 'KAA',
+					'383': 'KODA',
+					'404': 'MAXI',
+					'420': 'BLAZE',
+					'520': '0xe299a5e299a5e299a5',
+					'555': 'GAME',
+					'567': 'CHRWNA',
+					'569': 'KUSA',
+					'598': 'EREN',
+					'666': 'BAD',
+					'677': 'GRB',
+					'759': 'bLd',
+					'777': 'GOD',
+					'813': 'TBUX',
+					'841': 'YAYOI',
+					'888': 'LUCK',
+					'911': '911',
+					'969': 'WGTL',
+					'999': 'CBDC',
+					'1000': 'SPARK',
+					'1107': 'HOLIC',
+					'1111': 'MTVD',
+					'1123': 'XEN',
+					'1155': 'WITEK',
+					'1225': 'GOD',
+					'1234': 'KSM',
+					'1313': 'TACP',
+					'1337': 'TIP',
+					'1420': 'HYDR',
+					'1441': 'SPOT',
+					'1526': 'bcd',
+					'1607': 'STRGZN',
+					'1688': 'ali',
+					'1984': 'USDt',
+					'1999': 'ADVERT2',
+					'2021': 'WAVE',
+					'2048': 'RWS',
+					'2049': 'Android',
+					'2050': 'CUT',
+					'2077': 'XRT',
+					'3000': 'GRAIN',
+					'3001': 'DUCK',
+					'3077': 'ACT',
+					'3327': 'MVPW',
+					'3328': 'A42',
+					'3721': 'fast',
+					'3943': 'GMK',
+					'6789': 'VHM',
+					'6967': 'CHAOS',
+					'7777': 'lucky7',
+					'8848': 'top',
+					'9000': 'KPOTS',
+					'9999': 'BTC',
+					'11111': 'KVC',
+					'12345': 'DREX',
+					'19840': 'USDt',
+					'42069': 'INTRN',
+					'69420': 'CHAOS',
+					'80815': 'KSMFS',
+					'80816': 'RUEPP',
+					'80817': 'FRALEY',
+					'88888': 'BAILEGO',
+					'95834': 'LUL',
+					'131313': 'DMO',
+					'220204': 'STM',
+					'314159': 'RTT',
+					'777777': 'DEFI',
+					'862812': 'CUBO',
+					'863012': 'VCOP',
+					'4206969': 'SHIB',
+					'5201314': 'belove',
+					'5797867': 'TAKE',
+					'7777777': 'king',
+					'4294967291': 'PRIME',
+				},
+				foreignAssetsInfo: {},
+				poolPairsInfo: {},
+			});
+		});
+	});
+
+	describe('Bifrost', () => {
+		it('Correctly fetches Bifrost Kusama ChainInfo', async () => {
+			(getApi as jest.MockedFunction<any>).mockResolvedValueOnce(
+				adjustedMockBifrostKusamaParachainApi,
+			);
+			(
+				fetchSystemParachainAssetInfo as jest.MockedFunction<any>
+			).mockResolvedValueOnce({});
+			(
+				fetchSystemParachainForeignAssetInfo as jest.MockedFunction<any>
+			).mockResolvedValueOnce({});
+			(
+				fetchSystemParachainAssetConversionPoolInfo as jest.MockedFunction<any>
+			).mockResolvedValueOnce({});
+
+			await expect(fetchChainInfo(prodRelayKusama, true)).resolves.toEqual({
+				tokens: ['BNC'],
+				specName: 'bifrost',
+				assetsInfo: {},
+				foreignAssetsInfo: {},
+				poolPairsInfo: {},
+			});
+		});
+	});
+});

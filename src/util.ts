@@ -1,8 +1,10 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
 import fs from 'fs';
+import fetch from 'node-fetch';
 
-import type { TokenRegistry } from './types';
+import { RPC_BLACK_LIST } from './consts';
+import type { TokenRegistry, XcAssets } from './types';
 
 /**
  * Write Json to a file path.
@@ -36,4 +38,27 @@ export const sleep = (ms: number): Promise<void> => {
 	return new Promise((resolve) => {
 		setTimeout(() => resolve(), ms);
 	});
+};
+
+/**
+ * Determines when endpoint processing should be skipped.
+ *
+ * @param endpoint
+ */
+export const skipProcessingEndpoint = (endpoint: string): boolean => {
+	if (endpoint.includes('onfinality') || RPC_BLACK_LIST.includes(endpoint)) {
+		return true;
+	}
+
+	return false;
+};
+
+export const fetchXcAssetData = async (
+	cdnUrl: string,
+): Promise<{ xcAssets: XcAssets }> => {
+	const xcAssetsRegistry = (await (await fetch(cdnUrl)).json()) as {
+		xcAssets: XcAssets;
+	};
+
+	return xcAssetsRegistry;
 };
