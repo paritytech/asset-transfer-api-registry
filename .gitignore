@@ -4,8 +4,6 @@
 # MacOS
 .DS_Store
 
-/tests
-
 # Yarn berry
 .yarn/*
 !.yarn/releases
