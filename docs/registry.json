@@ -1581,6 +1581,15 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
+    "2056": {
+      "tokens": [
+        "AVT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "avn-parachain"
+    },
     "2086": {
       "tokens": [
         "KILT"
@@ -3618,6 +3627,15 @@
       "poolPairsInfo": {},
       "specName": "amplitude"
     },
+    "2222": {
+      "tokens": [
+        "MITO"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "ipci"
+    },
     "2236": {
       "tokens": [
         "ZERO",
@@ -4126,6 +4144,7 @@
         "224": "creagen",
         "228": "bebra",
         "233": "NTT",
+        "234": "LIA",
         "261": "DOS",
         "322": "SOLO",
         "333": "MEM",
@@ -4357,7 +4376,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "bridge-hub-rococo"
+      "specName": "statemine"
     },
     "2004": {
       "tokens": [
@@ -4474,15 +4493,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "Pangolin2"
-    },
-    "2106": {
-      "tokens": [
-        "LIT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "rococo-parachain"
     },
     "2114": {
       "tokens": [

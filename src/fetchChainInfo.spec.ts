@@ -12,7 +12,9 @@ import { getApi } from './getApi';
 import { adjustedmockAssetHubKusamaApi } from './testHelpers/adjustedMockAssetHubKusamaApi';
 import { adjustedMockBifrostKusamaParachainApi } from './testHelpers/adjustedMockBifrostKusamaParachainApi';
 import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRelayApi';
+import { mockAssetHubKusamaParachainPoolPairsInfo } from './testHelpers/mockSystemParachainAssetConversionPoolInfo';
 import { mockAssetHubKusamaParachainAssetsInfo } from './testHelpers/mockSystemParachainAssetInfo';
+import { mockAssetHubKusamaParachainForeignAssetsInfo } from './testHelpers/mockSystemParachainForeignAssetInfo';
 import { AssetsInfo, ForeignAssetsInfo, PoolPairsInfo } from './types';
 
 jest.mock('./getApi');
@@ -76,12 +78,12 @@ describe('fetchChainInfo', () => {
 				fetchSystemParachainForeignAssetInfo as jest.MockedFunction<
 					(api: ApiPromise) => Promise<ForeignAssetsInfo>
 				>
-			).mockResolvedValueOnce({});
+			).mockResolvedValueOnce(mockAssetHubKusamaParachainForeignAssetsInfo);
 			(
 				fetchSystemParachainAssetConversionPoolInfo as jest.MockedFunction<
 					(api: ApiPromise) => Promise<PoolPairsInfo>
 				>
-			).mockResolvedValueOnce({});
+			).mockResolvedValueOnce(mockAssetHubKusamaParachainPoolPairsInfo);
 
 			await expect(fetchChainInfo(prodRelayKusama, false)).resolves.toEqual({
 				tokens: ['KSM'],
@@ -248,8 +250,53 @@ describe('fetchChainInfo', () => {
 					'7777777': 'king',
 					'4294967291': 'PRIME',
 				},
-				foreignAssetsInfo: {},
-				poolPairsInfo: {},
+				foreignAssetsInfo: {
+					'0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a22506f6c6b61646f74227d7d7d':
+						{
+							symbol: '',
+							name: '',
+							multiLocation:
+								'{"parents":"2","interior":{"X1":{"GlobalConsensus":"Polkadot"}}}',
+						},
+					TNKR: {
+						symbol: 'TNKR',
+						name: 'Tinkernet',
+						multiLocation:
+							'{"parents":"1","interior":{"X2":[{"Parachain":"2125"},{"GeneralIndex":"0"}]}}',
+					},
+				},
+				poolPairsInfo: {
+					'0': {
+						lpToken: '0',
+						pairInfo:
+							'[[{"parents":"1","interior":"Here"},{"parents":"0","interior":{"X2":[{"PalletInstance":"50"},{"GeneralIndex":"5797867"}]}}]]',
+					},
+					'1': {
+						lpToken: '1',
+						pairInfo:
+							'[[{"parents":"1","interior":"Here"},{"parents":"0","interior":{"X2":[{"PalletInstance":"50"},{"GeneralIndex":"1984"}]}}]]',
+					},
+					'2': {
+						lpToken: '2',
+						pairInfo:
+							'[[{"parents":"1","interior":"Here"},{"parents":"0","interior":{"X2":[{"PalletInstance":"50"},{"GeneralIndex":"1313"}]}}]]',
+					},
+					'3': {
+						lpToken: '3',
+						pairInfo:
+							'[[{"parents":"1","interior":"Here"},{"parents":"0","interior":{"X2":[{"PalletInstance":"50"},{"GeneralIndex":"3327"}]}}]]',
+					},
+					'4': {
+						lpToken: '4',
+						pairInfo:
+							'[[{"parents":"1","interior":"Here"},{"parents":"0","interior":{"X2":[{"PalletInstance":"50"},{"GeneralIndex":"3328"}]}}]]',
+					},
+					'5': {
+						lpToken: '5',
+						pairInfo:
+							'[[{"parents":"1","interior":"Here"},{"parents":"0","interior":{"X2":[{"PalletInstance":"50"},{"GeneralIndex":"131313"}]}}]]',
+					},
+				},
 			});
 		});
 	});
