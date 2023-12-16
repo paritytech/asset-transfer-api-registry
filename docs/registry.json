@@ -4048,16 +4048,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "statemine"
-    },
-    "2004": {
-      "tokens": [
-        "PHA"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "rhala"
+      "specName": "bridge-hub-rococo"
     },
     "2011": {
       "tokens": [
