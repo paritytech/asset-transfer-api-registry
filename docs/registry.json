@@ -2346,20 +2346,6 @@
           "asset": "18446744073709551620"
         },
         {
-          "paraID": 2024,
-          "symbol": "GENS",
-          "decimals": 9,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2024}}}}",
-          "asset": "18446744073709551630"
-        },
-        {
-          "paraID": 2024,
-          "symbol": "EQD",
-          "decimals": 9,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2024},{\"generalKey\":\"0x657164\"}]}}}",
-          "asset": "18446744073709551631"
-        },
-        {
           "paraID": 2092,
           "symbol": "KBTC",
           "decimals": 8,
@@ -2379,13 +2365,6 @@
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2095}}}}",
           "asset": "18446744073709551633"
-        },
-        {
-          "paraID": 2096,
-          "symbol": "NEER",
-          "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2096},{\"generalKey\":\"0x000000000000000000\"}]}}}",
-          "asset": "18446744073709551632"
         },
         {
           "paraID": 2105,
@@ -4049,6 +4028,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "bridge-hub-rococo"
+    },
+    "2004": {
+      "tokens": [
+        "PHA"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "rhala"
     },
     "2011": {
       "tokens": [
