@@ -15,7 +15,7 @@ import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRela
 import { mockAssetHubKusamaParachainPoolPairsInfo } from './testHelpers/mockSystemParachainAssetConversionPoolInfo';
 import { mockAssetHubKusamaParachainAssetsInfo } from './testHelpers/mockSystemParachainAssetInfo';
 import { mockAssetHubKusamaParachainForeignAssetsInfo } from './testHelpers/mockSystemParachainForeignAssetInfo';
-import { AssetsInfo, ForeignAssetsInfo, PoolPairsInfo } from './types';
+import type { AssetsInfo, ForeignAssetsInfo, PoolPairsInfo } from './types';
 
 jest.mock('./getApi');
 jest.mock('./fetchSystemParachainAssetInfo');

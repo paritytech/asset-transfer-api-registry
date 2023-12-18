@@ -5,7 +5,7 @@ import { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import { createChainRegistryFromRelay } from './createChainRegistryFromRelay';
 import { fetchChainInfo } from './fetchChainInfo';
-import { ChainInfoKeys, TokenRegistry } from './types';
+import type { ChainInfoKeys, TokenRegistry } from './types';
 import { twirlTimer } from './util';
 
 jest.mock('./util');

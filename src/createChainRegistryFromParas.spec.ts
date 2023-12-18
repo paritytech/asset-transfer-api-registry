@@ -8,7 +8,7 @@ import {
 	createChainRegistryFromParas,
 } from './createChainRegistryFromParas';
 import { fetchParaIds } from './fetchParaIds';
-import { ChainName, ParaIds, TokenRegistry } from './types';
+import type { ChainName, ParaIds, TokenRegistry } from './types';
 import { twirlTimer } from './util';
 
 jest.mock('./util');

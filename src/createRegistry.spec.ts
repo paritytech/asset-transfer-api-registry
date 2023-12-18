@@ -4,20 +4,21 @@
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 import fs from 'fs';
 
-import { BASE_REGISTRY, TEST_REGISTRY_FILE_PATH } from './consts';
+import { DEFAULT_REGISTRY, TEST_REGISTRY_FILE_PATH } from './consts';
 import { createChainRegistryFromParas } from './createChainRegistryFromParas';
 import { createChainRegistryFromRelay } from './createChainRegistryFromRelay';
 import { main } from './createRegistry';
 import { fetchParaIds } from './fetchParaIds';
 import { fetchXcAssetsRegistryInfo } from './fetchXcAssetRegistryInfo';
-import { ChainName, ParaIds, TokenRegistry } from './types';
-const registry = BASE_REGISTRY;
+import type { ChainName, ParaIds, TokenRegistry } from './types';
+
+const registry = DEFAULT_REGISTRY;
 
 jest.mock('./fetchParaIds');
 jest.mock('./fetchXcAssetRegistryInfo');
 (
 	fetchXcAssetsRegistryInfo as jest.MockedFunction<
-		(registry: TokenRegistry) => Promise<void>
+		(tokenRegistry: TokenRegistry) => Promise<void>
 	>
 ).mockReturnValueOnce(
 	Promise.resolve([

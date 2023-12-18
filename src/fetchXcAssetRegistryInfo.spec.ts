@@ -4,7 +4,7 @@ import { fetchXcAssetsRegistryInfo } from './fetchXcAssetRegistryInfo';
 import { astarTestXcAssets } from './testHelpers/astarXcAssets';
 import { bifrostKusamaTestXcAssets } from './testHelpers/bifrostKusamaXcAssets';
 import { moonBeamTestXcAssets } from './testHelpers/moonbeamXcAssets';
-import { XcAssets, XcAssetsInfo } from './types';
+import type { XcAssets, XcAssetsInfo } from './types';
 import { fetchXcAssetData } from './util';
 
 jest.mock('./util');

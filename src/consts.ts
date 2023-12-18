@@ -2,7 +2,7 @@
 
 import path from 'path';
 
-import { TokenRegistry } from './types';
+import type { TokenRegistry } from './types';
 
 /**
  * @const MAX_RETRIES Maximum amount of connection attempts
@@ -20,7 +20,7 @@ export const RPC_BLACK_LIST = [
 	'wss://westend-rpc.blockops.network/ws',
 ];
 
-export const BASE_REGISTRY: TokenRegistry = {
+export const DEFAULT_REGISTRY: TokenRegistry = {
 	polkadot: {},
 	kusama: {},
 	westend: {},

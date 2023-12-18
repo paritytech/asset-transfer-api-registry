@@ -2560,22 +2560,6 @@
           "asset": "18446744073709551620"
         },
         {
-          "paraID": 2024,
-          "nativeChainID": null,
-          "symbol": "GENS",
-          "decimals": 9,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2024}}}}",
-          "asset": "18446744073709551630"
-        },
-        {
-          "paraID": 2024,
-          "nativeChainID": null,
-          "symbol": "EQD",
-          "decimals": 9,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2024},{\"generalKey\":\"0x657164\"}]}}}",
-          "asset": "18446744073709551631"
-        },
-        {
           "paraID": 2092,
           "nativeChainID": "kintsugi",
           "symbol": "KBTC",
@@ -2598,14 +2582,6 @@
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2095}}}}",
           "asset": "18446744073709551633"
-        },
-        {
-          "paraID": 2096,
-          "nativeChainID": "bitcountryPioneer",
-          "symbol": "NEER",
-          "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2096},{\"generalKey\":\"0x000000000000000000\"}]}}}",
-          "asset": "18446744073709551632"
         },
         {
           "paraID": 2105,
@@ -4210,6 +4186,7 @@
         "22064": "XPPEN",
         "22065": "TREM",
         "26845": "TTT",
+        "34634": "seg",
         "41217": "KFTP",
         "42069": "PEB",
         "50001": "jelou",
