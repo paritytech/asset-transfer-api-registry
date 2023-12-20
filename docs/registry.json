@@ -3287,15 +3287,6 @@
       "poolPairsInfo": {},
       "specName": "amplitude"
     },
-    "2222": {
-      "tokens": [
-        "MITO"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "ipci"
-    },
     "2236": {
       "tokens": [
         "ZERO",
@@ -4057,6 +4048,23 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "sora_ksm"
+    },
+    "2030": {
+      "tokens": [
+        "BNC",
+        "KUSD",
+        "DOT",
+        "KSM",
+        "KAR",
+        "ZLK",
+        "PHA",
+        "RMRK",
+        "MOVR"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "bifrost_polkadot"
     },
     "2031": {
       "tokens": [
