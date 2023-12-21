@@ -1260,6 +1260,13 @@
           "asset": "8"
         },
         {
+          "paraID": 2037,
+          "symbol": "UNQ",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2037}}}}",
+          "asset": "25"
+        },
+        {
           "paraID": 2092,
           "symbol": "ZTG",
           "decimals": 10,
@@ -1388,24 +1395,6 @@
       "poolPairsInfo": {},
       "specName": "integritee-parachain"
     },
-    "2043": {
-      "tokens": [
-        "OTP"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "origintrail-parachain",
-      "xcAssetsData": [
-        {
-          "paraID": 2043,
-          "symbol": "TRAC",
-          "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2043},{\"generalIndex\":1}]}}}",
-          "asset": "1"
-        }
-      ]
-    },
     "2046": {
       "tokens": [
         "RING"
@@ -1432,15 +1421,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "ajuna"
-    },
-    "2056": {
-      "tokens": [
-        "AVT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "avn-parachain"
     },
     "2086": {
       "tokens": [
@@ -1469,15 +1449,6 @@
       "poolPairsInfo": {},
       "specName": "zeitgeist"
     },
-    "2093": {
-      "tokens": [
-        "HASH"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "luhn"
-    },
     "2094": {
       "tokens": [
         "PEN"
@@ -1504,15 +1475,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "manta"
-    },
-    "3333": {
-      "tokens": [
-        "TRN"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "t3rn"
     }
   },
   "kusama": {
@@ -1661,6 +1623,7 @@
         "3327": "MVPW",
         "3328": "A42",
         "3721": "fast",
+        "3913": "KAI ",
         "3943": "GMK",
         "6789": "VHM",
         "6967": "CHAOS",
@@ -3287,18 +3250,6 @@
       "poolPairsInfo": {},
       "specName": "amplitude"
     },
-    "2236": {
-      "tokens": [
-        "ZERO",
-        "PLAY",
-        "GAME",
-        "DOT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "subzero"
-    },
     "2241": {
       "tokens": [
         "KREST"
@@ -3693,6 +3644,10 @@
         "46": {
           "lpToken": "46",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"333333333\"}]}}]]"
+        },
+        "47": {
+          "lpToken": "47",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"6\"}]}}]]"
         }
       },
       "specName": "westmint"
