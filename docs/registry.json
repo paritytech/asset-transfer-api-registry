@@ -1395,6 +1395,24 @@
       "poolPairsInfo": {},
       "specName": "integritee-parachain"
     },
+    "2043": {
+      "tokens": [
+        "OTP"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "origintrail-parachain",
+      "xcAssetsData": [
+        {
+          "paraID": 2043,
+          "symbol": "TRAC",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2043},{\"generalIndex\":1}]}}}",
+          "asset": "1"
+        }
+      ]
+    },
     "2046": {
       "tokens": [
         "RING"
@@ -1475,6 +1493,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "manta"
+    },
+    "3333": {
+      "tokens": [
+        "TRN"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "t3rn"
     }
   },
   "kusama": {
@@ -3250,14 +3277,17 @@
       "poolPairsInfo": {},
       "specName": "amplitude"
     },
-    "2241": {
+    "2236": {
       "tokens": [
-        "KREST"
+        "ZERO",
+        "PLAY",
+        "GAME",
+        "DOT"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "peaq-node-krest"
+      "specName": "subzero"
     }
   },
   "westend": {
@@ -4065,15 +4095,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "basilisk"
-    },
-    "2093": {
-      "tokens": [
-        "MD5"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "hashed"
     },
     "2100": {
       "tokens": [
