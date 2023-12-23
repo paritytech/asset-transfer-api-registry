@@ -44,6 +44,7 @@
         "1337": "USDC",
         "1984": "USDt",
         "2023": "dot",
+        "2024": "WOOD",
         "862812": "CUBO",
         "868367": "VSC",
         "20090103": "BTC"
@@ -1440,6 +1441,15 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
+    "2056": {
+      "tokens": [
+        "AVT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "avn-parachain"
+    },
     "2086": {
       "tokens": [
         "KILT"
@@ -1466,6 +1476,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "zeitgeist"
+    },
+    "2093": {
+      "tokens": [
+        "HASH"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "luhn"
     },
     "2094": {
       "tokens": [
@@ -1615,6 +1634,7 @@
         "598": "EREN",
         "666": "BAD",
         "677": "GRB",
+        "756": "TSM",
         "759": "bLd",
         "777": "GOD",
         "813": "TBUX",
@@ -1716,6 +1736,10 @@
         "5": {
           "lpToken": "5",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"131313\"}]}}]]"
+        },
+        "6": {
+          "lpToken": "6",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"756\"}]}}]]"
         }
       },
       "specName": "statemine"
@@ -3268,6 +3292,17 @@
       "poolPairsInfo": {},
       "specName": "bajun"
     },
+    "2123": {
+      "tokens": [
+        "FREN",
+        "GM",
+        "GN"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "gm_parachain"
+    },
     "2124": {
       "tokens": [
         "AMPE"
@@ -3288,6 +3323,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "subzero"
+    },
+    "2241": {
+      "tokens": [
+        "KREST"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "peaq-node-krest"
     }
   },
   "westend": {
@@ -3793,6 +3837,7 @@
         "500": "TRN",
         "501": "KCK",
         "555": "bambam",
+        "567": "TSM",
         "609": "HMT",
         "666": "HOGE",
         "689": "YPT",
@@ -4095,6 +4140,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "basilisk"
+    },
+    "2093": {
+      "tokens": [
+        "MD5"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "hashed"
     },
     "2100": {
       "tokens": [
