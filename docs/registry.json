@@ -45,6 +45,7 @@
         "1984": "USDt",
         "2023": "dot",
         "2024": "WOOD",
+        "30035": "DED",
         "862812": "CUBO",
         "868367": "VSC",
         "20090103": "BTC"
@@ -753,6 +754,143 @@
       "poolPairsInfo": {},
       "specName": "nodle-para"
     },
+    "2030": {
+      "tokens": [
+        "BNC"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "bifrost_polkadot",
+      "xcAssetsData": [
+        {
+          "paraID": 0,
+          "symbol": "DOT",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"here\":null}}}",
+          "asset": {
+            "Token2": "0"
+          }
+        },
+        {
+          "paraID": 1000,
+          "symbol": "USDT",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
+          "asset": {
+            "Token2": "2"
+          }
+        },
+        {
+          "paraID": 1000,
+          "symbol": "USDC",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}",
+          "asset": {
+            "Token2": "5"
+          }
+        },
+        {
+          "paraID": 2004,
+          "symbol": "GLMR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2004},{\"palletInstance\":10}]}}}",
+          "asset": {
+            "Token2": "1"
+          }
+        },
+        {
+          "paraID": 2006,
+          "symbol": "ASTR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2006}}}}",
+          "asset": {
+            "Token2": "3"
+          }
+        },
+        {
+          "paraID": 2030,
+          "symbol": "vGLMR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0901\"}]}}}",
+          "asset": {
+            "VToken2": "1"
+          }
+        },
+        {
+          "paraID": 2030,
+          "symbol": "vFIL",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0904\"}]}}}",
+          "asset": {
+            "VToken2": "4"
+          }
+        },
+        {
+          "paraID": 2030,
+          "symbol": "FIL",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0804\"}]}}}",
+          "asset": {
+            "Token2": "4"
+          }
+        },
+        {
+          "paraID": 2030,
+          "symbol": "vASTR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0903\"}]}}}",
+          "asset": {
+            "VToken2": "3"
+          }
+        },
+        {
+          "paraID": 2030,
+          "symbol": "vDOT",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0900\"}]}}}",
+          "asset": {
+            "VToken2": "0"
+          }
+        },
+        {
+          "paraID": 2030,
+          "symbol": "vsDOT",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0403\"}]}}}",
+          "asset": {
+            "VSToken2": "0"
+          }
+        },
+        {
+          "paraID": 2032,
+          "symbol": "IBTC",
+          "decimals": 8,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2032},{\"generalKey\":\"0x0001\"}]}}}",
+          "asset": {
+            "Token2": "6"
+          }
+        },
+        {
+          "paraID": 2032,
+          "symbol": "INTR",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2032},{\"generalKey\":\"0x0002\"}]}}}",
+          "asset": {
+            "Token2": "7"
+          }
+        },
+        {
+          "paraID": 2104,
+          "symbol": "MANTA",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2104}}}}",
+          "asset": {
+            "Token2": "8"
+          }
+        }
+      ]
+    },
     "2031": {
       "tokens": [
         "CFG"
@@ -1339,6 +1477,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "zeitgeist"
+    },
+    "2093": {
+      "tokens": [
+        "HASH"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "luhn"
     },
     "2094": {
       "tokens": [
@@ -3994,15 +4141,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "basilisk"
-    },
-    "2093": {
-      "tokens": [
-        "MD5"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "hashed"
     },
     "2100": {
       "tokens": [
