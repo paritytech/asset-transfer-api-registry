@@ -12,19 +12,23 @@ import type {
 	ForeignAssetsInfo,
 	PoolPairsInfo,
 } from './types';
+import { logWithDate } from './util';
 
 /**
  * Fetch chain token and spec info.
  *
  * @param endpointOpts
+ * @param chain
  * @param isRelay
  */
 export const fetchChainInfo = async (
 	endpointOpts: EndpointOption,
+	chain: string,
 	isRelay?: boolean,
 ): Promise<ChainInfoKeys | null> => {
-	const api = await getApi(endpointOpts, isRelay);
-	console.log('Api connected: ', api?.isConnected);
+	const api = await getApi(endpointOpts, chain, isRelay);
+	const connected = api?.isConnected === true;
+	logWithDate(`Api connected for ${chain}: ${connected}`, true);
 
 	if (api !== null && api !== undefined) {
 		const { tokenSymbol } = await api.rpc.system.properties();

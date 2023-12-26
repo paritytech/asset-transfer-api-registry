@@ -17,7 +17,7 @@ export const fetchParaIds = async (
 	endpointOpts: EndpointOption,
 	paraIds: ParaIds,
 ): Promise<ParaIds> => {
-	const api = await getApi(endpointOpts, true);
+	const api = await getApi(endpointOpts, chain, true);
 
 	if (api !== null && api !== undefined) {
 		const paras = await api.query.paras.parachains();

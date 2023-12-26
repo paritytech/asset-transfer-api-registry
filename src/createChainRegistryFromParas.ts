@@ -4,7 +4,7 @@ import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import { fetchChainInfo } from './fetchChainInfo';
 import type { ChainName, ParaIds, TokenRegistry } from './types';
-import { twirlTimer } from './util';
+import { logWithDate, twirlTimer } from './util';
 
 /**
  * This adds to the chain registry for each chain that is passed in.
@@ -17,10 +17,9 @@ export const createChainRegistryFromParas = async (
 	chainName: ChainName,
 	endpoints: Omit<EndpointOption, 'teleport'>[],
 	registry: TokenRegistry,
-	currentRegistry: TokenRegistry,
 	paraIds: ParaIds,
 ) => {
-	console.log('Creating chain registry from parachains');
+	logWithDate('Creating chain registry from parachains', true);
 
 	twirlTimer();
 
@@ -33,11 +32,11 @@ export const createChainRegistryFromParas = async (
 		if (!reliable) {
 			// Add to registry if it exists
 			if (
-				currentRegistry[chainName] &&
-				currentRegistry[chainName][endpoint.paraId as number]
+				registry[chainName] &&
+				registry[chainName][endpoint.paraId as number]
 			) {
 				registry[chainName][`${endpoint.paraId as number}`] =
-					currentRegistry[chainName][endpoint.paraId as number];
+					registry[chainName][endpoint.paraId as number];
 			}
 			continue;
 		}
@@ -60,7 +59,7 @@ export const appendFetchChainInfoPromise = (
 	chainName: ChainName,
 ) => {
 	fetchChainInfoPromises.push(
-		fetchChainInfo(endpoint).then((res) => {
+		fetchChainInfo(endpoint, endpoint.info as unknown as string).then((res) => {
 			if (res !== null) {
 				registry[chainName][`${endpoint.paraId as number}`] = res;
 			}

@@ -403,14 +403,8 @@ describe('createRegistry', () => {
 				}),
 			);
 
-		const currentRegistry: TokenRegistry = {
-			polkadot: {},
-			kusama: {},
-			westend: {},
-			rococo: {},
-		};
 
-		await main(TEST_REGISTRY_FILE_PATH, registry, currentRegistry);
+		await main(TEST_REGISTRY_FILE_PATH, registry);
 		const registryData = fs.readFileSync(TEST_REGISTRY_FILE_PATH, 'utf8');
 		const createdRegistry = JSON.parse(registryData) as TokenRegistry;
 		expect(createChainRegistryFromRelay).toHaveBeenCalledTimes(4);

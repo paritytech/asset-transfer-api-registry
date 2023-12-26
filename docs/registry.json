@@ -44,6 +44,8 @@
         "1337": "USDC",
         "1984": "USDt",
         "2023": "dot",
+        "2024": "WOOD",
+        "30035": "DED",
         "862812": "CUBO",
         "868367": "VSC",
         "20090103": "BTC"
@@ -318,6 +320,48 @@
           "decimals": 12,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2012},{\"generalKey\":\"0x50415241\"}]}}}",
           "asset": "32615670524745285411807346420584982855"
+        },
+        {
+          "paraID": 2019,
+          "symbol": "ibcMOVR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000017\"}]}}}",
+          "asset": "78407957940239408223554844611219482002"
+        },
+        {
+          "paraID": 2019,
+          "symbol": "ibcTIA",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000013\"}]}}}",
+          "asset": "133307414193833606001516599592873928539"
+        },
+        {
+          "paraID": 2019,
+          "symbol": "ibcIST",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000019\"}]}}}",
+          "asset": "141196559012917796508928734717797136690"
+        },
+        {
+          "paraID": 2019,
+          "symbol": "ibcBLD",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000012\"}]}}}",
+          "asset": "199907282886248358976504623107230837230"
+        },
+        {
+          "paraID": 2019,
+          "symbol": "ibcATOM",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000007\"}]}}}",
+          "asset": "138280378441551394289980644963240827219"
+        },
+        {
+          "paraID": 2019,
+          "symbol": "ibcPICA",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000001\"}]}}}",
+          "asset": "228510780171552721666262089780561563481"
         },
         {
           "paraID": 2026,
@@ -1393,6 +1437,13 @@
           "asset": "8"
         },
         {
+          "paraID": 2037,
+          "symbol": "UNQ",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2037}}}}",
+          "asset": "25"
+        },
+        {
           "paraID": 2092,
           "nativeChainID": "zeitgeist",
           "symbol": "ZTG",
@@ -1617,15 +1668,6 @@
       "poolPairsInfo": {},
       "specName": "zeitgeist"
     },
-    "2093": {
-      "tokens": [
-        "HASH"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "luhn"
-    },
     "2094": {
       "tokens": [
         "PEN"
@@ -1774,6 +1816,7 @@
         "598": "EREN",
         "666": "BAD",
         "677": "GRB",
+        "756": "TSM",
         "759": "bLd",
         "777": "GOD",
         "813": "TBUX",
@@ -1803,12 +1846,14 @@
         "2049": "Android",
         "2050": "CUT",
         "2077": "XRT",
+        "2323": "Tsn",
         "3000": "GRAIN",
         "3001": "DUCK",
         "3077": "ACT",
         "3327": "MVPW",
         "3328": "A42",
         "3721": "fast",
+        "3913": "KAI ",
         "3943": "GMK",
         "6789": "VHM",
         "6967": "CHAOS",
@@ -1819,6 +1864,7 @@
         "11111": "KVC",
         "12345": "DREX",
         "19840": "USDt",
+        "22060": "RON",
         "42069": "INTRN",
         "69420": "CHAOS",
         "80815": "KSMFS",
@@ -1874,6 +1920,10 @@
         "5": {
           "lpToken": "5",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"131313\"}]}}]]"
+        },
+        "6": {
+          "lpToken": "6",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"756\"}]}}]]"
         }
       },
       "specName": "statemine"
@@ -3594,6 +3644,17 @@
       "poolPairsInfo": {},
       "specName": "bajun"
     },
+    "2123": {
+      "tokens": [
+        "FREN",
+        "GM",
+        "GN"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "gm_parachain"
+    },
     "2124": {
       "tokens": [
         "AMPE"
@@ -4018,6 +4079,10 @@
         "46": {
           "lpToken": "46",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"333333333\"}]}}]]"
+        },
+        "47": {
+          "lpToken": "47",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"6\"}]}}]]"
         }
       },
       "specName": "westmint"
@@ -4093,9 +4158,11 @@
         "56": "PSP",
         "66": "BBC",
         "69": "SRT",
+        "70": "dsads",
         "74": "GID",
         "77": "shicoin",
         "88": "MEM",
+        "89": "HAT",
         "96": "@@@",
         "99": "PBA",
         "100": "ACRST",
@@ -4115,6 +4182,7 @@
         "143": "XIN",
         "144": "TTT",
         "145": "UMG",
+        "171": "SAW",
         "200": "nUSDT",
         "201": "VNST",
         "224": "creagen",
@@ -4133,6 +4201,7 @@
         "500": "TRN",
         "501": "KCK",
         "555": "bambam",
+        "567": "TSM",
         "609": "HMT",
         "666": "HOGE",
         "689": "YPT",
@@ -4177,6 +4246,7 @@
         "10000": "AST",
         "11111": "RLC",
         "11123": "AAE",
+        "12121": "TEST",
         "12345": "USDT",
         "20001": "TSTT",
         "20301": "EVM",

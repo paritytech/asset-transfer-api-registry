@@ -3,7 +3,7 @@
 import { WsProvider } from '@polkadot/api';
 
 import { MAX_RETRIES, WS_DISCONNECT_TIMEOUT_SECONDS } from './consts';
-import { sleep, twirlTimer } from './util';
+import { logWithDate, sleep, twirlTimer } from './util';
 import { skipProcessingEndpoint } from './util';
 
 /**
@@ -15,8 +15,8 @@ import { skipProcessingEndpoint } from './util';
  *
  * @param wsEndpoints Endpoint we are going to fetch the info from
  */
-export const getProvider = async (wsEndpoints: string[]) => {
-	console.log('Getting endpoint providers');
+export const getProvider = async (wsEndpoints: string[], chain: string) => {
+	logWithDate(`Getting endpoint providers for ${chain}`, true);
 
 	twirlTimer();
 

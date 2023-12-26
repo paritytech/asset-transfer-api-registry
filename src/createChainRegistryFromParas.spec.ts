@@ -3,6 +3,7 @@
 import { prodParasKusamaCommon } from '@polkadot/apps-config';
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
+import { DEFAULT_REGISTRY } from './consts';
 import {
 	appendFetchChainInfoPromise,
 	createChainRegistryFromParas,
@@ -16,18 +17,7 @@ jest.mock('./createChainRegistryFromParas');
 jest.mock('./fetchChainInfo');
 jest.mock('./fetchParaIds');
 
-const newRegistry: TokenRegistry = {
-	polkadot: {},
-	kusama: {},
-	westend: {},
-	rococo: {},
-};
-const currentRegistry: TokenRegistry = {
-	polkadot: {},
-	kusama: {},
-	westend: {},
-	rococo: {},
-};
+const registry: TokenRegistry = DEFAULT_REGISTRY;
 
 describe('CreateRegistryFromParas', () => {
 	it('Should correctly add the registries for paras when found', async () => {
@@ -52,7 +42,7 @@ describe('CreateRegistryFromParas', () => {
 					poolPairsInfo: {},
 					specName: 'statemine',
 				}).then((res) => {
-					newRegistry['kusama']['1000'] = res;
+					registry['kusama']['1000'] = res;
 				}),
 			])
 			.mockReturnValueOnce([
@@ -63,7 +53,7 @@ describe('CreateRegistryFromParas', () => {
 					poolPairsInfo: {},
 					specName: 'encointer-parachain',
 				}).then((res) => {
-					newRegistry['kusama']['1001'] = res;
+					registry['kusama']['1001'] = res;
 				}),
 			])
 			.mockReturnValueOnce([
@@ -74,7 +64,7 @@ describe('CreateRegistryFromParas', () => {
 					poolPairsInfo: {},
 					specName: 'bridge-hub-kusama',
 				}).then((res) => {
-					newRegistry['kusama']['1002'] = res;
+					registry['kusama']['1002'] = res;
 				}),
 			]);
 
@@ -95,11 +85,10 @@ describe('CreateRegistryFromParas', () => {
 		await createChainRegistryFromParas(
 			'kusama',
 			prodParasKusamaCommon,
-			newRegistry,
-			currentRegistry,
+			registry,
 			paraIds,
 		);
-		expect(newRegistry).toEqual({
+		expect(registry).toEqual({
 			polkadot: {},
 			kusama: {
 				'1000': {

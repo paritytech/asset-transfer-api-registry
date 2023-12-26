@@ -29,6 +29,7 @@ describe('fetchChainInfo', () => {
 				getApi as jest.MockedFunction<
 					(
 						endpointOpts: EndpointOption,
+						chain: string,
 						isRelay?: boolean,
 					) => Promise<ApiPromise | null | undefined>
 				>
@@ -49,7 +50,13 @@ describe('fetchChainInfo', () => {
 				>
 			).mockResolvedValueOnce({});
 
-			await expect(fetchChainInfo(prodRelayKusama, true)).resolves.toEqual({
+			await expect(
+				fetchChainInfo(
+					prodRelayKusama,
+					prodRelayKusama.info as unknown as string,
+					true,
+				),
+			).resolves.toEqual({
 				tokens: ['KSM'],
 				specName: 'kusama',
 				assetsInfo: {},
@@ -65,6 +72,7 @@ describe('fetchChainInfo', () => {
 				getApi as jest.MockedFunction<
 					(
 						endpointOpts: EndpointOption,
+						chain: string,
 						isRelay?: boolean,
 					) => Promise<ApiPromise | null | undefined>
 				>
@@ -85,7 +93,13 @@ describe('fetchChainInfo', () => {
 				>
 			).mockResolvedValueOnce(mockAssetHubKusamaParachainPoolPairsInfo);
 
-			await expect(fetchChainInfo(prodRelayKusama, false)).resolves.toEqual({
+			await expect(
+				fetchChainInfo(
+					prodRelayKusama,
+					prodRelayKusama.info as unknown as string,
+					false,
+				),
+			).resolves.toEqual({
 				tokens: ['KSM'],
 				specName: 'asset-hub-kusama',
 				assetsInfo: {
@@ -307,6 +321,7 @@ describe('fetchChainInfo', () => {
 				getApi as jest.MockedFunction<
 					(
 						endpointOpts: EndpointOption,
+						chain: string,
 						isRelay?: boolean,
 					) => Promise<ApiPromise | null | undefined>
 				>
@@ -327,7 +342,13 @@ describe('fetchChainInfo', () => {
 				>
 			).mockResolvedValueOnce({});
 
-			await expect(fetchChainInfo(prodRelayKusama, true)).resolves.toEqual({
+			await expect(
+				fetchChainInfo(
+					prodRelayKusama,
+					prodRelayKusama.info as unknown as string,
+					true,
+				),
+			).resolves.toEqual({
 				tokens: ['BNC'],
 				specName: 'bifrost',
 				assetsInfo: {},

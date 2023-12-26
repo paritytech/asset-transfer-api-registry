@@ -17,6 +17,7 @@ describe('fetchParaIds', () => {
 			getApi as jest.MockedFunction<
 				(
 					endpointOpts: EndpointOption,
+					chain: string,
 					isRelay?: boolean,
 				) => Promise<ApiPromise | null | undefined>
 			>

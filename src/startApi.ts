@@ -11,14 +11,13 @@ import { getProvider } from './getProvider';
  */
 export const startApi = async (
 	endpoints: string[],
+	chain: string,
 ): Promise<ApiPromise | undefined> => {
-	const wsProviders = await getProvider(endpoints);
+	const wsProviders = await getProvider(endpoints, chain);
 
 	if (wsProviders === undefined) {
 		return;
 	}
-
-	console.log('Endpoint providers: ', wsProviders);
 
 	const providers = new WsProvider(wsProviders);
 	const api = await ApiPromise.create({

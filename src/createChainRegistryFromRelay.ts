@@ -4,7 +4,7 @@ import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import { fetchChainInfo } from './fetchChainInfo';
 import type { ChainName, TokenRegistry } from './types';
-import { twirlTimer } from './util';
+import { logWithDate, twirlTimer } from './util';
 
 /**
  * Similar to `createChainRegistryFromParas`, this will only add to the registry for a single chain,
@@ -19,9 +19,13 @@ export const createChainRegistryFromRelay = async (
 	endpoint: EndpointOption,
 	registry: TokenRegistry,
 ) => {
-	console.log(`Creating chain registry for ${chainName} relay`);
+	logWithDate(`Creating chain registry for ${chainName} relay`, true);
 	twirlTimer();
-	const res = await fetchChainInfo(endpoint, true);
+	const res = await fetchChainInfo(
+		endpoint,
+		endpoint.info as unknown as string,
+		true,
+	);
 	if (res !== null) {
 		registry[chainName]['0'] = res;
 	}

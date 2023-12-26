@@ -21,6 +21,7 @@ describe('createChainRegistryFromRelay', () => {
 			fetchChainInfo as jest.MockedFunction<
 				(
 					endpointOpts: EndpointOption,
+					chain: string,
 					isRelay?: boolean,
 				) => Promise<ChainInfoKeys | null>
 			>
@@ -65,6 +66,7 @@ describe('createChainRegistryFromRelay', () => {
 			fetchChainInfo as jest.MockedFunction<
 				(
 					endpointOpts: EndpointOption,
+					chain: string,
 					isRelay?: boolean,
 				) => Promise<ChainInfoKeys | null>
 			>

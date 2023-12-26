@@ -12,6 +12,7 @@ import { startApi } from './startApi';
  */
 export const getApi = async (
 	endpointOpts: EndpointOption,
+	chain: string,
 	isRelay?: boolean,
 ) => {
 	const { providers, paraId } = endpointOpts;
@@ -25,7 +26,7 @@ export const getApi = async (
 		(url) => !url.startsWith('light'),
 	);
 
-	const api = await startApi(endpoints);
+	const api = await startApi(endpoints, chain);
 
 	return api;
 };
