@@ -2,8 +2,10 @@
 
 import { formatDate } from '@polkadot/util';
 import fs from 'fs';
+import fetch from 'node-fetch';
 
-import type { TokenRegistry } from './types';
+import { RPC_BLACK_LIST } from './consts';
+import type { TokenRegistry, XcAssets } from './types';
 
 /**
  * Write Json to a file path.
@@ -41,7 +43,29 @@ export const sleep = (ms: number): Promise<void> => {
 };
 
 /**
- * Formats a string to match the output of polkadot-js logging.
+ * Determines when endpoint processing should be skipped.
+ *
+ * @param endpoint
+ */
+export const skipProcessingEndpoint = (endpoint: string): boolean => {
+	if (endpoint.includes('onfinality') || RPC_BLACK_LIST.includes(endpoint)) {
+		return true;
+	}
+
+	return false;
+};
+
+export const fetchXcAssetData = async (
+	cdnUrl: string,
+): Promise<{ xcAssets: XcAssets }> => {
+	const xcAssetsRegistry = (await (await fetch(cdnUrl)).json()) as {
+		xcAssets: XcAssets;
+	};
+
+	return xcAssetsRegistry;
+};
+
+/** Formats a string to match the output of polkadot-js logging.
  *
  * @param log String to be logged
  * @param remove Remove lines before that were cleared by std

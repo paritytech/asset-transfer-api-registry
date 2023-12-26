@@ -1,0 +1,68 @@
+// Copyright 2023 Parity Technologies (UK) Ltd.
+
+import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
+
+import { fetchChainInfo } from './fetchChainInfo';
+import type { ChainName, ParaIds, TokenRegistry } from './types';
+import { logWithDate, twirlTimer } from './util';
+
+/**
+ * This adds to the chain registry for each chain that is passed in.
+ *
+ * @param chainName Relay chain name
+ * @param endpoints Endpoints we are going to iterate through, and query
+ * @param registry Registry we want to add the info too
+ */
+export const createChainRegistryFromParas = async (
+	chainName: ChainName,
+	endpoints: Omit<EndpointOption, 'teleport'>[],
+	registry: TokenRegistry,
+	paraIds: ParaIds,
+) => {
+	logWithDate('Creating chain registry from parachains', true);
+
+	twirlTimer();
+
+	const fetchChainInfoPromises: Promise<void>[] = [];
+
+	for (const endpoint of endpoints) {
+		const reliable: boolean = paraIds[chainName].includes(
+			endpoint.paraId as number,
+		);
+		if (!reliable) {
+			// Add to registry if it exists
+			if (
+				registry[chainName] &&
+				registry[chainName][endpoint.paraId as number]
+			) {
+				registry[chainName][`${endpoint.paraId as number}`] =
+					registry[chainName][endpoint.paraId as number];
+			}
+			continue;
+		}
+
+		appendFetchChainInfoPromise(
+			fetchChainInfoPromises,
+			endpoint,
+			registry,
+			chainName,
+		);
+	}
+
+	await Promise.all(fetchChainInfoPromises);
+};
+
+export const appendFetchChainInfoPromise = (
+	fetchChainInfoPromises: Promise<void>[],
+	endpoint: EndpointOption,
+	registry: TokenRegistry,
+	chainName: ChainName,
+) => {
+	fetchChainInfoPromises.push(
+		fetchChainInfo(endpoint, endpoint.info as unknown as string).then((res) => {
+			if (res !== null) {
+				registry[chainName][`${endpoint.paraId as number}`] = res;
+			}
+		}),
+	);
+};
