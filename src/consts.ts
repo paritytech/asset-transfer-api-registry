@@ -36,6 +36,7 @@ export const PROD_REGISTRY_FILE_PATH = path.join(
 export const TEST_REGISTRY_FILE_PATH = path.join(
 	__dirname,
 	'..',
-	'tests',
-	'registry.json',
+	'src',
+	'testHelpers',
+	'testRegistry.json',
 );
