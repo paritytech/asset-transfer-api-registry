@@ -299,6 +299,48 @@
           "asset": "32615670524745285411807346420584982855"
         },
         {
+          "paraID": 2019,
+          "symbol": "ibcMOVR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000017\"}]}}}",
+          "asset": "78407957940239408223554844611219482002"
+        },
+        {
+          "paraID": 2019,
+          "symbol": "ibcTIA",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000013\"}]}}}",
+          "asset": "133307414193833606001516599592873928539"
+        },
+        {
+          "paraID": 2019,
+          "symbol": "ibcIST",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000019\"}]}}}",
+          "asset": "141196559012917796508928734717797136690"
+        },
+        {
+          "paraID": 2019,
+          "symbol": "ibcBLD",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000012\"}]}}}",
+          "asset": "199907282886248358976504623107230837230"
+        },
+        {
+          "paraID": 2019,
+          "symbol": "ibcATOM",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000007\"}]}}}",
+          "asset": "138280378441551394289980644963240827219"
+        },
+        {
+          "paraID": 2019,
+          "symbol": "ibcPICA",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000001\"}]}}}",
+          "asset": "228510780171552721666262089780561563481"
+        },
+        {
           "paraID": 2026,
           "symbol": "NODL",
           "decimals": 11,
@@ -1442,15 +1484,6 @@
       "poolPairsInfo": {},
       "specName": "ajuna"
     },
-    "2056": {
-      "tokens": [
-        "AVT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "avn-parachain"
-    },
     "2086": {
       "tokens": [
         "KILT"
@@ -1477,15 +1510,6 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "zeitgeist"
-    },
-    "2093": {
-      "tokens": [
-        "HASH"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "luhn"
     },
     "2094": {
       "tokens": [
@@ -1665,6 +1689,7 @@
         "2049": "Android",
         "2050": "CUT",
         "2077": "XRT",
+        "2323": "Tsn",
         "3000": "GRAIN",
         "3001": "DUCK",
         "3077": "ACT",
@@ -1682,6 +1707,7 @@
         "11111": "KVC",
         "12345": "DREX",
         "19840": "USDt",
+        "22060": "RON",
         "42069": "INTRN",
         "69420": "CHAOS",
         "80815": "KSMFS",
@@ -3798,9 +3824,11 @@
         "56": "PSP",
         "66": "BBC",
         "69": "SRT",
+        "70": "dsads",
         "74": "GID",
         "77": "shicoin",
         "88": "MEM",
+        "89": "HAT",
         "96": "@@@",
         "99": "PBA",
         "100": "ACRST",
@@ -3820,6 +3848,7 @@
         "143": "XIN",
         "144": "TTT",
         "145": "UMG",
+        "171": "SAW",
         "200": "nUSDT",
         "201": "VNST",
         "224": "creagen",
@@ -4141,6 +4170,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "basilisk"
+    },
+    "2093": {
+      "tokens": [
+        "MD5"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "hashed"
     },
     "2100": {
       "tokens": [
