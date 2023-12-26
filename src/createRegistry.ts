@@ -38,7 +38,7 @@ import type {
 	XcAssets,
 	XcAssetsData,
 } from './types';
-import { sleep, twirlTimer, writeJson } from './util';
+import { logWithDate, sleep, twirlTimer, writeJson } from './util';
 
 /**
  * @const MAX_RETRIES Maximum amount of connection attempts
@@ -76,10 +76,12 @@ const skipProcessingEndpoint = (endpoint: string): boolean => {
  */
 const fetchChainInfo = async (
 	endpointOpts: EndpointOption,
+	chain: string,
 	isRelay?: boolean,
 ) => {
-	const api = await getApi(endpointOpts, isRelay);
-	console.log('Api connected: ', api?.isConnected);
+	const api = await getApi(endpointOpts, chain, isRelay);
+	const connected = api?.isConnected === true;
+	logWithDate(`Api connected for ${chain}: ${connected}`, true);
 
 	if (api !== null && api !== undefined) {
 		const { tokenSymbol } = await api.rpc.system.properties();
@@ -134,7 +136,7 @@ const createChainRegistryFromParas = async (
 	registry: TokenRegistry,
 	paraIds: ParaIds,
 ): Promise<void> => {
-	console.log('Creating chain registry from parachains');
+	logWithDate('Creating chain registry from parachains', true);
 
 	twirlTimer();
 
@@ -157,11 +159,13 @@ const createChainRegistryFromParas = async (
 			continue;
 		}
 		fetchChainInfoPromises.push(
-			fetchChainInfo(endpoint).then((res) => {
-				if (res !== null) {
-					registry[chainName][`${endpoint.paraId as number}`] = res;
-				}
-			}),
+			fetchChainInfo(endpoint, endpoint.info as unknown as string).then(
+				(res) => {
+					if (res !== null) {
+						registry[chainName][`${endpoint.paraId as number}`] = res;
+					}
+				},
+			),
 		);
 	}
 
@@ -181,9 +185,9 @@ const createChainRegistryFromRelay = async (
 	endpoint: EndpointOption,
 	registry: TokenRegistry,
 ): Promise<void> => {
-	console.log(`Creating chain registry for ${chainName} relay`);
+	logWithDate(`Creating chain registry for ${chainName} relay`, true);
 	twirlTimer();
-	const res = await fetchChainInfo(endpoint, true);
+	const res = await fetchChainInfo(endpoint, chainName, true);
 	if (res !== null) {
 		registry[chainName]['0'] = res;
 	}
@@ -327,7 +331,7 @@ const fetchParaIds = async (
 	endpointOpts: EndpointOption,
 	paraIds: ParaIds,
 ): Promise<ParaIds> => {
-	const api = await getApi(endpointOpts, true);
+	const api = await getApi(endpointOpts, chain, true);
 
 	if (api !== null && api !== undefined) {
 		const paras = await api.query.paras.parachains();
@@ -346,7 +350,11 @@ const fetchParaIds = async (
  * @param endpointOpts
  * @param isRelay
  */
-const getApi = async (endpointOpts: EndpointOption, isRelay?: boolean) => {
+const getApi = async (
+	endpointOpts: EndpointOption,
+	chain: string,
+	isRelay?: boolean,
+) => {
 	const { providers, paraId } = endpointOpts;
 
 	// If no providers are present return null.
@@ -358,7 +366,7 @@ const getApi = async (endpointOpts: EndpointOption, isRelay?: boolean) => {
 		(url) => !url.startsWith('light'),
 	);
 
-	const api = await startApi(endpoints);
+	const api = await startApi(endpoints, chain);
 
 	return api;
 };
@@ -371,14 +379,13 @@ const getApi = async (endpointOpts: EndpointOption, isRelay?: boolean) => {
  */
 const startApi = async (
 	endpoints: string[],
+	chain: string,
 ): Promise<ApiPromise | undefined> => {
-	const wsProviders = await getProvider(endpoints);
+	const wsProviders = await getProvider(endpoints, chain);
 
 	if (wsProviders === undefined) {
 		return;
 	}
-
-	console.log('Endpoint providers: ', wsProviders);
 
 	const providers = new WsProvider(wsProviders);
 	const api = await ApiPromise.create({
@@ -404,8 +411,8 @@ const startApi = async (
  *
  * @param wsEndpoints Endpoint we are going to fetch the info from
  */
-const getProvider = async (wsEndpoints: string[]) => {
-	console.log('Getting endpoint providers');
+const getProvider = async (wsEndpoints: string[], chain: string) => {
+	logWithDate(`Getting endpoint providers for ${chain}`, true);
 
 	twirlTimer();
 
@@ -496,12 +503,7 @@ const sanitizeXcAssetData = (data: XcAssetsData[]): SanitizedXcAssetsData[] => {
 };
 
 const main = async () => {
-	const registry = {
-		polkadot: {},
-		kusama: {},
-		westend: {},
-		rococo: {},
-	};
+	const registry = FinalRegistry as unknown as TokenRegistry;
 
 	const paraIds: ParaIds = {};
 
