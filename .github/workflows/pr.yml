@@ -80,7 +80,7 @@ jobs:
       - name: Checkout files
         uses: actions/checkout@v4
 
-      - name: Install Node v16
+      - name: Install Node v18
         uses: actions/setup-node@v4
         with:
           node-version: '18.14'
