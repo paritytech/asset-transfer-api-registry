@@ -17,6 +17,8 @@ export const startApi = async (
 
 	if (wsProviders === undefined) {
 		return;
+	} else if (wsProviders.includes('wss://rpc.parallel.fi')) {
+		return;
 	}
 
 	const providers = new WsProvider(wsProviders);
