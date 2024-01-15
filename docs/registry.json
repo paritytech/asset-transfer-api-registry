@@ -41,11 +41,13 @@
         "777": "777",
         "999": "gold",
         "1000": "BRZ",
+        "1230": "HAM",
         "1337": "USDC",
         "1984": "USDt",
         "2023": "dot",
         "2024": "WOOD",
         "30035": "DED",
+        "660301": "GRL",
         "862812": "CUBO",
         "868367": "VSC",
         "20090103": "BTC"
@@ -108,6 +110,16 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
           "asset": {
             "ForeignAsset": "12"
+          }
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "PINK",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":23}]}}}",
+          "asset": {
+            "ForeignAsset": "13"
           }
         },
         {
@@ -266,6 +278,14 @@
           "asset": "311091173110107856861649819128533077277"
         },
         {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "PINK",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":23}]}}}",
+          "asset": "64174511183114006009298114091987195453"
+        },
+        {
           "paraID": 2000,
           "nativeChainID": "acala",
           "symbol": "LDOT",
@@ -323,6 +343,7 @@
         },
         {
           "paraID": 2019,
+          "nativeChainID": "composableFinance",
           "symbol": "ibcMOVR",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000017\"}]}}}",
@@ -330,6 +351,7 @@
         },
         {
           "paraID": 2019,
+          "nativeChainID": "composableFinance",
           "symbol": "ibcTIA",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000013\"}]}}}",
@@ -337,6 +359,7 @@
         },
         {
           "paraID": 2019,
+          "nativeChainID": "composableFinance",
           "symbol": "ibcIST",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000019\"}]}}}",
@@ -344,6 +367,7 @@
         },
         {
           "paraID": 2019,
+          "nativeChainID": "composableFinance",
           "symbol": "ibcBLD",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000012\"}]}}}",
@@ -351,6 +375,7 @@
         },
         {
           "paraID": 2019,
+          "nativeChainID": "composableFinance",
           "symbol": "ibcATOM",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000007\"}]}}}",
@@ -358,6 +383,7 @@
         },
         {
           "paraID": 2019,
+          "nativeChainID": "composableFinance",
           "symbol": "ibcPICA",
           "decimals": 12,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2019},{\"palletInstance\":59},{\"generalIndex\":\"0x00000001000000000000000000000001\"}]}}}",
@@ -541,6 +567,14 @@
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
           "asset": "4294969280"
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "PINK",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":23}]}}}",
+          "asset": "18446744073709551633"
         },
         {
           "paraID": 2000,
@@ -913,6 +947,16 @@
           }
         },
         {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "PINK",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":23}]}}}",
+          "asset": {
+            "Token2": "10"
+          }
+        },
+        {
           "paraID": 2004,
           "nativeChainID": "moonbeam",
           "symbol": "GLMR",
@@ -970,6 +1014,16 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0903\"}]}}}",
           "asset": {
             "VToken2": "3"
+          }
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "BNC",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0001\"}]}}}",
+          "asset": {
+            "Native": "BNC"
           }
         },
         {
@@ -1091,6 +1145,16 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x4\":[{\"parachain\":2031},{\"palletInstance\":103},{\"globalConsensus\":{\"ethereum\":{\"chainId\":42161}}},{\"accountKey20\":{\"network\":null,\"key\":\"0xaf88d065e77c8cc2239327c5edb3a432268e5831\"}}]}}}",
           "asset": {
             "ForeignAsset": "100,003"
+          }
+        },
+        {
+          "paraID": 2031,
+          "nativeChainID": "centrifuge",
+          "symbol": "LpFRAX",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x4\":[{\"parachain\":2031},{\"palletInstance\":103},{\"globalConsensus\":{\"ethereum\":{\"chainId\":1}}},{\"accountKey20\":{\"network\":null,\"key\":\"0x853d955acef822db058eb8505911ed77f175b99e\"}}]}}}",
+          "asset": {
+            "ForeignAsset": "100,005"
           }
         },
         {
@@ -1389,6 +1453,14 @@
           "asset": "9"
         },
         {
+          "paraID": 2026,
+          "nativeChainID": "nodle",
+          "symbol": "NODL",
+          "decimals": 11,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2026},{\"palletInstance\":2}]}}}",
+          "asset": "26"
+        },
+        {
           "paraID": 2030,
           "nativeChainID": "bifrost",
           "symbol": "BNC",
@@ -1438,6 +1510,7 @@
         },
         {
           "paraID": 2037,
+          "nativeChainID": "unique",
           "symbol": "UNQ",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2037}}}}",
@@ -1477,6 +1550,14 @@
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"here\":null}}}",
           "asset": "0"
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "PINK",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":23}]}}}",
+          "asset": "12"
         },
         {
           "paraID": 2000,
@@ -1668,6 +1749,15 @@
       "poolPairsInfo": {},
       "specName": "zeitgeist"
     },
+    "2093": {
+      "tokens": [
+        "HASH"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "luhn"
+    },
     "2094": {
       "tokens": [
         "PEN"
@@ -1823,7 +1913,6 @@
         "841": "YAYOI",
         "888": "LUCK",
         "911": "911",
-        "969": "WGTL",
         "999": "CBDC",
         "1000": "SPARK",
         "1107": "HOLIC",
@@ -1878,6 +1967,7 @@
         "777777": "DEFI",
         "862812": "CUBO",
         "863012": "VCOP",
+        "2284739": "ETAR",
         "4206969": "SHIB",
         "5201314": "belove",
         "5797867": "TAKE",
@@ -1894,6 +1984,11 @@
           "symbol": "TNKR",
           "name": "Tinkernet",
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2125\"},{\"GeneralIndex\":\"0\"}]}}"
+        },
+        "FREN": {
+          "symbol": "FREN",
+          "name": "FREN",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2123\"}}}"
         }
       },
       "poolPairsInfo": {
@@ -1924,6 +2019,10 @@
         "6": {
           "lpToken": "6",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"756\"}]}}]]"
+        },
+        "7": {
+          "lpToken": "7",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2123\"}}}]]"
         }
       },
       "specName": "statemine"
@@ -4304,6 +4403,11 @@
           "symbol": "WND",
           "name": "Westend",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Westend\"}}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307866666639393736373832643436636330353633306431663665626162313862323332346436623134227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xfff9976782d46cc05630d1f6ebab18b2324d6b14\"}}]}}"
         }
       },
       "poolPairsInfo": {
@@ -4423,7 +4527,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "statemine"
+      "specName": "bridge-hub-rococo"
     },
     "2004": {
       "tokens": [
@@ -4540,6 +4644,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "Pangolin2"
+    },
+    "2110": {
+      "tokens": [
+        "MGAT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "mangata-parachain"
     },
     "2114": {
       "tokens": [

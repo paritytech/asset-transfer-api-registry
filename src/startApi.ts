@@ -3,6 +3,9 @@
 import { ApiPromise, WsProvider } from '@polkadot/api';
 
 import { getProvider } from './getProvider';
+
+const blackListedApis = ['wss://rpc.parallel.fi'];
+
 /**
  * This intakes an array of endpoints and returns a list of viable endpoints
  * ready to be connected to.
@@ -17,6 +20,12 @@ export const startApi = async (
 
 	if (wsProviders === undefined) {
 		return;
+	} else {
+		for (let i = 0; i < blackListedApis.length; i++) {
+			if (wsProviders.includes(blackListedApis[i])) {
+				return;
+			}
+		}
 	}
 
 	const providers = new WsProvider(wsProviders);
