@@ -30,6 +30,7 @@ export const DEFAULT_REGISTRY: TokenRegistry = {
 export const PROD_REGISTRY_FILE_PATH = path.join(
 	__dirname,
 	'..',
+	'..',
 	'docs',
 	'registry.json',
 );
