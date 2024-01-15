@@ -2,10 +2,10 @@
 
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
+import FinalRegistry from '../docs/registry.json';
 import { fetchChainInfo } from './fetchChainInfo';
 import type { ChainName, ParaIds, TokenRegistry } from './types';
 import { logWithDate, twirlTimer } from './util';
-import FinalRegistry from '../docs/registry.json';
 
 /**
  * This adds to the chain registry for each chain that is passed in.
@@ -36,6 +36,7 @@ export const createChainRegistryFromParas = async (
 				FinalRegistry[chainName] &&
 				FinalRegistry[chainName][endpoint.paraId as number]
 			) {
+				// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 				registry[chainName][`${endpoint.paraId as number}`] =
 					FinalRegistry[chainName][endpoint.paraId as number];
 			}
