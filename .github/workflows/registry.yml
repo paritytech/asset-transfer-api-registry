@@ -19,10 +19,10 @@ jobs:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
     
-      - name: Set Node.js 16.x
+      - name: Set Node.js 18.14
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 18.14
     
       - name: Install deps
         run: yarn install
