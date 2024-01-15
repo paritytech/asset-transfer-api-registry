@@ -31,9 +31,11 @@ jobs:
       - run: yarn start
 
       - name: Commit and Push Changes
-        run: |
+        run: >-
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add ./docs/registry.json
-          git commit -m "update registry"
-          git push origin main
+          if [[ `git status --porcelain` ]]; then
+            git add ./docs/registry.json
+            git commit -m "chore: update registry"
+            git push origin main
+          fi
