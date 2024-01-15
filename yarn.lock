@@ -390,21 +390,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.14.6, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.17.2, @babel/runtime@npm:^7.20.6":
+"@babel/runtime@npm:^7.14.6, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.17.2, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.20.6":
   version: 7.23.6
   resolution: "@babel/runtime@npm:7.23.6"
   dependencies:
     regenerator-runtime: ^0.14.0
   checksum: 1a8eaf3d3a103ef5227b60ca7ab5c589118c36ca65ef2d64e65380b32a98a3f3b5b3ef96660fa0471b079a18b619a8317f3e7f03ab2b930c45282a8b69ed9a16
-  languageName: node
-  linkType: hard
-
-"@babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.20.13":
-  version: 7.23.4
-  resolution: "@babel/runtime@npm:7.23.4"
-  dependencies:
-    regenerator-runtime: ^0.14.0
-  checksum: 8eb6a6b2367f7d60e7f7dd83f477cc2e2fdb169e5460694d7614ce5c730e83324bcf29251b70940068e757ad1ee56ff8073a372260d90cad55f18a825caf97cd
   languageName: node
   linkType: hard
 
@@ -1339,7 +1330,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/api@npm:10.11.1, @polkadot/api@npm:^10.7.3, @polkadot/api@npm:^10.9.1, @polkadot/api@npm:latest":
+"@polkadot/api@npm:10.11.1, @polkadot/api@npm:latest":
   version: 10.11.1
   resolution: "@polkadot/api@npm:10.11.1"
   dependencies:
@@ -1364,7 +1355,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/api@npm:10.11.2, @polkadot/api@npm:^10.4.1":
+"@polkadot/api@npm:10.11.2, @polkadot/api@npm:^10.4.1, @polkadot/api@npm:^10.7.3, @polkadot/api@npm:^10.9.1":
   version: 10.11.2
   resolution: "@polkadot/api@npm:10.11.2"
   dependencies:
@@ -7904,7 +7895,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.15.1":
+"ws@npm:^8.15.1, ws@npm:^8.8.1":
   version: 8.15.1
   resolution: "ws@npm:8.15.1"
   peerDependencies:
@@ -7916,21 +7907,6 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: 8c67365f6e6134278ad635d558bfce466d7ef7543a043baea333aaa430429f0af8a130c0c36e7dd78f918d68167a659ba9b5067330b77c4b279e91533395952b
-  languageName: node
-  linkType: hard
-
-"ws@npm:^8.8.1":
-  version: 8.14.2
-  resolution: "ws@npm:8.14.2"
-  peerDependencies:
-    bufferutil: ^4.0.1
-    utf-8-validate: ">=5.0.2"
-  peerDependenciesMeta:
-    bufferutil:
-      optional: true
-    utf-8-validate:
-      optional: true
-  checksum: 3ca0dad26e8cc6515ff392b622a1467430814c463b3368b0258e33696b1d4bed7510bc7030f7b72838b9fdeb8dbd8839cbf808367d6aae2e1d668ce741d4308b
   languageName: node
   linkType: hard
 
