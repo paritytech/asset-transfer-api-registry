@@ -47,6 +47,7 @@
         "2023": "dot",
         "2024": "WOOD",
         "30035": "DED",
+        "42069": "STINK",
         "660301": "GRL",
         "862812": "CUBO",
         "868367": "VSC",
@@ -241,6 +242,33 @@
           "asset": {
             "ForeignAsset": "10"
           }
+        }
+      ]
+    },
+    "2002": {
+      "tokens": [
+        "CLV"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "clover-mainnet",
+      "xcAssetsData": [
+        {
+          "paraID": 2006,
+          "nativeChainID": "astar",
+          "symbol": "ASTR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2006}}}}",
+          "asset": "12"
+        },
+        {
+          "paraID": 2012,
+          "nativeChainID": "parallel",
+          "symbol": "PARA",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2012},{\"generalKey\":\"0x50415241\"}]}}}",
+          "asset": "11"
         }
       ]
     },
