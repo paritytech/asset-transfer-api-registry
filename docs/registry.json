@@ -3763,6 +3763,15 @@
       "poolPairsInfo": {},
       "specName": "amplitude"
     },
+    "2125": {
+      "tokens": [
+        "TNKR"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "tinkernet_node"
+    },
     "2222": {
       "tokens": [
         "MITO"
