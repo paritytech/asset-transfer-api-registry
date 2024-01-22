@@ -1989,6 +1989,7 @@
         "80817": "FRALEY",
         "88888": "BAILEGO",
         "95834": "LUL",
+        "123456": "DMX",
         "131313": "DMO",
         "220204": "STM",
         "314159": "RTT",
@@ -2017,6 +2018,11 @@
           "symbol": "FREN",
           "name": "FREN",
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2123\"}}}"
+        },
+        "MOVR": {
+          "symbol": "MOVR",
+          "name": "MOVR Token",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2023\"},{\"PalletInstance\":\"10\"}]}}"
         }
       },
       "poolPairsInfo": {
