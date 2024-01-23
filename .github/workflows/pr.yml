@@ -18,10 +18,10 @@ jobs:
       - name: Checkout files
         uses: actions/checkout@v4
 
-      - name: Install Node v18
+      - name: Install Node v20
         uses: actions/setup-node@v4
         with:
-          node-version: '18.14'
+          node-version: 20
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -49,10 +49,10 @@ jobs:
       - name: Checkout files
         uses: actions/checkout@v4
 
-      - name: Install Node v18
+      - name: Install Node v20
         uses: actions/setup-node@v4
         with:
-          node-version: '18.14'
+          node-version: 20
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -80,10 +80,10 @@ jobs:
       - name: Checkout files
         uses: actions/checkout@v4
 
-      - name: Install Node v18
+      - name: Install Node v20
         uses: actions/setup-node@v4
         with:
-          node-version: '18.14'
+          node-version: 20
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
