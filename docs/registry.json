@@ -2004,9 +2004,9 @@
         "4294967291": "PRIME"
       },
       "foreignAssetsInfo": {
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a22506f6c6b61646f74227d7d7d": {
-          "symbol": "",
-          "name": "",
+        "DOT": {
+          "symbol": "DOT",
+          "name": "Polkadot",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Polkadot\"}}}"
         },
         "TNKR": {
@@ -4441,6 +4441,11 @@
         "2430784328": "TMW"
       },
       "foreignAssetsInfo": {
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863336430383838343264636630326331333639396639333662623833646662626336663732316162227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc3d088842dcf02c13699f936bb83dfbbc6f721ab\"}}]}}"
+        },
         "HOP": {
           "symbol": "HOP",
           "name": "Trappist Hop",
