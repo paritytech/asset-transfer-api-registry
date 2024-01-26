@@ -26,6 +26,7 @@
         "10": "BEAST",
         "11": "web3",
         "12": "USDcp",
+        "14": "LEAP",
         "15": "Meme",
         "20": "StabCP",
         "21": "WBTC",
@@ -1022,6 +1023,16 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0904\"}]}}}",
           "asset": {
             "VToken2": "4"
+          }
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "BNCS",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0809\"}]}}}",
+          "asset": {
+            "Token2": "9"
           }
         },
         {
