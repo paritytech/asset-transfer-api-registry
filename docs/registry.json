@@ -1494,6 +1494,14 @@
           "asset": "9"
         },
         {
+          "paraID": 2008,
+          "nativeChainID": null,
+          "symbol": "CRU",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2008}}}}",
+          "asset": "27"
+        },
+        {
           "paraID": 2026,
           "nativeChainID": "nodle",
           "symbol": "NODL",
@@ -1908,9 +1916,11 @@
         "66": "DAI",
         "68": "ADVERT",
         "69": "NICE",
+        "70": "KRSU",
         "71": "OAK",
         "75": "cipher",
         "77": "Crypto",
+        "85": "DED",
         "87": "XEXR",
         "88": "BTC",
         "90": "SATS",
@@ -1930,6 +1940,7 @@
         "222": "PNEO",
         "223": "BILL",
         "224": "SIK",
+        "252": "BLACK",
         "300": "PWS",
         "333": "Token",
         "345": "345",
@@ -1940,6 +1951,7 @@
         "383": "KODA",
         "404": "MAXI",
         "420": "BLAZE",
+        "500": "$DED",
         "520": "0xe299a5e299a5e299a5",
         "555": "GAME",
         "567": "CHRWNA",
