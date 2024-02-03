@@ -109,6 +109,16 @@
         {
           "paraID": 1000,
           "nativeChainID": "statemint",
+          "symbol": "USDC",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}",
+          "asset": {
+            "ForeignAsset": "14"
+          }
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
           "symbol": "USDT",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
