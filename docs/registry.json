@@ -63,9 +63,9 @@
           "name": "Equilibrium",
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2011\"}}}"
         },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a224b7573616d61227d7d7d": {
-          "symbol": "",
-          "name": "",
+        "KSM": {
+          "symbol": "KSM",
+          "name": "Kusama",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Kusama\"}}}"
         },
         "EQD": {
