@@ -1859,7 +1859,87 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "pendulum"
+      "specName": "pendulum",
+      "xcAssetsData": [
+        {
+          "paraID": 0,
+          "nativeChainID": "polkadot",
+          "symbol": "DOT",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"here\":null}}}",
+          "asset": {
+            "XCM": "0"
+          }
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "USDC",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}",
+          "asset": {
+            "XCM": "2"
+          }
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "USDT",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
+          "asset": {
+            "XCM": "1"
+          }
+        },
+        {
+          "paraID": 2004,
+          "nativeChainID": "moonbeam",
+          "symbol": "GLMR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2004},{\"palletInstance\":10}]}}}",
+          "asset": {
+            "XCM": "6"
+          }
+        },
+        {
+          "paraID": 2004,
+          "nativeChainID": "moonbeam",
+          "symbol": "BRZ",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":{\"any\":null},\"key\":\"0x3225edce8ad30ae282e62fa32e7418e4b9cf197b\"}}]}}}",
+          "asset": {
+            "XCM": "4"
+          }
+        },
+        {
+          "paraID": 2011,
+          "nativeChainID": "equilibrium",
+          "symbol": "EQD",
+          "decimals": 9,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2011},{\"palletInstance\":11},{\"generalIndex\":6648164}]}}}",
+          "asset": {
+            "XCM": "3"
+          }
+        },
+        {
+          "paraID": 2040,
+          "nativeChainID": null,
+          "symbol": "PDEX",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2040}}}}",
+          "asset": {
+            "XCM": "5"
+          }
+        },
+        {
+          "paraID": 2094,
+          "nativeChainID": "pendulum",
+          "symbol": "PEN",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2094},{\"palletInstance\":10}]}}}",
+          "asset": "Native"
+        }
+      ]
     },
     "2101": {
       "tokens": [
@@ -3867,7 +3947,37 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "amplitude"
+      "specName": "amplitude",
+      "xcAssetsData": [
+        {
+          "paraID": 0,
+          "nativeChainID": "kusama",
+          "symbol": "KSM",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"here\":null}}}",
+          "asset": {
+            "XCM": "0"
+          }
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemine",
+          "symbol": "USDT",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
+          "asset": {
+            "XCM": "1"
+          }
+        },
+        {
+          "paraID": 2124,
+          "nativeChainID": "amplitude",
+          "symbol": "AMPE",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2124},{\"palletInstance\":10}]}}}",
+          "asset": "Native"
+        }
+      ]
     },
     "2125": {
       "tokens": [
@@ -4050,6 +4160,7 @@
         "4123": "DWND2",
         "4200": "KLM",
         "6666": "BOB",
+        "6969": "BEE",
         "8888": "USDT",
         "8937": "test",
         "9898": "FTT",
@@ -4299,6 +4410,10 @@
         "47": {
           "lpToken": "47",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"6\"}]}}]]"
+        },
+        "48": {
+          "lpToken": "48",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"6969\"}]}}]]"
         }
       },
       "specName": "westmint"
