@@ -2178,6 +2178,11 @@
           "symbol": "MOVR",
           "name": "MOVR Token",
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2023\"},{\"PalletInstance\":\"10\"}]}}"
+        },
+        "0x7b22706172656e7473223a2231222c22696e746572696f72223a7b225831223a7b2250617261636861696e223a2232303135227d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2015\"}}}"
         }
       },
       "poolPairsInfo": {
@@ -4136,6 +4141,7 @@
         "1022": "nfttst",
         "1023": "qqnihao",
         "1024": "qqnihao",
+        "1025": "DJS",
         "1111": "TESTY",
         "1113": "JTT",
         "1114": "USDC",
