@@ -4183,6 +4183,7 @@
         "6969": "BEE",
         "8888": "USDT",
         "8937": "test",
+        "9876": "AKS",
         "9898": "FTT",
         "9999": "WND",
         "10111": "ETH",
@@ -4434,6 +4435,10 @@
         "48": {
           "lpToken": "48",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"6969\"}]}}]]"
+        },
+        "49": {
+          "lpToken": "49",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"9876\"}]}}]]"
         }
       },
       "specName": "westmint"
