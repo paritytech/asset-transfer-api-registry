@@ -74,6 +74,11 @@
           "symbol": "EQD",
           "name": "Equilibrium Dollar",
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2011\"},{\"GeneralKey\":{\"length\":\"3\",\"data\":\"0x6571640000000000000000000000000000000000000000000000000000000000\"}}]}}"
+        },
+        "GLMR": {
+          "symbol": "GLMR",
+          "name": "Glimmer",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2004\"},{\"PalletInstance\":\"10\"}]}}"
         }
       },
       "poolPairsInfo": {},
