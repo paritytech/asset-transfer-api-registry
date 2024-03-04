@@ -4444,6 +4444,10 @@
         "49": {
           "lpToken": "49",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"9876\"}]}}]]"
+        },
+        "50": {
+          "lpToken": "50",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"5679853\"}]}}]]"
         }
       },
       "specName": "westmint"
