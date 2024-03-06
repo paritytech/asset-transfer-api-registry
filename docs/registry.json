@@ -40,6 +40,7 @@
         "101": "DOTMA",
         "123": "123",
         "256": "ICE",
+        "420": "BEEFY",
         "666": "DANGER",
         "777": "777",
         "999": "gold",
@@ -3927,19 +3928,27 @@
           "asset": "5"
         },
         {
-          "nativeChainID": null,
-          "symbol": "TUR",
-          "decimals": 10,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2114}}}}",
-          "asset": "0"
-        },
-        {
           "paraID": 2085,
           "nativeChainID": "heiko",
           "symbol": "SKSM",
           "decimals": 12,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2085},{\"generalKey\":\"0x734b534d\"}]}}}",
           "asset": "6"
+        },
+        {
+          "paraID": 2110,
+          "nativeChainID": "mangata",
+          "symbol": "MGX",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2110},{\"generalKey\":\"0x00000000\"}]}}}",
+          "asset": "10"
+        },
+        {
+          "nativeChainID": null,
+          "symbol": "TUR",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2114}}}}",
+          "asset": "0"
         }
       ]
     },
