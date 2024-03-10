@@ -2233,6 +2233,10 @@
         "7": {
           "lpToken": "7",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2123\"}}}]]"
+        },
+        "8": {
+          "lpToken": "8",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1107\"}]}}]]"
         }
       },
       "specName": "statemine"
