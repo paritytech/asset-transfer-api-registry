@@ -3,10 +3,10 @@
 import { prodRelayKusama, prodRelayPolkadot } from '@polkadot/apps-config';
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
-import { createChainRegistryFromRelay } from './createChainRegistryFromRelay';
-import { fetchChainInfo } from './fetchChainInfo';
-import type { ChainInfoKeys, TokenRegistry } from './types';
-import { twirlTimer } from './util';
+import { createChainRegistryFromRelay } from './createChainRegistryFromRelay.js';
+import { fetchChainInfo } from './fetchChainInfo.js';
+import type { ChainInfoKeys, TokenRegistry } from './types.js';
+import { twirlTimer } from './util.js';
 
 jest.mock('./util');
 jest.mock('./fetchChainInfo');

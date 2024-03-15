@@ -17,12 +17,12 @@ import {
 	testRelayWestend,
 } from '@polkadot/apps-config';
 
-import { createChainRegistryFromParas } from './createChainRegistryFromParas';
-import { createChainRegistryFromRelay } from './createChainRegistryFromRelay';
-import { fetchParaIds } from './fetchParaIds';
-import { fetchXcAssetsRegistryInfo } from './fetchXcAssetRegistryInfo';
-import type { ParaIds, TokenRegistry } from './types';
-import { writeJson } from './util';
+import { createChainRegistryFromParas } from './createChainRegistryFromParas.js';
+import { createChainRegistryFromRelay } from './createChainRegistryFromRelay.js';
+import { fetchParaIds } from './fetchParaIds.js';
+import { fetchXcAssetsRegistryInfo } from './fetchXcAssetRegistryInfo.js';
+import type { ParaIds, TokenRegistry } from './types.js';
+import { writeJson } from './util.js';
 
 export const main = async (filePath: string, registry: TokenRegistry) => {
 	const paraIds: ParaIds = {};

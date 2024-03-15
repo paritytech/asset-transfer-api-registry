@@ -8,6 +8,8 @@
       "ignoreDeprecations": "5.0",
       "resolveJsonModule": true,
       "esModuleInterop": true,
+      "module": "ESNext",
+      "target": "ES2015"
     },
     "typeRoots": [
       "./node_modules/@types"

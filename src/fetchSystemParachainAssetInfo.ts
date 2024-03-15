@@ -2,7 +2,7 @@
 
 import { ApiPromise } from '@polkadot/api';
 
-import type { AssetsInfo } from './types';
+import type { AssetsInfo } from './types.js';
 
 /**
  * Fetch Asset info for system parachains.

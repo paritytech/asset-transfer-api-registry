@@ -4,13 +4,13 @@
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 import fs from 'fs';
 
-import { DEFAULT_REGISTRY, TEST_REGISTRY_FILE_PATH } from './consts';
-import { createChainRegistryFromParas } from './createChainRegistryFromParas';
-import { createChainRegistryFromRelay } from './createChainRegistryFromRelay';
-import { main } from './createRegistry';
-import { fetchParaIds } from './fetchParaIds';
-import { fetchXcAssetsRegistryInfo } from './fetchXcAssetRegistryInfo';
-import type { ChainName, ParaIds, TokenRegistry } from './types';
+import { DEFAULT_REGISTRY, TEST_REGISTRY_FILE_PATH } from './consts.js';
+import { createChainRegistryFromParas } from './createChainRegistryFromParas.js';
+import { createChainRegistryFromRelay } from './createChainRegistryFromRelay.js';
+import { main } from './createRegistry.js';
+import { fetchParaIds } from './fetchParaIds.js';
+import { fetchXcAssetsRegistryInfo } from './fetchXcAssetRegistryInfo.js';
+import type { ChainName, ParaIds, TokenRegistry } from './types.js';
 
 const registry = DEFAULT_REGISTRY;
 

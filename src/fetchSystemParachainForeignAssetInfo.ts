@@ -7,7 +7,7 @@ import type {
 	ForeignAssetMetadata,
 	ForeignAssetsInfo,
 	UnionXcmMultiLocation,
-} from './types';
+} from './types.js';
 
 /**
  * This will fetch all the foreign asset entries in storage and return an object

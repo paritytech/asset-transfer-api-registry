@@ -1,11 +1,11 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
-import { fetchXcAssetsRegistryInfo } from './fetchXcAssetRegistryInfo';
-import { astarTestXcAssets } from './testHelpers/astarXcAssets';
-import { bifrostKusamaTestXcAssets } from './testHelpers/bifrostKusamaXcAssets';
-import { moonBeamTestXcAssets } from './testHelpers/moonbeamXcAssets';
-import type { XcAssets, XcAssetsInfo } from './types';
-import { fetchXcAssetData } from './util';
+import { fetchXcAssetsRegistryInfo } from './fetchXcAssetRegistryInfo.js';
+import { astarTestXcAssets } from './testHelpers/astarXcAssets.js';
+import { bifrostKusamaTestXcAssets } from './testHelpers/bifrostKusamaXcAssets.js';
+import { moonBeamTestXcAssets } from './testHelpers/moonbeamXcAssets.js';
+import type { XcAssets, XcAssetsInfo } from './types.js';
+import { fetchXcAssetData } from './util.js';
 
 jest.mock('./util');
 

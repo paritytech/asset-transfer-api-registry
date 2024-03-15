@@ -4,10 +4,10 @@ import type { ApiPromise } from '@polkadot/api';
 import { prodRelayKusama } from '@polkadot/apps-config';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
-import { fetchParaIds } from './fetchParaIds';
-import { getApi } from './getApi';
-import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRelayApi';
-import type { ParaIds } from './types';
+import { fetchParaIds } from './fetchParaIds.js';
+import { getApi } from './getApi.js';
+import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRelayApi.js';
+import type { ParaIds } from './types.js';
 
 jest.mock('./getApi');
 

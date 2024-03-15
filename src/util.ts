@@ -4,8 +4,8 @@ import { formatDate } from '@polkadot/util';
 import fs from 'fs';
 import fetch from 'node-fetch';
 
-import { RPC_BLACK_LIST } from './consts';
-import type { TokenRegistry, XcAssets } from './types';
+import { RPC_BLACK_LIST } from './consts.js';
+import type { TokenRegistry, XcAssets } from './types.js';
 
 /**
  * Write Json to a file path.

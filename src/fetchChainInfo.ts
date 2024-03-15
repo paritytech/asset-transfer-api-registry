@@ -2,17 +2,17 @@
 
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
-import { fetchSystemParachainAssetConversionPoolInfo } from './fetchSystemParachainAssetConversionPoolInfo';
-import { fetchSystemParachainAssetInfo } from './fetchSystemParachainAssetInfo';
-import { fetchSystemParachainForeignAssetInfo } from './fetchSystemParachainForeignAssetInfo';
-import { getApi } from './getApi';
+import { fetchSystemParachainAssetConversionPoolInfo } from './fetchSystemParachainAssetConversionPoolInfo.js';
+import { fetchSystemParachainAssetInfo } from './fetchSystemParachainAssetInfo.js';
+import { fetchSystemParachainForeignAssetInfo } from './fetchSystemParachainForeignAssetInfo.js';
+import { getApi } from './getApi.js';
 import type {
 	AssetsInfo,
 	ChainInfoKeys,
 	ForeignAssetsInfo,
 	PoolPairsInfo,
-} from './types';
-import { logWithDate } from './util';
+} from './types.js';
+import { logWithDate } from './util.js';
 
 /**
  * Fetch chain token and spec info.

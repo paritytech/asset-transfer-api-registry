@@ -1,7 +1,7 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
-import { fetchSystemParachainForeignAssetInfo } from './fetchSystemParachainForeignAssetInfo';
-import { adjustedmockAssetHubKusamaApi } from './testHelpers/adjustedMockAssetHubKusamaApi';
+import { fetchSystemParachainForeignAssetInfo } from './fetchSystemParachainForeignAssetInfo.js';
+import { adjustedmockAssetHubKusamaApi } from './testHelpers/adjustedMockAssetHubKusamaApi.js';
 
 describe('fetchSystemParachainForeignAssetInfo', () => {
 	it('Should correctly return the Foreign Asset Info for Asset Hub', async () => {

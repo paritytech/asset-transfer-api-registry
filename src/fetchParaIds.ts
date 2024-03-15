@@ -2,8 +2,8 @@
 
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
-import { getApi } from './getApi';
-import type { ParaIds } from './types';
+import { getApi } from './getApi.js';
+import type { ParaIds } from './types.js';
 
 /**
  * This will create a registry of Parachain Ids.

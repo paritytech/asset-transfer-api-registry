@@ -2,10 +2,10 @@
 
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
-import FinalRegistry from '../docs/registry.json';
-import { fetchChainInfo } from './fetchChainInfo';
-import type { ChainName, ParaIds, TokenRegistry } from './types';
-import { logWithDate, twirlTimer } from './util';
+import FinalRegistry from '../docs/registry.json' assert { type: 'json' };
+import { fetchChainInfo } from './fetchChainInfo.js';
+import type { ChainName, ParaIds, TokenRegistry } from './types.js';
+import { logWithDate, twirlTimer } from './util.js';
 
 /**
  * This adds to the chain registry for each chain that is passed in.

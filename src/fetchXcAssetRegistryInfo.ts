@@ -1,13 +1,13 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
-import { XC_ASSET_CDN_URL } from './consts';
+import { XC_ASSET_CDN_URL } from './consts.js';
 import type {
 	SanitizedXcAssetsData,
 	TokenRegistry,
 	XcAssets,
 	XcAssetsData,
-} from './types';
-import { fetchXcAssetData } from './util';
+} from './types.js';
+import { fetchXcAssetData } from './util.js';
 
 export const fetchXcAssetsRegistryInfo = async (
 	registry: TokenRegistry,

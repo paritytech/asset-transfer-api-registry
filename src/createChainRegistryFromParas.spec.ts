@@ -3,14 +3,14 @@
 import { prodParasKusamaCommon } from '@polkadot/apps-config';
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
-import { DEFAULT_REGISTRY } from './consts';
+import { DEFAULT_REGISTRY } from './consts.js';
 import {
 	appendFetchChainInfoPromise,
 	createChainRegistryFromParas,
-} from './createChainRegistryFromParas';
-import { fetchParaIds } from './fetchParaIds';
-import type { ChainName, ParaIds, TokenRegistry } from './types';
-import { twirlTimer } from './util';
+} from './createChainRegistryFromParas.js';
+import { fetchParaIds } from './fetchParaIds.js';
+import type { ChainName, ParaIds, TokenRegistry } from './types.js';
+import { twirlTimer } from './util.js';
 
 jest.mock('./util');
 jest.mock('./createChainRegistryFromParas');

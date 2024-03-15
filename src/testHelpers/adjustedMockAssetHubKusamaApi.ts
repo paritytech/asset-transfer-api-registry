@@ -10,7 +10,7 @@ import {
 } from '@polkadot/types';
 import type { ChainProperties, Header } from '@polkadot/types/interfaces';
 import type {
-	PalletAssetConversionNativeOrAssetId,
+	PalletAssetConversionEvent,
 	PalletAssetConversionPoolInfo,
 	PalletAssetsAssetDetails,
 	PalletAssetsAssetMetadata,
@@ -366,15 +366,15 @@ const poolAsset = (asset: string): Promise<Option<PalletAssetsAssetDetails>> =>
 
 const pools = (
 	_arg: ITuple<
-		[PalletAssetConversionNativeOrAssetId, PalletAssetConversionNativeOrAssetId]
+		[PalletAssetConversionEvent, PalletAssetConversionEvent]
 	>,
 ): Promise<
-	[PalletAssetConversionNativeOrAssetId, PalletAssetConversionPoolInfo]
+	[PalletAssetConversionEvent, PalletAssetConversionPoolInfo]
 > =>
 	Promise.resolve().then(() => {
 		const palletAssetConversionNativeOrAssetId =
 			mockAssetHubKusamaApi.registry.createType(
-				'PalletAssetConversionNativeOrAssetId',
+				'PalletAssetConversionEvent',
 				[
 					{ parents: 0, interior: { Here: '' } },
 					{

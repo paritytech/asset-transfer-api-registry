@@ -3,6 +3,7 @@
   "version": "0.2.14",
   "description": "Asset registry for asset-transfer-api",
   "main": "docs/registry.json",
+  "type": "module",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
@@ -19,8 +20,8 @@
   "author": "Parity Technologies <admin@parity.io>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@polkadot/api": "10.11.2",
-    "@polkadot/apps-config": "0.132.1",
+    "@polkadot/api": "^10.12.2",
+    "@polkadot/apps-config": "^0.134.1",
     "@substrate/dev": "0.7.1",
     "@types/node-fetch": "^2.6.9",
     "node-fetch": "2.6.7"

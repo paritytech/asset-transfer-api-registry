@@ -973,6 +973,15 @@
       "poolPairsInfo": {},
       "specName": "composable"
     },
+    "2025": {
+      "tokens": [
+        "XOR"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "sora_ksm"
+    },
     "2026": {
       "tokens": [
         "NODL"
@@ -1780,6 +1789,15 @@
       "poolPairsInfo": {},
       "specName": "integritee-parachain"
     },
+    "2040": {
+      "tokens": [
+        "PDEX"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "polkadex-parachain"
+    },
     "2043": {
       "tokens": [
         "NEURO"
@@ -1834,6 +1852,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "avn-parachain"
+    },
+    "2058": {
+      "tokens": [
+        "WATR"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "watr-mainnet"
     },
     "2086": {
       "tokens": [
@@ -1986,6 +2013,51 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "t3rn"
+    },
+    "3340": {
+      "tokens": [
+        "VARCH"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "invarch"
+    },
+    "3344": {
+      "tokens": [
+        "PLMC"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "polimec-mainnet"
+    },
+    "3345": {
+      "tokens": [
+        "EWT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "ewx-parachain"
+    },
+    "3346": {
+      "tokens": [
+        "NUUM"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "continuum-runtime"
+    },
+    "3354": {
+      "tokens": [
+        "LGNT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "logion"
     }
   },
   "kusama": {
@@ -3752,6 +3824,15 @@
       "poolPairsInfo": {},
       "specName": "quartz"
     },
+    "2096": {
+      "tokens": [
+        "NEER"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "pioneer-runtime"
+    },
     "2105": {
       "tokens": [
         "CRAB"
@@ -3969,6 +4050,15 @@
       "poolPairsInfo": {},
       "specName": "bajun"
     },
+    "2121": {
+      "tokens": [
+        "IMBU"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "imbue"
+    },
     "2123": {
       "tokens": [
         "FREN",
@@ -4057,6 +4147,51 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "peaq-node-krest"
+    },
+    "2281": {
+      "tokens": [
+        "KSM"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "kreivo-parachain"
+    },
+    "3336": {
+      "tokens": [
+        "KLAOS"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "laos"
+    },
+    "3339": {
+      "tokens": [
+        "CGT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "curio-mainnet"
+    },
+    "3340": {
+      "tokens": [
+        "NAND"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "messier"
+    },
+    "3344": {
+      "tokens": [
+        "XON"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "template-parachain"
     }
   },
   "westend": {
@@ -4478,6 +4613,33 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "collectives-westend"
+    },
+    "1002": {
+      "tokens": [
+        "WND"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "bridge-hub-westend"
+    },
+    "1004": {
+      "tokens": [
+        "WND"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "people-westend"
+    },
+    "1005": {
+      "tokens": [
+        "WND"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "coretime-westend"
     }
   },
   "rococo": {
@@ -4826,6 +4988,24 @@
       "poolPairsInfo": {},
       "specName": "encointer-parachain"
     },
+    "1004": {
+      "tokens": [
+        "ROC"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "people-rococo"
+    },
+    "1005": {
+      "tokens": [
+        "ROC"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "coretime-rococo"
+    },
     "1013": {
       "tokens": [
         "ROC"
@@ -4834,6 +5014,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "bridge-hub-rococo"
+    },
+    "1836": {
+      "tokens": [
+        "HOP"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "trappist-rococo"
     },
     "2004": {
       "tokens": [
@@ -4878,6 +5067,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "centrifuge"
+    },
+    "2034": {
+      "tokens": [
+        "HDX"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "hydradx"
     },
     "2043": {
       "tokens": [
@@ -4951,6 +5149,15 @@
       "poolPairsInfo": {},
       "specName": "Pangolin2"
     },
+    "2106": {
+      "tokens": [
+        "LIT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "rococo-parachain"
+    },
     "2110": {
       "tokens": [
         "MGAT"
@@ -4987,6 +5194,15 @@
       "poolPairsInfo": {},
       "specName": "foucoco"
     },
+    "2239": {
+      "tokens": [
+        "tACU"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "acurast-parachain"
+    },
     "3333": {
       "tokens": [
         "T0RN"
@@ -4996,6 +5212,24 @@
       "poolPairsInfo": {},
       "specName": "t0rn"
     },
+    "3339": {
+      "tokens": [
+        "CGT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "curio-testnet"
+    },
+    "3345": {
+      "tokens": [
+        "VT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "ewx-parachain"
+    },
     "4044": {
       "tokens": [
         "XRQCY"
@@ -5004,6 +5238,42 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "frequency-testnet"
+    },
+    "4292": {
+      "tokens": [
+        "ROC"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "yerba-rococo"
+    },
+    "4343": {
+      "tokens": [
+        "GIE"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "laos"
+    },
+    "4374": {
+      "tokens": [
+        "tNAND"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "gargantua"
+    },
+    "201804": {
+      "tokens": [
+        "MUSE"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "muse"
     }
   }
 }

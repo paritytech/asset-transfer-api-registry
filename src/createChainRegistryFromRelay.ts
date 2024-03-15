@@ -2,9 +2,9 @@
 
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
-import { fetchChainInfo } from './fetchChainInfo';
-import type { ChainName, TokenRegistry } from './types';
-import { logWithDate, twirlTimer } from './util';
+import { fetchChainInfo } from './fetchChainInfo.js';
+import type { ChainName, TokenRegistry } from './types.js';
+import { logWithDate, twirlTimer } from './util.js';
 
 /**
  * Similar to `createChainRegistryFromParas`, this will only add to the registry for a single chain,
