@@ -2241,6 +2241,10 @@
         "8": {
           "lpToken": "8",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1107\"}]}}]]"
+        },
+        "9": {
+          "lpToken": "9",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2993\"}]}}]]"
         }
       },
       "specName": "statemine"
@@ -4659,6 +4663,7 @@
         "69420": "PLONK",
         "77777": "SHREK",
         "80085": "NKT",
+        "100000": "TEST1",
         "111111": "11111",
         "111112": "SQRLTKN",
         "121212": "PLY",
