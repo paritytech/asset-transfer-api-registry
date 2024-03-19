@@ -1,31 +1,26 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
+import { jest } from '@jest/globals'
+
 import { fetchXcAssetsRegistryInfo } from './fetchXcAssetRegistryInfo.js';
 import { astarTestXcAssets } from './testHelpers/astarXcAssets.js';
 import { bifrostKusamaTestXcAssets } from './testHelpers/bifrostKusamaXcAssets.js';
 import { moonBeamTestXcAssets } from './testHelpers/moonbeamXcAssets.js';
-import type { XcAssets, XcAssetsInfo } from './types.js';
-import { fetchXcAssetData } from './util.js';
+import type { XcAssetsInfo } from './types.js';
 
-jest.mock('./util');
+jest.useFakeTimers()
+
+jest.mock('./util', () => ({
+	fetchXcAssetData: jest.fn(() => Promise.resolve({
+		xcAssets: {
+			polkadot: [moonBeamTestXcAssets, astarTestXcAssets],
+			kusama: [bifrostKusamaTestXcAssets],
+		},
+	}),)
+}));
 
 describe('fetchXcAssetsRegistryInfo', () => {
 	it('Should Correctly set xcAssetsData on the Assets Registry', async () => {
-		(
-			fetchXcAssetData as jest.MockedFunction<
-				(cdnUrl: string) => Promise<{
-					xcAssets: XcAssets;
-				}>
-			>
-		).mockReturnValueOnce(
-			Promise.resolve({
-				xcAssets: {
-					polkadot: [moonBeamTestXcAssets, astarTestXcAssets],
-					kusama: [bifrostKusamaTestXcAssets],
-				},
-			}),
-		);
-
 		const registry = {
 			polkadot: {
 				'2004': {

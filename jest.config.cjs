@@ -14,8 +14,22 @@ module.exports = {
 	testEnvironment: 'node',
 	maxConcurrency: 3,
 	maxWorkers: '50%',
-	testPathIgnorePatterns: ['/lib/', '/node_modules/', '/build/'],
+	testPathIgnorePatterns: ['/lib/', '/node_modules/', '/build'],
 	// The below resolves `jest-haste-map:...`
 	modulePathIgnorePatterns: ['/lib', '/build'],
+	moduleFileExtensions: ['js', 'ts'],
+	transform: {
+        '\\.[jt]s?$': 'ts-jest'
+    },
 	resetMocks: true,
+	globals: {
+        'ts-jest': {
+            useESM: true
+        }
+    },
+	moduleNameMapper: {
+        "^(\\.\\.?\\/.+)\\.js$": "$1",
+    },
+    extensionsToTreatAsEsm: ['.ts'],
+	transformIgnorePatterns: ['/node_modules/']
 };
