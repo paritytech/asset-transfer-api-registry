@@ -365,24 +365,17 @@ const poolAsset = (asset: string): Promise<Option<PalletAssetsAssetDetails>> =>
 	});
 
 const pools = (
-	_arg: ITuple<
-		[PalletAssetConversionEvent, PalletAssetConversionEvent]
-	>,
-): Promise<
-	[PalletAssetConversionEvent, PalletAssetConversionPoolInfo]
-> =>
+	_arg: ITuple<[PalletAssetConversionEvent, PalletAssetConversionEvent]>,
+): Promise<[PalletAssetConversionEvent, PalletAssetConversionPoolInfo]> =>
 	Promise.resolve().then(() => {
 		const palletAssetConversionNativeOrAssetId =
-			mockAssetHubKusamaApi.registry.createType(
-				'PalletAssetConversionEvent',
-				[
-					{ parents: 0, interior: { Here: '' } },
-					{
-						parents: 0,
-						interior: { X2: [{ PalletInstance: 50 }, { GeneralIndex: 100 }] },
-					},
-				],
-			);
+			mockAssetHubKusamaApi.registry.createType('PalletAssetConversionEvent', [
+				{ parents: 0, interior: { Here: '' } },
+				{
+					parents: 0,
+					interior: { X2: [{ PalletInstance: 50 }, { GeneralIndex: 100 }] },
+				},
+			]);
 
 		const poolInfo = mockAssetHubKusamaApi.registry.createType(
 			'PalletAssetConversionPoolInfo',

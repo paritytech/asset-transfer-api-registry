@@ -1,4 +1,4 @@
-import REGISTRY from '../docs/registry.json' assert { type: "json" };;
+import REGISTRY from '../docs/registry.json' assert { type: 'json' };
 import { PROD_REGISTRY_FILE_PATH } from './consts.js';
 import { main } from './createRegistry.js';
 import type { TokenRegistry } from './types.js';

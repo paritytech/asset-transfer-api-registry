@@ -2,7 +2,11 @@
 
 import { ApiPromise } from '@polkadot/api';
 
-import type { PoolInfo, PoolPairsInfo, UnionXcmMultiLocation } from './types.js';
+import type {
+	PoolInfo,
+	PoolPairsInfo,
+	UnionXcmMultiLocation,
+} from './types.js';
 
 /**
  * Fetch asset conversion pool info from storage. This will return an object where

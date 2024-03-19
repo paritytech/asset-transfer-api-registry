@@ -14,7 +14,7 @@
     "lint": "substrate-dev-run-lint",
     "lint:fix": "substrate-dev-run-lint --fix",
     "deploy": "yarn build && npm publish",
-    "test": "NODE_ENV=test substrate-exec-jest --detectOpenHandles"
+    "test": "NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules substrate-exec-jest --detectOpenHandles"
   },
   "keywords": [],
   "author": "Parity Technologies <admin@parity.io>",
