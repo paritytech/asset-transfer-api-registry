@@ -13,7 +13,13 @@ import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRela
 import { mockAssetHubKusamaParachainPoolPairsInfo } from './testHelpers/mockSystemParachainAssetConversionPoolInfo.js';
 import { mockAssetHubKusamaParachainAssetsInfo } from './testHelpers/mockSystemParachainAssetInfo.js';
 import { mockAssetHubKusamaParachainForeignAssetsInfo } from './testHelpers/mockSystemParachainForeignAssetInfo.js';
+import { getApi } from './getApi.js';
 
+vi.mock('./getApi.js', () => {
+	return {
+		getApi: vi.fn(),
+	};
+});
 vi.mock('./fetchSystemParachainAssetInfo', () => {
 	return {
 		fetchSystemParachainAssetInfo: vi.fn(),
@@ -37,6 +43,8 @@ describe('fetchChainInfo', () => {
 
 	describe('Kusama', () => {
 		it('Correctly fetches Kusama ChainInfo', async () => {
+			vi.mocked(getApi).mockResolvedValueOnce(adjustedMockKusamaRelayApi);
+
 			vi.mocked(fetchSystemParachainAssetInfo).mockResolvedValueOnce({});
 
 			vi.mocked(fetchSystemParachainForeignAssetInfo).mockResolvedValueOnce({});
@@ -46,7 +54,11 @@ describe('fetchChainInfo', () => {
 			).mockResolvedValueOnce({});
 
 			await expect(
-				fetchChainInfo(adjustedMockKusamaRelayApi, prodRelayKusama),
+				fetchChainInfo(
+					prodRelayKusama,
+					prodRelayKusama.info as unknown as string,
+					true
+				),
 			).resolves.toEqual([
 				{
 					tokens: ['KSM'],
@@ -62,6 +74,8 @@ describe('fetchChainInfo', () => {
 
 	describe('AssetHub Kusama', () => {
 		it('Correctly fetches AssetHub Kusama ChainInfo', async () => {
+			vi.mocked(getApi).mockResolvedValueOnce(adjustedmockAssetHubKusamaApi);
+
 			vi.mocked(fetchSystemParachainAssetInfo).mockResolvedValueOnce(
 				mockAssetHubKusamaParachainAssetsInfo,
 			);
@@ -75,8 +89,9 @@ describe('fetchChainInfo', () => {
 			).mockResolvedValueOnce(mockAssetHubKusamaParachainPoolPairsInfo);
 
 			const result = await fetchChainInfo(
-				adjustedmockAssetHubKusamaApi,
 				prodRelayKusama,
+					prodRelayKusama.info as unknown as string,
+					false,
 			);
 
 			expect(result).toEqual([
@@ -300,6 +315,7 @@ describe('fetchChainInfo', () => {
 
 	describe('Bifrost', () => {
 		it('Correctly fetches Bifrost Kusama ChainInfo', async () => {
+			vi.mocked(getApi).mockResolvedValueOnce(adjustedMockBifrostKusamaParachainApi);
 			vi.mocked(fetchSystemParachainAssetInfo).mockResolvedValueOnce({});
 
 			vi.mocked(fetchSystemParachainForeignAssetInfo).mockResolvedValueOnce({});
@@ -309,8 +325,9 @@ describe('fetchChainInfo', () => {
 			).mockResolvedValueOnce({});
 
 			const result = await fetchChainInfo(
-				adjustedMockBifrostKusamaParachainApi,
 				prodRelayKusama,
+					prodRelayKusama.info as unknown as string,
+					false,
 			);
 
 			expect(result).toEqual([

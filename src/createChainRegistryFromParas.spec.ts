@@ -9,7 +9,6 @@ const paraIds: ParaIds = { kusama: [1000, 1001, 1002] };
 import { prodParasKusamaCommon } from '@polkadot/apps-config';
 
 import { createChainRegistryFromParas } from './createChainRegistryFromParas.js';
-import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRelayApi';
 import { updateRegistryChainInfo } from './updateRegistryChainInfo.js';
 
 vi.mock('./updateRegistryChainInfo', () => {
@@ -52,7 +51,6 @@ vi.mocked(updateRegistryChainInfo).mockReturnValue(
 describe('createChainRegistryFromParas', () => {
 	it('Should correctly add the registries for paras when found', async () => {
 		const result = await createChainRegistryFromParas(
-			adjustedMockKusamaRelayApi,
 			'kusama',
 			prodParasKusamaCommon,
 			DEFAULT_REGISTRY,

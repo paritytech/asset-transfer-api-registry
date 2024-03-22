@@ -22,7 +22,6 @@ import { logWithDate, twirlTimer } from './util.js';
  * @param registry Registry we want to add the info too
  */
 export const createChainRegistryFromParas = async (
-	api: ApiPromise | undefined | null,
 	chainName: ChainName,
 	endpoints: Omit<EndpointOption, 'teleport'>[],
 	registry: TokenRegistry,
@@ -53,16 +52,19 @@ export const createChainRegistryFromParas = async (
 			continue;
 		}
 
-		appendFetchChainInfoPromise(api, chainInfoPromises, endpoint);
+		appendFetchChainInfoPromise(chainInfoPromises, endpoint);
 	}
 
 	return await updateRegistryChainInfo(chainName, registry, chainInfoPromises);
 };
 
 export const appendFetchChainInfoPromise = (
-	api: ApiPromise | undefined | null,
 	chainInfoPromises: Promise<[ChainInfoKeys, number | undefined] | null>[],
 	endpoint: EndpointOption,
 ) => {
-	chainInfoPromises.push(fetchChainInfo(api, endpoint));
+	chainInfoPromises.push(fetchChainInfo(
+		endpoint,
+		endpoint.info as unknown as string,
+		false,
+	));
 };

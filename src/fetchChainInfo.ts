@@ -14,6 +14,7 @@ import type {
 	PoolPairsInfo,
 } from './types.js';
 import { logWithDate } from './util.js';
+import { getApi } from './getApi.js';
 
 /**
  * Fetch chain token and spec info.
@@ -23,10 +24,17 @@ import { logWithDate } from './util.js';
  * @param isRelay
  */
 export const fetchChainInfo = async (
-	api: ApiPromise | undefined | null,
-	endpoint: EndpointOption,
+	// api: ApiPromise | undefined | null,
+	endpointOpts: EndpointOption,
+	chain: string,
+	isRelay: boolean
 ): Promise<[ChainInfoKeys, number | undefined] | null> => {
-	const chain = endpoint.info as unknown as string;
+	if (chain === 'acala') {
+		return null;
+	}
+	const api = await getApi(endpointOpts, chain, isRelay);
+
+	// const chain = endpoint.info as unknown as string;
 	const connected = api?.isConnected === true;
 	logWithDate(`Api connected for ${chain}: ${connected}`, true);
 
@@ -69,7 +77,7 @@ export const fetchChainInfo = async (
 				poolPairsInfo,
 				specName: specNameStr,
 			},
-			endpoint.paraId,
+			endpointOpts.paraId,
 		];
 	} else {
 		return null;

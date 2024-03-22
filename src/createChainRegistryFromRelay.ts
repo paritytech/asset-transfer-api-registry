@@ -16,14 +16,18 @@ import { logWithDate, twirlTimer } from './util.js';
  * @param registry Registry we want to add the info to
  */
 export const createChainRegistryFromRelay = async (
-	api: ApiPromise | undefined | null,
+	// api: ApiPromise | undefined | null,
 	chainName: ChainName,
 	endpoint: EndpointOption,
 	registry: TokenRegistry,
 ): Promise<TokenRegistry> => {
 	logWithDate(`Creating chain registry for ${chainName} relay`, true);
 	twirlTimer();
-	const res = await fetchChainInfo(api, endpoint);
+	const res = await fetchChainInfo(
+		endpoint,
+		endpoint.info as unknown as string,
+		true,
+		);
 	if (res) {
 		const chainInfoKeys = res[0];
 		registry[chainName]['0'] = chainInfoKeys;
