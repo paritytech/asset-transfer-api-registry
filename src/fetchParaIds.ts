@@ -1,7 +1,5 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
-import { ApiPromise } from '@polkadot/api';
-
 import type { ParaIds } from './types.js';
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types.js';
 import { getApi } from './getApi.js';

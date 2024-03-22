@@ -2,7 +2,6 @@
 
 import '@polkadot/api-augment';
 
-import { ApiPromise } from '@polkadot/api';
 import {
 	prodParasKusama,
 	prodParasKusamaCommon,
@@ -22,7 +21,6 @@ import { addParasChainInfoToRelayRegistries } from './addParasChainInfoToRelayRe
 import { createChainRegistryFromRelay } from './createChainRegistryFromRelay.js';
 import { fetchParaIds } from './fetchParaIds.js';
 import { fetchXcAssetsRegistryInfo } from './fetchXcAssetsRegistryInfo.js';
-import { getApi } from './getApi.js';
 import type { ParaIds, TokenRegistry } from './types.js';
 import { writeJson } from './util.js';
 

@@ -1,7 +1,5 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
-// import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
-import { ApiPromise } from '@polkadot/api';
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types.js';
 
 import { fetchSystemParachainAssetConversionPoolInfo } from './fetchSystemParachainAssetConversionPoolInfo.js';

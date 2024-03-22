@@ -1,6 +1,5 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
-import { ApiPromise } from '@polkadot/api';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import { fetchChainInfo } from './fetchChainInfo.js';

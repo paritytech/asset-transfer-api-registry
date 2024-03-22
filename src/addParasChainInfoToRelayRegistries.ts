@@ -1,4 +1,3 @@
-import { ApiPromise } from '@polkadot/api';
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import { createChainRegistryFromParas } from './createChainRegistryFromParas';

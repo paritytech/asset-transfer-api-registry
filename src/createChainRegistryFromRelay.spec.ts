@@ -5,8 +5,6 @@ import { describe, expect, it, vi } from 'vitest';
 
 import { createChainRegistryFromRelay } from './createChainRegistryFromRelay.js';
 import { fetchChainInfo } from './fetchChainInfo.js';
-import { mockKusamaRelayApi } from './testHelpers/mockKusamaRelayApi.js';
-import { mockPolkadotApi } from './testHelpers/mockPolkadotRelayApi.js';
 import { twirlTimer } from './util.js';
 
 vi.mock('./fetchChainInfo', () => {
