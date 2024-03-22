@@ -14,7 +14,7 @@
     "lint": "substrate-dev-run-lint",
     "lint:fix": "substrate-dev-run-lint --fix",
     "deploy": "yarn build && npm publish",
-    "test": "NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules substrate-exec-jest --detectOpenHandles"
+    "test": "vitest"
   },
   "keywords": [],
   "author": "Parity Technologies <admin@parity.io>",
@@ -24,7 +24,8 @@
     "@polkadot/apps-config": "^0.134.1",
     "@substrate/dev": "0.7.1",
     "@types/node-fetch": "^2.6.9",
-    "node-fetch": "2.6.7"
+    "node-fetch": "2.6.7",
+    "vitest": "^1.4.0"
   },
   "packageManager": "yarn@4.1.0"
 }

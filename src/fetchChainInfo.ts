@@ -1,11 +1,12 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
-import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
+// import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
+import { ApiPromise } from '@polkadot/api';
+import { EndpointOption } from '@polkadot/apps-config/endpoints/types.js';
 
 import { fetchSystemParachainAssetConversionPoolInfo } from './fetchSystemParachainAssetConversionPoolInfo.js';
 import { fetchSystemParachainAssetInfo } from './fetchSystemParachainAssetInfo.js';
 import { fetchSystemParachainForeignAssetInfo } from './fetchSystemParachainForeignAssetInfo.js';
-import { getApi } from './getApi.js';
 import type {
 	AssetsInfo,
 	ChainInfoKeys,
@@ -22,11 +23,10 @@ import { logWithDate } from './util.js';
  * @param isRelay
  */
 export const fetchChainInfo = async (
-	endpointOpts: EndpointOption,
-	chain: string,
-	isRelay?: boolean,
-): Promise<ChainInfoKeys | null> => {
-	const api = await getApi(endpointOpts, chain, isRelay);
+	api: ApiPromise | undefined | null,
+	endpoint: EndpointOption,
+): Promise<[ChainInfoKeys, number | undefined] | null> => {
+	const chain = endpoint.info as unknown as string;
 	const connected = api?.isConnected === true;
 	logWithDate(`Api connected for ${chain}: ${connected}`, true);
 
@@ -61,13 +61,16 @@ export const fetchChainInfo = async (
 
 		await api.disconnect();
 
-		return {
-			tokens,
-			assetsInfo,
-			foreignAssetsInfo,
-			poolPairsInfo,
-			specName: specNameStr,
-		};
+		return [
+			{
+				tokens,
+				assetsInfo,
+				foreignAssetsInfo,
+				poolPairsInfo,
+				specName: specNameStr,
+			},
+			endpoint.paraId,
+		];
 	} else {
 		return null;
 	}

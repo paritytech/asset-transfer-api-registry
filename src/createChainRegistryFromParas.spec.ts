@@ -1,69 +1,67 @@
-// Copyright 2023 Parity Technologies (UK) Ltd.
+// Copyright 2024 Parity Technologies (UK) Ltd.
 
-import { jest } from '@jest/globals'
+import { describe, expect, it, vi } from 'vitest';
+
+import { DEFAULT_REGISTRY } from './consts';
+import type { ParaIds } from './types';
+const paraIds: ParaIds = { kusama: [1000, 1001, 1002] };
 
 import { prodParasKusamaCommon } from '@polkadot/apps-config';
 
+import { createChainRegistryFromParas } from './createChainRegistryFromParas.js';
+import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRelayApi';
+import { updateRegistryChainInfo } from './updateRegistryChainInfo.js';
 
-import { DEFAULT_REGISTRY } from './consts.js';
-import {
-	createChainRegistryFromParas,
-} from './createChainRegistryFromParas.js';
-import type { ParaIds, TokenRegistry } from './types.js';
+vi.mock('./updateRegistryChainInfo', () => {
+	return {
+		updateRegistryChainInfo: vi.fn(),
+	};
+});
 
-jest.setTimeout(60000);
-jest.mock('./util', () => ({
-	twirlTimer: (() => setTimeout(() => {}, 0))
-}));
-jest.mock('./createChainRegistryFromParas',() => ({
-	appendFetchChainInfoPromise: async () => {
-		await Promise.resolve({
-			tokens: ['KSM'],
-			assetsInfo: {},
-			foreignAssetsInfo: {},
-			poolPairsInfo: {},
-			specName: 'statemine',
-		}).then((res) => {
-			registry['kusama']['1000'] = res;
-		})
-		await Promise.resolve({
-			tokens: ['KSM'],
-			assetsInfo: {},
-			foreignAssetsInfo: {},
-			poolPairsInfo: {},
-			specName: 'bridge-hub-kusama',
-		}).then((res) => {
-			registry['kusama']['1002'] = res;
-		})
-		await Promise.resolve({
-			tokens: ['KSM'],
-			assetsInfo: {},
-			foreignAssetsInfo: {},
-			poolPairsInfo: {},
-			specName: 'bridge-hub-kusama',
-		}).then((res) => {
-			registry['kusama']['1002'] = res;
-		})
-	}
-}));
-jest.mock('./fetchParaIds', () => ({
-	fetchParaIds: () => ({kusama: [1000, 1001, 1002]})
-}));
+vi.mocked(updateRegistryChainInfo).mockReturnValue(
+	Promise.resolve({
+		polkadot: {},
+		kusama: {
+			'1000': {
+				tokens: ['KSM'],
+				assetsInfo: {},
+				foreignAssetsInfo: {},
+				poolPairsInfo: {},
+				specName: 'statemine',
+			},
+			'1001': {
+				tokens: ['KSM'],
+				assetsInfo: {},
+				foreignAssetsInfo: {},
+				poolPairsInfo: {},
+				specName: 'encointer-parachain',
+			},
+			'1002': {
+				tokens: ['KSM'],
+				assetsInfo: {},
+				foreignAssetsInfo: {},
+				poolPairsInfo: {},
+				specName: 'bridge-hub-kusama',
+			},
+		},
+		westend: {},
+		rococo: {},
+	}),
+);
 
-const registry: TokenRegistry = DEFAULT_REGISTRY;
-
-describe('CreateRegistryFromParas', () => {
+describe('createChainRegistryFromParas', () => {
 	it('Should correctly add the registries for paras when found', async () => {
-		const paraIds: ParaIds = { kusama: [1000, 1001, 1002] };
-
-		//NOTE: use return value
-		await createChainRegistryFromParas(
+		const result = await createChainRegistryFromParas(
+			adjustedMockKusamaRelayApi,
 			'kusama',
 			prodParasKusamaCommon,
-			registry,
+			DEFAULT_REGISTRY,
 			paraIds,
 		);
-		expect(registry).toEqual({
+
+		expect(vi.isMockFunction(updateRegistryChainInfo)).toBeTruthy();
+		expect(updateRegistryChainInfo).toHaveBeenCalled();
+		expect(result).toStrictEqual({
 			polkadot: {},
 			kusama: {
 				'1000': {

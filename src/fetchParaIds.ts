@@ -1,8 +1,7 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
-import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
+import { ApiPromise } from '@polkadot/api';
 
-import { getApi } from './getApi.js';
 import type { ParaIds } from './types.js';
 
 /**
@@ -13,12 +12,10 @@ import type { ParaIds } from './types.js';
  * @param paraIds Registry we want to add the info to
  */
 export const fetchParaIds = async (
+	api: ApiPromise | undefined | null,
 	chain: string,
-	endpointOpts: EndpointOption,
 	paraIds: ParaIds,
 ): Promise<ParaIds> => {
-	const api = await getApi(endpointOpts, chain, true);
-
 	if (api !== null && api !== undefined) {
 		const paras = await api.query.paras.parachains();
 		const paraIdsJson = paras.toJSON();

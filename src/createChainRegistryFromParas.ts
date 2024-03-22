@@ -1,10 +1,17 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
+import { ApiPromise } from '@polkadot/api';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import FinalRegistry from '../docs/registry.json' assert { type: 'json' };
 import { fetchChainInfo } from './fetchChainInfo.js';
-import type { ChainName, ParaIds, TokenRegistry } from './types.js';
+import type {
+	ChainInfoKeys,
+	ChainName,
+	ParaIds,
+	TokenRegistry,
+} from './types.js';
+import { updateRegistryChainInfo } from './updateRegistryChainInfo';
 import { logWithDate, twirlTimer } from './util.js';
 
 /**
@@ -15,16 +22,19 @@ import { logWithDate, twirlTimer } from './util.js';
  * @param registry Registry we want to add the info too
  */
 export const createChainRegistryFromParas = async (
+	api: ApiPromise | undefined | null,
 	chainName: ChainName,
 	endpoints: Omit<EndpointOption, 'teleport'>[],
 	registry: TokenRegistry,
 	paraIds: ParaIds,
-) => {
+): Promise<TokenRegistry> => {
 	logWithDate('Creating chain registry from parachains', true);
 
 	twirlTimer();
 
-	const fetchChainInfoPromises: Promise<void>[] = [];
+	const chainInfoPromises: Promise<
+		[ChainInfoKeys, number | undefined] | null
+	>[] = [];
 
 	for (const endpoint of endpoints) {
 		const reliable: boolean = paraIds[chainName].includes(
@@ -43,28 +53,16 @@ export const createChainRegistryFromParas = async (
 			continue;
 		}
 
-		appendFetchChainInfoPromise(
-			fetchChainInfoPromises,
-			endpoint,
-			registry,
-			chainName,
-		);
+		appendFetchChainInfoPromise(api, chainInfoPromises, endpoint);
 	}
 
-	await Promise.all(fetchChainInfoPromises);
+	return await updateRegistryChainInfo(chainName, registry, chainInfoPromises);
 };
 
 export const appendFetchChainInfoPromise = (
-	fetchChainInfoPromises: Promise<void>[],
+	api: ApiPromise | undefined | null,
+	chainInfoPromises: Promise<[ChainInfoKeys, number | undefined] | null>[],
 	endpoint: EndpointOption,
-	registry: TokenRegistry,
-	chainName: ChainName,
 ) => {
-	fetchChainInfoPromises.push(
-		fetchChainInfo(endpoint, endpoint.info as unknown as string).then((res) => {
-			if (res !== null) {
-				registry[chainName][`${endpoint.paraId as number}`] = res;
-			}
-		}),
-	);
+	chainInfoPromises.push(fetchChainInfo(api, endpoint));
 };

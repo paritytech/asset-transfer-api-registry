@@ -2,6 +2,7 @@
 
 import '@polkadot/api-augment';
 
+import { ApiPromise } from '@polkadot/api';
 import {
 	prodParasKusama,
 	prodParasKusamaCommon,
@@ -17,10 +18,11 @@ import {
 	testRelayWestend,
 } from '@polkadot/apps-config';
 
-import { createChainRegistryFromParas } from './createChainRegistryFromParas.js';
+import { addParasChainInfoToRelayRegistries } from './addParasChainInfoToRelayRegistries.js';
 import { createChainRegistryFromRelay } from './createChainRegistryFromRelay.js';
 import { fetchParaIds } from './fetchParaIds.js';
-import { fetchXcAssetsRegistryInfo } from './fetchXcAssetRegistryInfo.js';
+import { fetchXcAssetsRegistryInfo } from './fetchXcAssetsRegistryInfo.js';
+import { getApi } from './getApi.js';
 import type { ParaIds, TokenRegistry } from './types.js';
 import { writeJson } from './util.js';
 
@@ -32,68 +34,89 @@ export const main = async (filePath: string, registry: TokenRegistry) => {
 	const westendEndpoints = [testParasWestend, testParasWestendCommon];
 	const rococoEndpoints = [testParasRococo, testParasRococoCommon];
 
-	const fetchParaIdsPromises: Promise<ParaIds>[] = [];
+	const relayApis: { [x: string]: ApiPromise | undefined | null } = {};
+	const fetchRelayApis: Promise<ApiPromise | null | undefined>[] = [];
+	fetchRelayApis.push(getApi(prodRelayPolkadot, 'polkadot', true));
+	fetchRelayApis.push(getApi(prodRelayKusama, 'kusama', true));
+	fetchRelayApis.push(getApi(testRelayWestend, 'westend', true));
+	fetchRelayApis.push(getApi(testRelayRococo, 'rococo', true));
+	await Promise.all(fetchRelayApis).then(async (apis) => {
+		for (const api of apis) {
+			if (api) {
+				const { specName } = await api.rpc.state.getRuntimeVersion();
+				relayApis[specName.toString()] = api;
+			}
+		}
+	});
 
+	const fetchParaIdsPromises: Promise<ParaIds>[] = [];
 	fetchParaIdsPromises.push(
-		fetchParaIds('polkadot', prodRelayPolkadot, paraIds),
+		fetchParaIds(relayApis['polkadot'], 'polkadot', paraIds),
 	);
-	fetchParaIdsPromises.push(fetchParaIds('kusama', prodRelayKusama, paraIds));
-	fetchParaIdsPromises.push(fetchParaIds('westend', testRelayWestend, paraIds));
-	fetchParaIdsPromises.push(fetchParaIds('rococo', testRelayRococo, paraIds));
+	fetchParaIdsPromises.push(
+		fetchParaIds(relayApis['kusama'], 'kusama', paraIds),
+	);
+	fetchParaIdsPromises.push(
+		fetchParaIds(relayApis['westend'], 'westend', paraIds),
+	);
+	fetchParaIdsPromises.push(
+		fetchParaIds(relayApis['rococo'], 'rococo', paraIds),
+	);
 
 	// Set the Parachains Ids to the corresponding registry
 	await Promise.all(fetchParaIdsPromises);
 
 	// store all create chain registry relay promises
-	const createChainRegistryFromRelayPromises: Promise<void>[] = [];
+	const createChainRegistryFromRelayPromises: Promise<TokenRegistry>[] = [];
 
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay('polkadot', prodRelayPolkadot, registry),
+		createChainRegistryFromRelay(
+			relayApis['polkadot'],
+			'polkadot',
+			prodRelayPolkadot,
+			registry,
+		),
 	);
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay('kusama', prodRelayKusama, registry),
+		createChainRegistryFromRelay(
+			relayApis['kusama'],
+			'kusama',
+			prodRelayKusama,
+			registry,
+		),
 	);
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay('westend', testRelayWestend, registry),
+		createChainRegistryFromRelay(
+			relayApis['westend'],
+			'westend',
+			testRelayWestend,
+			registry,
+		),
 	);
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay('rococo', testRelayRococo, registry),
+		createChainRegistryFromRelay(
+			relayApis['rococo'],
+			'rococo',
+			testRelayRococo,
+			registry,
+		),
 	);
 
 	// Set the relay chain info to the registry
 	await Promise.all(createChainRegistryFromRelayPromises);
 
-	// store all create chain registry para promises
-	const chainRegistryFromParasPromises: Promise<void>[] = [];
-
-	for (const endpoints of polkadotEndpoints) {
-		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas('polkadot', endpoints, registry, paraIds),
-		);
-	}
-
-	for (const endpoints of kusamaEndpoints) {
-		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas('kusama', endpoints, registry, paraIds),
-		);
-	}
-
-	for (const endpoints of westendEndpoints) {
-		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas('westend', endpoints, registry, paraIds),
-		);
-	}
-	for (const endpoints of rococoEndpoints) {
-		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas('rococo', endpoints, registry, paraIds),
-		);
-	}
-
-	// set the paras info to the registry
-	await Promise.all(chainRegistryFromParasPromises);
+	registry = await addParasChainInfoToRelayRegistries(
+		registry,
+		paraIds,
+		relayApis,
+		polkadotEndpoints,
+		kusamaEndpoints,
+		westendEndpoints,
+		rococoEndpoints,
+	);
 
 	// fetch xcAssets and add them to the registry
-	await fetchXcAssetsRegistryInfo(registry);
+	registry = await fetchXcAssetsRegistryInfo(registry);
 
 	writeJson(filePath, registry);
 };

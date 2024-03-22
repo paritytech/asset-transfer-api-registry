@@ -1,5 +1,6 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
+import { ApiPromise } from '@polkadot/api';
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 import { fetchChainInfo } from './fetchChainInfo.js';
@@ -15,18 +16,18 @@ import { logWithDate, twirlTimer } from './util.js';
  * @param registry Registry we want to add the info to
  */
 export const createChainRegistryFromRelay = async (
+	api: ApiPromise | undefined | null,
 	chainName: ChainName,
 	endpoint: EndpointOption,
 	registry: TokenRegistry,
-) => {
+): Promise<TokenRegistry> => {
 	logWithDate(`Creating chain registry for ${chainName} relay`, true);
 	twirlTimer();
-	const res = await fetchChainInfo(
-		endpoint,
-		endpoint.info as unknown as string,
-		true,
-	);
-	if (res !== null) {
-		registry[chainName]['0'] = res;
+	const res = await fetchChainInfo(api, endpoint);
+	if (res) {
+		const chainInfoKeys = res[0];
+		registry[chainName]['0'] = chainInfoKeys;
 	}
+
+	return registry;
 };

@@ -1,24 +1,22 @@
-// Copyright 2023 Parity Technologies (UK) Ltd.
+// Copyright 2024 Parity Technologies (UK) Ltd.
 
-import { jest } from '@jest/globals'
-
-import { prodRelayKusama } from '@polkadot/apps-config';
+import { describe, expect, it } from 'vitest';
 
 import { fetchParaIds } from './fetchParaIds.js';
 import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRelayApi.js';
 import type { ParaIds } from './types.js';
 
-jest.mock('./getApi.js', () => ({
-	getApi: jest.fn(() => adjustedMockKusamaRelayApi)
-}));
-
 describe('fetchParaIds', () => {
 	it('Correctly fetches the parachain Ids for a given relay chain', async () => {
 		const paraIds: ParaIds = {};
 
-		await expect(
-			fetchParaIds('kusama', prodRelayKusama, paraIds),
-		).resolves.toEqual({
+		const result = await fetchParaIds(
+			adjustedMockKusamaRelayApi,
+			'kusama',
+			paraIds,
+		);
+
+		expect(result).toEqual({
 			kusama: [
 				1000, 1001, 1002, 2000, 2001, 2004, 2007, 2011, 2012, 2015, 2023, 2024,
 				2048, 2084, 2085, 2087, 2088, 2090, 2092, 2095, 2096, 2105, 2106, 2110,

@@ -10,7 +10,8 @@
       "esModuleInterop": true,
       "module": "ESNext",
       "target": "ES2015",
-      "allowJs": true
+      "allowJs": true,
+      "moduleResolution": "Node"
     },
     "typeRoots": [
       "./node_modules/@types"
@@ -20,5 +21,9 @@
     ],
     "include": [
       "./src/**/*.ts",
-    ]
+    ],
+    "ts-node": {
+      "esm": true,
+      "experimentalSpecifierResolution": "node",
+    },
   }
