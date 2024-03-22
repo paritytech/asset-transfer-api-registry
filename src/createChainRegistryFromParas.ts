@@ -61,9 +61,7 @@ export const appendFetchChainInfoPromise = (
 	chainInfoPromises: Promise<[ChainInfoKeys, number | undefined] | null>[],
 	endpoint: EndpointOption,
 ) => {
-	chainInfoPromises.push(fetchChainInfo(
-		endpoint,
-		endpoint.info as unknown as string,
-		false,
-	));
+	chainInfoPromises.push(
+		fetchChainInfo(endpoint, endpoint.info as unknown as string, false),
+	);
 };

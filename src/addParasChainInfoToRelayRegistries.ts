@@ -16,44 +16,24 @@ export const addParasChainInfoToRelayRegistries = async (
 
 	for (const endpoints of polkadotEndpoints) {
 		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas(
-				'polkadot',
-				endpoints,
-				registry,
-				paraIds,
-			),
+			createChainRegistryFromParas('polkadot', endpoints, registry, paraIds),
 		);
 	}
 
 	for (const endpoints of kusamaEndpoints) {
 		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas(
-				'kusama',
-				endpoints,
-				registry,
-				paraIds,
-			),
+			createChainRegistryFromParas('kusama', endpoints, registry, paraIds),
 		);
 	}
 
 	for (const endpoints of westendEndpoints) {
 		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas(
-				'westend',
-				endpoints,
-				registry,
-				paraIds,
-			),
+			createChainRegistryFromParas('westend', endpoints, registry, paraIds),
 		);
 	}
 	for (const endpoints of rococoEndpoints) {
 		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas(
-				'rococo',
-				endpoints,
-				registry,
-				paraIds,
-			),
+			createChainRegistryFromParas('rococo', endpoints, registry, paraIds),
 		);
 	}
 

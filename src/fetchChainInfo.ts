@@ -5,6 +5,7 @@ import { EndpointOption } from '@polkadot/apps-config/endpoints/types.js';
 import { fetchSystemParachainAssetConversionPoolInfo } from './fetchSystemParachainAssetConversionPoolInfo.js';
 import { fetchSystemParachainAssetInfo } from './fetchSystemParachainAssetInfo.js';
 import { fetchSystemParachainForeignAssetInfo } from './fetchSystemParachainForeignAssetInfo.js';
+import { getApi } from './getApi.js';
 import type {
 	AssetsInfo,
 	ChainInfoKeys,
@@ -12,7 +13,6 @@ import type {
 	PoolPairsInfo,
 } from './types.js';
 import { logWithDate } from './util.js';
-import { getApi } from './getApi.js';
 
 /**
  * Fetch chain token and spec info.
@@ -25,7 +25,7 @@ export const fetchChainInfo = async (
 	// api: ApiPromise | undefined | null,
 	endpointOpts: EndpointOption,
 	chain: string,
-	isRelay: boolean
+	isRelay: boolean,
 ): Promise<[ChainInfoKeys, number | undefined] | null> => {
 	if (chain === 'acala') {
 		return null;

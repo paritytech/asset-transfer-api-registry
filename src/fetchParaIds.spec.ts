@@ -1,17 +1,17 @@
 // Copyright 2024 Parity Technologies (UK) Ltd.
 
-import { vi, describe, expect, it } from 'vitest';
+import { prodRelayKusama } from '@polkadot/apps-config';
+import { describe, expect, it, vi } from 'vitest';
 
 import { fetchParaIds } from './fetchParaIds.js';
+import { getApi } from './getApi.js';
 import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRelayApi.js';
 import type { ParaIds } from './types.js';
-import { prodRelayKusama } from '@polkadot/apps-config';
-import { getApi } from './getApi.js';
 
 vi.mock('./getApi.js', () => {
 	return {
 		getApi: vi.fn(),
-	}
+	};
 });
 vi.mocked(getApi).mockResolvedValue(adjustedMockKusamaRelayApi);
 
@@ -19,11 +19,7 @@ describe('fetchParaIds', () => {
 	it('Correctly fetches the parachain Ids for a given relay chain', async () => {
 		const paraIds: ParaIds = {};
 
-		const result = await fetchParaIds(
-			'kusama',
-			prodRelayKusama,
-			paraIds,
-		);
+		const result = await fetchParaIds('kusama', prodRelayKusama, paraIds);
 
 		expect(result).toEqual({
 			kusama: [

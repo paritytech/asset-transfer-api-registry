@@ -1,8 +1,9 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
-import type { ParaIds } from './types.js';
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types.js';
+
 import { getApi } from './getApi.js';
+import type { ParaIds } from './types.js';
 
 /**
  * This will create a registry of Parachain Ids.

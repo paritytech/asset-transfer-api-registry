@@ -7,13 +7,13 @@ import { fetchChainInfo } from './fetchChainInfo.js';
 import { fetchSystemParachainAssetConversionPoolInfo } from './fetchSystemParachainAssetConversionPoolInfo.js';
 import { fetchSystemParachainAssetInfo } from './fetchSystemParachainAssetInfo.js';
 import { fetchSystemParachainForeignAssetInfo } from './fetchSystemParachainForeignAssetInfo.js';
+import { getApi } from './getApi.js';
 import { adjustedmockAssetHubKusamaApi } from './testHelpers/adjustedMockAssetHubKusamaApi.js';
 import { adjustedMockBifrostKusamaParachainApi } from './testHelpers/adjustedMockBifrostKusamaParachainApi.js';
 import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRelayApi.js';
 import { mockAssetHubKusamaParachainPoolPairsInfo } from './testHelpers/mockSystemParachainAssetConversionPoolInfo.js';
 import { mockAssetHubKusamaParachainAssetsInfo } from './testHelpers/mockSystemParachainAssetInfo.js';
 import { mockAssetHubKusamaParachainForeignAssetsInfo } from './testHelpers/mockSystemParachainForeignAssetInfo.js';
-import { getApi } from './getApi.js';
 
 vi.mock('./getApi.js', () => {
 	return {
@@ -57,7 +57,7 @@ describe('fetchChainInfo', () => {
 				fetchChainInfo(
 					prodRelayKusama,
 					prodRelayKusama.info as unknown as string,
-					true
+					true,
 				),
 			).resolves.toEqual([
 				{
@@ -90,8 +90,8 @@ describe('fetchChainInfo', () => {
 
 			const result = await fetchChainInfo(
 				prodRelayKusama,
-					prodRelayKusama.info as unknown as string,
-					false,
+				prodRelayKusama.info as unknown as string,
+				false,
 			);
 
 			expect(result).toEqual([
@@ -315,7 +315,9 @@ describe('fetchChainInfo', () => {
 
 	describe('Bifrost', () => {
 		it('Correctly fetches Bifrost Kusama ChainInfo', async () => {
-			vi.mocked(getApi).mockResolvedValueOnce(adjustedMockBifrostKusamaParachainApi);
+			vi.mocked(getApi).mockResolvedValueOnce(
+				adjustedMockBifrostKusamaParachainApi,
+			);
 			vi.mocked(fetchSystemParachainAssetInfo).mockResolvedValueOnce({});
 
 			vi.mocked(fetchSystemParachainForeignAssetInfo).mockResolvedValueOnce({});
@@ -326,8 +328,8 @@ describe('fetchChainInfo', () => {
 
 			const result = await fetchChainInfo(
 				prodRelayKusama,
-					prodRelayKusama.info as unknown as string,
-					false,
+				prodRelayKusama.info as unknown as string,
+				false,
 			);
 
 			expect(result).toEqual([

@@ -36,15 +36,9 @@ export const main = async (filePath: string, registry: TokenRegistry) => {
 	fetchParaIdsPromises.push(
 		fetchParaIds('polkadot', prodRelayPolkadot, paraIds),
 	);
-	fetchParaIdsPromises.push(
-		fetchParaIds('kusama', prodRelayKusama, paraIds),
-	);
-	fetchParaIdsPromises.push(
-		fetchParaIds('westend', testRelayWestend, paraIds),
-	);
-	fetchParaIdsPromises.push(
-		fetchParaIds('rococo', testRelayRococo, paraIds),
-	);
+	fetchParaIdsPromises.push(fetchParaIds('kusama', prodRelayKusama, paraIds));
+	fetchParaIdsPromises.push(fetchParaIds('westend', testRelayWestend, paraIds));
+	fetchParaIdsPromises.push(fetchParaIds('rococo', testRelayRococo, paraIds));
 
 	// Set the Parachains Ids to the corresponding registry
 	await Promise.all(fetchParaIdsPromises);
@@ -53,32 +47,16 @@ export const main = async (filePath: string, registry: TokenRegistry) => {
 	const createChainRegistryFromRelayPromises: Promise<TokenRegistry>[] = [];
 
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay(
-			'polkadot',
-			prodRelayPolkadot,
-			registry,
-		),
+		createChainRegistryFromRelay('polkadot', prodRelayPolkadot, registry),
 	);
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay(
-			'kusama',
-			prodRelayKusama,
-			registry,
-		),
+		createChainRegistryFromRelay('kusama', prodRelayKusama, registry),
 	);
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay(
-			'westend',
-			testRelayWestend,
-			registry,
-		),
+		createChainRegistryFromRelay('westend', testRelayWestend, registry),
 	);
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay(
-			'rococo',
-			testRelayRococo,
-			registry,
-		),
+		createChainRegistryFromRelay('rococo', testRelayRococo, registry),
 	);
 
 	// Set the relay chain info to the registry
