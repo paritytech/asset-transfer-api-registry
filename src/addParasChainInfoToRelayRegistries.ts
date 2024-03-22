@@ -1,7 +1,7 @@
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
-import { createChainRegistryFromParas } from './createChainRegistryFromParas';
-import { ParaIds, TokenRegistry } from './types';
+import { createChainRegistryFromParas } from './createChainRegistryFromParas.js';
+import { ParaIds, TokenRegistry } from './types.js';
 
 export const addParasChainInfoToRelayRegistries = async (
 	registry: TokenRegistry,

@@ -1,4 +1,4 @@
-// Copyright 2023 Parity Technologies (UK) Ltd.
+// Copyright 2024 Parity Technologies (UK) Ltd.
 
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
@@ -15,7 +15,6 @@ import { logWithDate, twirlTimer } from './util.js';
  * @param registry Registry we want to add the info to
  */
 export const createChainRegistryFromRelay = async (
-	// api: ApiPromise | undefined | null,
 	chainName: ChainName,
 	endpoint: EndpointOption,
 	registry: TokenRegistry,

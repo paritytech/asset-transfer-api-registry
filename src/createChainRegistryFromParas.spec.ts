@@ -1,12 +1,13 @@
 // Copyright 2024 Parity Technologies (UK) Ltd.
 
+import { prodParasKusamaCommon } from '@polkadot/apps-config';
+
 import { describe, expect, it, vi } from 'vitest';
 
-import { DEFAULT_REGISTRY } from './consts';
-import type { ParaIds } from './types';
+import { DEFAULT_REGISTRY } from './consts.js';
+import type { ParaIds } from './types.js';
 const paraIds: ParaIds = { kusama: [1000, 1001, 1002] };
 
-import { prodParasKusamaCommon } from '@polkadot/apps-config';
 
 import { createChainRegistryFromParas } from './createChainRegistryFromParas.js';
 import { updateRegistryChainInfo } from './updateRegistryChainInfo.js';

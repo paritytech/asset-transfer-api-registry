@@ -1,4 +1,4 @@
-// Copyright 2023 Parity Technologies (UK) Ltd.
+// Copyright 2024 Parity Technologies (UK) Ltd.
 
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
@@ -10,7 +10,7 @@ import type {
 	ParaIds,
 	TokenRegistry,
 } from './types.js';
-import { updateRegistryChainInfo } from './updateRegistryChainInfo';
+import { updateRegistryChainInfo } from './updateRegistryChainInfo.js';
 import { logWithDate, twirlTimer } from './util.js';
 
 /**

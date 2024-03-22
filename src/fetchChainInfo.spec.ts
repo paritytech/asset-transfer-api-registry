@@ -1,4 +1,4 @@
-// // Copyright 2024 Parity Technologies (UK) Ltd.
+// Copyright 2024 Parity Technologies (UK) Ltd.
 
 import { prodRelayKusama } from '@polkadot/apps-config';
 import { beforeEach, describe, expect, it, vi } from 'vitest';

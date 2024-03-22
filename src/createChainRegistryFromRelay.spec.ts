@@ -38,7 +38,6 @@ describe('createChainRegistryFromRelay', () => {
 		);
 
 		const result = await createChainRegistryFromRelay(
-			// mockKusamaRelayApi,
 			'kusama',
 			prodRelayKusama,
 			{ polkadot: {}, kusama: {}, westend: {}, rococo: {} },

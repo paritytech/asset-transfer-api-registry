@@ -28,10 +28,12 @@
         "12": "USDcp",
         "14": "LEAP",
         "15": "Meme",
+        "18": "DOTA",
         "20": "StabCP",
         "21": "WBTC",
         "22": "KNRY",
         "23": "PINK",
+        "30": "DED",
         "42": "PJS",
         "77": "TRQ",
         "79": "PGOLD",
@@ -56,6 +58,7 @@
         "25518": "BEER",
         "30035": "DED",
         "42069": "STINK",
+        "65454": "TST",
         "660301": "GRL",
         "862812": "CUBO",
         "868367": "VSC",
@@ -2313,6 +2316,10 @@
         "8": {
           "lpToken": "8",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1107\"}]}}]]"
+        },
+        "9": {
+          "lpToken": "9",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2993\"}]}}]]"
         }
       },
       "specName": "statemine"
@@ -4139,6 +4146,15 @@
       "poolPairsInfo": {},
       "specName": "subzero"
     },
+    "2239": {
+      "tokens": [
+        "cACU"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "acurast-parachain"
+    },
     "2241": {
       "tokens": [
         "KREST"
@@ -4239,7 +4255,10 @@
         "30": "TRTI",
         "31": "GTT",
         "32": "TRTO",
+        "40": "YOLO",
+        "41": "YOLO",
         "42": "HG2G",
+        "43": "YOLO",
         "44": "dcUSD",
         "46": "RASTA",
         "47": "MRT",
@@ -4316,6 +4335,8 @@
         "1122": "dmd",
         "1233": "QTY",
         "1234": "TEST",
+        "1284": "FLOKDT",
+        "1285": "IGN",
         "1309": "KLO",
         "1312": "NG1312",
         "1337": "NACHO",
@@ -4601,6 +4622,14 @@
         "50": {
           "lpToken": "50",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"5679853\"}]}}]]"
+        },
+        "51": {
+          "lpToken": "51",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"42\"}]}}]]"
+        },
+        "52": {
+          "lpToken": "52",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"41\"}]}}]]"
         }
       },
       "specName": "westmint"
@@ -4780,6 +4809,7 @@
         "1730": "PRCVL",
         "1793": "TKNZ",
         "1807": "SVO",
+        "1983": "BGA",
         "1984": "USDt",
         "1985": "XCMSDK",
         "2000": "bcdt",
@@ -4820,6 +4850,7 @@
         "69420": "PLONK",
         "77777": "SHREK",
         "80085": "NKT",
+        "100000": "TEST1",
         "111111": "11111",
         "111112": "SQRLTKN",
         "121212": "PLY",
