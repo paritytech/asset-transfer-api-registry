@@ -1,4 +1,4 @@
-// Copyright 202 Parity Technologies (UK) Ltd.
+// Copyright 2023 Parity Technologies (UK) Ltd.
 
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types.js';
 
