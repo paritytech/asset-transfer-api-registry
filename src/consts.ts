@@ -1,8 +1,12 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-import type { TokenRegistry } from './types';
+import type { TokenRegistry } from './types.js';
+
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename);
 
 /**
  * @const MAX_RETRIES Maximum amount of connection attempts

@@ -2,9 +2,9 @@
 
 import { WsProvider } from '@polkadot/api';
 
-import { MAX_RETRIES, WS_DISCONNECT_TIMEOUT_SECONDS } from './consts';
-import { logWithDate, sleep, twirlTimer } from './util';
-import { skipProcessingEndpoint } from './util';
+import { MAX_RETRIES, WS_DISCONNECT_TIMEOUT_SECONDS } from './consts.js';
+import { logWithDate, sleep, twirlTimer } from './util.js';
+import { skipProcessingEndpoint } from './util.js';
 
 /**
  * This tests the available endpoints to check which are responsive

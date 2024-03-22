@@ -1,7 +1,7 @@
-import REGISTRY from '../docs/registry.json';
-import { PROD_REGISTRY_FILE_PATH } from './consts';
-import { main } from './createRegistry';
-import type { TokenRegistry } from './types';
+import REGISTRY from '../docs/registry.json' assert { type: 'json' };
+import { PROD_REGISTRY_FILE_PATH } from './consts.js';
+import { main } from './createRegistry.js';
+import type { TokenRegistry } from './types.js';
 
 main(PROD_REGISTRY_FILE_PATH, REGISTRY as unknown as TokenRegistry)
 	.catch((err) => console.error(err))

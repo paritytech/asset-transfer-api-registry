@@ -1,31 +1,29 @@
-// Copyright 2023 Parity Technologies (UK) Ltd.
+// Copyright 2024 Parity Technologies (UK) Ltd.
 
-import { fetchXcAssetsRegistryInfo } from './fetchXcAssetRegistryInfo';
-import { astarTestXcAssets } from './testHelpers/astarXcAssets';
-import { bifrostKusamaTestXcAssets } from './testHelpers/bifrostKusamaXcAssets';
-import { moonBeamTestXcAssets } from './testHelpers/moonbeamXcAssets';
-import type { XcAssets, XcAssetsInfo } from './types';
-import { fetchXcAssetData } from './util';
+import { describe, expect, it, vi } from 'vitest';
 
-jest.mock('./util');
+import { fetchXcAssetsRegistryInfo } from './fetchXcAssetsRegistryInfo.js';
+import { astarTestXcAssets } from './testHelpers/astarXcAssets.js';
+import { bifrostKusamaTestXcAssets } from './testHelpers/bifrostKusamaXcAssets.js';
+import { moonBeamTestXcAssets } from './testHelpers/moonbeamXcAssets.js';
+import type { XcAssetsInfo } from './types.js';
+import { fetchXcAssetData } from './util.js';
+
+vi.mock('./util', () => {
+	return {
+		fetchXcAssetData: vi.fn(),
+	};
+});
+
+vi.mocked(fetchXcAssetData).mockResolvedValueOnce({
+	xcAssets: {
+		polkadot: [moonBeamTestXcAssets, astarTestXcAssets],
+		kusama: [bifrostKusamaTestXcAssets],
+	},
+});
 
 describe('fetchXcAssetsRegistryInfo', () => {
 	it('Should Correctly set xcAssetsData on the Assets Registry', async () => {
-		(
-			fetchXcAssetData as jest.MockedFunction<
-				(cdnUrl: string) => Promise<{
-					xcAssets: XcAssets;
-				}>
-			>
-		).mockReturnValueOnce(
-			Promise.resolve({
-				xcAssets: {
-					polkadot: [moonBeamTestXcAssets, astarTestXcAssets],
-					kusama: [bifrostKusamaTestXcAssets],
-				},
-			}),
-		);
-
 		const registry = {
 			polkadot: {
 				'2004': {

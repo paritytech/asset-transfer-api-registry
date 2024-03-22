@@ -2,7 +2,7 @@
 
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
-import { startApi } from './startApi';
+import { startApi } from './startApi.js';
 /**
  * This will attempt to retrieve an active api that has succesfully connected to a node.
  * It will return null if no connection is made.

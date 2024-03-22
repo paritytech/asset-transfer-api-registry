@@ -1,18 +1,18 @@
-// Copyright 2023 Parity Technologies (UK) Ltd.
+// Copyright 2024 Parity Technologies (UK) Ltd.
 
-import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
+import { EndpointOption } from '@polkadot/apps-config/endpoints/types.js';
 
-import { fetchSystemParachainAssetConversionPoolInfo } from './fetchSystemParachainAssetConversionPoolInfo';
-import { fetchSystemParachainAssetInfo } from './fetchSystemParachainAssetInfo';
-import { fetchSystemParachainForeignAssetInfo } from './fetchSystemParachainForeignAssetInfo';
-import { getApi } from './getApi';
+import { fetchSystemParachainAssetConversionPoolInfo } from './fetchSystemParachainAssetConversionPoolInfo.js';
+import { fetchSystemParachainAssetInfo } from './fetchSystemParachainAssetInfo.js';
+import { fetchSystemParachainForeignAssetInfo } from './fetchSystemParachainForeignAssetInfo.js';
+import { getApi } from './getApi.js';
 import type {
 	AssetsInfo,
 	ChainInfoKeys,
 	ForeignAssetsInfo,
 	PoolPairsInfo,
-} from './types';
-import { logWithDate } from './util';
+} from './types.js';
+import { logWithDate } from './util.js';
 
 /**
  * Fetch chain token and spec info.
@@ -24,9 +24,10 @@ import { logWithDate } from './util';
 export const fetchChainInfo = async (
 	endpointOpts: EndpointOption,
 	chain: string,
-	isRelay?: boolean,
-): Promise<ChainInfoKeys | null> => {
+	isRelay: boolean,
+): Promise<[ChainInfoKeys, number | undefined] | null> => {
 	const api = await getApi(endpointOpts, chain, isRelay);
+
 	const connected = api?.isConnected === true;
 	logWithDate(`Api connected for ${chain}: ${connected}`, true);
 
@@ -61,13 +62,16 @@ export const fetchChainInfo = async (
 
 		await api.disconnect();
 
-		return {
-			tokens,
-			assetsInfo,
-			foreignAssetsInfo,
-			poolPairsInfo,
-			specName: specNameStr,
-		};
+		return [
+			{
+				tokens,
+				assetsInfo,
+				foreignAssetsInfo,
+				poolPairsInfo,
+				specName: specNameStr,
+			},
+			endpointOpts.paraId,
+		];
 	} else {
 		return null;
 	}

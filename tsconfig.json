@@ -8,6 +8,10 @@
       "ignoreDeprecations": "5.0",
       "resolveJsonModule": true,
       "esModuleInterop": true,
+      "module": "ESNext",
+      "target": "ES2015",
+      "allowJs": true,
+      "moduleResolution": "Node"
     },
     "typeRoots": [
       "./node_modules/@types"
@@ -17,5 +21,10 @@
     ],
     "include": [
       "./src/**/*.ts",
-    ]
+      "./**/*.ts"
+    ],
+    "ts-node": {
+      "esm": true,
+      "experimentalSpecifierResolution": "node",
+    },
   }

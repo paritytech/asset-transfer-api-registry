@@ -1,22 +1,24 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
-import { XC_ASSET_CDN_URL } from './consts';
+import { XC_ASSET_CDN_URL } from './consts.js';
 import type {
 	SanitizedXcAssetsData,
 	TokenRegistry,
 	XcAssets,
 	XcAssetsData,
-} from './types';
-import { fetchXcAssetData } from './util';
+} from './types.js';
+import { fetchXcAssetData } from './util.js';
 
 export const fetchXcAssetsRegistryInfo = async (
 	registry: TokenRegistry,
-): Promise<void> => {
+): Promise<TokenRegistry> => {
 	const xcAssetsRegistry = await fetchXcAssetData(XC_ASSET_CDN_URL);
 	const { xcAssets } = xcAssetsRegistry;
 
 	assignXcAssetsToRelay(registry, xcAssets, 'polkadot');
 	assignXcAssetsToRelay(registry, xcAssets, 'kusama');
+
+	return registry;
 };
 
 const assignXcAssetsToRelay = (

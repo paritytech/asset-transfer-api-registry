@@ -2,7 +2,7 @@
 
 import { ApiPromise, WsProvider } from '@polkadot/api';
 
-import { getProvider } from './getProvider';
+import { getProvider } from './getProvider.js';
 
 const blackListedApis = ['wss://rpc.parallel.fi'];
 

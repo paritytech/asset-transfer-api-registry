@@ -40,10 +40,10 @@
       "tokens": [
         "BNC"
       ],
+      "specName": "bifrost-polkadot",
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "bifrost-polkadot",
       "xcAssetsData": [
         {
           "paraID": 0,

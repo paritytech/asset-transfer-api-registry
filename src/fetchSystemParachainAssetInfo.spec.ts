@@ -1,7 +1,9 @@
-// Copyright 2023 Parity Technologies (UK) Ltd.
+// Copyright 2024 Parity Technologies (UK) Ltd.
 
-import { fetchSystemParachainAssetInfo } from './fetchSystemParachainAssetInfo';
-import { adjustedmockAssetHubKusamaApi } from './testHelpers/adjustedMockAssetHubKusamaApi';
+import { describe, expect, it } from 'vitest';
+
+import { fetchSystemParachainAssetInfo } from './fetchSystemParachainAssetInfo.js';
+import { adjustedmockAssetHubKusamaApi } from './testHelpers/adjustedMockAssetHubKusamaApi.js';
 
 describe('fetchSystemParachainAssetInfo', () => {
 	it('Should correctly return the Asset Info for Asset Hub', async () => {
