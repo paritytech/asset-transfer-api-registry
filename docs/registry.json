@@ -35,6 +35,7 @@
         "23": "PINK",
         "30": "DED",
         "42": "PJS",
+        "69": "DAL",
         "77": "TRQ",
         "79": "PGOLD",
         "99": "Cypress",
@@ -1038,6 +1039,16 @@
         {
           "paraID": 1000,
           "nativeChainID": "statemint",
+          "symbol": "DED",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":30}]}}}",
+          "asset": {
+            "Token2": "11"
+          }
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
           "symbol": "PINK",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":23}]}}}",
@@ -1269,6 +1280,16 @@
         {
           "paraID": 2031,
           "nativeChainID": "centrifuge",
+          "symbol": "LpCeloUSDC",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x4\":[{\"parachain\":2031},{\"palletInstance\":103},{\"globalConsensus\":{\"ethereum\":{\"chainId\":42220}}},{\"accountKey20\":{\"network\":null,\"key\":\"0xceba9300f2b948710d2653dd7b07f33a8b32118c\"}}]}}}",
+          "asset": {
+            "ForeignAsset": "100,006"
+          }
+        },
+        {
+          "paraID": 2031,
+          "nativeChainID": "centrifuge",
           "symbol": "CFG",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2031},{\"generalKey\":\"0x0001\"}]}}}",
@@ -1297,7 +1318,7 @@
         {
           "paraID": 2031,
           "nativeChainID": "centrifuge",
-          "symbol": "LpCeloUSDC",
+          "symbol": "LpCeloWormUSDC ",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x4\":[{\"parachain\":2031},{\"palletInstance\":103},{\"globalConsensus\":{\"ethereum\":{\"chainId\":42220}}},{\"accountKey20\":{\"network\":null,\"key\":\"0x37f750b7cc259a2f741af45294f6a16572cf5cad\"}}]}}}",
           "asset": {
@@ -1439,6 +1460,16 @@
           "asset": {
             "ForeignAsset": "3"
           }
+        },
+        {
+          "paraID": 2034,
+          "nativeChainID": "hydra",
+          "symbol": "HDX",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2034},{\"generalIndex\":0}]}}}",
+          "asset": {
+            "ForeignAsset": "13"
+          }
         }
       ]
     },
@@ -1462,34 +1493,26 @@
         {
           "paraID": 1000,
           "nativeChainID": "statemint",
-          "symbol": "USDC",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}",
-          "asset": "22"
-        },
-        {
-          "paraID": 1000,
-          "nativeChainID": "statemint",
           "symbol": "USDT",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
           "asset": "10"
         },
         {
-          "paraID": 2000,
-          "nativeChainID": "acala",
+          "paraID": 1000,
+          "nativeChainID": "statemint",
           "symbol": "USDC",
           "decimals": 6,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0207df96d1341a7d16ba1ad431e2c847d978bc2bce\"}]}}}",
-          "asset": "7"
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}",
+          "asset": "22"
         },
         {
           "paraID": 2000,
           "nativeChainID": "acala",
-          "symbol": "DAI",
+          "symbol": "WETH",
           "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0254a37a01cd75b616d63e0ab665bffdb0143c52ae\"}]}}}",
-          "asset": "2"
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x025a4d6acdc4e3e5ab15717f407afe957f7a242578\"}]}}}",
+          "asset": "4"
         },
         {
           "paraID": 2000,
@@ -1502,18 +1525,34 @@
         {
           "paraID": 2000,
           "nativeChainID": "acala",
+          "symbol": "DAI",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0254a37a01cd75b616d63e0ab665bffdb0143c52ae\"}]}}}",
+          "asset": "2"
+        },
+        {
+          "paraID": 2000,
+          "nativeChainID": "acala",
+          "symbol": "USDC",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0207df96d1341a7d16ba1ad431e2c847d978bc2bce\"}]}}}",
+          "asset": "7"
+        },
+        {
+          "paraID": 2000,
+          "nativeChainID": "acala",
           "symbol": "WBTC",
           "decimals": 8,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x02c80084af223c8b598536178d9361dc55bfda6818\"}]}}}",
           "asset": "3"
         },
         {
-          "paraID": 2000,
-          "nativeChainID": "acala",
-          "symbol": "WETH",
-          "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x025a4d6acdc4e3e5ab15717f407afe957f7a242578\"}]}}}",
-          "asset": "4"
+          "paraID": 2004,
+          "nativeChainID": "moonbeam",
+          "symbol": "USDC",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0x931715fee2d06333043d11f658c8ce934ac61d0c\"}}]}}}",
+          "asset": "21"
         },
         {
           "paraID": 2004,
@@ -1526,14 +1565,6 @@
         {
           "paraID": 2004,
           "nativeChainID": "moonbeam",
-          "symbol": "WBTC",
-          "decimals": 8,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0xe57ebd2d67b462e9926e04a8e33f01cd0d64346d\"}}]}}}",
-          "asset": "19"
-        },
-        {
-          "paraID": 2004,
-          "nativeChainID": "moonbeam",
           "symbol": "GLMR",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2004},{\"palletInstance\":10}]}}}",
@@ -1542,10 +1573,10 @@
         {
           "paraID": 2004,
           "nativeChainID": "moonbeam",
-          "symbol": "USDC",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0x931715fee2d06333043d11f658c8ce934ac61d0c\"}}]}}}",
-          "asset": "21"
+          "symbol": "WBTC",
+          "decimals": 8,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0xe57ebd2d67b462e9926e04a8e33f01cd0d64346d\"}}]}}}",
+          "asset": "19"
         },
         {
           "paraID": 2004,
@@ -2158,6 +2189,7 @@
         "123": "NFT",
         "138": "Abc",
         "168": "Tokens",
+        "177": "KST",
         "188": "ZLK",
         "200": "SIX",
         "214": "LOVE",
