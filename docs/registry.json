@@ -1373,16 +1373,6 @@
           }
         },
         {
-          "paraID": 2001,
-          "nativeChainID": null,
-          "symbol": "BNC",
-          "decimals": 12,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},{\"generalKey\":\"0x0001\"}]}}}",
-          "asset": {
-            "ForeignAsset": "11"
-          }
-        },
-        {
           "paraID": 2004,
           "nativeChainID": "moonbeam",
           "symbol": "WBNB.wh",
@@ -1450,6 +1440,16 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0x06e605775296e851ff43b4daa541bb0984e9d6fd\"}}]}}}",
           "asset": {
             "ForeignAsset": "4"
+          }
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "BNC",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0001\"}]}}}",
+          "asset": {
+            "ForeignAsset": "11"
           }
         },
         {
@@ -4793,6 +4793,7 @@
         "40": "RND",
         "43": "TTT",
         "44": "dcUSD",
+        "45": "TTT",
         "46": "RocRa",
         "47": "testDED",
         "48": "Bal",
@@ -4807,6 +4808,7 @@
         "57": "xcm",
         "58": "TBT",
         "66": "BBC",
+        "67": "TTT",
         "69": "SRT",
         "70": "dsads",
         "71": "testDED",
@@ -4814,6 +4816,7 @@
         "75": "UGOL",
         "77": "shicoin",
         "80": "NLT",
+        "86": "TCA",
         "88": "MEM",
         "89": "HAT",
         "90": "Alrn",
