@@ -2095,6 +2095,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "logion"
+    },
+    "3367": {
+      "tokens": [
+        "NAND"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "nexus"
     }
   },
   "kusama": {
@@ -4234,7 +4243,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "laos"
+      "specName": "klaos"
     },
     "3339": {
       "tokens": [
