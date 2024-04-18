@@ -22,6 +22,7 @@ export const RPC_BLACK_LIST = [
 	'wss://polkadot-public-rpc.blockops.network/ws',
 	'wss://kusama-public-rpc.blockops.network/ws',
 	'wss://westend-rpc.blockops.network/ws',
+	'wss://kreivo.kippu.rocks/',
 ];
 
 export const DEFAULT_REGISTRY: TokenRegistry = {

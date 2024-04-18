@@ -2165,6 +2165,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "nexus"
+    },
+    "3369": {
+      "tokens": [
+        "MYTH"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "mythos"
     }
   },
   "kusama": {
@@ -2449,6 +2458,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "bridge-hub-kusama"
+    },
+    "1005": {
+      "tokens": [
+        "KSM"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "coretime-kusama"
     },
     "2000": {
       "tokens": [
@@ -5440,6 +5458,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "ewx-parachain"
+    },
+    "3369": {
+      "tokens": [
+        "MUSE"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "muse"
     },
     "4044": {
       "tokens": [
