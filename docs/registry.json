@@ -28,11 +28,13 @@
         "12": "USDcp",
         "14": "LEAP",
         "15": "Meme",
+        "16": "WIFD",
         "18": "DOTA",
         "20": "StabCP",
         "21": "WBTC",
         "22": "KNRY",
         "23": "PINK",
+        "24": "PRDOG",
         "30": "DED",
         "42": "PJS",
         "69": "DAL",
@@ -52,21 +54,26 @@
         "1000": "BRZ",
         "1230": "HAM",
         "1337": "USDC",
+        "1983": "KAS",
         "1984": "USDt",
         "2023": "dot",
         "2024": "WOOD",
         "2820": "HOOT",
+        "4157": "PDOG",
         "5417": "HASH",
+        "6969": "LEEMO",
         "8008": "HOBO",
         "9527": "LSCAT",
         "25518": "BEER",
         "30035": "DED",
         "42069": "STINK",
         "65454": "TST",
+        "69420": "GABE",
         "660301": "GRL",
         "862812": "CUBO",
         "868367": "VSC",
-        "20090103": "BTC"
+        "20090103": "BTC",
+        "4294967295": "(>'')>"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -322,6 +329,14 @@
         {
           "paraID": 1000,
           "nativeChainID": "statemint",
+          "symbol": "DED",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":30}]}}}",
+          "asset": "124463719055550872076363892993240202694"
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
           "symbol": "USDC",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}",
@@ -560,6 +575,14 @@
           "asset": "132685552157663328694213725410064821485"
         },
         {
+          "paraID": 2037,
+          "nativeChainID": "unique",
+          "symbol": "UNQ",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2037}}}}",
+          "asset": "283870493414747423842723289889816153538"
+        },
+        {
           "paraID": 2040,
           "nativeChainID": null,
           "symbol": "PDEX",
@@ -614,6 +637,14 @@
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2104}}}}",
           "asset": "166446646689194205559791995948102903873"
+        },
+        {
+          "paraID": 3338,
+          "nativeChainID": null,
+          "symbol": "PEAQ",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":3338}}}}",
+          "asset": "314077021455772878282433861213184736939"
         }
       ]
     },
@@ -1967,6 +1998,16 @@
         {
           "paraID": 1000,
           "nativeChainID": "statemint",
+          "symbol": "PINK",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":23}]}}}",
+          "asset": {
+            "XCM": "7"
+          }
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
           "symbol": "USDT",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
@@ -1995,6 +2036,16 @@
           }
         },
         {
+          "paraID": 2006,
+          "nativeChainID": "astar",
+          "symbol": "ASTR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2006}}}}",
+          "asset": {
+            "XCM": "9"
+          }
+        },
+        {
           "paraID": 2011,
           "nativeChainID": "equilibrium",
           "symbol": "EQD",
@@ -2002,6 +2053,16 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2011},{\"palletInstance\":11},{\"generalIndex\":6648164}]}}}",
           "asset": {
             "XCM": "3"
+          }
+        },
+        {
+          "paraID": 2034,
+          "nativeChainID": "hydra",
+          "symbol": "HDX",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2034},{\"generalIndex\":0}]}}}",
+          "asset": {
+            "XCM": "8"
           }
         },
         {
@@ -4867,6 +4928,7 @@
         "412": "PML",
         "414": "KTT",
         "420": "SWED",
+        "432": "TTT",
         "444": "SASS",
         "500": "TRN",
         "501": "KCK",
@@ -4912,6 +4974,7 @@
         "2984": "RUSD",
         "3008": "ARR",
         "3012": "gnt",
+        "3344": "XON",
         "4040": "ROSTIK",
         "4110": "DDA",
         "5000": "xdtb",
