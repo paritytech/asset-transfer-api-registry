@@ -28,7 +28,7 @@
         "12": "USDcp",
         "14": "LEAP",
         "15": "Meme",
-        "16": "WIFD",
+        "17": "WIFD",
         "18": "DOTA",
         "20": "StabCP",
         "21": "WBTC",
@@ -63,11 +63,14 @@
         "2820": "HOOT",
         "4157": "PDOG",
         "5417": "HASH",
+        "6666": "CHAOS",
         "6969": "LEEMO",
+        "7777": "FUM",
         "8008": "HOBO",
         "9527": "LSCAT",
         "25518": "BEER",
         "30035": "DED",
+        "31337": "WUD",
         "42069": "STINK",
         "65454": "TST",
         "69420": "GABE",
@@ -1709,12 +1712,28 @@
           "asset": "25"
         },
         {
+          "paraID": 2086,
+          "nativeChainID": null,
+          "symbol": "KILT",
+          "decimals": 15,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2086}}}}",
+          "asset": "28"
+        },
+        {
           "paraID": 2092,
           "nativeChainID": "zeitgeist",
           "symbol": "ZTG",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2092},{\"generalKey\":\"0x0001\"}]}}}",
           "asset": "12"
+        },
+        {
+          "paraID": 2094,
+          "nativeChainID": "pendulum",
+          "symbol": "PEN",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2094},{\"palletInstance\":10}]}}}",
+          "asset": "1000081"
         },
         {
           "paraID": 2101,
