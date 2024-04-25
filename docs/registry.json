@@ -44,7 +44,9 @@
         "99": "Cypress",
         "100": "WETH",
         "101": "DOTMA",
+        "111": "DEMO",
         "123": "123",
+        "149": "EDU",
         "256": "ICE",
         "404": "clay",
         "420": "BEEFY",
@@ -106,7 +108,20 @@
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2004\"},{\"PalletInstance\":\"10\"}]}}"
         }
       },
-      "poolPairsInfo": {},
+      "poolPairsInfo": {
+        "0": {
+          "lpToken": "0",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1984\"}]}}]]"
+        },
+        "1": {
+          "lpToken": "1",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1337\"}]}}]]"
+        },
+        "2": {
+          "lpToken": "2",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"111\"}]}}]]"
+        }
+      },
       "specName": "statemint"
     },
     "1001": {
@@ -4956,6 +4971,7 @@
         "143": "XIN",
         "144": "TTT",
         "145": "UMG",
+        "149": "EDU",
         "171": "SAW",
         "200": "nUSDT",
         "201": "VNST",
@@ -5228,6 +5244,10 @@
         "23": {
           "lpToken": "23",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50174\"}]}}]]"
+        },
+        "24": {
+          "lpToken": "24",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"149\"}]}}]]"
         }
       },
       "specName": "statemine"
