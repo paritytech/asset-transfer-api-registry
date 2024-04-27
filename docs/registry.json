@@ -37,6 +37,7 @@
         "24": "PRDOG",
         "25": "T54",
         "30": "DED",
+        "33": "COCOA",
         "42": "PJS",
         "69": "DAL",
         "77": "TRQ",
@@ -58,6 +59,7 @@
         "999": "gold",
         "1000": "BRZ",
         "1230": "HAM",
+        "1313": "GGI",
         "1337": "USDC",
         "1983": "KAS",
         "1984": "USDt",
@@ -124,6 +126,18 @@
         "2": {
           "lpToken": "2",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"111\"}]}}]]"
+        },
+        "3": {
+          "lpToken": "3",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1313\"}]}}]]"
+        },
+        "4": {
+          "lpToken": "4",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"30\"}]}}]]"
+        },
+        "5": {
+          "lpToken": "5",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"23\"}]}}]]"
         }
       },
       "specName": "statemint"
@@ -1577,6 +1591,14 @@
         {
           "paraID": 2000,
           "nativeChainID": "acala",
+          "symbol": "ACA",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0000\"}]}}}",
+          "asset": "1000099"
+        },
+        {
+          "paraID": 2000,
+          "nativeChainID": "acala",
           "symbol": "APE",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x02f4c723e61709d90f89939c1852f516e373d418a8\"}]}}}",
@@ -1597,6 +1619,14 @@
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0207df96d1341a7d16ba1ad431e2c847d978bc2bce\"}]}}}",
           "asset": "7"
+        },
+        {
+          "paraID": 2000,
+          "nativeChainID": "acala",
+          "symbol": "LDOT",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0003\"}]}}}",
+          "asset": "1000100"
         },
         {
           "paraID": 2000,
@@ -2481,6 +2511,10 @@
         "9": {
           "lpToken": "9",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2993\"}]}}]]"
+        },
+        "10": {
+          "lpToken": "10",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"223\"}]}}]]"
         }
       },
       "specName": "statemine"
@@ -4975,6 +5009,7 @@
         "143": "XIN",
         "144": "TTT",
         "145": "UMG",
+        "146": "VYV",
         "149": "EDU",
         "171": "SAW",
         "200": "nUSDT",
@@ -5076,8 +5111,10 @@
         "77777": "SHREK",
         "80085": "NKT",
         "100000": "TEST1",
+        "101001": "FSUP",
         "111111": "11111",
         "111112": "SQRLTKN",
+        "112233": "haha",
         "121212": "PLY",
         "123443": "ICO",
         "123456": "LRSKA",
