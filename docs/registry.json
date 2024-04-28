@@ -401,6 +401,14 @@
           "asset": "64174511183114006009298114091987195453"
         },
         {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "STINK",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":42069}]}}}",
+          "asset": "112679793397406599376365943185137098326"
+        },
+        {
           "paraID": 2000,
           "nativeChainID": "acala",
           "symbol": "LDOT",
@@ -4988,6 +4996,7 @@
         "89": "HAT",
         "90": "Alrn",
         "96": "@@@",
+        "97": "SEK",
         "99": "PBA",
         "100": "ACRST",
         "101": "TTO",
@@ -5066,6 +5075,7 @@
         "1985": "XCMSDK",
         "1999": "JOE",
         "2000": "bcdt",
+        "2003": "GRT",
         "2024": "MTK",
         "2206": "RSD",
         "2304": "itm",
