@@ -80,6 +80,7 @@
         "9002": "TAPE",
         "9003": "KTRL",
         "9527": "LSCAT",
+        "9999": "TOM",
         "25518": "BEER",
         "30035": "DED",
         "31337": "WUD",
@@ -138,6 +139,10 @@
         "5": {
           "lpToken": "5",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"23\"}]}}]]"
+        },
+        "6": {
+          "lpToken": "6",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"18\"}]}}]]"
         }
       },
       "specName": "statemint"
@@ -4529,6 +4534,7 @@
         "233": "NTT",
         "301": "RYUD",
         "318": "SAT",
+        "333": "ucoco",
         "368": "KLING",
         "369": "WIN",
         "370": "SUM",
@@ -4995,6 +5001,7 @@
         "88": "MEM",
         "89": "HAT",
         "90": "Alrn",
+        "93": "SOT",
         "96": "@@@",
         "97": "SEK",
         "99": "PBA",
