@@ -61,6 +61,7 @@
         "1230": "HAM",
         "1313": "GGI",
         "1337": "USDC",
+        "1980": "GAVIN",
         "1983": "KAS",
         "1984": "USDt",
         "2023": "dot",
@@ -5084,9 +5085,11 @@
         "2000": "bcdt",
         "2003": "GRT",
         "2024": "MTK",
+        "2101": "BSTT",
         "2206": "RSD",
         "2304": "itm",
         "2512": "ARR2",
+        "2661": "FRAC",
         "2727": "PRES",
         "2984": "RUSD",
         "3008": "ARR",
@@ -5117,6 +5120,7 @@
         "22064": "XPPEN",
         "22065": "TREM",
         "26845": "TTT",
+        "33332": "FRAC",
         "34634": "seg",
         "41217": "KFTP",
         "42069": "PEB",
@@ -5306,6 +5310,14 @@
         "24": {
           "lpToken": "24",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"149\"}]}}]]"
+        },
+        "25": {
+          "lpToken": "25",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"33332\"}]}}]]"
+        },
+        "26": {
+          "lpToken": "26",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2101\"}]}}]]"
         }
       },
       "specName": "statemine"
