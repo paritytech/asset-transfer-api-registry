@@ -144,6 +144,14 @@
         "6": {
           "lpToken": "6",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"18\"}]}}]]"
+        },
+        "7": {
+          "lpToken": "7",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Kusama\"}}}]]"
+        },
+        "8": {
+          "lpToken": "8",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2004\"},{\"PalletInstance\":\"10\"}]}}]]"
         }
       },
       "specName": "statemint"
@@ -880,6 +888,14 @@
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2046},{\"palletInstance\":5}]}}}",
           "asset": "18446744073709551627"
+        },
+        {
+          "paraID": 2094,
+          "nativeChainID": "pendulum",
+          "symbol": "xcPEN",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2094},{\"palletInstance\":10}]}}}",
+          "asset": "18446744073709551634"
         }
       ]
     },
@@ -5125,7 +5141,7 @@
         "41217": "KFTP",
         "42069": "PEB",
         "50001": "jelou",
-        "50174": "HLIM",
+        "50174": "LIMI",
         "65536": "AKT",
         "66666": "KST",
         "69420": "PLONK",
