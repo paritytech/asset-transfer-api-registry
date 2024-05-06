@@ -4659,7 +4659,8 @@
         "863012": "VCOPT",
         "1000000": "USDT_B",
         "13700000": "DNT",
-        "19801204": "KHT",
+        "19801204": "obsolete do not use",
+        "20120608": "KTT",
         "21000000": "PKTB",
         "21000001": "PKCR",
         "40000001": "ETH",
@@ -4897,6 +4898,10 @@
         "52": {
           "lpToken": "52",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"41\"}]}}]]"
+        },
+        "53": {
+          "lpToken": "53",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"20120608\"}]}}]]"
         }
       },
       "specName": "westmint"
@@ -5183,6 +5188,7 @@
         "11117777": "MAG",
         "12345678": "giraffe",
         "19801204": "KHR",
+        "20120608": "KTT",
         "20240419": "rUSDT",
         "22332244": "ZoV",
         "69696969": "PENE",
@@ -5339,6 +5345,10 @@
         "26": {
           "lpToken": "26",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2101\"}]}}]]"
+        },
+        "27": {
+          "lpToken": "27",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"20120608\"}]}}]]"
         }
       },
       "specName": "statemine"
