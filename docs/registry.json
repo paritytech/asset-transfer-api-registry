@@ -28,40 +28,97 @@
         "12": "USDcp",
         "14": "LEAP",
         "15": "Meme",
+        "16": "COLA",
+        "17": "WIFD",
         "18": "DOTA",
+        "19": "MOON",
         "20": "StabCP",
         "21": "WBTC",
         "22": "KNRY",
         "23": "PINK",
+        "24": "PRDOG",
+        "25": "T54",
+        "26": "POKA",
+        "27": "FISH",
+        "28": "BULL",
+        "29": "SHRIMP",
         "30": "DED",
+        "31": "WOOD",
+        "32": "CLAY",
+        "33": "COCOA",
         "42": "PJS",
+        "50": "CATWIF",
+        "55": "COFI",
+        "56": "UNION",
+        "66": "DOGE",
+        "67": "LINK",
+        "69": "DAL",
         "77": "TRQ",
+        "78": "COCA",
         "79": "PGOLD",
+        "88": "PND",
+        "89": "STAR",
         "99": "Cypress",
         "100": "WETH",
         "101": "DOTMA",
+        "111": "DEMO",
         "123": "123",
+        "149": "EDU",
+        "200": "MONA",
         "256": "ICE",
+        "333": "DOKA",
+        "404": "clay",
         "420": "BEEFY",
+        "482": "HUB",
         "555": "GAME",
+        "567": "ANT",
         "666": "DANGER",
+        "678": "SATS",
         "777": "777",
+        "789": "DBX",
+        "888": "ASX",
         "999": "gold",
         "1000": "BRZ",
+        "1107": "JAM",
         "1230": "HAM",
+        "1313": "GGI",
         "1337": "USDC",
+        "1980": "GAVIN",
+        "1983": "KAS",
         "1984": "USDt",
+        "2000": "DAO",
         "2023": "dot",
         "2024": "WOOD",
+        "2121": "SKEM",
+        "2230": "GBILL",
         "2820": "HOOT",
+        "2828": "JAMD",
+        "2829": "JTO",
+        "4157": "PDOG",
         "5417": "HASH",
+        "6666": "CHAOS",
+        "6969": "LEEMO",
+        "7777": "FUM",
+        "8008": "HOBO",
+        "8886": "BANDIT",
+        "8889": "BNDT",
+        "9000": "PLAY",
+        "9001": "BOMB",
+        "9002": "TAPE",
+        "9003": "KTRL",
+        "9527": "LSCAT",
+        "9999": "TOM",
         "25518": "BEER",
         "30035": "DED",
+        "31337": "WUD",
         "42069": "STINK",
         "65454": "TST",
+        "69420": "GABE",
+        "420666": "GIO",
         "660301": "GRL",
         "862812": "CUBO",
         "868367": "VSC",
+        "5318008": "PXPS",
         "20090103": "BTC"
       },
       "foreignAssetsInfo": {
@@ -86,7 +143,44 @@
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2004\"},{\"PalletInstance\":\"10\"}]}}"
         }
       },
-      "poolPairsInfo": {},
+      "poolPairsInfo": {
+        "0": {
+          "lpToken": "0",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1984\"}]}}]]"
+        },
+        "1": {
+          "lpToken": "1",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1337\"}]}}]]"
+        },
+        "2": {
+          "lpToken": "2",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"111\"}]}}]]"
+        },
+        "3": {
+          "lpToken": "3",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1313\"}]}}]]"
+        },
+        "4": {
+          "lpToken": "4",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"30\"}]}}]]"
+        },
+        "5": {
+          "lpToken": "5",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"23\"}]}}]]"
+        },
+        "6": {
+          "lpToken": "6",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"18\"}]}}]]"
+        },
+        "7": {
+          "lpToken": "7",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Kusama\"}}}]]"
+        },
+        "8": {
+          "lpToken": "8",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2004\"},{\"PalletInstance\":\"10\"}]}}]]"
+        }
+      },
       "specName": "statemint"
     },
     "1001": {
@@ -318,6 +412,14 @@
         {
           "paraID": 1000,
           "nativeChainID": "statemint",
+          "symbol": "DED",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":30}]}}}",
+          "asset": "124463719055550872076363892993240202694"
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
           "symbol": "USDC",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}",
@@ -338,6 +440,14 @@
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":23}]}}}",
           "asset": "64174511183114006009298114091987195453"
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "STINK",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":42069}]}}}",
+          "asset": "112679793397406599376365943185137098326"
         },
         {
           "paraID": 2000,
@@ -556,6 +666,14 @@
           "asset": "132685552157663328694213725410064821485"
         },
         {
+          "paraID": 2037,
+          "nativeChainID": "unique",
+          "symbol": "UNQ",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2037}}}}",
+          "asset": "283870493414747423842723289889816153538"
+        },
+        {
           "paraID": 2040,
           "nativeChainID": null,
           "symbol": "PDEX",
@@ -610,6 +728,14 @@
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2104}}}}",
           "asset": "166446646689194205559791995948102903873"
+        },
+        {
+          "paraID": 3338,
+          "nativeChainID": null,
+          "symbol": "PEAQ",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":3338}}}}",
+          "asset": "314077021455772878282433861213184736939"
         }
       ]
     },
@@ -789,6 +915,14 @@
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2046},{\"palletInstance\":5}]}}}",
           "asset": "18446744073709551627"
+        },
+        {
+          "paraID": 2094,
+          "nativeChainID": "pendulum",
+          "symbol": "xcPEN",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2094},{\"palletInstance\":10}]}}}",
+          "asset": "18446744073709551634"
         }
       ]
     },
@@ -1036,6 +1170,16 @@
         {
           "paraID": 1000,
           "nativeChainID": "statemint",
+          "symbol": "DED",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":30}]}}}",
+          "asset": {
+            "Token2": "11"
+          }
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
           "symbol": "PINK",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":23}]}}}",
@@ -1267,6 +1411,16 @@
         {
           "paraID": 2031,
           "nativeChainID": "centrifuge",
+          "symbol": "LpCeloUSDC",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x4\":[{\"parachain\":2031},{\"palletInstance\":103},{\"globalConsensus\":{\"ethereum\":{\"chainId\":42220}}},{\"accountKey20\":{\"network\":null,\"key\":\"0xceba9300f2b948710d2653dd7b07f33a8b32118c\"}}]}}}",
+          "asset": {
+            "ForeignAsset": "100,006"
+          }
+        },
+        {
+          "paraID": 2031,
+          "nativeChainID": "centrifuge",
           "symbol": "CFG",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2031},{\"generalKey\":\"0x0001\"}]}}}",
@@ -1295,7 +1449,7 @@
         {
           "paraID": 2031,
           "nativeChainID": "centrifuge",
-          "symbol": "LpCeloUSDC",
+          "symbol": "LpCeloWormUSDC ",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x4\":[{\"parachain\":2031},{\"palletInstance\":103},{\"globalConsensus\":{\"ethereum\":{\"chainId\":42220}}},{\"accountKey20\":{\"network\":null,\"key\":\"0x37f750b7cc259a2f741af45294f6a16572cf5cad\"}}]}}}",
           "asset": {
@@ -1346,16 +1500,6 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0003\"}]}}}",
           "asset": {
             "ForeignAsset": "1"
-          }
-        },
-        {
-          "paraID": 2001,
-          "nativeChainID": null,
-          "symbol": "BNC",
-          "decimals": 12,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},{\"generalKey\":\"0x0001\"}]}}}",
-          "asset": {
-            "ForeignAsset": "11"
           }
         },
         {
@@ -1431,11 +1575,31 @@
         {
           "paraID": 2030,
           "nativeChainID": "bifrost",
+          "symbol": "BNC",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0001\"}]}}}",
+          "asset": {
+            "ForeignAsset": "11"
+          }
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
           "symbol": "VDOT",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0900\"}]}}}",
           "asset": {
             "ForeignAsset": "3"
+          }
+        },
+        {
+          "paraID": 2034,
+          "nativeChainID": "hydra",
+          "symbol": "HDX",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2034},{\"generalIndex\":0}]}}}",
+          "asset": {
+            "ForeignAsset": "13"
           }
         }
       ]
@@ -1460,34 +1624,34 @@
         {
           "paraID": 1000,
           "nativeChainID": "statemint",
-          "symbol": "USDC",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}",
-          "asset": "22"
-        },
-        {
-          "paraID": 1000,
-          "nativeChainID": "statemint",
           "symbol": "USDT",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
           "asset": "10"
         },
         {
-          "paraID": 2000,
-          "nativeChainID": "acala",
+          "paraID": 1000,
+          "nativeChainID": "statemint",
           "symbol": "USDC",
           "decimals": 6,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0207df96d1341a7d16ba1ad431e2c847d978bc2bce\"}]}}}",
-          "asset": "7"
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}",
+          "asset": "22"
         },
         {
           "paraID": 2000,
           "nativeChainID": "acala",
-          "symbol": "DAI",
+          "symbol": "WETH",
           "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0254a37a01cd75b616d63e0ab665bffdb0143c52ae\"}]}}}",
-          "asset": "2"
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x025a4d6acdc4e3e5ab15717f407afe957f7a242578\"}]}}}",
+          "asset": "4"
+        },
+        {
+          "paraID": 2000,
+          "nativeChainID": "acala",
+          "symbol": "ACA",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0000\"}]}}}",
+          "asset": "1000099"
         },
         {
           "paraID": 2000,
@@ -1500,18 +1664,42 @@
         {
           "paraID": 2000,
           "nativeChainID": "acala",
+          "symbol": "DAI",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0254a37a01cd75b616d63e0ab665bffdb0143c52ae\"}]}}}",
+          "asset": "2"
+        },
+        {
+          "paraID": 2000,
+          "nativeChainID": "acala",
+          "symbol": "USDC",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0207df96d1341a7d16ba1ad431e2c847d978bc2bce\"}]}}}",
+          "asset": "7"
+        },
+        {
+          "paraID": 2000,
+          "nativeChainID": "acala",
+          "symbol": "LDOT",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x0003\"}]}}}",
+          "asset": "1000100"
+        },
+        {
+          "paraID": 2000,
+          "nativeChainID": "acala",
           "symbol": "WBTC",
           "decimals": 8,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x02c80084af223c8b598536178d9361dc55bfda6818\"}]}}}",
           "asset": "3"
         },
         {
-          "paraID": 2000,
-          "nativeChainID": "acala",
-          "symbol": "WETH",
-          "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2000},{\"generalKey\":\"0x025a4d6acdc4e3e5ab15717f407afe957f7a242578\"}]}}}",
-          "asset": "4"
+          "paraID": 2004,
+          "nativeChainID": "moonbeam",
+          "symbol": "USDC",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0x931715fee2d06333043d11f658c8ce934ac61d0c\"}}]}}}",
+          "asset": "21"
         },
         {
           "paraID": 2004,
@@ -1524,14 +1712,6 @@
         {
           "paraID": 2004,
           "nativeChainID": "moonbeam",
-          "symbol": "WBTC",
-          "decimals": 8,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0xe57ebd2d67b462e9926e04a8e33f01cd0d64346d\"}}]}}}",
-          "asset": "19"
-        },
-        {
-          "paraID": 2004,
-          "nativeChainID": "moonbeam",
           "symbol": "GLMR",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2004},{\"palletInstance\":10}]}}}",
@@ -1540,10 +1720,10 @@
         {
           "paraID": 2004,
           "nativeChainID": "moonbeam",
-          "symbol": "USDC",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0x931715fee2d06333043d11f658c8ce934ac61d0c\"}}]}}}",
-          "asset": "21"
+          "symbol": "WBTC",
+          "decimals": 8,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0xe57ebd2d67b462e9926e04a8e33f01cd0d64346d\"}}]}}}",
+          "asset": "19"
         },
         {
           "paraID": 2004,
@@ -1642,12 +1822,28 @@
           "asset": "25"
         },
         {
+          "paraID": 2086,
+          "nativeChainID": null,
+          "symbol": "KILT",
+          "decimals": 15,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2086}}}}",
+          "asset": "28"
+        },
+        {
           "paraID": 2092,
           "nativeChainID": "zeitgeist",
           "symbol": "ZTG",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2092},{\"generalKey\":\"0x0001\"}]}}}",
           "asset": "12"
+        },
+        {
+          "paraID": 2094,
+          "nativeChainID": "pendulum",
+          "symbol": "PEN",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2094},{\"palletInstance\":10}]}}}",
+          "asset": "1000081"
         },
         {
           "paraID": 2101,
@@ -1933,6 +2129,16 @@
         {
           "paraID": 1000,
           "nativeChainID": "statemint",
+          "symbol": "PINK",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":23}]}}}",
+          "asset": {
+            "XCM": "7"
+          }
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
           "symbol": "USDT",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
@@ -1961,6 +2167,16 @@
           }
         },
         {
+          "paraID": 2006,
+          "nativeChainID": "astar",
+          "symbol": "ASTR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2006}}}}",
+          "asset": {
+            "XCM": "9"
+          }
+        },
+        {
           "paraID": 2011,
           "nativeChainID": "equilibrium",
           "symbol": "EQD",
@@ -1968,6 +2184,16 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2011},{\"palletInstance\":11},{\"generalIndex\":6648164}]}}}",
           "asset": {
             "XCM": "3"
+          }
+        },
+        {
+          "paraID": 2034,
+          "nativeChainID": "hydra",
+          "symbol": "HDX",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2034},{\"generalIndex\":0}]}}}",
+          "asset": {
+            "XCM": "8"
           }
         },
         {
@@ -2061,6 +2287,24 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "logion"
+    },
+    "3367": {
+      "tokens": [
+        "NAND"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "nexus"
+    },
+    "3369": {
+      "tokens": [
+        "MYTH"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "mythos"
     }
   },
   "kusama": {
@@ -2153,9 +2397,11 @@
         "102": "DRX",
         "111": "NO1",
         "117": "TNKR",
+        "120": "OAT",
         "123": "NFT",
         "138": "Abc",
         "168": "Tokens",
+        "177": "KST",
         "188": "ZLK",
         "200": "SIX",
         "214": "LOVE",
@@ -2190,12 +2436,14 @@
         "911": "911",
         "999": "CBDC",
         "1000": "SPARK",
-        "1107": "GUPPY",
+        "1107": "JAM",
         "1111": "MTVD",
+        "1121": "OAT",
         "1123": "XEN",
         "1155": "WITEK",
         "1225": "GOD",
         "1234": "KSM",
+        "1311": "GCT",
         "1313": "TACP",
         "1337": "TIP",
         "1420": "HYDR",
@@ -2203,6 +2451,7 @@
         "1526": "bcd",
         "1607": "STRGZN",
         "1688": "ali",
+        "1899": "BKNRY",
         "1984": "USDt",
         "1999": "ADVERT2",
         "2000": "USDT",
@@ -2320,6 +2569,10 @@
         "9": {
           "lpToken": "9",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2993\"}]}}]]"
+        },
+        "10": {
+          "lpToken": "10",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"223\"}]}}]]"
         }
       },
       "specName": "statemine"
@@ -2341,6 +2594,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "bridge-hub-kusama"
+    },
+    "1005": {
+      "tokens": [
+        "KSM"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "coretime-kusama"
     },
     "2000": {
       "tokens": [
@@ -2920,6 +3182,14 @@
         {
           "paraID": 1000,
           "nativeChainID": "statemine",
+          "symbol": "BILL",
+          "decimals": 8,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":223}]}}}",
+          "asset": "18446744073709551634"
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemine",
           "symbol": "USDT",
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
@@ -3316,6 +3586,14 @@
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2114}}}}",
           "asset": "133300872918374599700079037156071917454"
+        },
+        {
+          "paraID": 2125,
+          "nativeChainID": null,
+          "symbol": "TNKR",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2125},{\"generalIndex\":0}]}}}",
+          "asset": "138512078356357941985706694377215053953"
         }
       ]
     },
@@ -4180,7 +4458,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "laos"
+      "specName": "klaos"
     },
     "3339": {
       "tokens": [
@@ -4260,6 +4538,7 @@
         "42": "HG2G",
         "43": "YOLO",
         "44": "dcUSD",
+        "45": "YOLO",
         "46": "RASTA",
         "47": "MRT",
         "49": "RAN",
@@ -4271,6 +4550,7 @@
         "67": "USDT",
         "68": "TTT",
         "69": "TIDE",
+        "70": "DOTA",
         "77": "MVP1",
         "81": "SIRI",
         "84": "ASTRA",
@@ -4285,10 +4565,12 @@
         "103": "cPHP",
         "104": "NewT",
         "109": "assetT",
+        "110": "sera",
         "121": "TAL",
         "122": "TESTC",
         "123": "INXTSW1",
         "126": "TAT",
+        "133": ".|.",
         "145": "dsu",
         "146": "FRAC",
         "168": "NIK",
@@ -4298,6 +4580,7 @@
         "233": "NTT",
         "301": "RYUD",
         "318": "SAT",
+        "333": "ucoco",
         "368": "KLING",
         "369": "WIN",
         "370": "SUM",
@@ -4309,7 +4592,9 @@
         "535": "KEL",
         "666": "FTT",
         "676": "nbnbnbn",
+        "720": "POTAT",
         "777": "JJD",
+        "789": "TOL",
         "887": "TTA",
         "900": "VOD",
         "950": "HBCOIN",
@@ -4340,6 +4625,7 @@
         "1309": "KLO",
         "1312": "NG1312",
         "1337": "NACHO",
+        "1948": "YOLO",
         "1977": "SQL",
         "1984": "USDTT",
         "1988": "HBB",
@@ -4353,11 +4639,16 @@
         "2122": "SVE",
         "2131": "Wnd",
         "2511": "TTY",
+        "2633": "dxt",
+        "2634": "tt2",
         "3000": "DEV",
         "3327": "3327",
         "4000": "DES",
         "4123": "DWND2",
         "4200": "KLM",
+        "4399": "dtt",
+        "5550": "FRAC",
+        "5551": "FRAC",
         "6666": "BOB",
         "6969": "BEE",
         "8888": "USDT",
@@ -4377,6 +4668,7 @@
         "22064": "DKT",
         "22065": "MIN",
         "31337": "USDC",
+        "36895": "lhkt",
         "45678": "yee",
         "54221": "wTEST",
         "61337": "USDC",
@@ -4393,11 +4685,14 @@
         "862812": "CUBOT",
         "863012": "VCOPT",
         "1000000": "USDT_B",
-        "19801204": "KHT",
+        "13700000": "DNT",
+        "19801204": "obsolete do not use",
+        "20120608": "KTT",
         "21000000": "PKTB",
         "21000001": "PKCR",
         "40000001": "ETH",
         "123456789": "PUSH",
+        "193000000": "SRCT",
         "333333333": "PRIM",
         "900990087": "SPOT",
         "1000000000": "CZX",
@@ -4630,6 +4925,10 @@
         "52": {
           "lpToken": "52",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"41\"}]}}]]"
+        },
+        "53": {
+          "lpToken": "53",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"20120608\"}]}}]]"
         }
       },
       "specName": "westmint"
@@ -4721,9 +5020,14 @@
         "33": "Utoken",
         "34": "NSV",
         "35": "WOOD",
+        "36": "gtt",
+        "37": "TTT",
+        "38": "TTT",
         "39": "KVSS",
         "40": "RND",
+        "43": "TTT",
         "44": "dcUSD",
+        "45": "TTT",
         "46": "RocRa",
         "47": "testDED",
         "48": "Bal",
@@ -4736,21 +5040,31 @@
         "55": "PIZ",
         "56": "PSP",
         "57": "xcm",
+        "58": "TBT",
         "66": "BBC",
+        "67": "TTT",
         "69": "SRT",
         "70": "dsads",
         "71": "testDED",
         "74": "GID",
+        "75": "UGOL",
         "77": "shicoin",
+        "80": "NLT",
+        "86": "TCA",
         "88": "MEM",
         "89": "HAT",
+        "90": "Alrn",
+        "93": "SOT",
         "96": "@@@",
+        "97": "SEK",
         "99": "PBA",
         "100": "ACRST",
         "101": "TTO",
+        "102": "4YP",
         "108": "GURU",
         "111": "PBAC",
         "112": "TTam",
+        "113": "prkt",
         "114": "GOG",
         "121": "NsNsN",
         "122": "ttam",
@@ -4758,11 +5072,14 @@
         "124": "BEA",
         "125": "SDV",
         "134": "TNG",
+        "135": "PXT",
         "139": "PHNX",
         "140": "USDT",
         "143": "XIN",
         "144": "TTT",
         "145": "UMG",
+        "146": "VYV",
+        "149": "EDU",
         "171": "SAW",
         "200": "nUSDT",
         "201": "VNST",
@@ -4777,7 +5094,9 @@
         "399": "TTAM",
         "404": "PDRS",
         "412": "PML",
+        "414": "KTT",
         "420": "SWED",
+        "432": "TTT",
         "444": "SASS",
         "500": "TRN",
         "501": "KCK",
@@ -4794,6 +5113,7 @@
         "988": "BABY",
         "999": "YAKIO",
         "1000": "TWC",
+        "1001": "LOOM",
         "1111": "RCL",
         "1112": "TTam",
         "1113": "KCT",
@@ -4801,7 +5121,9 @@
         "1231": "123",
         "1234": "PPV",
         "1235": "PAV",
+        "1311": "prak",
         "1313": "TNA",
+        "1324": "TOAST",
         "1335": "LOT",
         "1336": "INV",
         "1337": "rUSD",
@@ -4812,12 +5134,20 @@
         "1983": "BGA",
         "1984": "USDt",
         "1985": "XCMSDK",
+        "1999": "JOE",
         "2000": "bcdt",
+        "2003": "GRT",
+        "2024": "MTK",
+        "2101": "BSTT",
         "2206": "RSD",
+        "2304": "itm",
         "2512": "ARR2",
+        "2661": "FRAC",
         "2727": "PRES",
         "2984": "RUSD",
         "3008": "ARR",
+        "3012": "gnt",
+        "3344": "XON",
         "4040": "ROSTIK",
         "4110": "DDA",
         "5000": "xdtb",
@@ -4825,10 +5155,14 @@
         "6900": "LSPA",
         "6969": "STNLY",
         "7777": "USDT",
+        "8888": "GGG",
         "9394": "SMEAD",
         "9991": "SPT",
         "9999": "FLUB",
         "10000": "AST",
+        "10001": "mango1",
+        "10011": "TTTT",
+        "10201": "GINO",
         "11111": "RLC",
         "11123": "AAE",
         "12121": "TEST",
@@ -4841,24 +5175,32 @@
         "22064": "XPPEN",
         "22065": "TREM",
         "26845": "TTT",
+        "33332": "FRAC",
         "34634": "seg",
         "41217": "KFTP",
         "42069": "PEB",
         "50001": "jelou",
-        "50174": "HLIM",
+        "50174": "LIMINAL",
+        "65536": "AKT",
         "66666": "KST",
         "69420": "PLONK",
         "77777": "SHREK",
         "80085": "NKT",
         "100000": "TEST1",
+        "101001": "FSUP",
         "111111": "11111",
         "111112": "SQRLTKN",
+        "112233": "haha",
         "121212": "PLY",
+        "123443": "ICO",
         "123456": "LRSKA",
         "131313": "DMO",
+        "200001": "TEST1",
         "228228": "TEST",
         "228282": "WTN",
         "228322": "nzprt",
+        "292363": "KPA",
+        "333333": "I'M",
         "335277": "PSPV",
         "411299": "any",
         "412177": "LKT",
@@ -4867,26 +5209,39 @@
         "666666": "ISH",
         "696969": "tDED",
         "766768": "jghg",
+        "777777": "ITM",
         "862105": "USDTT",
         "862812": "CUBOT",
         "863012": "vCOPT",
+        "1000000": "Qzx",
         "1111111": "VVA",
         "1234567": "TAFK",
+        "4242424": "CRISTO",
+        "11117777": "MAG",
         "12345678": "giraffe",
         "19801204": "KHR",
+        "20120608": "KTT",
+        "20240419": "rUSDT",
         "22332244": "ZoV",
+        "69696969": "PENE",
         "76657621": "gaa",
         "123456789": "ZeAs",
         "143228832": "tasset",
         "333333333": "PRIM",
         "1234567890": "giraffe",
-        "2430784328": "TMW"
+        "2430784328": "TMW",
+        "3782010103": "ggg"
       },
       "foreignAssetsInfo": {
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863396630353332363331316263326135353432363736316265633230303537363835666238306637227d7d5d7d7d": {
           "symbol": "",
           "name": "",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc9f05326311bc2a55426761bec20057685fb80f7\"}}]}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307862333461363932346130323130306261366566313261663163373938323835653866376131366565227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xb34a6924a02100ba6ef12af1c798285e8f7a16ee\"}}]}}"
         },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863336430383838343264636630326331333639396639333662623833646662626336663732316162227d7d5d7d7d": {
           "symbol": "",
@@ -4907,6 +5262,11 @@
           "symbol": "",
           "name": "",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xfff9976782d46cc05630d1f6ebab18b2324d6b14\"}}]}}"
+        },
+        "MUSE": {
+          "symbol": "MUSE",
+          "name": "Muse",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3369\"}}}"
         }
       },
       "poolPairsInfo": {
@@ -4997,6 +5357,30 @@
         "21": {
           "lpToken": "21",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"333333333\"}]}}]]"
+        },
+        "22": {
+          "lpToken": "22",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3369\"}}}]]"
+        },
+        "23": {
+          "lpToken": "23",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50174\"}]}}]]"
+        },
+        "24": {
+          "lpToken": "24",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"149\"}]}}]]"
+        },
+        "25": {
+          "lpToken": "25",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"33332\"}]}}]]"
+        },
+        "26": {
+          "lpToken": "26",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2101\"}]}}]]"
+        },
+        "27": {
+          "lpToken": "27",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"20120608\"}]}}]]"
         }
       },
       "specName": "statemine"
@@ -5260,6 +5644,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "ewx-parachain"
+    },
+    "3369": {
+      "tokens": [
+        "MUSE"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "muse"
     },
     "4044": {
       "tokens": [
