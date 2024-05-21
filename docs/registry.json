@@ -4556,6 +4556,7 @@
         "84": "ASTRA",
         "85": "ITC",
         "88": "AEC",
+        "90": "testo",
         "91": "stt",
         "95": "HACK",
         "99": "hcc",
@@ -4931,6 +4932,10 @@
         "53": {
           "lpToken": "53",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"20120608\"}]}}]]"
+        },
+        "54": {
+          "lpToken": "54",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"333\"}]}}]]"
         }
       },
       "specName": "westmint"
