@@ -1855,6 +1855,14 @@
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2101}}}}",
           "asset": "24"
+        },
+        {
+          "paraID": 3344,
+          "nativeChainID": null,
+          "symbol": "PLMC",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":3344}}}}",
+          "asset": "29"
         }
       ]
     },
