@@ -687,7 +687,7 @@
         {
           "paraID": 2043,
           "nativeChainID": "origintrail-parachain",
-          "symbol": "OTP",
+          "symbol": "NEURO",
           "decimals": 12,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2043},{\"palletInstance\":10}]}}}",
           "asset": "238111524681612888331172110363070489924"
@@ -1863,6 +1863,14 @@
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":3344}}}}",
           "asset": "29"
+        },
+        {
+          "paraID": 3369,
+          "nativeChainID": null,
+          "symbol": "MYTH",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":3369}}}}",
+          "asset": "30"
         }
       ]
     },
@@ -4607,6 +4615,8 @@
         "720": "POTAT",
         "777": "JJD",
         "789": "TOL",
+        "790": "TST",
+        "791": "NAME",
         "887": "TTA",
         "890": "test",
         "900": "VOD",
