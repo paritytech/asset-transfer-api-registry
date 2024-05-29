@@ -27,5 +27,5 @@
     "node-fetch": "2.6.7",
     "vitest": "^1.4.0"
   },
-  "packageManager": "yarn@4.1.0"
+  "packageManager": "yarn@4.2.2"
 }
