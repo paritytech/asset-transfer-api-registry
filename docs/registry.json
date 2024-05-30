@@ -927,10 +927,26 @@
         {
           "paraID": 2094,
           "nativeChainID": "pendulum",
+          "symbol": "EURC.s",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x5\":[{\"parachain\":2094},{\"palletInstance\":53},{\"generalIndex\":2},{\"generalKey\":\"0x45555243\"},{\"generalKey\":\"0x2112ee863867e4e219fe254c0918b00bc9ea400775bfc3ab4430971ce505877c\"}]}}}",
+          "asset": "18446744073709551636"
+        },
+        {
+          "paraID": 2094,
+          "nativeChainID": "pendulum",
           "symbol": "xcPEN",
           "decimals": 12,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2094},{\"palletInstance\":10}]}}}",
           "asset": "18446744073709551634"
+        },
+        {
+          "paraID": 2094,
+          "nativeChainID": "pendulum",
+          "symbol": "XLM.s",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2094},{\"palletInstance\":53},{\"generalIndex\":2}]}}}",
+          "asset": "18446744073709551635"
         }
       ]
     },
@@ -2282,6 +2298,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "t3rn"
+    },
+    "3338": {
+      "tokens": [
+        "PEAQ"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "peaq-node"
     },
     "3340": {
       "tokens": [
