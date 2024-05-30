@@ -1,6 +1,6 @@
 {
   "name": "@substrate/asset-transfer-api-registry",
-  "version": "0.2.17",
+  "version": "0.2.18",
   "description": "Asset registry for asset-transfer-api",
   "main": "docs/registry.json",
   "type": "module",
@@ -27,5 +27,5 @@
     "node-fetch": "2.6.7",
     "vitest": "^1.4.0"
   },
-  "packageManager": "yarn@4.1.0"
+  "packageManager": "yarn@4.2.2"
 }

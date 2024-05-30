@@ -46,16 +46,21 @@
         "31": "WOOD",
         "32": "CLAY",
         "33": "COCOA",
+        "40": "PEPE",
         "42": "PJS",
+        "46": "PEPE",
         "50": "CATWIF",
         "55": "COFI",
         "56": "UNION",
         "66": "DOGE",
         "67": "LINK",
         "69": "DAL",
+        "70": "STEEBOR",
+        "71": "CATNIP",
         "77": "TRQ",
         "78": "COCA",
         "79": "PGOLD",
+        "80": "GOVD",
         "88": "PND",
         "89": "STAR",
         "99": "Cypress",
@@ -74,11 +79,14 @@
         "567": "ANT",
         "666": "DANGER",
         "678": "SATS",
+        "690": "BORK",
         "777": "777",
         "789": "DBX",
         "888": "ASX",
         "999": "gold",
         "1000": "BRZ",
+        "1001": "NFLR",
+        "1024": "NCTR",
         "1107": "JAM",
         "1230": "HAM",
         "1313": "GGI",
@@ -100,7 +108,7 @@
         "6969": "LEEMO",
         "7777": "FUM",
         "8008": "HOBO",
-        "8886": "BANDIT",
+        "8888": "BOOTY",
         "8889": "BNDT",
         "9000": "PLAY",
         "9001": "BOMB",
@@ -684,7 +692,7 @@
         {
           "paraID": 2043,
           "nativeChainID": "origintrail-parachain",
-          "symbol": "OTP",
+          "symbol": "NEURO",
           "decimals": 12,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2043},{\"palletInstance\":10}]}}}",
           "asset": "238111524681612888331172110363070489924"
@@ -1852,6 +1860,22 @@
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2101}}}}",
           "asset": "24"
+        },
+        {
+          "paraID": 3344,
+          "nativeChainID": null,
+          "symbol": "PLMC",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":3344}}}}",
+          "asset": "29"
+        },
+        {
+          "paraID": 3369,
+          "nativeChainID": null,
+          "symbol": "MYTH",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":3369}}}}",
+          "asset": "30"
         }
       ]
     },
@@ -1951,6 +1975,22 @@
           "decimals": 12,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0001\"}]}}}",
           "asset": "8"
+        },
+        {
+          "paraID": 2032,
+          "nativeChainID": "interlay",
+          "symbol": "INTR",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2032},{\"generalKey\":\"0x0002\"}]}}}",
+          "asset": "13"
+        },
+        {
+          "paraID": 2032,
+          "nativeChainID": "interlay",
+          "symbol": "iBTC",
+          "decimals": 8,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2032},{\"generalKey\":\"0x0001\"}]}}}",
+          "asset": "14"
         },
         {
           "paraID": 2034,
@@ -4556,6 +4596,7 @@
         "84": "ASTRA",
         "85": "ITC",
         "88": "AEC",
+        "90": "testo",
         "91": "stt",
         "95": "HACK",
         "99": "hcc",
@@ -4594,8 +4635,15 @@
         "676": "nbnbnbn",
         "720": "POTAT",
         "777": "JJD",
+        "778": "NME",
+        "779": "NME",
+        "780": "NME",
         "789": "TOL",
+        "790": "TST",
+        "791": "NAME",
+        "792": "NME",
         "887": "TTA",
+        "890": "test",
         "900": "VOD",
         "950": "HBCOIN",
         "987": "JVT",
@@ -4674,6 +4722,7 @@
         "61337": "USDC",
         "100112": "FLK",
         "100500": "KEKPEK",
+        "111000": "HEY",
         "114514": "KUNKA",
         "123456": "BATTY",
         "313370": "WBTC",
@@ -4929,6 +4978,10 @@
         "53": {
           "lpToken": "53",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"20120608\"}]}}]]"
+        },
+        "54": {
+          "lpToken": "54",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"333\"}]}}]]"
         }
       },
       "specName": "westmint"
@@ -5113,7 +5166,7 @@
         "988": "BABY",
         "999": "YAKIO",
         "1000": "TWC",
-        "1001": "LOOM",
+        "1001": "UNT",
         "1111": "RCL",
         "1112": "TTam",
         "1113": "KCT",
@@ -5381,6 +5434,10 @@
         "27": {
           "lpToken": "27",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"20120608\"}]}}]]"
+        },
+        "28": {
+          "lpToken": "28",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1984\"}]}}]]"
         }
       },
       "specName": "statemine"
