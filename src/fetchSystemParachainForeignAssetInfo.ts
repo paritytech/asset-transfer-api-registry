@@ -3,6 +3,7 @@
 import { ApiPromise } from '@polkadot/api';
 import { stringToHex } from '@polkadot/util';
 
+import { getAssetReserveLocations } from './getAssetReserveLocations.js';
 import type {
 	ForeignAssetMetadata,
 	ForeignAssetsInfo,
@@ -17,6 +18,7 @@ import type {
  */
 export const fetchSystemParachainForeignAssetInfo = async (
 	api: ApiPromise,
+	chainId: number,
 ): Promise<ForeignAssetsInfo> => {
 	const foreignAssetsInfo: ForeignAssetsInfo = {};
 
@@ -49,10 +51,12 @@ export const fetchSystemParachainForeignAssetInfo = async (
 
 					// if the symbol exists in metadata use it, otherwise uses the hex of the multilocation as the key
 					const foreignAssetInfoKey = assetSymbol ? assetSymbol : hexId;
+					const assetLocation = JSON.stringify(foreignAssetMultiLocation);
 					foreignAssetsInfo[foreignAssetInfoKey] = {
 						symbol: assetSymbol,
 						name: assetName,
-						multiLocation: JSON.stringify(foreignAssetMultiLocation),
+						multiLocation: assetLocation,
+						reserveLocations: getAssetReserveLocations(assetLocation, chainId),
 					};
 				}
 			}

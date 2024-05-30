@@ -88,6 +88,7 @@
         "1001": "NFLR",
         "1024": "NCTR",
         "1107": "JAM",
+        "1180": "KRAK",
         "1230": "HAM",
         "1313": "GGI",
         "1337": "USDC",
@@ -133,22 +134,38 @@
         "EQ": {
           "symbol": "EQ",
           "name": "Equilibrium",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2011\"}}}"
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2011\"}}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2011\"}}}"
+          ]
         },
         "KSM": {
           "symbol": "KSM",
           "name": "Kusama",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Kusama\"}}}"
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Kusama\"}}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":\"Kusama\"},{\"Parachain\":\"1000\"}]}}"
+          ]
         },
         "EQD": {
           "symbol": "EQD",
           "name": "Equilibrium Dollar",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2011\"},{\"GeneralKey\":{\"length\":\"3\",\"data\":\"0x6571640000000000000000000000000000000000000000000000000000000000\"}}]}}"
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2011\"},{\"GeneralKey\":{\"length\":\"3\",\"data\":\"0x6571640000000000000000000000000000000000000000000000000000000000\"}}]}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2011\"}}}"
+          ]
         },
         "GLMR": {
           "symbol": "GLMR",
           "name": "Glimmer",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2004\"},{\"PalletInstance\":\"10\"}]}}"
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2004\"},{\"PalletInstance\":\"10\"}]}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2004\"}}}"
+          ]
         }
       },
       "poolPairsInfo": {
@@ -2571,27 +2588,47 @@
         "DOT": {
           "symbol": "DOT",
           "name": "Polkadot",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Polkadot\"}}}"
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Polkadot\"}}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":\"Polkadot\"},{\"Parachain\":\"1000\"}]}}"
+          ]
         },
         "TNKR": {
           "symbol": "TNKR",
           "name": "Tinkernet",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2125\"},{\"GeneralIndex\":\"0\"}]}}"
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2125\"},{\"GeneralIndex\":\"0\"}]}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2125\"}}}"
+          ]
         },
         "FREN": {
           "symbol": "FREN",
           "name": "FREN",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2123\"}}}"
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2123\"}}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2123\"}}}"
+          ]
         },
         "MOVR": {
           "symbol": "MOVR",
           "name": "MOVR Token",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2023\"},{\"PalletInstance\":\"10\"}]}}"
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2023\"},{\"PalletInstance\":\"10\"}]}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2023\"}}}"
+          ]
         },
         "0x7b22706172656e7473223a2231222c22696e746572696f72223a7b225831223a7b2250617261636861696e223a2232303135227d7d7d": {
           "symbol": "",
           "name": "",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2015\"}}}"
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2015\"}}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2015\"}}}"
+          ]
         }
       },
       "poolPairsInfo": {
@@ -4624,6 +4661,7 @@
         "90": "testo",
         "91": "stt",
         "95": "HACK",
+        "97": "PDAPI",
         "99": "hcc",
         "100": "tlj",
         "101": "WIL",
@@ -4779,12 +4817,20 @@
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a22506f6c6b61646f74227d7d7d": {
           "symbol": "",
           "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Polkadot\"}}}"
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Polkadot\"}}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":\"Polkadot\"},{\"Parachain\":\"1000\"}]}}"
+          ]
         },
         "ROC": {
           "symbol": "ROC",
           "name": "Rococo",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Rococo\"}}}"
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Rococo\"}}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":\"Rococo\"},{\"Parachain\":\"1000\"}]}}"
+          ]
         }
       },
       "poolPairsInfo": {
@@ -5314,37 +5360,65 @@
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863396630353332363331316263326135353432363736316265633230303537363835666238306637227d7d5d7d7d": {
           "symbol": "",
           "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc9f05326311bc2a55426761bec20057685fb80f7\"}}]}}"
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc9f05326311bc2a55426761bec20057685fb80f7\"}}]}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+          ]
         },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307862333461363932346130323130306261366566313261663163373938323835653866376131366565227d7d5d7d7d": {
           "symbol": "",
           "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xb34a6924a02100ba6ef12af1c798285e8f7a16ee\"}}]}}"
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xb34a6924a02100ba6ef12af1c798285e8f7a16ee\"}}]}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+          ]
         },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863336430383838343264636630326331333639396639333662623833646662626336663732316162227d7d5d7d7d": {
           "symbol": "",
           "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc3d088842dcf02c13699f936bb83dfbbc6f721ab\"}}]}}"
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc3d088842dcf02c13699f936bb83dfbbc6f721ab\"}}]}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+          ]
         },
         "HOP": {
           "symbol": "HOP",
           "name": "Trappist Hop",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1836\"}}}"
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1836\"}}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1836\"}}}"
+          ]
         },
         "WND": {
           "symbol": "WND",
           "name": "Westend",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Westend\"}}}"
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Westend\"}}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":\"Westend\"},{\"Parachain\":\"1000\"}]}}"
+          ]
         },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307866666639393736373832643436636330353633306431663665626162313862323332346436623134227d7d5d7d7d": {
           "symbol": "",
           "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xfff9976782d46cc05630d1f6ebab18b2324d6b14\"}}]}}"
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xfff9976782d46cc05630d1f6ebab18b2324d6b14\"}}]}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+          ]
         },
         "MUSE": {
           "symbol": "MUSE",
           "name": "Muse",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3369\"}}}"
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3369\"}}}",
+          "reserveLocations": [
+            "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3369\"}}}"
+          ]
         }
       },
       "poolPairsInfo": {

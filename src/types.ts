@@ -48,6 +48,7 @@ export interface ForeignAssetsInfo {
 		symbol: string;
 		name: string;
 		multiLocation: string;
+		reserveLocations: string[];
 	};
 }
 

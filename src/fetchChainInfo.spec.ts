@@ -58,6 +58,7 @@ describe('fetchChainInfo', () => {
 					prodRelayKusama,
 					prodRelayKusama.info as unknown as string,
 					true,
+					0,
 				),
 			).resolves.toEqual([
 				{
@@ -92,6 +93,7 @@ describe('fetchChainInfo', () => {
 				prodRelayKusama,
 				prodRelayKusama.info as unknown as string,
 				false,
+				1000,
 			);
 
 			expect(result).toEqual([
@@ -267,12 +269,20 @@ describe('fetchChainInfo', () => {
 								name: '',
 								multiLocation:
 									'{"parents":"2","interior":{"X1":{"GlobalConsensus":"Polkadot"}}}',
+								reserveLocations: [
+									'{"parents":"0","interior":{"Here":""}}',
+									'{"parents":"2","interior":{"X2":[{"GlobalConsensus":"Polkadot"},{"Parachain":"1000"}]}}',
+								],
 							},
 						TNKR: {
 							symbol: 'TNKR',
 							name: 'Tinkernet',
 							multiLocation:
 								'{"parents":"1","interior":{"X2":[{"Parachain":"2125"},{"GeneralIndex":"0"}]}}',
+							reserveLocations: [
+								'{"parents":"0","interior":{"X1":{"Parachain":"1000"}}}',
+								'{"parents":"1","interior":{"X1":{"Parachain":"2125"}}}',
+							],
 						},
 					},
 					poolPairsInfo: {
@@ -330,6 +340,7 @@ describe('fetchChainInfo', () => {
 				prodRelayKusama,
 				prodRelayKusama.info as unknown as string,
 				false,
+				2030,
 			);
 
 			expect(result).toEqual([
