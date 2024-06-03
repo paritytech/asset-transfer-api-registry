@@ -47,6 +47,7 @@
         "32": "CLAY",
         "33": "COCOA",
         "35": "DOGE",
+        "36": "CLAY",
         "40": "PEPE",
         "42": "PJS",
         "45": "HYDRA",
@@ -2222,7 +2223,7 @@
           "nativeChainID": "moonbeam",
           "symbol": "BRZ",
           "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":{\"any\":null},\"key\":\"0x3225edce8ad30ae282e62fa32e7418e4b9cf197b\"}}]}}}",
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0x3225edce8ad30ae282e62fa32e7418e4b9cf197b\"}}]}}}",
           "asset": {
             "XCM": "4"
           }
