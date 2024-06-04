@@ -1,7 +1,11 @@
-import { XcmV3MultiLocation } from './types';
+// Copyright 2024 Parity Technologies (UK) Ltd.
+
+import type { AnyJson } from '@polkadot/types/types';
+
+import { AnyObj, RequireOnlyOne, XcmV3Junctions, XcmV3MultiLocation } from './types';
 
 export const getAssetReserveLocations = (
-	location: string,
+	location: string | AnyJson,
 	chainId: number,
 ): string[] => {
 	const assetHubLocation =
@@ -16,83 +20,130 @@ export const getAssetReserveLocations = (
 		chainId,
 	);
 
+	if (assetHubLocation === originChainLocation) {
+		return [assetHubLocation];
+	}
+
 	return [assetHubLocation, originChainLocation];
 };
 
 const getOriginChainLocationFromLocation = (
-	location: string,
+	location: string | AnyJson,
 	chainId: number,
 ): string => {
+	const locationStr =
+		typeof location === 'string'
+			? location
+			: JSON.stringify(sanitizeXcAssetLocationJSON(location?.['v1']));
+
 	let originChainLocation: XcmV3MultiLocation | string = '';
 	let xcmLocation: XcmV3MultiLocation | undefined = undefined;
 
 	try {
-		xcmLocation = JSON.parse(location) as XcmV3MultiLocation;
+		xcmLocation = JSON.parse(locationStr) as XcmV3MultiLocation;
 	} catch {
-		throw new Error(`Unable to parse ${location} as a valid location`);
+		throw new Error(
+			`Unable to parse ${JSON.stringify(location)} as a valid location`,
+		);
 	}
 
-	if (xcmLocation.interior?.X1) {
+	const parents: number | undefined = xcmLocation?.parents
+		? xcmLocation?.parents
+		: xcmLocation?.['Parents']
+		  ? (xcmLocation['Parents'] as number)
+		  : undefined;
+	const interior:
+		| RequireOnlyOne<XcmV3Junctions, keyof XcmV3Junctions>
+		| undefined = xcmLocation?.interior
+		? xcmLocation?.interior
+		: xcmLocation?.['Interior']
+		  ? (xcmLocation['Interior'] as RequireOnlyOne<
+					XcmV3Junctions,
+					keyof XcmV3Junctions
+		    >)
+		  : undefined;
+
+	if (!interior || !parents) {
+		throw new Error(
+			`Invalid xcm location for location ${JSON.stringify(xcmLocation)}`,
+		);
+	}
+
+	if (interior?.X1) {
+		originChainLocation = {
+			parents,
+			interior: {
+				X1: interior.X1,
+			},
+		};
+	} else if (interior?.X2) {
+		originChainLocation = {
+			parents,
+			interior: {
+				X1: interior.X2[0],
+			},
+		};
+	} else if (interior?.X3) {
+		originChainLocation = {
+			parents,
+			interior: {
+				X1: interior.X3[0],
+			},
+		};
+	} else if (interior?.X4) {
+		originChainLocation = {
+			parents,
+			interior: {
+				X1: interior.X4[0],
+			},
+		};
+	} else if (interior?.X5) {
+		originChainLocation = {
+			parents,
+			interior: {
+				X1: interior.X5[0],
+			},
+		};
+	} else if (interior?.X6) {
+		originChainLocation = {
+			parents,
+			interior: {
+				X1: interior?.X6[0],
+			},
+		};
+	} else if (interior?.X7) {
+		originChainLocation = {
+			parents,
+			interior: {
+				X1: interior.X7[0],
+			},
+		};
+	} else if (interior?.X8) {
+		originChainLocation = {
+			parents,
+			interior: {
+				X1: interior.X8[0],
+			},
+		};
+	} else if (interior?.Here === '' || interior?.Here === null) {
 		originChainLocation = xcmLocation;
-	} else if (xcmLocation.interior?.X2) {
-		originChainLocation = {
-			parents: xcmLocation.parents,
-			interior: {
-				X1: xcmLocation.interior.X2[0],
-			},
-		};
-	} else if (xcmLocation.interior?.X3) {
-		originChainLocation = {
-			parents: xcmLocation.parents,
-			interior: {
-				X1: xcmLocation.interior.X3[0],
-			},
-		};
-	} else if (xcmLocation.interior?.X4) {
-		originChainLocation = {
-			parents: xcmLocation.parents,
-			interior: {
-				X1: xcmLocation.interior.X4[0],
-			},
-		};
-	} else if (xcmLocation.interior?.X5) {
-		originChainLocation = {
-			parents: xcmLocation.parents,
-			interior: {
-				X1: xcmLocation.interior.X5[0],
-			},
-		};
-	} else if (xcmLocation.interior?.X6) {
-		originChainLocation = {
-			parents: xcmLocation.parents,
-			interior: {
-				X1: xcmLocation.interior?.X6[0],
-			},
-		};
-	} else if (xcmLocation.interior?.X7) {
-		originChainLocation = {
-			parents: xcmLocation.parents,
-			interior: {
-				X1: xcmLocation.interior.X7[0],
-			},
-		};
-	} else if (xcmLocation.interior?.X8) {
-		originChainLocation = {
-			parents: xcmLocation.parents,
-			interior: {
-				X1: xcmLocation.interior.X8[0],
-			},
-		};
 	} else {
-		throw new Error(`Unable to derive chain origin from location ${location}`);
+		throw new Error(
+			`Unable to derive chain origin from location ${JSON.stringify(location)}`,
+		);
 	}
 
 	if (
-		JSON.stringify(originChainLocation.interior.X1).includes(chainId.toString())
+		originChainLocation.interior?.Here === undefined &&
+		originChainLocation.interior?.X1 &&
+		JSON.stringify(originChainLocation.interior?.X1).includes(
+			chainId.toString(),
+		)
 	) {
 		originChainLocation = '{"parents":"0","interior":{"Here":""}}';
 	} else if (
-		originChainLocation.interior.X1?.GlobalConsensus &&
+		originChainLocation.interior?.X1 &&
+		originChainLocation.interior?.X1?.GlobalConsensus &&
 		!JSON.stringify(originChainLocation.interior.X1?.GlobalConsensus)
 			.toLowerCase()
 			.includes('ethereum')
@@ -107,4 +158,32 @@ const getOriginChainLocationFromLocation = (
 	}
 
 	return originChainLocation;
+};
+
+const sanitizeXcAssetLocationJSON = <T extends AnyObj>(
+	xcAssetLocationJSON: T,
+): T => {
+	const sanitizedJSON = {};
+
+	return Object.keys(xcAssetLocationJSON).reduce((_, key) => {
+		let value: unknown;
+
+		if (xcAssetLocationJSON[key] === null) {
+			value = '';
+		} else {
+			value = xcAssetLocationJSON[key];
+		}
+
+		if (typeof value === 'string' && value.length > 0) {
+			value = value[0].toUpperCase() + value.slice(1);
+		} else if (typeof value === 'number') {
+			value = value.toString();
+		} else if (typeof value === 'object') {
+			value = sanitizeXcAssetLocationJSON(value as T);
+		}
+
+		sanitizedJSON[key[0].toUpperCase() + key.slice(1)] = value;
+
+		return sanitizedJSON as T;
+	}, {} as T);
 };

@@ -53,7 +53,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"here\":null}}}",
           "asset": {
             "Token2": "0"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"1\",\"Interior\":{\"Here\":\"\"}}"
+          ]
         },
         {
           "paraID": 1000,
@@ -63,7 +67,10 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
           "asset": {
             "Token2": "2"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}"
+          ]
         },
         {
           "paraID": 1000,
@@ -73,7 +80,10 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}",
           "asset": {
             "Token2": "5"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}"
+          ]
         },
         {
           "paraID": 2004,
@@ -83,7 +93,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2004},{\"palletInstance\":10}]}}}",
           "asset": {
             "Token2": "1"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"1\",\"Interior\":{\"X1\":{\"Parachain\":\"2004}}}"
+          ]
         },
         {
           "paraID": 2006,
@@ -93,7 +107,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2006}}}}",
           "asset": {
             "Token2": "3"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"1\",\"Interior\":{\"X1\":{\"Parachain\":\"2006}}}"
+          ]
         },
         {
           "paraID": 2030,
@@ -103,7 +121,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0901\"}]}}}",
           "asset": {
             "VToken2": "1"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"0\",\"Interior\":{\"Here\":\"\"}}"
+          ]
         },
         {
           "paraID": 2030,
@@ -113,7 +135,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0904\"}]}}}",
           "asset": {
             "VToken2": "4"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"0\",\"Interior\":{\"Here\":\"\"}}"
+          ]
         },
         {
           "paraID": 2030,
@@ -123,7 +149,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0804\"}]}}}",
           "asset": {
             "Token2": "4"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"0\",\"Interior\":{\"Here\":\"\"}}"
+          ]
         },
         {
           "paraID": 2030,
@@ -133,7 +163,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0903\"}]}}}",
           "asset": {
             "VToken2": "3"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"0\",\"Interior\":{\"Here\":\"\"}}"
+          ]
         },
         {
           "paraID": 2030,
@@ -143,7 +177,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0900\"}]}}}",
           "asset": {
             "VToken2": "0"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"0\",\"Interior\":{\"Here\":\"\"}}"
+          ]
         },
         {
           "paraID": 2030,
@@ -153,7 +191,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0403\"}]}}}",
           "asset": {
             "VSToken2": "0"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"0\",\"Interior\":{\"Here\":\"\"}}"
+          ]
         },
         {
           "paraID": 2032,
@@ -163,7 +205,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2032},{\"generalKey\":\"0x0001\"}]}}}",
           "asset": {
             "Token2": "6"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"1\",\"Interior\":{\"X1\":{\"Parachain\":\"2032\"}}}"
+          ]
         },
         {
           "paraID": 2032,
@@ -173,7 +219,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2032},{\"generalKey\":\"0x0002\"}]}}}",
           "asset": {
             "Token2": "7"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"1\",\"Interior\":{\"X1\":{\"Parachain\":\"2032\"}}}"
+          ]
         },
         {
           "paraID": 2104,
@@ -183,7 +233,11 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2104}}}}",
           "asset": {
             "Token2": "8"
-          }
+          },
+          "reserveLocations": [
+            "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+            "{\"Parents\":\"1\",\"Interior\":{\"X1\":{\"Parachain\":\"2104\"}}}"
+          ]
         }
       ]
     }

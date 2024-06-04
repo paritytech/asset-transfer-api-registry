@@ -77,6 +77,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							Token2: '0',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 1000,
@@ -88,6 +92,9 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							Token2: '2',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+						],
 					},
 					{
 						paraID: 1000,
@@ -99,6 +106,9 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							Token2: '5',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+						],
 					},
 					{
 						paraID: 2004,
@@ -110,6 +120,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							Token2: '1',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"X1":{"Parachain":"2004}}}',
+						],
 					},
 					{
 						paraID: 2006,
@@ -121,6 +135,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							Token2: '3',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"X1":{"Parachain":"2006}}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -132,6 +150,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							VToken2: '1',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -143,6 +165,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							VToken2: '4',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -154,6 +180,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							Token2: '4',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -165,6 +195,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							VToken2: '3',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -176,6 +210,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							VToken2: '0',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -187,6 +225,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							VSToken2: '0',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2032,
@@ -198,6 +240,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							Token2: '6',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"X1":{"Parachain":"2032"}}}',
+						],
 					},
 					{
 						paraID: 2032,
@@ -209,6 +255,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							Token2: '7',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"X1":{"Parachain":"2032"}}}',
+						],
 					},
 					{
 						paraID: 2104,
@@ -220,6 +270,10 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 						asset: {
 							Token2: '8',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"X1":{"Parachain":"2104"}}}',
+						],
 					},
 				],
 			},
@@ -555,6 +609,10 @@ describe('createRegistry', () => {
 						asset: {
 							Token2: '0',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 1000,
@@ -566,6 +624,9 @@ describe('createRegistry', () => {
 						asset: {
 							Token2: '2',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+						],
 					},
 					{
 						paraID: 1000,
@@ -577,6 +638,9 @@ describe('createRegistry', () => {
 						asset: {
 							Token2: '5',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+						],
 					},
 					{
 						paraID: 2004,
@@ -588,6 +652,10 @@ describe('createRegistry', () => {
 						asset: {
 							Token2: '1',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"X1":{"Parachain":"2004}}}',
+						],
 					},
 					{
 						paraID: 2006,
@@ -599,6 +667,10 @@ describe('createRegistry', () => {
 						asset: {
 							Token2: '3',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"X1":{"Parachain":"2006}}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -610,6 +682,10 @@ describe('createRegistry', () => {
 						asset: {
 							VToken2: '1',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -621,6 +697,10 @@ describe('createRegistry', () => {
 						asset: {
 							VToken2: '4',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -632,6 +712,10 @@ describe('createRegistry', () => {
 						asset: {
 							Token2: '4',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -643,6 +727,10 @@ describe('createRegistry', () => {
 						asset: {
 							VToken2: '3',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -654,6 +742,10 @@ describe('createRegistry', () => {
 						asset: {
 							VToken2: '0',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2030,
@@ -665,6 +757,10 @@ describe('createRegistry', () => {
 						asset: {
 							VSToken2: '0',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"0","Interior":{"Here":""}}',
+						],
 					},
 					{
 						paraID: 2032,
@@ -676,6 +772,10 @@ describe('createRegistry', () => {
 						asset: {
 							Token2: '6',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"X1":{"Parachain":"2032"}}}',
+						],
 					},
 					{
 						paraID: 2032,
@@ -687,6 +787,10 @@ describe('createRegistry', () => {
 						asset: {
 							Token2: '7',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"X1":{"Parachain":"2032"}}}',
+						],
 					},
 					{
 						paraID: 2104,
@@ -698,6 +802,10 @@ describe('createRegistry', () => {
 						asset: {
 							Token2: '8',
 						},
+						reserveLocations: [
+							'{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}',
+							'{"Parents":"1","Interior":{"X1":{"Parachain":"2104"}}}',
+						],
 					},
 				],
 			},
