@@ -39,8 +39,19 @@ const assignXcAssetsToRelay = (
 	}
 };
 
-const sanitizeXcAssetData = (data: XcAssetsData[], chainId: number): SanitizedXcAssetsData[] => {
+const sanitizeXcAssetData = (
+	data: XcAssetsData[],
+	chainId: number,
+): SanitizedXcAssetsData[] => {
 	const mappedData = data.map((info) => {
+		const reserveLocations = getAssetReserveLocations(
+			info.xcmV1MultiLocation,
+			chainId,
+		);
+		const assetHubReserveLocation = reserveLocations[0];
+		const originChainReserveLocation =
+			reserveLocations.length > 1 ? reserveLocations[1] : undefined;
+
 		return {
 			paraID: info.paraID,
 			nativeChainID: info.nativeChainID,
@@ -48,10 +59,8 @@ const sanitizeXcAssetData = (data: XcAssetsData[], chainId: number): SanitizedXc
 			decimals: info.decimals,
 			xcmV1MultiLocation: JSON.stringify(info.xcmV1MultiLocation),
 			asset: info.asset,
-			reserveLocations: getAssetReserveLocations(
-				info.xcmV1MultiLocation,
-				chainId,
-			),
+			assetHubReserveLocation,
+			originChainReserveLocation,
 		};
 	});
 

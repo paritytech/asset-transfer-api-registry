@@ -52,11 +52,21 @@ export const fetchSystemParachainForeignAssetInfo = async (
 					// if the symbol exists in metadata use it, otherwise uses the hex of the multilocation as the key
 					const foreignAssetInfoKey = assetSymbol ? assetSymbol : hexId;
 					const assetLocation = JSON.stringify(foreignAssetMultiLocation);
+
+					const reserveLocations = getAssetReserveLocations(
+						assetLocation,
+						chainId,
+					);
+					const assetHubReserveLocation = reserveLocations[0];
+					const originChainReserveLocation =
+						reserveLocations.length > 1 ? reserveLocations[1] : undefined;
+
 					foreignAssetsInfo[foreignAssetInfoKey] = {
 						symbol: assetSymbol,
 						name: assetName,
 						multiLocation: assetLocation,
-						reserveLocations: getAssetReserveLocations(assetLocation, chainId),
+						assetHubReserveLocation,
+						originChainReserveLocation,
 					};
 				}
 			}

@@ -18,10 +18,10 @@ describe('fetchSystemParachainForeignAssetInfo', () => {
 					'{"parents":"1","interior":{"X2":[{"Parachain":"2125"},{"GeneralIndex":"0"}]}}',
 				name: 'Tinkernet',
 				symbol: 'TNKR',
-				reserveLocations: [
+				assetHubReserveLocation:
 					'{"parents":"0","interior":{"X1":{"Parachain":"1000"}}}',
+				originChainReserveLocation:
 					'{"parents":"1","interior":{"X1":{"Parachain":"2125"}}}',
-				],
 			},
 		});
 	});

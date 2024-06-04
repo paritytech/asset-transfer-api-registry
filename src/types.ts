@@ -48,7 +48,8 @@ export interface ForeignAssetsInfo {
 		symbol: string;
 		name: string;
 		multiLocation: string;
-		reserveLocations: string[];
+		assetHubReserveLocation: string;
+		originChainReserveLocation?: string;
 	};
 }
 
@@ -94,7 +95,8 @@ export type SanitizedXcAssetsData = {
 	decimals: number;
 	xcmV1MultiLocation: string;
 	asset: Object | string;
-	reserveLocations: string[];
+	assetHubReserveLocation: string;
+	originChainReserveLocation?: string | undefined;
 };
 
 export type XcAssetXcmStandardized = {

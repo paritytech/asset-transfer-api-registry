@@ -2,7 +2,12 @@
 
 import type { AnyJson } from '@polkadot/types/types';
 
-import { AnyObj, RequireOnlyOne, XcmV3Junctions, XcmV3MultiLocation } from './types';
+import {
+	AnyObj,
+	RequireOnlyOne,
+	XcmV3Junctions,
+	XcmV3MultiLocation,
+} from './types';
 
 export const getAssetReserveLocations = (
 	location: string | AnyJson,
