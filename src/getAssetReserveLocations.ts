@@ -9,6 +9,13 @@ import {
 	XcmV3MultiLocation,
 } from './types';
 
+/**
+ * Returns the relative AssetHub and origin chain reserve locations of an asset location.
+ * Returns only the AssetHub location if the origin chain is AssetHub.
+ *
+ * @param location
+ * @param chainId
+ */
 export const getAssetReserveLocations = (
 	location: string | AnyJson,
 	chainId: number,
@@ -32,6 +39,12 @@ export const getAssetReserveLocations = (
 	return [assetHubLocation, originChainLocation];
 };
 
+/**
+ * Returns the relative origin chain reserve location of an asset location.
+ *
+ * @param location
+ * @param chainId
+ */
 const getOriginChainLocationFromLocation = (
 	location: string | AnyJson,
 	chainId: number,
@@ -165,6 +178,13 @@ const getOriginChainLocationFromLocation = (
 	return originChainLocation;
 };
 
+/**
+ * Set all keys in a location object with the first key being capitalized.
+ * When a keys value is an integer it will convert that integer into a string.
+ * If a keys value is null it will return an empty string in its place.
+ *
+ * @param xcAssetLocationJSON
+ */
 const sanitizeXcAssetLocationJSON = <T extends AnyObj>(
 	xcAssetLocationJSON: T,
 ): T => {
