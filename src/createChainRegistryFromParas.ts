@@ -35,23 +35,18 @@ export const createChainRegistryFromParas = async (
 	>[] = [];
 
 	for (const endpoint of endpoints) {
-		const reliable: boolean = paraIds[chainName].includes(
-			endpoint.paraId as number,
-		);
+		const paraId = endpoint.paraId as number;
+		const reliable: boolean = paraIds[chainName].includes(paraId);
 		if (!reliable) {
 			// Add to registry if it exists
-			if (
-				FinalRegistry[chainName] &&
-				FinalRegistry[chainName][endpoint.paraId as number]
-			) {
+			if (FinalRegistry[chainName] && FinalRegistry[chainName][paraId]) {
 				// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-				registry[chainName][`${endpoint.paraId as number}`] =
-					FinalRegistry[chainName][endpoint.paraId as number];
+				registry[chainName][`${paraId}`] = FinalRegistry[chainName][paraId];
 			}
 			continue;
 		}
 
-		appendFetchChainInfoPromise(chainInfoPromises, endpoint);
+		appendFetchChainInfoPromise(chainInfoPromises, endpoint, paraId);
 	}
 
 	return await updateRegistryChainInfo(chainName, registry, chainInfoPromises);
@@ -60,8 +55,9 @@ export const createChainRegistryFromParas = async (
 export const appendFetchChainInfoPromise = (
 	chainInfoPromises: Promise<[ChainInfoKeys, number | undefined] | null>[],
 	endpoint: EndpointOption,
+	paraId: number,
 ) => {
 	chainInfoPromises.push(
-		fetchChainInfo(endpoint, endpoint.info as unknown as string, false),
+		fetchChainInfo(endpoint, endpoint.info as unknown as string, false, paraId),
 	);
 };
