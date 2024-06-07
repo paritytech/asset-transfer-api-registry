@@ -863,6 +863,14 @@
         {
           "paraID": 2030,
           "nativeChainID": "bifrost",
+          "symbol": "FIL",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0804\"}]}}}",
+          "asset": "18446744073709551639"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
           "symbol": "vsDOT",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0403\"}]}}}",
@@ -871,10 +879,26 @@
         {
           "paraID": 2030,
           "nativeChainID": "bifrost",
+          "symbol": "vMANTA",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0908\"}]}}}",
+          "asset": "18446744073709551638"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
           "symbol": "vDOT",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0900\"}]}}}",
           "asset": "18446744073709551624"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "vFIL",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0904\"}]}}}",
+          "asset": "18446744073709551640"
         },
         {
           "paraID": 2030,
@@ -891,6 +915,14 @@
           "decimals": 12,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0001\"}]}}}",
           "asset": "18446744073709551623"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "vGLMR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0901\"}]}}}",
+          "asset": "18446744073709551637"
         },
         {
           "paraID": 2032,
