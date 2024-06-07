@@ -151,21 +151,23 @@ const getOriginChainLocationFromLocation = (
 		);
 	}
 
-	if (
+	const originIsCurrentChain =
 		originChainLocation.interior?.Here === undefined &&
 		originChainLocation.interior?.X1 &&
 		JSON.stringify(originChainLocation.interior?.X1).includes(
 			chainId.toString(),
-		)
-	) {
-		originChainLocation = '{"parents":"0","interior":{"Here":""}}';
-	} else if (
-		originChainLocation.interior?.X1 &&
-		originChainLocation.interior?.X1?.GlobalConsensus &&
+		);
+
+	const isNonEthereumGlobalConsensusLocation =
+		originChainLocation.interior?.X1 != undefined &&
+		originChainLocation.interior?.X1?.GlobalConsensus != undefined &&
 		!JSON.stringify(originChainLocation.interior.X1?.GlobalConsensus)
 			.toLowerCase()
-			.includes('ethereum')
-	) {
+			.includes('ethereum');
+
+	if (originIsCurrentChain) {
+		originChainLocation = '{"parents":"0","interior":{"Here":""}}';
+	} else if (isNonEthereumGlobalConsensusLocation) {
 		originChainLocation = `{"parents":${JSON.stringify(
 			originChainLocation.parents,
 		)},"interior":{"X2":[${JSON.stringify(
