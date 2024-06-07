@@ -8,7 +8,7 @@ describe('getAssetReserveLocations', () => {
 	type Test = [
 		assetLocation: string | AnyJson,
 		chainId: number,
-		reserveLocations: string[],
+		reserveLocations: [string, string | undefined],
 	];
 
 	it('Should correctly get the relative reserve locations given an assets location and the host chains ID', () => {
@@ -152,7 +152,7 @@ describe('getAssetReserveLocations', () => {
 					},
 				},
 				1000,
-				['{"parents":"0","interior":{"Here":""}}'],
+				['{"parents":"0","interior":{"Here":""}}', undefined],
 			],
 			[
 				'{"parents":"1","interior":{"X2":[{"Parachain":"2004"},{"PalletInstance":"10"}]}}',
@@ -205,7 +205,7 @@ describe('getAssetReserveLocations', () => {
 					},
 				},
 				2030,
-				['{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}'],
+				['{"parents":"1","interior":{"X1":{"Parachain":"1000"}}}', undefined],
 			],
 			[
 				{

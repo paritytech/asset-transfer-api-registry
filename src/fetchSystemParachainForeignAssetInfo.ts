@@ -53,13 +53,8 @@ export const fetchSystemParachainForeignAssetInfo = async (
 					const foreignAssetInfoKey = assetSymbol ? assetSymbol : hexId;
 					const assetLocation = JSON.stringify(foreignAssetMultiLocation);
 
-					const reserveLocations = getAssetReserveLocations(
-						assetLocation,
-						chainId,
-					);
-					const assetHubReserveLocation = reserveLocations[0];
-					const originChainReserveLocation =
-						reserveLocations.length > 1 ? reserveLocations[1] : undefined;
+					const [assetHubReserveLocation, originChainReserveLocation] =
+						getAssetReserveLocations(assetLocation, chainId);
 
 					foreignAssetsInfo[foreignAssetInfoKey] = {
 						symbol: assetSymbol,

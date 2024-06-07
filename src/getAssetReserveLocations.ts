@@ -19,7 +19,7 @@ import {
 export const getAssetReserveLocations = (
 	location: string | AnyJson,
 	chainId: number,
-): string[] => {
+): [string, string | undefined] => {
 	const assetHubLocation =
 		chainId === 0
 			? `{"parents":"0","interior":{"X1":{"Parachain":"1000"}}}`
@@ -33,7 +33,7 @@ export const getAssetReserveLocations = (
 	);
 
 	if (assetHubLocation === originChainLocation) {
-		return [assetHubLocation];
+		return [assetHubLocation, undefined];
 	}
 
 	return [assetHubLocation, originChainLocation];

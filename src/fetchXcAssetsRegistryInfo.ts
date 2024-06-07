@@ -44,13 +44,8 @@ const sanitizeXcAssetData = (
 	chainId: number,
 ): SanitizedXcAssetsData[] => {
 	const mappedData = data.map((info) => {
-		const reserveLocations = getAssetReserveLocations(
-			info.xcmV1MultiLocation,
-			chainId,
-		);
-		const assetHubReserveLocation = reserveLocations[0];
-		const originChainReserveLocation =
-			reserveLocations.length > 1 ? reserveLocations[1] : undefined;
+		const [assetHubReserveLocation, originChainReserveLocation] =
+			getAssetReserveLocations(info.xcmV1MultiLocation, chainId);
 
 		return {
 			paraID: info.paraID,
