@@ -127,6 +127,7 @@
         "25518": "BEER",
         "30035": "DED",
         "31337": "WUD",
+        "33441": "MPACT",
         "42069": "STINK",
         "65454": "TST",
         "69420": "GABE",
@@ -470,7 +471,8 @@
           "symbol": "WIFD",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":17}]}}}",
-          "asset": "61295607754960722617854661686514597014"
+          "asset": "61295607754960722617854661686514597014",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}"
         },
         {
           "paraID": 1000,
@@ -1001,7 +1003,9 @@
           "symbol": "FIL",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0804\"}]}}}",
-          "asset": "18446744073709551639"
+          "asset": "18446744073709551639",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2030\"}}}"
         },
         {
           "paraID": 2030,
@@ -1019,7 +1023,9 @@
           "symbol": "vMANTA",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0908\"}]}}}",
-          "asset": "18446744073709551638"
+          "asset": "18446744073709551638",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2030\"}}}"
         },
         {
           "paraID": 2030,
@@ -1037,7 +1043,9 @@
           "symbol": "vFIL",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0904\"}]}}}",
-          "asset": "18446744073709551640"
+          "asset": "18446744073709551640",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2030\"}}}"
         },
         {
           "paraID": 2030,
@@ -1065,7 +1073,9 @@
           "symbol": "vGLMR",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0901\"}]}}}",
-          "asset": "18446744073709551637"
+          "asset": "18446744073709551637",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2030\"}}}"
         },
         {
           "paraID": 2032,
@@ -2216,6 +2226,16 @@
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2037\"}}}"
         },
         {
+          "paraID": 2046,
+          "nativeChainID": "darwinia",
+          "symbol": "RING",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2046},{\"palletInstance\":5}]}}}",
+          "asset": "31",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2046\"}}}"
+        },
+        {
           "paraID": 2086,
           "nativeChainID": null,
           "symbol": "KILT",
@@ -2950,6 +2970,7 @@
         "1688": "ali",
         "1899": "BKNRY",
         "1984": "USDt",
+        "1985": "web3",
         "1999": "ADVERT2",
         "2000": "USDT",
         "2021": "WAVE",
