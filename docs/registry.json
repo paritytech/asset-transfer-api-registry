@@ -5939,6 +5939,8 @@
         "69": "SRT",
         "70": "dsads",
         "71": "testDED",
+        "72": "NEHT",
+        "73": "NEHT1",
         "74": "GID",
         "75": "UGOL",
         "77": "shicoin",
@@ -6147,6 +6149,13 @@
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
         },
+        "EDU": {
+          "symbol": "EDU",
+          "name": "Educhain",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4428\"}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4428\"}}}"
+        },
         "HOP": {
           "symbol": "HOP",
           "name": "Trappist Hop",
@@ -6292,6 +6301,14 @@
         "28": {
           "lpToken": "28",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1984\"}]}}]]"
+        },
+        "29": {
+          "lpToken": "29",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"10201\"}]}}]]"
+        },
+        "30": {
+          "lpToken": "30",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1001\"}]}}]]"
         }
       },
       "specName": "statemine"
