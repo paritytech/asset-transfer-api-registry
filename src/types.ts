@@ -48,6 +48,8 @@ export interface ForeignAssetsInfo {
 		symbol: string;
 		name: string;
 		multiLocation: string;
+		assetHubReserveLocation: string;
+		originChainReserveLocation?: string;
 	};
 }
 
@@ -93,13 +95,15 @@ export type SanitizedXcAssetsData = {
 	decimals: number;
 	xcmV1MultiLocation: string;
 	asset: Object | string;
+	assetHubReserveLocation: string;
+	originChainReserveLocation?: string | undefined;
 };
 
 export type XcAssetXcmStandardized = {
 	[x: string]: string | number | undefined;
 };
 
-type RequireOnlyOne<T, Keys extends keyof T = keyof T> = Pick<
+export type RequireOnlyOne<T, Keys extends keyof T = keyof T> = Pick<
 	T,
 	Exclude<keyof T, Keys>
 > &
@@ -325,3 +329,5 @@ export interface XcAssetsV3MultiLocation {
 		};
 	};
 }
+
+export type AnyObj = { [x: string]: unknown };
