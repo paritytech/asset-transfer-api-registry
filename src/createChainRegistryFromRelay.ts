@@ -25,6 +25,7 @@ export const createChainRegistryFromRelay = async (
 		endpoint,
 		endpoint.info as unknown as string,
 		true,
+		endpoint.paraId as number,
 	);
 	if (res) {
 		const chainInfoKeys = res[0];

@@ -25,6 +25,7 @@ export const fetchChainInfo = async (
 	endpointOpts: EndpointOption,
 	chain: string,
 	isRelay: boolean,
+	paraId: number,
 ): Promise<[ChainInfoKeys, number | undefined] | null> => {
 	const api = await getApi(endpointOpts, chain, isRelay);
 
@@ -56,7 +57,10 @@ export const fetchChainInfo = async (
 			specNameStr === 'asset-hub-polkadot'
 		) {
 			assetsInfo = await fetchSystemParachainAssetInfo(api);
-			foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(api);
+			foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(
+				api,
+				paraId,
+			);
 			poolPairsInfo = await fetchSystemParachainAssetConversionPoolInfo(api);
 		}
 

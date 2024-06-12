@@ -9,11 +9,18 @@ export const mockAssetHubKusamaParachainForeignAssetsInfo: ForeignAssetsInfo = {
 			name: '',
 			multiLocation:
 				'{"parents":"2","interior":{"X1":{"GlobalConsensus":"Polkadot"}}}',
+			assetHubReserveLocation: '{"parents":"0","interior":{"Here":""}}',
+			originChainReserveLocation:
+				'{"parents":"2","interior":{"X2":[{"GlobalConsensus":"Polkadot"},{"Parachain":"1000"}]}}',
 		},
 	TNKR: {
 		symbol: 'TNKR',
 		name: 'Tinkernet',
 		multiLocation:
 			'{"parents":"1","interior":{"X2":[{"Parachain":"2125"},{"GeneralIndex":"0"}]}}',
+		assetHubReserveLocation:
+			'{"parents":"0","interior":{"X1":{"Parachain":"1000"}}}',
+		originChainReserveLocation:
+			'{"parents":"1","interior":{"X1":{"Parachain":"2125"}}}',
 	},
 };
