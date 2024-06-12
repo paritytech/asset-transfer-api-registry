@@ -151,6 +151,11 @@
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2011\"}}}"
         },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863303261616133396232323366653864306130653563346632376561643930383363373536636332227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2\"}}]}}"
+        },
         "KSM": {
           "symbol": "KSM",
           "name": "Kusama",
@@ -478,6 +483,14 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":17}]}}}",
           "asset": "61295607754960722617854661686514597014",
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}"
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "WIFD",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":17}]}}}",
+          "asset": "61295607754960722617854661686514597014"
         },
         {
           "paraID": 1000,
@@ -1015,6 +1028,14 @@
         {
           "paraID": 2030,
           "nativeChainID": "bifrost",
+          "symbol": "FIL",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0804\"}]}}}",
+          "asset": "18446744073709551639"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
           "symbol": "vsDOT",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0403\"}]}}}",
@@ -1035,6 +1056,14 @@
         {
           "paraID": 2030,
           "nativeChainID": "bifrost",
+          "symbol": "vMANTA",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0908\"}]}}}",
+          "asset": "18446744073709551638"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
           "symbol": "vDOT",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0900\"}]}}}",
@@ -1051,6 +1080,14 @@
           "asset": "18446744073709551640",
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2030\"}}}"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "vFIL",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0904\"}]}}}",
+          "asset": "18446744073709551640"
         },
         {
           "paraID": 2030,
@@ -1081,6 +1118,14 @@
           "asset": "18446744073709551637",
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2030\"}}}"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "vGLMR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0901\"}]}}}",
+          "asset": "18446744073709551637"
         },
         {
           "paraID": 2032,
@@ -1151,6 +1196,14 @@
           "asset": "18446744073709551636",
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2094\"}}}"
+        },
+        {
+          "paraID": 2094,
+          "nativeChainID": "pendulum",
+          "symbol": "EURC.s",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x5\":[{\"parachain\":2094},{\"palletInstance\":53},{\"generalIndex\":2},{\"generalKey\":\"0x45555243\"},{\"generalKey\":\"0x2112ee863867e4e219fe254c0918b00bc9ea400775bfc3ab4430971ce505877c\"}]}}}",
+          "asset": "18446744073709551636"
         },
         {
           "paraID": 2094,
@@ -1567,6 +1620,16 @@
           },
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "PEN",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"palletInstance\":10}]}}}",
+          "asset": {
+            "Token2": "12"
+          }
         },
         {
           "paraID": 2030,
@@ -2251,6 +2314,14 @@
           "asset": "31",
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2046\"}}}"
+        },
+        {
+          "paraID": 2046,
+          "nativeChainID": "darwinia",
+          "symbol": "RING",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2046},{\"palletInstance\":5}]}}}",
+          "asset": "31"
         },
         {
           "paraID": 2086,
@@ -5536,6 +5607,7 @@
         "4399": "dtt",
         "5550": "FRAC",
         "5551": "FRAC",
+        "5552": "FRAC",
         "6666": "BOB",
         "6969": "BEE",
         "8888": "USDT",
@@ -6158,6 +6230,11 @@
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4428\"}}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4428\"}}}"
+        },
+        "EDU": {
+          "symbol": "EDU",
+          "name": "Educhain",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4428\"}}}"
         },
         "HOP": {
           "symbol": "HOP",
