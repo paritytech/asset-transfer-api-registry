@@ -46,8 +46,11 @@
         "31": "WOOD",
         "32": "CLAY",
         "33": "COCOA",
+        "35": "DOGE",
+        "36": "CLAY",
         "40": "PEPE",
         "42": "PJS",
+        "45": "HYDRA",
         "46": "PEPE",
         "50": "CATWIF",
         "55": "COFI",
@@ -57,6 +60,7 @@
         "69": "DAL",
         "70": "STEEBOR",
         "71": "CATNIP",
+        "72": "NEHT",
         "77": "TRQ",
         "78": "COCA",
         "79": "PGOLD",
@@ -66,6 +70,7 @@
         "99": "Cypress",
         "100": "WETH",
         "101": "DOTMA",
+        "110": "SIX",
         "111": "DEMO",
         "123": "123",
         "149": "EDU",
@@ -88,16 +93,25 @@
         "1001": "NFLR",
         "1024": "NCTR",
         "1107": "JAM",
+        "1180": "KRAK",
+        "1212": "DOTTY",
         "1230": "HAM",
+        "1234": "BUNS",
         "1313": "GGI",
         "1337": "USDC",
+        "1970": "NIPS",
         "1980": "GAVIN",
         "1983": "KAS",
         "1984": "USDt",
+        "1992": "SITE",
+        "1994": "CRT",
         "2000": "DAO",
+        "2020": "HYDRA",
         "2023": "dot",
         "2024": "WOOD",
+        "2025": "FLMG",
         "2121": "SKEM",
+        "2222": "DUCK",
         "2230": "GBILL",
         "2820": "HOOT",
         "2828": "JAMD",
@@ -119,6 +133,7 @@
         "25518": "BEER",
         "30035": "DED",
         "31337": "WUD",
+        "33441": "MPACT",
         "42069": "STINK",
         "65454": "TST",
         "69420": "GABE",
@@ -134,6 +149,11 @@
           "symbol": "EQ",
           "name": "Equilibrium",
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2011\"}}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863303261616133396232323366653864306130653563346632376561643930383363373536636332227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2\"}}]}}"
         },
         "KSM": {
           "symbol": "KSM",
@@ -416,6 +436,14 @@
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"here\":null}}}",
           "asset": "42259045809535163221576417993425387648"
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "WIFD",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":17}]}}}",
+          "asset": "61295607754960722617854661686514597014"
         },
         {
           "paraID": 1000,
@@ -847,6 +875,14 @@
         {
           "paraID": 2030,
           "nativeChainID": "bifrost",
+          "symbol": "FIL",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0804\"}]}}}",
+          "asset": "18446744073709551639"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
           "symbol": "vsDOT",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0403\"}]}}}",
@@ -855,10 +891,26 @@
         {
           "paraID": 2030,
           "nativeChainID": "bifrost",
+          "symbol": "vMANTA",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0908\"}]}}}",
+          "asset": "18446744073709551638"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
           "symbol": "vDOT",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0900\"}]}}}",
           "asset": "18446744073709551624"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "vFIL",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0904\"}]}}}",
+          "asset": "18446744073709551640"
         },
         {
           "paraID": 2030,
@@ -875,6 +927,14 @@
           "decimals": 12,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0001\"}]}}}",
           "asset": "18446744073709551623"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "vGLMR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0901\"}]}}}",
+          "asset": "18446744073709551637"
         },
         {
           "paraID": 2032,
@@ -1279,6 +1339,16 @@
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0908\"}]}}}",
           "asset": {
             "VToken2": "8"
+          }
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "PEN",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"palletInstance\":10}]}}}",
+          "asset": {
+            "Token2": "12"
           }
         },
         {
@@ -1846,6 +1916,14 @@
           "asset": "25"
         },
         {
+          "paraID": 2046,
+          "nativeChainID": "darwinia",
+          "symbol": "RING",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2046},{\"palletInstance\":5}]}}}",
+          "asset": "31"
+        },
+        {
           "paraID": 2086,
           "nativeChainID": null,
           "symbol": "KILT",
@@ -2217,7 +2295,7 @@
           "nativeChainID": "moonbeam",
           "symbol": "BRZ",
           "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":{\"any\":null},\"key\":\"0x3225edce8ad30ae282e62fa32e7418e4b9cf197b\"}}]}}}",
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0x3225edce8ad30ae282e62fa32e7418e4b9cf197b\"}}]}}}",
           "asset": {
             "XCM": "4"
           }
@@ -2518,9 +2596,11 @@
         "1688": "ali",
         "1899": "BKNRY",
         "1984": "USDt",
+        "1985": "web3",
         "1999": "ADVERT2",
         "2000": "USDT",
         "2021": "WAVE",
+        "2025": "FLMG",
         "2048": "RWS",
         "2049": "Android",
         "2050": "CUT",
@@ -4624,6 +4704,7 @@
         "90": "testo",
         "91": "stt",
         "95": "HACK",
+        "97": "PDAPI",
         "99": "hcc",
         "100": "tlj",
         "101": "WIL",
@@ -4651,6 +4732,7 @@
         "369": "WIN",
         "370": "SUM",
         "381": "ALC",
+        "400": "COCOUSD",
         "404": "JET",
         "420": "SKER",
         "434": "cool",
@@ -4722,6 +4804,7 @@
         "4399": "dtt",
         "5550": "FRAC",
         "5551": "FRAC",
+        "5552": "FRAC",
         "6666": "BOB",
         "6969": "BEE",
         "8888": "USDT",
@@ -5124,6 +5207,8 @@
         "69": "SRT",
         "70": "dsads",
         "71": "testDED",
+        "72": "NEHT",
+        "73": "NEHT1",
         "74": "GID",
         "75": "UGOL",
         "77": "shicoin",
@@ -5326,6 +5411,11 @@
           "name": "",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc3d088842dcf02c13699f936bb83dfbbc6f721ab\"}}]}}"
         },
+        "EDU": {
+          "symbol": "EDU",
+          "name": "Educhain",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4428\"}}}"
+        },
         "HOP": {
           "symbol": "HOP",
           "name": "Trappist Hop",
@@ -5463,6 +5553,14 @@
         "28": {
           "lpToken": "28",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1984\"}]}}]]"
+        },
+        "29": {
+          "lpToken": "29",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"10201\"}]}}]]"
+        },
+        "30": {
+          "lpToken": "30",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1001\"}]}}]]"
         }
       },
       "specName": "statemine"
