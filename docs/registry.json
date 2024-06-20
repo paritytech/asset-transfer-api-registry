@@ -94,6 +94,7 @@
         "1001": "NFLR",
         "1024": "NCTR",
         "1107": "JAM",
+        "1111": "TESTV2",
         "1180": "KRAK",
         "1212": "DOTTY",
         "1230": "HAM",
@@ -3223,6 +3224,10 @@
         "10": {
           "lpToken": "10",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"223\"}]}}]]"
+        },
+        "11": {
+          "lpToken": "11",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Polkadot\"}}}]]"
         }
       },
       "specName": "statemine"
