@@ -144,6 +144,7 @@
         "9001": "BOMB",
         "9002": "TAPE",
         "9003": "KTRL",
+        "9202": "BUG",
         "9527": "LSCAT",
         "9999": "TOM",
         "25518": "BEER",
@@ -252,6 +253,13 @@
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x8daebade922df735c38c80c7ebd708af50815faa\"}}]}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}}}}"
+        },
+        "AJUN": {
+          "symbol": "AJUN",
+          "name": "Ajuna Polkadot AJUN",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2051\"}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2051\"}}}"
         }
       },
       "poolPairsInfo": {
@@ -318,6 +326,10 @@
         "15": {
           "lpToken": "15",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0\"}}]}}]]"
+        },
+        "16": {
+          "lpToken": "16",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2051\"}}}]]"
         }
       },
       "specName": "statemint"
@@ -6074,6 +6086,7 @@
         "76": "CHANDU",
         "77": "shicoin",
         "80": "NLT",
+        "81": "TS13",
         "86": "TCA",
         "88": "MEM",
         "89": "HAT",
