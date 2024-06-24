@@ -2383,6 +2383,16 @@
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2046\"}}}"
         },
         {
+          "paraID": 2051,
+          "nativeChainID": null,
+          "symbol": "AJUN",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2051},{\"generalKey\":\"0x414a554e\"}]}}}",
+          "asset": "32",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2051\"}}}"
+        },
+        {
           "paraID": 2086,
           "nativeChainID": null,
           "symbol": "KILT",
@@ -5592,6 +5602,7 @@
         "223": "BILL",
         "224": "PONG",
         "233": "NTT",
+        "243": "FING",
         "301": "RYUD",
         "318": "SAT",
         "333": "ucoco",
