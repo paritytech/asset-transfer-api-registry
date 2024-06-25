@@ -86,9 +86,11 @@
         "123": "123",
         "149": "EDU",
         "200": "MONA",
+        "201": "WUD",
         "222": "SHL",
         "256": "ICE",
         "300": "DOGE",
+        "301": "HORN",
         "333": "DOKA",
         "404": "clay",
         "420": "BEEFY",
@@ -147,6 +149,7 @@
         "9202": "BUG",
         "9527": "LSCAT",
         "9999": "TOM",
+        "10000": "DOGE",
         "25518": "BEER",
         "30035": "DED",
         "31337": "WUD",
@@ -330,6 +333,10 @@
         "16": {
           "lpToken": "16",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2051\"}}}]]"
+        },
+        "17": {
+          "lpToken": "17",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1994\"}]}}]]"
         }
       },
       "specName": "statemint"
@@ -5684,6 +5691,7 @@
         "5550": "FRAC",
         "5551": "FRAC",
         "5552": "FRAC",
+        "5555": "FL",
         "6666": "BOB",
         "6969": "BEE",
         "8888": "USDT",
@@ -6299,6 +6307,13 @@
           "symbol": "",
           "name": "",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc3d088842dcf02c13699f936bb83dfbbc6f721ab\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307839653231366333616635663063366365373038353162393364646462363235373333383063666566227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x9e216c3af5f0c6ce70851b93dddb62573380cfef\"}}]}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
         },
