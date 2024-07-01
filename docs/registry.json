@@ -107,6 +107,7 @@
         "999": "gold",
         "1000": "BRZ",
         "1001": "NFLR",
+        "1010": "ETH",
         "1024": "NCTR",
         "1107": "JAM",
         "1111": "TESTV2",
@@ -6235,6 +6236,7 @@
         "2003": "GRT",
         "2024": "MTK",
         "2101": "BSTT",
+        "2121": "RETH",
         "2206": "RSD",
         "2304": "itm",
         "2512": "ARR2",
@@ -6518,6 +6520,10 @@
         "30": {
           "lpToken": "30",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1001\"}]}}]]"
+        },
+        "31": {
+          "lpToken": "31",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2121\"}]}}]]"
         }
       },
       "specName": "statemine"
