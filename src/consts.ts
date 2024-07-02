@@ -23,6 +23,10 @@ export const RPC_BLACK_LIST = [
 	'wss://kusama-public-rpc.blockops.network/ws',
 	'wss://westend-rpc.blockops.network/ws',
 	'wss://kreivo.kippu.rocks/',
+	'wss://rpc-karura.luckyfriday.io',
+	'wss://rpc-acala.luckyfriday.io',
+	'wss://crab-rpc.darwiniacommunitydao.xyz',
+	'wss://darwinia-rpc.darwiniacommunitydao.xyz',
 ];
 
 export const DEFAULT_REGISTRY: TokenRegistry = {
