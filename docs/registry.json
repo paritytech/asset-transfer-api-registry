@@ -131,6 +131,7 @@
         "2024": "WOOD",
         "2025": "FLMG",
         "2121": "SKEM",
+        "2203": "PBTC",
         "2222": "DUCK",
         "2230": "GBILL",
         "2820": "HOOT",
@@ -6211,6 +6212,7 @@
         "999": "YAKIO",
         "1000": "TWC",
         "1001": "UNT",
+        "1010": "PBTC",
         "1111": "RCL",
         "1112": "TTam",
         "1113": "KCT",
@@ -6524,6 +6526,10 @@
         "31": {
           "lpToken": "31",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2121\"}]}}]]"
+        },
+        "32": {
+          "lpToken": "32",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1010\"}]}}]]"
         }
       },
       "specName": "statemine"
