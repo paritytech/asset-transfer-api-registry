@@ -3028,6 +3028,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "mythos"
+    },
+    "3370": {
+      "tokens": [
+        "LAOS"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "laos"
     }
   },
   "kusama": {
@@ -5784,7 +5793,15 @@
         "1233344433": "BQE",
         "2000000000": "weUSDT",
         "3999999999": "BETH",
-        "4000000000": "dde"
+        "4000000000": "dde",
+        "4000000001": "WETH",
+        "4000000002": "WETH",
+        "4000000003": "WETH",
+        "4000000004": "RETHV2",
+        "4000000005": "RETHV2",
+        "4000000006": "RETHV2",
+        "4000000007": "WBTC",
+        "4000000008": "WMATIC"
       },
       "foreignAssetsInfo": {
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a22506f6c6b61646f74227d7d7d": {
