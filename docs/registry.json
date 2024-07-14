@@ -281,6 +281,13 @@
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}}}}"
         },
+        "HDX": {
+          "symbol": "HDX",
+          "name": "Hydration",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2034\"},{\"GeneralIndex\":\"0\"}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2034\"}}}"
+        },
         "AJUN": {
           "symbol": "AJUN",
           "name": "Ajuna Polkadot AJUN",
@@ -5829,7 +5836,10 @@
         "4000000005": "RETHV2",
         "4000000006": "RETHV2",
         "4000000007": "WBTC",
-        "4000000008": "WMATIC"
+        "4000000008": "WMATIC",
+        "4000000009": "WT",
+        "4000000010": "TESTW",
+        "4000000011": "WNEW"
       },
       "foreignAssetsInfo": {
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a22506f6c6b61646f74227d7d7d": {
@@ -6361,6 +6371,7 @@
         "292363": "KPA",
         "333333": "I'M",
         "335277": "PSPV",
+        "378201": "NASST",
         "411299": "any",
         "412177": "LKT",
         "413801": "PPV",
@@ -6401,7 +6412,18 @@
         "3782010117": "DOI",
         "3782010118": "RTC",
         "3782010119": "RCTC2",
-        "3782010120": "USDT"
+        "3782010120": "USDT",
+        "3782010121": "RBTC",
+        "3782010122": "RETHV2",
+        "3782010123": "RETHV2",
+        "3782010124": "RETHV2",
+        "3782010125": "SETH",
+        "3782010126": "USDT",
+        "3782010127": "RETHV2",
+        "3782010128": "RETHV2",
+        "3782010129": "RETHV2222",
+        "3782010130": "RETHV21212",
+        "3782010131": "zcvXC"
       },
       "foreignAssetsInfo": {
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863396630353332363331316263326135353432363736316265633230303537363835666238306637227d7d5d7d7d": {
