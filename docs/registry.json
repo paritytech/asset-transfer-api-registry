@@ -46,16 +46,22 @@
         "31": "WOOD",
         "32": "CLAY",
         "33": "COCOA",
+        "34": "MeTest",
         "35": "DOGE",
         "36": "CLAY",
         "37": "DODA",
         "38": "SHIB",
         "39": "PEPE",
         "40": "PEPE",
+        "41": "TeMe4",
         "42": "PJS",
+        "43": "TeMe5",
         "44": "SKL",
         "45": "HYDRA",
         "46": "PEPE",
+        "47": "TeMe6Pump",
+        "48": "SAX",
+        "49": "TeMe7",
         "50": "CATWIF",
         "51": "JAMA",
         "55": "COFI",
@@ -73,10 +79,13 @@
         "79": "PGOLD",
         "80": "GOVD",
         "81": "GVN",
+        "86": "KOL",
         "88": "PND",
         "89": "STAR",
         "90": "ATC",
         "91": "WING",
+        "92": "TeMe2",
+        "97": "TeMe3",
         "99": "Cypress",
         "100": "WETH",
         "101": "DOTMA",
@@ -141,6 +150,7 @@
         "5417": "HASH",
         "6666": "CHAOS",
         "6969": "LEEMO",
+        "7151": "TUKI",
         "7777": "FUM",
         "8008": "HOBO",
         "8888": "BOOTY",
@@ -153,6 +163,8 @@
         "9527": "LSCAT",
         "9999": "TOM",
         "10000": "DOGE",
+        "10101": "COKE",
+        "12345": "usdc",
         "25518": "BEER",
         "30035": "DED",
         "31337": "WUD",
@@ -169,7 +181,38 @@
         "862812": "CUBO",
         "868367": "VSC",
         "5318008": "PXPS",
-        "20090103": "BTC"
+        "20090103": "BTC",
+        "20090104": "DOTC",
+        "20090105": "ETH",
+        "20090106": "PMATIC",
+        "20090107": "ETH",
+        "20090108": "MMM",
+        "20090109": "MATIC",
+        "20090110": "test1",
+        "20090111": "txt",
+        "20090112": "SOLETH",
+        "20090113": "test1",
+        "20090114": "DOI",
+        "20090115": "DOTCOIN",
+        "20090116": "POO",
+        "20090117": "DEDX",
+        "20090118": "NOTDED",
+        "20090119": "MDGA",
+        "20090120": "LUNCH",
+        "20090121": "IBW",
+        "20090122": "0xf09fa590",
+        "20090123": "GOVD",
+        "20090124": "test1",
+        "20090125": "PP",
+        "20090126": "DOGMOON",
+        "20090127": "PAMPIT",
+        "20090128": "DSTINK",
+        "20090129": "FCD",
+        "20090130": "SUS",
+        "20090131": "DVCAT",
+        "20090132": "Beggar",
+        "20090133": "BSOD",
+        "20090134": "DOTCOIN"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -199,6 +242,20 @@
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Kusama\"}}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":\"Kusama\"},{\"Parachain\":\"1000\"}]}}"
+        },
+        "BNC": {
+          "symbol": "BNC",
+          "name": "Bifrost Native Token",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2030\"},{\"GeneralKey\":{\"length\":\"2\",\"data\":\"0x0001000000000000000000000000000000000000000000000000000000000000\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2030\"}}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307861306238363939316336323138623336633164313964346132653965623063653336303665623438227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}}}}"
         },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307862613431646466303662376666643839643132363762356139336266656632343234656232303033227d7d5d7d7d": {
           "symbol": "",
@@ -256,10 +313,38 @@
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2004\"}}}"
         },
+        "MYTH": {
+          "symbol": "MYTH",
+          "name": "Mythos",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3369\"}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3369\"}}}"
+        },
+        "vDOT": {
+          "symbol": "vDOT",
+          "name": "Voucher DOT",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2030\"},{\"GeneralKey\":{\"length\":\"2\",\"data\":\"0x0900000000000000000000000000000000000000000000000000000000000000\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2030\"}}}"
+        },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307838646165626164653932326466373335633338633830633765626437303861663530383135666161227d7d5d7d7d": {
           "symbol": "",
           "name": "",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x8daebade922df735c38c80c7ebd708af50815faa\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}}}}"
+        },
+        "HDX": {
+          "symbol": "HDX",
+          "name": "Hydration",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X2\":[{\"Parachain\":\"2034\"},{\"GeneralIndex\":\"0\"}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2034\"}}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307864616331376639353864326565353233613232303632303639393435393763313364383331656337227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xdac17f958d2ee523a2206206994597c13d831ec7\"}}]}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}}}}"
         },
@@ -343,6 +428,10 @@
         "17": {
           "lpToken": "17",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1994\"}]}}]]"
+        },
+        "18": {
+          "lpToken": "18",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3369\"}}}]]"
         }
       },
       "specName": "statemint"
@@ -2138,6 +2227,26 @@
           "originChainReserveLocation": "{\"Parents\":\"1\",\"Interior\":{\"Here\":\"\"}}"
         },
         {
+          "paraID": 0,
+          "nativeChainID": "polkadot",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"globalConsensus\":{\"ethereum\":{\"chainId\":1}}},{\"accountKey20\":{\"network\":null,\"key\":\"0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\"}}]}}}",
+          "asset": "1000190",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"ChainId\":\"1\"}}}}}"
+        },
+        {
+          "paraID": 0,
+          "nativeChainID": "polkadot",
+          "symbol": "WETH",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"globalConsensus\":{\"ethereum\":{\"chainId\":1}}},{\"accountKey20\":{\"network\":null,\"key\":\"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2\"}}]}}}",
+          "asset": "1000189",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"ChainId\":\"1\"}}}}}"
+        },
+        {
           "paraID": 1000,
           "nativeChainID": "statemint",
           "symbol": "USDT",
@@ -2322,6 +2431,16 @@
           "decimals": 12,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0001\"}]}}}",
           "asset": "14",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2030\"}}}"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "bifrost",
+          "symbol": "vASTR",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2030},{\"generalKey\":\"0x0903\"}]}}}",
+          "asset": "33",
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2030\"}}}"
         },
@@ -3028,6 +3147,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "mythos"
+    },
+    "3370": {
+      "tokens": [
+        "LAOS"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "laos"
     }
   },
   "kusama": {
@@ -5644,6 +5772,8 @@
         "133": ".|.",
         "145": "dsu",
         "146": "FRAC",
+        "149": "EDU",
+        "150": "TEST",
         "168": "NIK",
         "200": "CRT",
         "222": "BBB",
@@ -5784,7 +5914,27 @@
         "1233344433": "BQE",
         "2000000000": "weUSDT",
         "3999999999": "BETH",
-        "4000000000": "dde"
+        "4000000000": "dde",
+        "4000000001": "WETH",
+        "4000000002": "WETH",
+        "4000000003": "WETH",
+        "4000000004": "RETHV2",
+        "4000000005": "RETHV2",
+        "4000000006": "RETHV2",
+        "4000000007": "WBTC",
+        "4000000008": "WMATIC",
+        "4000000009": "WT",
+        "4000000010": "TESTW",
+        "4000000011": "WNEW",
+        "4000000012": "USDT",
+        "4000000013": "This",
+        "4000000014": "BTC",
+        "4000000015": "BTC",
+        "4000000016": "BTC",
+        "4000000017": "BTC",
+        "4000000018": "BTC",
+        "4000000019": "BTC",
+        "4000000020": "BTC"
       },
       "foreignAssetsInfo": {
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a7b22476c6f62616c436f6e73656e737573223a22506f6c6b61646f74227d7d7d": {
@@ -5800,6 +5950,13 @@
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":\"Rococo\"}}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":\"Rococo\"},{\"Parachain\":\"1000\"}]}}"
+        },
+        "WMYTH": {
+          "symbol": "WMYTH",
+          "name": "wMythical Token",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3368\"}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3368\"}}}"
         }
       },
       "poolPairsInfo": {
@@ -6022,6 +6179,10 @@
         "54": {
           "lpToken": "54",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"333\"}]}}]]"
+        },
+        "55": {
+          "lpToken": "55",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3368\"}}}]]"
         }
       },
       "specName": "westmint"
@@ -6170,6 +6331,7 @@
         "125": "SDV",
         "134": "TNG",
         "135": "PXT",
+        "137": "TEST",
         "139": "PHNX",
         "140": "USDT",
         "143": "XIN",
@@ -6267,7 +6429,9 @@
         "11123": "AAE",
         "12121": "TEST",
         "12345": "USDT",
+        "20000": "SRK",
         "20001": "TSTT",
+        "20002": "doge",
         "20301": "EVM",
         "22061": "PIVO",
         "22062": "DEM",
@@ -6302,6 +6466,7 @@
         "292363": "KPA",
         "333333": "I'M",
         "335277": "PSPV",
+        "378201": "NASST",
         "411299": "any",
         "412177": "LKT",
         "413801": "PPV",
@@ -6329,9 +6494,37 @@
         "123456789": "ZeAs",
         "143228832": "tasset",
         "333333333": "PRIM",
+        "588492840": "AT1",
+        "678968242": "test",
+        "994054438": "test",
         "1234567890": "giraffe",
+        "1578907141": "newt",
         "2430784328": "TMW",
-        "3782010103": "ggg"
+        "2564157320": "sanasna",
+        "3529206684": "token",
+        "3782010103": "ggg",
+        "3782010107": "RRRBTC",
+        "3782010111": "WBTC",
+        "3782010112": "RETH",
+        "3782010113": "RBTC",
+        "3782010114": "DOI",
+        "3782010115": "DOI",
+        "3782010116": "RETH",
+        "3782010117": "DOI",
+        "3782010118": "RTC",
+        "3782010119": "RCTC2",
+        "3782010120": "USDT",
+        "3782010121": "RBTC",
+        "3782010122": "RETHV2",
+        "3782010123": "RETHV2",
+        "3782010124": "RETHV2",
+        "3782010125": "SETH",
+        "3782010126": "USDT",
+        "3782010127": "RETHV2",
+        "3782010128": "RETHV2",
+        "3782010129": "RETHV2222",
+        "3782010130": "RETHV21212",
+        "3782010131": "zcvXC"
       },
       "foreignAssetsInfo": {
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863396630353332363331316263326135353432363736316265633230303537363835666238306637227d7d5d7d7d": {
@@ -6389,6 +6582,13 @@
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xfff9976782d46cc05630d1f6ebab18b2324d6b14\"}}]}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+        },
+        "0x7b22706172656e7473223a2231222c22696e746572696f72223a7b225833223a5b7b2250617261636861696e223a2234343238227d2c7b2250616c6c6574496e7374616e6365223a223132227d2c7b2247656e6572616c496e646578223a2232227d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X3\":[{\"Parachain\":\"4428\"},{\"PalletInstance\":\"12\"},{\"GeneralIndex\":\"2\"}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4428\"}}}"
         },
         "MUSE": {
           "symbol": "MUSE",
