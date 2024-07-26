@@ -1,6 +1,6 @@
 {
   "name": "@substrate/asset-transfer-api-registry",
-  "version": "0.2.20",
+  "version": "0.2.21",
   "description": "Asset registry for asset-transfer-api",
   "main": "docs/registry.json",
   "type": "module",
