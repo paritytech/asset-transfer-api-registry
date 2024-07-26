@@ -5730,6 +5730,7 @@
         "30": "TRTI",
         "31": "GTT",
         "32": "TRTO",
+        "33": "DEVZ",
         "40": "YOLO",
         "41": "YOLO",
         "42": "HG2G",
@@ -5795,6 +5796,7 @@
         "482": "PVSE",
         "535": "KEL",
         "666": "FTT",
+        "669": "lish",
         "676": "nbnbnbn",
         "720": "POTAT",
         "777": "JJD",
@@ -6540,6 +6542,13 @@
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xb34a6924a02100ba6ef12af1c798285e8f7a16ee\"}}]}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+        },
+        "0x7b22706172656e7473223a2231222c22696e746572696f72223a7b225833223a5b7b2250617261636861696e223a2234343238227d2c7b2250616c6c6574496e7374616e6365223a223132227d2c7b2247656e6572616c496e646578223a2233227d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X3\":[{\"Parachain\":\"4428\"},{\"PalletInstance\":\"12\"},{\"GeneralIndex\":\"3\"}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4428\"}}}"
         },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863336430383838343264636630326331333639396639333662623833646662626336663732316162227d7d5d7d7d": {
           "symbol": "",
