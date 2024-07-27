@@ -181,6 +181,7 @@
         "862812": "CUBO",
         "868367": "VSC",
         "5318008": "PXPS",
+        "7777777": "DWH",
         "20090103": "BTC",
         "20090104": "DOTC",
         "20090105": "ETH",
@@ -212,7 +213,8 @@
         "20090131": "DVCAT",
         "20090132": "Beggar",
         "20090133": "BSOD",
-        "20090134": "DOTCOIN"
+        "20090134": "DOTCOIN",
+        "20090135": "DMX"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -453,6 +455,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "bridge-hub-polkadot"
+    },
+    "1004": {
+      "tokens": [
+        "DOT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "people-polkadot"
     },
     "2000": {
       "tokens": [
