@@ -54,6 +54,7 @@
         "39": "PEPE",
         "40": "PEPE",
         "41": "TeMe4",
+        "42": "GAVUN",
         "43": "TeMe5",
         "44": "SKL",
         "45": "HYDRA",
@@ -63,6 +64,7 @@
         "49": "TeMe7",
         "50": "CATWIF",
         "51": "JAMA",
+        "52": "TeMe8",
         "55": "COFI",
         "56": "UNION",
         "60": "ANT",
@@ -148,9 +150,11 @@
         "2828": "JAMD",
         "2829": "JTO",
         "4157": "PDOG",
+        "4242": "GAVUN",
         "5417": "HASH",
         "6666": "CHAOS",
         "6969": "LEEMO",
+        "7006": "ttt",
         "7151": "TUKI",
         "7777": "FUM",
         "8008": "HOBO",
@@ -216,7 +220,8 @@
         "20090133": "BSOD",
         "20090134": "DOTCOIN",
         "20090135": "DMX",
-        "20090136": "HTG"
+        "20090136": "HTG",
+        "20090137": "hawn"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -286,6 +291,13 @@
           "symbol": "",
           "name": "",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x582d872a1b094fc48f5de31d3b73f2d9be47def1\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}}}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307836623137353437346538393039346334346461393862393534656564656163343935323731643066227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x6b175474e89094c44da98b954eedeac495271d0f\"}}]}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}}}}"
         },
@@ -2149,6 +2161,18 @@
         {
           "paraID": 2004,
           "nativeChainID": "moonbeam",
+          "symbol": "stDOT",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0xbc7e02c4178a7df7d3e564323a5c359dc96c4db4\"}}]}}}",
+          "asset": {
+            "ForeignAsset": "15"
+          },
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2004\"}}}"
+        },
+        {
+          "paraID": 2004,
+          "nativeChainID": "moonbeam",
           "symbol": "GLMR",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2004},{\"palletInstance\":10}]}}}",
@@ -2217,6 +2241,18 @@
           },
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2034\"}}}"
+        },
+        {
+          "paraID": 2035,
+          "nativeChainID": "phala",
+          "symbol": "PHA",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2035}}}}",
+          "asset": {
+            "ForeignAsset": "14"
+          },
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2035\"}}}"
         }
       ]
     },
@@ -6516,6 +6552,7 @@
         "1578907141": "newt",
         "2430784328": "TMW",
         "2564157320": "sanasna",
+        "2773623529": "newasset",
         "3529206684": "token",
         "3782010103": "ggg",
         "3782010107": "RRRBTC",
