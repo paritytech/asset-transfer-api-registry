@@ -102,6 +102,7 @@
         "256": "ICE",
         "300": "DOGE",
         "301": "HORN",
+        "323": "DGNNNC",
         "333": "DOKA",
         "404": "clay",
         "420": "BEEFY",
@@ -221,7 +222,13 @@
         "20090134": "DOTCOIN",
         "20090135": "DMX",
         "20090136": "HTG",
-        "20090137": "hawn"
+        "20090137": "hawn",
+        "20090138": "LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONG",
+        "20090139": "DUSTY",
+        "20090140": "Grift ",
+        "20090141": "Guzzler",
+        "20090142": "ELONA",
+        "20090143": "DMSTR"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -2302,6 +2309,15 @@
           "decimals": 6,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1984}]}}}",
           "asset": "10",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}"
+        },
+        {
+          "paraID": 1000,
+          "nativeChainID": "statemint",
+          "symbol": "WUD",
+          "decimals": 10,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":31337}]}}}",
+          "asset": "1000085",
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}"
         },
         {
