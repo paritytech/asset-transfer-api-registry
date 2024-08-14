@@ -85,6 +85,9 @@
         "70": "STEEBOR",
         "71": "CATNIP",
         "72": "NEHT",
+        "73": "TeMe12",
+        "74": "TeMe13",
+        "75": "TeMe14",
         "77": "TRQ",
         "78": "COCA",
         "79": "PGOLD",
@@ -242,7 +245,9 @@
         "20090145": "ROCK",
         "20090146": "DOPE ",
         "20090147": "RVGAV",
-        "20090148": "BOB"
+        "20090148": "BOB",
+        "20090149": "TOD",
+        "22222000": "OMG"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -1694,6 +1699,18 @@
       "poolPairsInfo": {},
       "specName": "bifrost_polkadot",
       "xcAssetsData": [
+        {
+          "paraID": 0,
+          "nativeChainID": "polkadot",
+          "symbol": "WETH",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"globalConsensus\":{\"ethereum\":{\"chainId\":1}}},{\"accountKey20\":{\"network\":null,\"key\":\"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2\"}}]}}}",
+          "asset": {
+            "Token2": "13"
+          },
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"ChainId\":\"1\"}}}}}"
+        },
         {
           "paraID": 0,
           "nativeChainID": "polkadot",
@@ -6266,6 +6283,10 @@
         "55": {
           "lpToken": "55",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3368\"}}}]]"
+        },
+        "56": {
+          "lpToken": "56",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1285\"}]}}]]"
         }
       },
       "specName": "westmint"
