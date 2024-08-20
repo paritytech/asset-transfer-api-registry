@@ -292,7 +292,13 @@
         "22222042": "CORE",
         "22222043": "DDT",
         "22222044": "DONUT",
-        "22222045": "O"
+        "22222045": "O",
+        "22222046": "$PGH",
+        "22222047": "GWIF",
+        "22222048": "PKSK",
+        "22222049": "LUCKY",
+        "22222050": "SHIVER",
+        "22222051": "NIN"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -6689,6 +6695,13 @@
           "symbol": "",
           "name": "",
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xb34a6924a02100ba6ef12af1c798285e8f7a16ee\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307861646437366565376662356233643264373734623566656434616332306238376638333064623931227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xadd76ee7fb5b3d2d774b5fed4ac20b87f830db91\"}}]}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
         },
