@@ -309,7 +309,11 @@
         "22222057": "DIO",
         "22222058": "PLS",
         "22222059": "GOOD",
-        "22222060": "TATE"
+        "22222060": "TATE",
+        "22222061": "MONAD",
+        "22222062": "ALPHA",
+        "22222063": "MAXCAT",
+        "22222064": "RIDEMY"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -707,6 +711,18 @@
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2012\"}}}"
         },
         {
+          "paraID": 2031,
+          "nativeChainID": "centrifuge",
+          "symbol": "CFG",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2031},{\"generalKey\":\"0x0001\"}]}}}",
+          "asset": {
+            "ForeignAsset": "15"
+          },
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2031\"}}}"
+        },
+        {
           "paraID": 2032,
           "nativeChainID": "interlay",
           "symbol": "IBTC",
@@ -731,6 +747,18 @@
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2032\"}}}"
         },
         {
+          "paraID": 2034,
+          "nativeChainID": "hydra",
+          "symbol": "HDX",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2034},{\"generalIndex\":0}]}}}",
+          "asset": {
+            "ForeignAsset": "17"
+          },
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2034\"}}}"
+        },
+        {
           "paraID": 2035,
           "nativeChainID": "phala",
           "symbol": "PHA",
@@ -753,6 +781,18 @@
           },
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2037\"}}}"
+        },
+        {
+          "paraID": 2040,
+          "nativeChainID": null,
+          "symbol": "PDEX",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2040}}}}",
+          "asset": {
+            "ForeignAsset": "16"
+          },
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2040\"}}}"
         }
       ]
     },
@@ -6616,6 +6656,7 @@
         "69420": "PLONK",
         "77777": "SHREK",
         "80085": "NKT",
+        "99911": "fx1",
         "100000": "TEST1",
         "101001": "FSUP",
         "111111": "11111",
