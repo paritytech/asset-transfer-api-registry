@@ -330,7 +330,9 @@
         "22222073": "0x4b61696279c58d",
         "22222074": "$JAM",
         "22222075": "DUD",
-        "22222076": "AAPL"
+        "22222076": "AAPL",
+        "22222077": "SAPIEN",
+        "22222078": "JAMTON"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -557,6 +559,10 @@
         "18": {
           "lpToken": "18",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3369\"}}}]]"
+        },
+        "19": {
+          "lpToken": "19",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2567\"}]}}]]"
         }
       },
       "specName": "statemint"
@@ -3191,18 +3197,6 @@
           },
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2006\"}}}"
-        },
-        {
-          "paraID": 2011,
-          "nativeChainID": "equilibrium",
-          "symbol": "EQD",
-          "decimals": 9,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2011},{\"palletInstance\":11},{\"generalIndex\":6648164}]}}}",
-          "asset": {
-            "XCM": "3"
-          },
-          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
-          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2011\"}}}"
         },
         {
           "paraID": 2030,
