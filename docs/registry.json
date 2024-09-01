@@ -334,7 +334,9 @@
         "22222075": "DUD",
         "22222076": "AAPL",
         "22222077": "SAPIEN",
-        "22222078": "JAMTON"
+        "22222078": "JAMTON",
+        "22222079": "GR",
+        "22222080": "GREEN"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -565,6 +567,10 @@
         "19": {
           "lpToken": "19",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2567\"}]}}]]"
+        },
+        "20": {
+          "lpToken": "20",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"42069\"}]}}]]"
         }
       },
       "specName": "statemint"
