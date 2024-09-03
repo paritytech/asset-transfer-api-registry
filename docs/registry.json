@@ -118,7 +118,7 @@
         "256": "ICE",
         "300": "DOGE",
         "301": "HORN",
-        "323": "NNA",
+        "323": "NNN",
         "333": "DOKA",
         "404": "clay",
         "420": "BEEFY",
@@ -140,6 +140,7 @@
         "1024": "NCTR",
         "1107": "JAM",
         "1111": "TESTV2",
+        "1148": "NT2",
         "1180": "KRAK",
         "1212": "DOTTY",
         "1230": "HAM",
@@ -148,6 +149,7 @@
         "1337": "USDC",
         "1747": "EMR",
         "1810": "TSTD",
+        "1828": "CPLS",
         "1864": "JUNK",
         "1970": "NIPS",
         "1980": "GAVIN",
@@ -172,6 +174,7 @@
         "2829": "JTO",
         "4157": "PDOG",
         "4242": "GAVUN",
+        "5361": "NAT",
         "5417": "HASH",
         "6666": "CHAOS",
         "6969": "LEEMO",
@@ -339,7 +342,10 @@
         "22222080": "GREEN",
         "22222081": "NAR",
         "22222082": "Ax",
-        "22222083": "TAG"
+        "22222083": "TAG",
+        "22222084": "SOPHIA",
+        "22222085": "ANU",
+        "22222086": "BIFF"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -574,6 +580,14 @@
         "20": {
           "lpToken": "20",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"42069\"}]}}]]"
+        },
+        "21": {
+          "lpToken": "21",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"5361\"}]}}]]"
+        },
+        "22": {
+          "lpToken": "22",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1148\"}]}}]]"
         }
       },
       "specName": "statemint"
