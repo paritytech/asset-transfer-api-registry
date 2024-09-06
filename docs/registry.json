@@ -346,7 +346,8 @@
         "22222083": "TAG",
         "22222084": "SOPHIA",
         "22222085": "ANU",
-        "22222086": "BIFF"
+        "22222086": "BIFF",
+        "22222087": "KAIBYO"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -605,6 +606,10 @@
         "26": {
           "lpToken": "26",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"6543\"}]}}]]"
+        },
+        "27": {
+          "lpToken": "27",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2361\"}]}}]]"
         }
       },
       "specName": "statemint"
