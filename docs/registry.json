@@ -118,7 +118,6 @@
         "256": "ICE",
         "300": "DOGE",
         "301": "HORN",
-        "323": "NNN",
         "333": "DOKA",
         "404": "clay",
         "420": "BEEFY",
@@ -156,7 +155,6 @@
         "1983": "KAS",
         "1984": "USDt",
         "1992": "SITE",
-        "1994": "CRT",
         "2000": "DAO",
         "2001": "DOTA",
         "2020": "HYDRA",
@@ -168,15 +166,15 @@
         "2203": "PBTC",
         "2222": "DUCK",
         "2230": "GBILL",
-        "2361": "PSAS",
-        "2567": "TSTRM",
         "2820": "HOOT",
         "2828": "JAMD",
         "2829": "JTO",
+        "3164": "TTT",
         "4157": "PDOG",
         "4242": "GAVUN",
         "5361": "NAT",
         "5417": "HASH",
+        "6594": "MVPW",
         "6666": "CHAOS",
         "6969": "LEEMO",
         "7006": "ttt",
@@ -194,7 +192,6 @@
         "10000": "DOGE",
         "10101": "COKE",
         "12345": "usdc",
-        "12746": "TTTT",
         "25518": "BEER",
         "30035": "DED",
         "31337": "WUD",
@@ -610,6 +607,14 @@
         "27": {
           "lpToken": "27",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2361\"}]}}]]"
+        },
+        "28": {
+          "lpToken": "28",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"6594\"}]}}]]"
+        },
+        "29": {
+          "lpToken": "29",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"3164\"}]}}]]"
         }
       },
       "specName": "statemint"
