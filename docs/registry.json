@@ -914,6 +914,36 @@
         {
           "paraID": 0,
           "nativeChainID": "polkadot",
+          "symbol": "WETH.e",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"globalConsensus\":{\"ethereum\":{\"chainId\":1}}},{\"accountKey20\":{\"network\":null,\"key\":\"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2\"}}]}}}",
+          "asset": "178794693648360392906933130845919698647",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"ChainId\":\"1\"}}}}}"
+        },
+        {
+          "paraID": 0,
+          "nativeChainID": "polkadot",
+          "symbol": "wstETH.e",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"globalConsensus\":{\"ethereum\":{\"chainId\":1}}},{\"accountKey20\":{\"network\":null,\"key\":\"0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0\"}}]}}}",
+          "asset": "124105859028862849477017063633156007283",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"ChainId\":\"1\"}}}}}"
+        },
+        {
+          "paraID": 0,
+          "nativeChainID": "polkadot",
+          "symbol": "WBTC.e",
+          "decimals": 8,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"globalConsensus\":{\"ethereum\":{\"chainId\":1}}},{\"accountKey20\":{\"network\":null,\"key\":\"0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\"}}]}}}",
+          "asset": "36282181791341254438422467838694599751",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"ChainId\":\"1\"}}}}}"
+        },
+        {
+          "paraID": 0,
+          "nativeChainID": "polkadot",
           "symbol": "DOT",
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"here\":null}}}",
