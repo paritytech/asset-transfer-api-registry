@@ -6640,6 +6640,7 @@
         "146": "VYV",
         "149": "EDU",
         "171": "SAW",
+        "191": "AHW",
         "200": "nUSDT",
         "201": "VNST",
         "224": "creagen",
@@ -7063,6 +7064,10 @@
         "32": {
           "lpToken": "32",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1010\"}]}}]]"
+        },
+        "33": {
+          "lpToken": "33",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"191\"}]}}]]"
         }
       },
       "specName": "statemine"
