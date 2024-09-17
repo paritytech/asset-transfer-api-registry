@@ -9,16 +9,20 @@ import { ApiPromise, WsProvider } from '@polkadot/api';
 import { Metadata, TypeRegistry } from '@polkadot/types';
 
 export function createApiWithAugmentations(
+	// genesisHash: string,
 	metadataHex: `0x${string}`,
 ): ApiPromise {
 	const registry = new TypeRegistry();
 	const metadata = new Metadata(registry, metadataHex);
 
+	// const metadataRec: Record<string, `0x${string}`> = {
+	// 	[genesisHash]: metadataHex
+	// }
 	registry.setMetadata(metadata);
 
 	const api = new ApiPromise({
 		provider: new WsProvider('ws://', false),
-		registry,
+		registry: registry,
 	});
 
 	api.injectMetadata(metadata, true, registry);

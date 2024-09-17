@@ -21,7 +21,7 @@ import { getSpecTypes } from '@polkadot/types-known';
 import BN from 'bn.js';
 
 import type { UnionXcmMultiLocation } from '../types';
-import { assetHubKusamaV10400 } from './metadata/assetHubKusamaV10400';
+import { assetHubKusamaV1003000 } from './metadata/assetHubKusamaV1003000';
 import { mockAssetHubKusamaApi } from './mockAssetHubKusamaApi';
 import { mockWeightInfo } from './mockWeightInfo';
 /**
@@ -44,8 +44,8 @@ function createStatemineRegistry(specVersion: number): TypeRegistry {
 	registry.register(
 		getSpecTypes(registry, 'Statemine', 'statemine', specVersion),
 	);
-
-	registry.setMetadata(new Metadata(registry, assetHubKusamaV10400));
+	const metadata = new Metadata(registry, assetHubKusamaV1003000);
+	registry.setMetadata(metadata);
 
 	return registry;
 }
@@ -72,7 +72,10 @@ const queryInfoCallAt = () =>
 
 const getMetadata = () =>
 	Promise.resolve().then(() =>
-		mockAssetHubKusamaApi.registry.createType('Metadata', assetHubKusamaV10400),
+		mockAssetHubKusamaApi.registry.createType(
+			'Metadata',
+			assetHubKusamaV1003000,
+		),
 	);
 
 const getHeader = (): Promise<Header> =>
