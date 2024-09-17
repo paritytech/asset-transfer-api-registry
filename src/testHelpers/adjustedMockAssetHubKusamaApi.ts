@@ -44,8 +44,7 @@ function createStatemineRegistry(specVersion: number): TypeRegistry {
 	registry.register(
 		getSpecTypes(registry, 'Statemine', 'statemine', specVersion),
 	);
-	const metadata = new Metadata(registry, assetHubKusamaV1003000);
-	registry.setMetadata(metadata);
+	registry.setMetadata(new Metadata(registry, assetHubKusamaV1003000));
 
 	return registry;
 }
