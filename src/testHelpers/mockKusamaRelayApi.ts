@@ -1,6 +1,6 @@
 // Copyright 2023 Parity Technologies (UK) Ltd.
 
 import { createApiWithAugmentations } from './createApiWithAugmentations';
-import { kusamaV9420 } from './metadata/kusamaV9420';
+import { kusamaV1003000 } from './metadata/kusamaV1003000';
 
-export const mockKusamaRelayApi = createApiWithAugmentations(kusamaV9420);
+export const mockKusamaRelayApi = createApiWithAugmentations(kusamaV1003000);

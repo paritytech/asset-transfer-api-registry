@@ -1,6 +1,6 @@
 // Copyright 2024 Parity Technologies (UK) Ltd.
 
 import { createApiWithAugmentations } from './createApiWithAugmentations';
-import { polkadotV10800 } from './metadata/polkadotV10800';
+import { polkadotV1002007 } from './metadata/polkadotV1002007';
 
-export const mockPolkadotApi = createApiWithAugmentations(polkadotV10800);
+export const mockPolkadotApi = createApiWithAugmentations(polkadotV1002007);
