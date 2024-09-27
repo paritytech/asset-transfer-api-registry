@@ -3441,6 +3441,15 @@
       "poolPairsInfo": {},
       "specName": "logion"
     },
+    "3359": {
+      "tokens": [
+        "TEER"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "integritee-parachain"
+    },
     "3367": {
       "tokens": [
         "NAND"
@@ -3467,6 +3476,15 @@
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "laos"
+    },
+    "3388": {
+      "tokens": [
+        "XRT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "robonomics"
     }
   },
   "kusama": {
@@ -6126,6 +6144,7 @@
         "887": "TTA",
         "890": "test",
         "900": "VOD",
+        "926": "VARW",
         "950": "HBCOIN",
         "987": "JVT",
         "988": "VTT",
@@ -6941,6 +6960,13 @@
           "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":[{\"Parachain\":\"4428\"}]}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":[{\"Parachain\":\"4428\"}]}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307865336665383564326635613438336236626136326537316563346339646435353134313166313930227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xe3fe85d2f5a483b6ba62e71ec4c9dd551411f190\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
         },
         "HOP": {
           "symbol": "HOP",
