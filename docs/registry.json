@@ -484,6 +484,13 @@
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2034\"}}}"
         },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307835643364303166643664326164313136396231373931386562346631353363363631363238386562227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x5d3d01fd6d2ad1169b17918eb4f153c6616288eb\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}}}}"
+        },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307864616331376639353864326565353233613232303632303639393435393763313364383331656337227d7d5d7d7d": {
           "symbol": "",
           "name": "",
@@ -6061,6 +6068,7 @@
         "32": "TRTO",
         "33": "DEVZ",
         "34": "YSH",
+        "35": "usd",
         "40": "YOLO",
         "41": "YOLO",
         "42": "HG2G",
@@ -6139,7 +6147,7 @@
         "780": "NME",
         "789": "TOL",
         "790": "TST",
-        "791": "NAME",
+        "791": "NME2",
         "792": "NME",
         "887": "TTA",
         "890": "test",
