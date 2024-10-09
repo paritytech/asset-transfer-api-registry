@@ -6564,6 +6564,10 @@
         "57": {
           "lpToken": "57",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"501\"}]}}]]"
+        },
+        "58": {
+          "lpToken": "58",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"400\"}]}}]]"
         }
       },
       "specName": "westmint"
