@@ -2,7 +2,8 @@
 
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
-import FinalRegistry from '../docs/registry.json';
+/* eslint-disable-next-line */
+import FinalRegistry from '../docs/registry.json' with { type: 'json' };
 import { fetchChainInfo } from './fetchChainInfo.js';
 import type {
 	ChainInfoKeys,
