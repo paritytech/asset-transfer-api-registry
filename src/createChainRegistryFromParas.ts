@@ -2,7 +2,7 @@
 
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
-import FinalRegistry from '../docs/registry.json' assert { type: 'json' };
+import FinalRegistry from '../docs/registry.json';
 import { fetchChainInfo } from './fetchChainInfo.js';
 import type {
 	ChainInfoKeys,

@@ -290,51 +290,51 @@
       "specName": "bridge-hub-westend"
     }
   },
-  "rococo": {
+  "paseo": {
     "0": {
       "tokens": [
-        "ROC"
+        "PAS"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "rococo"
+      "specName": "paseo"
     },
     "1000": {
       "tokens": [
-        "ROC"
+        "PAS"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "statemine"
+      "specName": "asset-hub-paseo"
     },
     "1002": {
       "tokens": [
-        "ROC"
+        "PAS"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "contracts-rococo"
+      "specName": "bridge-hub-paseo"
     },
-    "1003": {
+    "1004": {
       "tokens": [
-        "ROC"
+        "PAS"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "encointer-parachain"
+      "specName": "people-paseo"
     },
-    "1013": {
+    "1005": {
       "tokens": [
-        "ROC"
+        "PAS"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "bridge-hub-rococo"
+      "specName": "coretime-paseo"
     }
   }
 }
