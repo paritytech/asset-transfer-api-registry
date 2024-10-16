@@ -61,7 +61,7 @@ describe('fetchXcAssetsRegistryInfo', () => {
 				},
 			},
 			westend: {},
-			rococo: {},
+			paseo: {},
 		};
 
 		await fetchXcAssetsRegistryInfo(registry);

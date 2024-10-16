@@ -9,13 +9,15 @@ import {
 	prodParasPolkadotCommon,
 	prodRelayKusama,
 	prodRelayPolkadot,
-	testParasRococo,
-	testParasRococoCommon,
 	testParasWestend,
 	testParasWestendCommon,
-	testRelayRococo,
 	testRelayWestend,
 } from '@polkadot/apps-config';
+import {
+	testParasPaseo,
+	testParasPaseoCommon,
+	testRelayPaseo,
+} from '@polkadot/apps-config/endpoints/testingRelayPaseo';
 
 import { addParasChainInfoToRelayRegistries } from './addParasChainInfoToRelayRegistries.js';
 import { createChainRegistryFromRelay } from './createChainRegistryFromRelay.js';
@@ -30,7 +32,7 @@ export const main = async (filePath: string, registry: TokenRegistry) => {
 	const polkadotEndpoints = [prodParasPolkadot, prodParasPolkadotCommon];
 	const kusamaEndpoints = [prodParasKusama, prodParasKusamaCommon];
 	const westendEndpoints = [testParasWestend, testParasWestendCommon];
-	const rococoEndpoints = [testParasRococo, testParasRococoCommon];
+	const paseoEndpoints = [testParasPaseo, testParasPaseoCommon];
 
 	const fetchParaIdsPromises: Promise<ParaIds>[] = [];
 	fetchParaIdsPromises.push(
@@ -38,7 +40,7 @@ export const main = async (filePath: string, registry: TokenRegistry) => {
 	);
 	fetchParaIdsPromises.push(fetchParaIds('kusama', prodRelayKusama, paraIds));
 	fetchParaIdsPromises.push(fetchParaIds('westend', testRelayWestend, paraIds));
-	fetchParaIdsPromises.push(fetchParaIds('rococo', testRelayRococo, paraIds));
+	fetchParaIdsPromises.push(fetchParaIds('paseo', testRelayPaseo, paraIds));
 
 	// Set the Parachains Ids to the corresponding registry
 	await Promise.all(fetchParaIdsPromises);
@@ -56,7 +58,7 @@ export const main = async (filePath: string, registry: TokenRegistry) => {
 		createChainRegistryFromRelay('westend', testRelayWestend, registry),
 	);
 	createChainRegistryFromRelayPromises.push(
-		createChainRegistryFromRelay('rococo', testRelayRococo, registry),
+		createChainRegistryFromRelay('paseo', testRelayPaseo, registry),
 	);
 
 	// Set the relay chain info to the registry
@@ -68,7 +70,7 @@ export const main = async (filePath: string, registry: TokenRegistry) => {
 		polkadotEndpoints,
 		kusamaEndpoints,
 		westendEndpoints,
-		rococoEndpoints,
+		paseoEndpoints,
 	);
 
 	// fetch xcAssets and add them to the registry

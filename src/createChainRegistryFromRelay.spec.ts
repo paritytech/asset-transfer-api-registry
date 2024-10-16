@@ -40,7 +40,7 @@ describe('createChainRegistryFromRelay', () => {
 		const result = await createChainRegistryFromRelay(
 			'kusama',
 			prodRelayKusama,
-			{ polkadot: {}, kusama: {}, westend: {}, rococo: {} },
+			{ polkadot: {}, kusama: {}, westend: {}, paseo: {} },
 		);
 		expect(vi.isMockFunction(fetchChainInfo)).toBeTruthy();
 		expect(fetchChainInfo).toHaveBeenCalled();
@@ -57,7 +57,7 @@ describe('createChainRegistryFromRelay', () => {
 				},
 			},
 			westend: {},
-			rococo: {},
+			paseo: {},
 		});
 	});
 	it('Should correctly create the registry for polkadot', async () => {
@@ -78,7 +78,7 @@ describe('createChainRegistryFromRelay', () => {
 			// mockPolkadotApi,
 			'polkadot',
 			prodRelayPolkadot,
-			{ polkadot: {}, kusama: {}, westend: {}, rococo: {} },
+			{ polkadot: {}, kusama: {}, westend: {}, paseo: {} },
 		);
 		expect(vi.isMockFunction(fetchChainInfo)).toBeTruthy();
 		expect(fetchChainInfo).toHaveBeenCalled();
@@ -95,7 +95,7 @@ describe('createChainRegistryFromRelay', () => {
 			},
 			kusama: {},
 			westend: {},
-			rococo: {},
+			paseo: {},
 		});
 	});
 });

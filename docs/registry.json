@@ -681,6 +681,15 @@
       "poolPairsInfo": {},
       "specName": "people-polkadot"
     },
+    "1005": {
+      "tokens": [
+        "DOT"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "coretime-polkadot"
+    },
     "2000": {
       "tokens": [
         "ACA",
@@ -6629,643 +6638,51 @@
       "specName": "coretime-westend"
     }
   },
-  "rococo": {
+  "paseo": {
     "0": {
       "tokens": [
-        "ROC"
+        "PAS"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "rococo"
+      "specName": "paseo"
     },
     "1000": {
       "tokens": [
-        "ROC"
+        "PAS"
       ],
-      "assetsInfo": {
-        "1": "QQ22",
-        "2": "DDTA",
-        "3": "NGNC",
-        "4": "RMRK",
-        "5": "TROC",
-        "6": "XTS",
-        "7": "CTS",
-        "8": "TCS",
-        "9": "CCoin",
-        "10": "RTST",
-        "11": "SVI",
-        "12": "TST",
-        "13": "dtc",
-        "14": "TTT",
-        "15": "RAT",
-        "16": "LVTAST",
-        "17": "MEW",
-        "18": "HEHE",
-        "19": "ITC",
-        "20": "ICC",
-        "21": "TT21",
-        "22": "SAF",
-        "23": "LART",
-        "24": "SPT",
-        "25": "TAT",
-        "26": "TVP",
-        "27": "MTA",
-        "28": "ZMS",
-        "29": "SAS",
-        "30": "GLT",
-        "31": "FOT",
-        "32": "KVS",
-        "33": "Utoken",
-        "34": "NSV",
-        "35": "WOOD",
-        "36": "gtt",
-        "37": "TTT",
-        "38": "TTT",
-        "39": "KVSS",
-        "40": "RND",
-        "43": "TTT",
-        "44": "dcUSD",
-        "45": "TTT",
-        "46": "RocRa",
-        "47": "testDED",
-        "48": "Bal",
-        "49": "Shark",
-        "50": "ZTK",
-        "51": "RCM",
-        "52": "tSov",
-        "53": "ttest",
-        "54": "SEB",
-        "55": "PIZ",
-        "56": "PSP",
-        "57": "xcm",
-        "58": "TBT",
-        "66": "BBC",
-        "67": "TTT",
-        "69": "SRT",
-        "70": "dsads",
-        "71": "testDED",
-        "72": "NEHT",
-        "73": "NEHT1",
-        "74": "GID",
-        "75": "UGOL",
-        "76": "CHANDU",
-        "77": "shicoin",
-        "80": "NLT",
-        "81": "TS13",
-        "86": "TCA",
-        "88": "MEM",
-        "89": "HAT",
-        "90": "Alrn",
-        "93": "SOT",
-        "96": "@@@",
-        "97": "SEK",
-        "99": "PBA",
-        "100": "ACRST",
-        "101": "TTO",
-        "102": "4YP",
-        "108": "GURU",
-        "111": "PBAC",
-        "112": "TTam",
-        "113": "prkt",
-        "114": "GOG",
-        "121": "NsNsN",
-        "122": "ttam",
-        "123": "RBT",
-        "124": "BEA",
-        "125": "SDV",
-        "134": "TNG",
-        "135": "PXT",
-        "137": "TEST",
-        "139": "PHNX",
-        "140": "USDT",
-        "143": "XIN",
-        "144": "TTT",
-        "145": "UMG",
-        "146": "VYV",
-        "149": "EDU",
-        "171": "SAW",
-        "191": "AHW",
-        "200": "nUSDT",
-        "201": "VNST",
-        "224": "creagen",
-        "228": "bebra",
-        "233": "NTT",
-        "234": "LIA",
-        "250": "FING",
-        "261": "DOS",
-        "322": "SOLO",
-        "333": "MEM",
-        "377": "KAA",
-        "399": "TTAM",
-        "404": "PDRS",
-        "412": "PML",
-        "414": "KTT",
-        "420": "SWED",
-        "432": "TTT",
-        "444": "SASS",
-        "500": "TRN",
-        "501": "KCK",
-        "555": "bambam",
-        "567": "TSM",
-        "609": "HMT",
-        "666": "HOGE",
-        "682": "QCN",
-        "689": "YPT",
-        "777": "FUGA",
-        "786": "AMT",
-        "824": "gbk",
-        "888": "FFF",
-        "988": "BABY",
-        "999": "YAKIO",
-        "1000": "TWC",
-        "1001": "UNT",
-        "1010": "PBTC",
-        "1111": "RCL",
-        "1112": "TTam",
-        "1113": "KCT",
-        "1212": "bob",
-        "1231": "123",
-        "1234": "PPV",
-        "1235": "PAV",
-        "1311": "prak",
-        "1313": "TNA",
-        "1324": "TOAST",
-        "1335": "LOT",
-        "1336": "INV",
-        "1337": "rUSD",
-        "1717": "qveex",
-        "1730": "PRCVL",
-        "1793": "TKNZ",
-        "1807": "SVO",
-        "1983": "BGA",
-        "1984": "USDt",
-        "1985": "XCMSDK",
-        "1997": "USDT",
-        "1999": "JOE",
-        "2000": "bcdt",
-        "2003": "GRT",
-        "2024": "MTK",
-        "2101": "BSTT",
-        "2121": "RETH",
-        "2206": "RSD",
-        "2304": "itm",
-        "2512": "ARR2",
-        "2661": "FRAC",
-        "2727": "PRES",
-        "2984": "RUSD",
-        "3008": "ARR",
-        "3012": "gnt",
-        "3344": "XON",
-        "4040": "ROSTIK",
-        "4110": "DDA",
-        "5000": "xdtb",
-        "5353": "FNLY",
-        "6900": "LSPA",
-        "6969": "STNLY",
-        "7777": "USDT",
-        "8790": "BGL",
-        "8888": "GGG",
-        "9394": "SMEAD",
-        "9991": "SPT",
-        "9999": "FLUB",
-        "10000": "AST",
-        "10001": "mango1",
-        "10011": "TTTT",
-        "10201": "GINO",
-        "11111": "RLC",
-        "11123": "AAE",
-        "12121": "TEST",
-        "12345": "USDT",
-        "20000": "SRK",
-        "20001": "TSTT",
-        "20002": "doge",
-        "20301": "EVM",
-        "22061": "PIVO",
-        "22062": "DEM",
-        "22063": "DKT",
-        "22064": "XPPEN",
-        "22065": "TREM",
-        "26845": "TTT",
-        "33332": "FRAC",
-        "34634": "seg",
-        "41217": "KFTP",
-        "42069": "PEB",
-        "50001": "jelou",
-        "50174": "LIMINAL",
-        "65536": "AKT",
-        "66666": "KST",
-        "69420": "PLONK",
-        "77777": "SHREK",
-        "80085": "NKT",
-        "99911": "fx1",
-        "100000": "TEST1",
-        "101001": "FSUP",
-        "111111": "11111",
-        "111112": "SQRLTKN",
-        "112233": "haha",
-        "121212": "PLY",
-        "123443": "ICO",
-        "123456": "LRSKA",
-        "131313": "DMO",
-        "200001": "TEST1",
-        "228228": "TEST",
-        "228282": "WTN",
-        "228322": "nzprt",
-        "292363": "KPA",
-        "333333": "I'M",
-        "335277": "PSPV",
-        "378201": "NASST",
-        "411299": "any",
-        "412177": "LKT",
-        "413801": "PPV",
-        "456789": "LDO",
-        "666666": "ISH",
-        "696969": "tDED",
-        "766768": "jghg",
-        "777777": "ITM",
-        "862105": "USDTT",
-        "862812": "CUBOT",
-        "863012": "vCOPT",
-        "1000000": "Qzx",
-        "1111111": "VVA",
-        "1234567": "TAFK",
-        "4242424": "CRISTO",
-        "11111111": "ETH",
-        "11117777": "MAG",
-        "12345678": "giraffe",
-        "13123214": "nmf",
-        "19801204": "KHR",
-        "20120608": "KTT",
-        "20240419": "rUSDT",
-        "22332244": "ZoV",
-        "69696969": "PENE",
-        "76657621": "gaa",
-        "123456789": "ZeAs",
-        "143228832": "tasset",
-        "333333333": "PRIM",
-        "588492840": "AT1",
-        "678968242": "test",
-        "896792687": "TS13FL",
-        "994054438": "test",
-        "1234567890": "giraffe",
-        "1578907141": "newt",
-        "2058845893": "ASTSUS",
-        "2430784328": "TMW",
-        "2564157320": "sanasna",
-        "2773623529": "newasset",
-        "2908320209": "AirTest1",
-        "3529206684": "token",
-        "3782010103": "ggg",
-        "3782010107": "RRRBTC",
-        "3782010111": "WBTC",
-        "3782010112": "RETH",
-        "3782010113": "RBTC",
-        "3782010114": "DOI",
-        "3782010115": "DOI",
-        "3782010116": "RETH",
-        "3782010117": "DOI",
-        "3782010118": "RTC",
-        "3782010119": "RCTC2",
-        "3782010120": "USDT",
-        "3782010121": "RBTC",
-        "3782010122": "RETHV2",
-        "3782010123": "RETHV2",
-        "3782010124": "RETHV2",
-        "3782010125": "SETH",
-        "3782010126": "USDT",
-        "3782010127": "RETHV2",
-        "3782010128": "RETHV2",
-        "3782010129": "RETHV2222",
-        "3782010130": "RETHV21212",
-        "3782010131": "zcvXC",
-        "3824385541": "AT9"
-      },
-      "foreignAssetsInfo": {
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863396630353332363331316263326135353432363736316265633230303537363835666238306637227d7d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc9f05326311bc2a55426761bec20057685fb80f7\"}}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
-        },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307862333461363932346130323130306261366566313261663163373938323835653866376131366565227d7d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xb34a6924a02100ba6ef12af1c798285e8f7a16ee\"}}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
-        },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307834356666653561343464616535343338656537666464323665653562656661643133643532383332227d7d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x45ffe5a44dae5438ee7fdd26ee5befad13d52832\"}}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
-        },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307861646437366565376662356233643264373734623566656434616332306238376638333064623931227d7d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xadd76ee7fb5b3d2d774b5fed4ac20b87f830db91\"}}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
-        },
-        "0x7b22706172656e7473223a2231222c22696e746572696f72223a7b225833223a5b7b2250617261636861696e223a2234343238227d2c7b2250616c6c6574496e7374616e6365223a223132227d2c7b2247656e6572616c496e646578223a2233227d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X3\":[{\"Parachain\":\"4428\"},{\"PalletInstance\":\"12\"},{\"GeneralIndex\":\"3\"}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4428\"}}}"
-        },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307863336430383838343264636630326331333639396639333662623833646662626336663732316162227d7d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc3d088842dcf02c13699f936bb83dfbbc6f721ab\"}}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
-        },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307839653231366333616635663063366365373038353162393364646462363235373333383063666566227d7d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x9e216c3af5f0c6ce70851b93dddb62573380cfef\"}}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
-        },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307862313530383635663266636337363861333063376364373530356263353635323736366637626363227d7d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xb150865f2fcc768a30c7cd7505bc5652766f7bcc\"}}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
-        },
-        "EDU": {
-          "symbol": "EDU",
-          "name": "Educhain",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":[{\"Parachain\":\"4428\"}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":[{\"Parachain\":\"4428\"}]}}"
-        },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307865336665383564326635613438336236626136326537316563346339646435353134313166313930227d7d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xe3fe85d2f5a483b6ba62e71ec4c9dd551411f190\"}}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
-        },
-        "HOP": {
-          "symbol": "HOP",
-          "name": "Trappist Hop",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":[{\"Parachain\":\"1836\"}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":[{\"Parachain\":\"1836\"}]}}"
-        },
-        "WND": {
-          "symbol": "WND",
-          "name": "Westend",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":[{\"GlobalConsensus\":\"Westend\"}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":[{\"GlobalConsensus\":\"Westend\"}]}}"
-        },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307866666639393736373832643436636330353633306431663665626162313862323332346436623134227d7d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xfff9976782d46cc05630d1f6ebab18b2324d6b14\"}}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
-        },
-        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307862623138663833633361616131333830313838386532396539346234656335303562633430366631227d7d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xbb18f83c3aaa13801888e29e94b4ec505bc406f1\"}}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
-        },
-        "0x7b22706172656e7473223a2231222c22696e746572696f72223a7b225833223a5b7b2250617261636861696e223a2234343238227d2c7b2250616c6c6574496e7374616e6365223a223132227d2c7b2247656e6572616c496e646578223a2232227d5d7d7d": {
-          "symbol": "",
-          "name": "",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X3\":[{\"Parachain\":\"4428\"},{\"PalletInstance\":\"12\"},{\"GeneralIndex\":\"2\"}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4428\"}}}"
-        },
-        "MUSE": {
-          "symbol": "MUSE",
-          "name": "Muse",
-          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":[{\"Parachain\":\"3369\"}]}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
-          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":[{\"Parachain\":\"3369\"}]}}"
-        }
-      },
-      "poolPairsInfo": {
-        "0": {
-          "lpToken": "0",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"140\"}]}}]]"
-        },
-        "1": {
-          "lpToken": "1",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"420\"}]}}]]"
-        },
-        "2": {
-          "lpToken": "2",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"47\"}]}}]]"
-        },
-        "3": {
-          "lpToken": "3",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"48\"}]}}]]"
-        },
-        "4": {
-          "lpToken": "4",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"46\"}]}}]]"
-        },
-        "5": {
-          "lpToken": "5",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"49\"}]}}]]"
-        },
-        "6": {
-          "lpToken": "6",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"51\"}]}}]]"
-        },
-        "7": {
-          "lpToken": "7",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"56\"}]}}]]"
-        },
-        "8": {
-          "lpToken": "8",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"11111\"}]}}]]"
-        },
-        "9": {
-          "lpToken": "9",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"101\"}]}}]]"
-        },
-        "10": {
-          "lpToken": "10",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1111\"}]}}]]"
-        },
-        "11": {
-          "lpToken": "11",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":[{\"Parachain\":\"1836\"}]}}]]"
-        },
-        "12": {
-          "lpToken": "12",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22062\"}]}}]]"
-        },
-        "13": {
-          "lpToken": "13",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"111111\"}]}}]]"
-        },
-        "14": {
-          "lpToken": "14",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22064\"}]}}]]"
-        },
-        "15": {
-          "lpToken": "15",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"19801204\"}]}}]]"
-        },
-        "16": {
-          "lpToken": "16",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"131313\"}]}}]]"
-        },
-        "17": {
-          "lpToken": "17",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"5353\"}]}}]]"
-        },
-        "18": {
-          "lpToken": "18",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22065\"}]}}]]"
-        },
-        "19": {
-          "lpToken": "19",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"22061\"}]}}]]"
-        },
-        "20": {
-          "lpToken": "20",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"10000\"}]}}]]"
-        },
-        "21": {
-          "lpToken": "21",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"333333333\"}]}}]]"
-        },
-        "22": {
-          "lpToken": "22",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":[{\"Parachain\":\"3369\"}]}}]]"
-        },
-        "23": {
-          "lpToken": "23",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50174\"}]}}]]"
-        },
-        "24": {
-          "lpToken": "24",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"149\"}]}}]]"
-        },
-        "25": {
-          "lpToken": "25",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"33332\"}]}}]]"
-        },
-        "26": {
-          "lpToken": "26",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2101\"}]}}]]"
-        },
-        "27": {
-          "lpToken": "27",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"20120608\"}]}}]]"
-        },
-        "28": {
-          "lpToken": "28",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1984\"}]}}]]"
-        },
-        "29": {
-          "lpToken": "29",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"10201\"}]}}]]"
-        },
-        "30": {
-          "lpToken": "30",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1001\"}]}}]]"
-        },
-        "31": {
-          "lpToken": "31",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"2121\"}]}}]]"
-        },
-        "32": {
-          "lpToken": "32",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1010\"}]}}]]"
-        },
-        "33": {
-          "lpToken": "33",
-          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"191\"}]}}]]"
-        }
-      },
-      "specName": "statemine"
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "asset-hub-paseo"
     },
     "1002": {
       "tokens": [
-        "ROC"
+        "PAS"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "contracts-rococo"
-    },
-    "1003": {
-      "tokens": [
-        "ROC"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "encointer-parachain"
+      "specName": "bridge-hub-paseo"
     },
     "1004": {
       "tokens": [
-        "ROC"
+        "PAS"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "people-rococo"
+      "specName": "people-paseo"
     },
     "1005": {
       "tokens": [
-        "ROC"
+        "PAS"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "coretime-rococo"
-    },
-    "1013": {
-      "tokens": [
-        "ROC"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "bridge-hub-rococo"
-    },
-    "1836": {
-      "tokens": [
-        "HOP"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "trappist-rococo"
-    },
-    "2004": {
-      "tokens": [
-        "PHA"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "rhala"
-    },
-    "2011": {
-      "tokens": [
-        "XOR"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "sora_ksm"
+      "specName": "coretime-paseo"
     },
     "2030": {
       "tokens": [
@@ -7284,32 +6701,14 @@
       "poolPairsInfo": {},
       "specName": "bifrost_polkadot"
     },
-    "2031": {
+    "2051": {
       "tokens": [
-        "NCFG"
+        "AJUN"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "centrifuge"
-    },
-    "2034": {
-      "tokens": [
-        "HDX"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "hydradx"
-    },
-    "2043": {
-      "tokens": [
-        "NEURO"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "origintrail-parachain"
+      "specName": "ajuna"
     },
     "2056": {
       "tokens": [
@@ -7320,41 +6719,14 @@
       "poolPairsInfo": {},
       "specName": "avn-parachain"
     },
-    "2058": {
+    "2086": {
       "tokens": [
-        "WATRD"
+        "PILT"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "watr-devnet"
-    },
-    "2090": {
-      "tokens": [
-        "BSX"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "basilisk"
-    },
-    "2093": {
-      "tokens": [
-        "MD5"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "hashed"
-    },
-    "2100": {
-      "tokens": [
-        "SOON"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "soonsocial-parachain"
+      "specName": "mashnet-node"
     },
     "2101": {
       "tokens": [
@@ -7367,39 +6739,12 @@
     },
     "2105": {
       "tokens": [
-        "PRING"
+        "KRING"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "Pangolin2"
-    },
-    "2106": {
-      "tokens": [
-        "LIT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "rococo-parachain"
-    },
-    "2110": {
-      "tokens": [
-        "MGAT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "mangata-parachain"
-    },
-    "2114": {
-      "tokens": [
-        "TUR"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "turing"
+      "specName": "Darwinia Koi"
     },
     "2119": {
       "tokens": [
@@ -7419,33 +6764,6 @@
       "poolPairsInfo": {},
       "specName": "foucoco"
     },
-    "2239": {
-      "tokens": [
-        "tACU"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "acurast-parachain"
-    },
-    "3333": {
-      "tokens": [
-        "T0RN"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "t0rn"
-    },
-    "3339": {
-      "tokens": [
-        "CGT"
-      ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
-      "poolPairsInfo": {},
-      "specName": "curio-testnet"
-    },
     "3345": {
       "tokens": [
         "VT"
@@ -7464,7 +6782,7 @@
       "poolPairsInfo": {},
       "specName": "muse"
     },
-    "4044": {
+    "4000": {
       "tokens": [
         "XRQCY"
       ],
@@ -7473,25 +6791,43 @@
       "poolPairsInfo": {},
       "specName": "frequency-testnet"
     },
-    "4292": {
+    "4001": {
       "tokens": [
-        "ROC"
+        "PAS"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "yerba-rococo"
+      "specName": "pop"
     },
-    "4343": {
+    "4003": {
       "tokens": [
-        "GIE"
+        "XCAV"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "dip-consumer-runtime-template"
+    },
+    "4005": {
+      "tokens": [
+        "MYRIA"
+      ],
+      "assetsInfo": {},
+      "foreignAssetsInfo": {},
+      "poolPairsInfo": {},
+      "specName": "myriad"
+    },
+    "4006": {
+      "tokens": [
+        "SIGMA"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
       "specName": "laos"
     },
-    "4374": {
+    "4009": {
       "tokens": [
         "tNAND"
       ],
@@ -7500,14 +6836,14 @@
       "poolPairsInfo": {},
       "specName": "gargantua"
     },
-    "201804": {
+    "4022": {
       "tokens": [
-        "MUSE"
+        "KPGT"
       ],
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "muse"
+      "specName": "niskala-parachain"
     }
   }
 }
