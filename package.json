@@ -20,15 +20,12 @@
   "author": "Parity Technologies <admin@parity.io>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@polkadot/api": "^13.0.1",
-    "@polkadot/apps-config": "^0.143.2",
+    "@polkadot/api": "^14.0.1",
+    "@polkadot/apps-config": "^0.145.1",
     "@substrate/dev": "0.7.1",
     "@types/node-fetch": "^2.6.9",
     "node-fetch": "2.6.7",
     "vitest": "^1.4.0"
-  },
-  "resolutions": {
-    "@polkadot/types": "13.0.1"
   },
   "packageManager": "yarn@4.2.2"
 }
