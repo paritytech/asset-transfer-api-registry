@@ -356,7 +356,8 @@
         "50000007": "i1DOT",
         "50000008": "GABI",
         "50000009": "GABIC",
-        "50000010": "KUS"
+        "50000010": "KUS",
+        "50000011": "NNN"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -6291,6 +6292,8 @@
         "862812": "CUBOT",
         "863012": "VCOPT",
         "1000000": "USDT_B",
+        "7340827": "TBC",
+        "8355067": "TBC",
         "10000000": "MAGE",
         "13700000": "DNT",
         "15383158": "35153",
@@ -6652,8 +6655,54 @@
       "tokens": [
         "PAS"
       ],
-      "assetsInfo": {},
-      "foreignAssetsInfo": {},
+      "assetsInfo": {
+        "4": "VAR 2",
+        "5": "SYN",
+        "6": "lop",
+        "7": "Pol",
+        "8": "PEPE",
+        "27": "USDC",
+        "69": "BRA",
+        "100": "VAR",
+        "101": "PIGLET",
+        "149": "EDU",
+        "365": "IAO",
+        "404": "JET",
+        "1337": "USDC",
+        "1984": "USDt",
+        "7777": "USDT",
+        "50000000": "PETER"
+      },
+      "foreignAssetsInfo": {
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307832326531326564346536626364653635326137333535326464653334306663623937326565663839227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x22e12ed4e6bcde652a73552dde340fcb972eef89\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307839396537343339363463303336626332383933316662353634383137646234323861613766373532227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x99e743964c036bc28931fb564817db428aa7f752\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+        },
+        "WETH": {
+          "symbol": "WETH",
+          "name": "Wrapped Ether",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0xfff9976782d46cc05630d1f6ebab18b2324d6b14\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+        },
+        "MYTH": {
+          "symbol": "MYTH",
+          "name": "Mythos",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3369\"}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"3369\"}}}"
+        }
+      },
       "poolPairsInfo": {},
       "specName": "asset-hub-paseo"
     },

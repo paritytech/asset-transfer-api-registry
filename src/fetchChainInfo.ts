@@ -2,6 +2,7 @@
 
 import { EndpointOption } from '@polkadot/apps-config/endpoints/types.js';
 
+import { ASSET_HUB_SPEC_NAMES } from './consts.js';
 import { fetchSystemParachainAssetConversionPoolInfo } from './fetchSystemParachainAssetConversionPoolInfo.js';
 import { fetchSystemParachainAssetInfo } from './fetchSystemParachainAssetInfo.js';
 import { fetchSystemParachainForeignAssetInfo } from './fetchSystemParachainForeignAssetInfo.js';
@@ -48,14 +49,7 @@ export const fetchChainInfo = async (
 		let foreignAssetsInfo: ForeignAssetsInfo = {};
 		let poolPairsInfo: PoolPairsInfo = {};
 
-		if (
-			specNameStr === 'westmint' ||
-			specNameStr === 'asset-hub-westend' ||
-			specNameStr === 'statemine' ||
-			specNameStr === 'asset-hub-kusama' ||
-			specNameStr === 'statemint' ||
-			specNameStr === 'asset-hub-polkadot'
-		) {
+		if (ASSET_HUB_SPEC_NAMES.includes(specNameStr)) {
 			assetsInfo = await fetchSystemParachainAssetInfo(api);
 			foreignAssetsInfo = await fetchSystemParachainForeignAssetInfo(
 				api,
