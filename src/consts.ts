@@ -50,3 +50,13 @@ export const TEST_REGISTRY_FILE_PATH = path.join(
 	'testHelpers',
 	'testRegistry.json',
 );
+
+export const ASSET_HUB_SPEC_NAMES = [
+	'statemint',
+	'statemine',
+	'westmint',
+	'asset-hub-polkadot',
+	'asset-hub-kusama',
+	'asset-hub-westend',
+	'asset-hub-paseo',
+];
