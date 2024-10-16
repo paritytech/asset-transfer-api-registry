@@ -3,7 +3,7 @@
 import type { EndpointOption } from '@polkadot/apps-config/endpoints/types';
 
 /* eslint-disable-next-line */
-import FinalRegistry from '../docs/registry.json' assert { type: 'json' };
+import FinalRegistry from '../docs/registry.json' with { type: 'json' };
 import { fetchChainInfo } from './fetchChainInfo.js';
 import type {
 	ChainInfoKeys,
