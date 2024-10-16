@@ -23,7 +23,7 @@ vi.mocked(fetchParaIds)
 	.mockResolvedValueOnce({ polkadot: [1000, 1001, 1002, 2030] })
 	.mockResolvedValueOnce({ kusama: [1000, 1001, 1002] })
 	.mockResolvedValueOnce({ westend: [1000, 1001, 1002] })
-	.mockResolvedValueOnce({ rococo: [1000, 1001, 1002] });
+	.mockResolvedValueOnce({ paseo: [1000, 1002, 1003, 1004, 1005] });
 
 vi.mock('./fetchXcAssetsRegistryInfo', () => {
 	return {
@@ -336,41 +336,41 @@ vi.mocked(fetchXcAssetsRegistryInfo).mockReturnValue(
 				specName: 'bridge-hub-westend',
 			},
 		},
-		rococo: {
+		paseo: {
 			'0': {
-				tokens: ['ROC'],
+				tokens: ['PAS'],
 				assetsInfo: {},
 				foreignAssetsInfo: {},
 				poolPairsInfo: {},
-				specName: 'rococo',
+				specName: 'paseo',
 			},
 			'1000': {
-				tokens: ['ROC'],
+				tokens: ['PAS'],
 				assetsInfo: {},
 				foreignAssetsInfo: {},
 				poolPairsInfo: {},
-				specName: 'statemine',
+				specName: 'asset-hub-paseo',
 			},
 			'1002': {
-				tokens: ['ROC'],
+				tokens: ['PAS'],
 				assetsInfo: {},
 				foreignAssetsInfo: {},
 				poolPairsInfo: {},
-				specName: 'contracts-rococo',
+				specName: 'bridge-hub-paseo',
 			},
-			'1003': {
-				tokens: ['ROC'],
+			'1004': {
+				tokens: ['PAS'],
 				assetsInfo: {},
 				foreignAssetsInfo: {},
 				poolPairsInfo: {},
-				specName: 'encointer-parachain',
+				specName: 'people-paseo',
 			},
-			'1013': {
-				tokens: ['ROC'],
+			'1005': {
+				tokens: ['PAS'],
 				assetsInfo: {},
 				foreignAssetsInfo: {},
 				poolPairsInfo: {},
-				specName: 'bridge-hub-rococo',
+				specName: 'coretime-paseo',
 			},
 		},
 	}),
@@ -458,34 +458,34 @@ vi.mocked(addParasChainInfoToRelayRegistries).mockResolvedValueOnce({
 			specName: 'bridge-hub-westend',
 		},
 	},
-	rococo: {
+	paseo: {
 		'1000': {
-			tokens: ['ROC'],
+			tokens: ['PAS'],
 			assetsInfo: {},
 			foreignAssetsInfo: {},
 			poolPairsInfo: {},
-			specName: 'statemine',
+			specName: 'asset-hub-paseo',
 		},
 		'1002': {
-			tokens: ['ROC'],
+			tokens: ['PAS'],
 			assetsInfo: {},
 			foreignAssetsInfo: {},
 			poolPairsInfo: {},
-			specName: 'contracts-rococo',
+			specName: 'bridge-hub-paseo',
 		},
-		'1003': {
-			tokens: ['ROC'],
+		'1004': {
+			tokens: ['PAS'],
 			assetsInfo: {},
 			foreignAssetsInfo: {},
 			poolPairsInfo: {},
-			specName: 'encointer-parachain',
+			specName: 'people-paseo',
 		},
-		'1013': {
-			tokens: ['ROC'],
+		'1005': {
+			tokens: ['PAS'],
 			assetsInfo: {},
 			foreignAssetsInfo: {},
 			poolPairsInfo: {},
-			specName: 'bridge-hub-rococo',
+			specName: 'coretime-paseo',
 		},
 	},
 });
@@ -523,13 +523,13 @@ vi.mocked(createChainRegistryFromRelay).mockResolvedValue({
 			specName: 'westend',
 		},
 	},
-	rococo: {
+	paseo: {
 		'0': {
-			tokens: ['ROC'],
+			tokens: ['PAS'],
 			assetsInfo: {},
 			foreignAssetsInfo: {},
 			poolPairsInfo: {},
-			specName: 'rococo',
+			specName: 'paseo',
 		},
 	},
 });
@@ -551,7 +551,6 @@ describe('createRegistry', () => {
 		expect(vi.isMockFunction(addParasChainInfoToRelayRegistries)).toBeTruthy();
 		expect(vi.isMockFunction(createChainRegistryFromRelay)).toBeTruthy();
 		expect(vi.isMockFunction(fetchXcAssetsRegistryInfo)).toBeTruthy();
-		// expect(await fetchXcAssetsRegistryInfo(DEFAULT_REGISTRY)).toStrictEqual('hello');
 
 		await main(TEST_REGISTRY_FILE_PATH, DEFAULT_REGISTRY);
 		const registryData = fs.readFileSync(TEST_REGISTRY_FILE_PATH, 'utf8');
@@ -866,41 +865,41 @@ describe('createRegistry', () => {
 				specName: 'bridge-hub-westend',
 			},
 		});
-		expect(createdRegistry['rococo']).toEqual({
+		expect(createdRegistry['paseo']).toEqual({
 			'0': {
-				tokens: ['ROC'],
+				tokens: ['PAS'],
 				assetsInfo: {},
 				foreignAssetsInfo: {},
 				poolPairsInfo: {},
-				specName: 'rococo',
+				specName: 'paseo',
 			},
 			'1000': {
-				tokens: ['ROC'],
+				tokens: ['PAS'],
 				assetsInfo: {},
 				foreignAssetsInfo: {},
 				poolPairsInfo: {},
-				specName: 'statemine',
+				specName: 'asset-hub-paseo',
 			},
 			'1002': {
-				tokens: ['ROC'],
+				tokens: ['PAS'],
 				assetsInfo: {},
 				foreignAssetsInfo: {},
 				poolPairsInfo: {},
-				specName: 'contracts-rococo',
+				specName: 'bridge-hub-paseo',
 			},
-			'1003': {
-				tokens: ['ROC'],
+			'1004': {
+				tokens: ['PAS'],
 				assetsInfo: {},
 				foreignAssetsInfo: {},
 				poolPairsInfo: {},
-				specName: 'encointer-parachain',
+				specName: 'people-paseo',
 			},
-			'1013': {
-				tokens: ['ROC'],
+			'1005': {
+				tokens: ['PAS'],
 				assetsInfo: {},
 				foreignAssetsInfo: {},
 				poolPairsInfo: {},
-				specName: 'bridge-hub-rococo',
+				specName: 'coretime-paseo',
 			},
 		});
 	});

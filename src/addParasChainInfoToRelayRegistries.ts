@@ -9,7 +9,7 @@ export const addParasChainInfoToRelayRegistries = async (
 	polkadotEndpoints: Omit<EndpointOption, 'teleport'>[][],
 	kusamaEndpoints: Omit<EndpointOption, 'teleport'>[][],
 	westendEndpoints: Omit<EndpointOption, 'teleport'>[][],
-	rococoEndpoints: Omit<EndpointOption, 'teleport'>[][],
+	paseoEndpoints: Omit<EndpointOption, 'teleport'>[][],
 ): Promise<TokenRegistry> => {
 	// store all create chain registry para promises
 	const chainRegistryFromParasPromises: Promise<TokenRegistry>[] = [];
@@ -31,9 +31,9 @@ export const addParasChainInfoToRelayRegistries = async (
 			createChainRegistryFromParas('westend', endpoints, registry, paraIds),
 		);
 	}
-	for (const endpoints of rococoEndpoints) {
+	for (const endpoints of paseoEndpoints) {
 		chainRegistryFromParasPromises.push(
-			createChainRegistryFromParas('rococo', endpoints, registry, paraIds),
+			createChainRegistryFromParas('paseo', endpoints, registry, paraIds),
 		);
 	}
 

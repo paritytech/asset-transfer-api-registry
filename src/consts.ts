@@ -33,7 +33,7 @@ export const DEFAULT_REGISTRY: TokenRegistry = {
 	polkadot: {},
 	kusama: {},
 	westend: {},
-	rococo: {},
+	paseo: {},
 };
 
 export const PROD_REGISTRY_FILE_PATH = path.join(

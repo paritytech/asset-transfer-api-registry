@@ -43,7 +43,7 @@ vi.mocked(updateRegistryChainInfo).mockReturnValue(
 			},
 		},
 		westend: {},
-		rococo: {},
+		paseo: {},
 	}),
 );
 
@@ -84,7 +84,7 @@ describe('createChainRegistryFromParas', () => {
 				},
 			},
 			westend: {},
-			rococo: {},
+			paseo: {},
 		});
 	});
 });
