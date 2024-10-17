@@ -3,6 +3,11 @@
 	"version": "0.2.24",
 	"description": "Asset registry for asset-transfer-api",
 	"main": "docs/registry.json",
+	"module": "docs/registry.json",
+	"exports": {
+		"./package.json": "./package.json",
+		".": "./docs/registry.json"
+	},
 	"type": "module",
 	"publishConfig": {
 		"access": "public",
