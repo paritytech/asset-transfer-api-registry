@@ -1,30 +1,23 @@
 {
-    "extends": "@substrate/dev/config/tsconfig.json",
-    "compilerOptions": {
-      "baseUrl": ".",
-      "outDir": "build",
-      "rootDirs": ["./src"],
-      "suppressImplicitAnyIndexErrors": true,
-      "ignoreDeprecations": "5.0",
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-      "module": "ESNext",
-      "target": "ES2015",
-      "allowJs": true,
-      "moduleResolution": "Node"
-    },
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
-    "exclude": [
-      "node_modules"
-    ],
-    "include": [
-      "./src/**/*.ts",
-      "./**/*.ts"
-    ],
-    "ts-node": {
-      "esm": true,
-      "experimentalSpecifierResolution": "node",
-    },
-  }
+	"extends": "@substrate/dev/config/tsconfig.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"outDir": "build",
+		"rootDirs": ["./src"],
+		"suppressImplicitAnyIndexErrors": true,
+		"ignoreDeprecations": "5.0",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"module": "ESNext",
+		"target": "ES2015",
+		"allowJs": true,
+		"moduleResolution": "Node"
+	},
+	"typeRoots": ["./node_modules/@types"],
+	"exclude": ["node_modules"],
+	"include": ["./src/**/*.ts", "./**/*.ts"],
+	"ts-node": {
+		"esm": true,
+		"experimentalSpecifierResolution": "node"
+	}
+}
