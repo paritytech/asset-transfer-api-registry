@@ -4173,7 +4173,7 @@
           "nativeChainID": "bifrost",
           "symbol": "vBNC",
           "decimals": 12,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},{\"generalKey\":\"0x0101\"}]}}}",
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},[{\"generalKey\":{\"length\":2,\"data\":\"0x0101000000000000000000000000000000000000000000000000000000000000\"}}]]}}}",
           "asset": {
             "VToken": "BNC"
           },
@@ -4185,7 +4185,7 @@
           "nativeChainID": "bifrost",
           "symbol": "vMOVR",
           "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},{\"generalKey\":\"0x010a\"}]}}}",
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},[{\"generalKey\":{\"length\":2,\"data\":\"0x010a000000000000000000000000000000000000000000000000000000000000\"}}]]}}}",
           "asset": {
             "VToken": "MOVR"
           },
@@ -4197,7 +4197,7 @@
           "nativeChainID": "bifrost",
           "symbol": "vKSM",
           "decimals": 12,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},{\"generalKey\":\"0x0104\"}]}}}",
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},[{\"generalKey\":{\"length\":2,\"data\":\"0x0104000000000000000000000000000000000000000000000000000000000000\"}}]]}}}",
           "asset": {
             "VToken": "KSM"
           },
@@ -4209,7 +4209,7 @@
           "nativeChainID": "bifrost",
           "symbol": "ZLK",
           "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},{\"generalKey\":\"0x0207\"}]}}}",
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},[{\"generalKey\":{\"length\":2,\"data\":\"0x0207000000000000000000000000000000000000000000000000000000000000\"}}]]}}}",
           "asset": {
             "Token": "ZLK"
           },
@@ -4221,7 +4221,7 @@
           "nativeChainID": "bifrost",
           "symbol": "VSvsKSM",
           "decimals": 12,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},{\"generalKey\":\"0x0404\"}]}}}",
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},[{\"generalKey\":{\"length\":2,\"data\":\"0x0404000000000000000000000000000000000000000000000000000000000000\"}}]]}}}",
           "asset": {
             "VSToken": "KSM"
           },
@@ -4233,36 +4233,12 @@
           "nativeChainID": "bifrost",
           "symbol": "BNC",
           "decimals": 12,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},{\"generalKey\":\"0x0001\"}]}}}",
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2001},[{\"generalKey\":{\"length\":2,\"data\":\"0x0001000000000000000000000000000000000000000000000000000000000000\"}}]]}}}",
           "asset": {
             "Native": "BNC"
           },
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        },
-        {
-          "paraID": 2004,
-          "nativeChainID": "khala",
-          "symbol": "PHA",
-          "decimals": 12,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2004}}}}",
-          "asset": {
-            "Token": "PHA"
-          },
-          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
-          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2004\"}}}"
-        },
-        {
-          "paraID": 2007,
-          "nativeChainID": "shiden",
-          "symbol": "SDN",
-          "decimals": 18,
-          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2007}}}}",
-          "asset": {
-            "Token2": "3"
-          },
-          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
-          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2007\"}}}"
         },
         {
           "paraID": 2023,
@@ -4311,6 +4287,28 @@
           },
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2110\"}}}"
+        },
+        {
+          "nativeChainID": null,
+          "symbol": "PHA",
+          "decimals": 12,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2004}}}}",
+          "asset": {
+            "Token": "PHA"
+          },
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2004\"}}}"
+        },
+        {
+          "nativeChainID": null,
+          "symbol": "SDN",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x1\":{\"parachain\":2007}}}}",
+          "asset": {
+            "Token2": "3"
+          },
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2007\"}}}"
         }
       ]
     },
@@ -6160,6 +6158,7 @@
         "222": "BBB",
         "223": "BILL",
         "224": "PONG",
+        "225": "SVL",
         "228": "ICT",
         "233": "NTT",
         "234": "YSH",
