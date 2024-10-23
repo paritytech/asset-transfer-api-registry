@@ -6232,6 +6232,8 @@
         "1309": "KLO",
         "1312": "NG1312",
         "1337": "NACHO",
+        "1412": "CWS",
+        "1669": "CWS",
         "1948": "YOLO",
         "1977": "SQL",
         "1984": "USDTT",
@@ -6300,6 +6302,7 @@
         "111000": "HEY",
         "114514": "KUNKA",
         "123456": "BATTY",
+        "123458": "KTEU",
         "153423": "WILL",
         "170352": "BAD",
         "313370": "WBTC",
@@ -6731,6 +6734,13 @@
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x99e743964c036bc28931fb564817db428aa7f752\"}}]}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
+        },
+        "0x7b22706172656e7473223a2231222c22696e746572696f72223a7b225831223a7b2250617261636861696e223a2234303233227d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4023\"}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"4023\"}}}"
         },
         "WETH": {
           "symbol": "WETH",
