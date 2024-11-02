@@ -359,7 +359,8 @@
         "50000011": "NNN",
         "50000012": "PHUDAO",
         "50000013": "PHU",
-        "50000014": "MOSA"
+        "50000014": "MOSA",
+        "50000015": "TMN"
       },
       "foreignAssetsInfo": {
         "EQ": {
@@ -741,7 +742,7 @@
         {
           "paraID": 1000,
           "nativeChainID": "statemint",
-          "symbol": "WETH",
+          "symbol": "WETHah",
           "decimals": 18,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":100}]}}}",
           "asset": {
