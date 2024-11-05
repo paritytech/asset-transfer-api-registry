@@ -25,8 +25,8 @@ export const RPC_BLACK_LIST = [
 	'wss://kreivo.kippu.rocks/',
 	'wss://rpc-karura.luckyfriday.io',
 	'wss://rpc-acala.luckyfriday.io',
-	'wss://crab-rpc.darwiniacommunitydao.xyz',
-	'wss://darwinia-rpc.darwiniacommunitydao.xyz',
+	'wss://crab-rpc.darwinia.network',
+	'wss://rpc.darwinia.network',
 ];
 
 export const DEFAULT_REGISTRY: TokenRegistry = {
