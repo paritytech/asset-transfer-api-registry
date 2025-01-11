@@ -25,45 +25,48 @@ export const fetchSystemParachainForeignAssetInfo = async (
 	if (api.query.foreignAssets !== undefined) {
 		const assetEntries = await api.query.foreignAssets.asset.entries();
 
-		for (const [assetStorageKeyData] of assetEntries) {
-			const foreignAssetData = assetStorageKeyData.toHuman();
+		let foreignAssetMultiLocationStr: string | undefined = undefined;
+		for (const asset of assetEntries) {
+			const storageKey = asset[0].toHuman();
+			if (storageKey && Array.isArray(storageKey) && storageKey.length > 0) {
+				foreignAssetMultiLocationStr = JSON.stringify(storageKey[0]).replace(
+					/(\d),/g,
+					'$1',
+				);
+			}
+			if (!foreignAssetMultiLocationStr) {
+				throw new Error('Unable to determine asset location');
+			}
 
-			if (foreignAssetData) {
-				// remove any commas from multilocation key values e.g. Parachain: 2,125 -> Parachain: 2125
-				const foreignAssetMultiLocationStr = JSON.stringify(
-					foreignAssetData[0],
-				).replace(/(\d),/g, '$1');
+			const foreignAssetMultiLocation = JSON.parse(
+				foreignAssetMultiLocationStr,
+			) as UnionXcmMultiLocation;
 
-				const foreignAssetMultiLocation = JSON.parse(
-					foreignAssetMultiLocationStr,
-				) as UnionXcmMultiLocation;
+			const hexId = stringToHex(JSON.stringify(foreignAssetMultiLocation));
 
-				const hexId = stringToHex(JSON.stringify(foreignAssetMultiLocation));
+			const assetMetadata = (
+				await api.query.foreignAssets.metadata(foreignAssetMultiLocation)
+			).toHuman();
 
-				const assetMetadata = (
-					await api.query.foreignAssets.metadata(foreignAssetMultiLocation)
-				).toHuman();
+			if (assetMetadata) {
+				const metadata = assetMetadata as ForeignAssetMetadata;
+				const assetSymbol = metadata.symbol;
+				const assetName = metadata.name;
 
-				if (assetMetadata) {
-					const metadata = assetMetadata as ForeignAssetMetadata;
-					const assetSymbol = metadata.symbol;
-					const assetName = metadata.name;
+				// if the symbol exists in metadata use it, otherwise uses the hex of the multilocation as the key
+				const foreignAssetInfoKey = assetSymbol ? assetSymbol : hexId;
+				const assetLocation = JSON.stringify(foreignAssetMultiLocation);
 
-					// if the symbol exists in metadata use it, otherwise uses the hex of the multilocation as the key
-					const foreignAssetInfoKey = assetSymbol ? assetSymbol : hexId;
-					const assetLocation = JSON.stringify(foreignAssetMultiLocation);
+				const [assetHubReserveLocation, originChainReserveLocation] =
+					getAssetReserveLocations(assetLocation, chainId);
 
-					const [assetHubReserveLocation, originChainReserveLocation] =
-						getAssetReserveLocations(assetLocation, chainId);
-
-					foreignAssetsInfo[foreignAssetInfoKey] = {
-						symbol: assetSymbol,
-						name: assetName,
-						multiLocation: assetLocation,
-						assetHubReserveLocation,
-						originChainReserveLocation,
-					};
-				}
+				foreignAssetsInfo[foreignAssetInfoKey] = {
+					symbol: assetSymbol,
+					name: assetName,
+					multiLocation: assetLocation,
+					assetHubReserveLocation,
+					originChainReserveLocation,
+				};
 			}
 		}
 	}
