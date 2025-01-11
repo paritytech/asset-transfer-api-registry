@@ -19,6 +19,20 @@ export const XC_ASSET_CDN_URL =
 	'https://cdn.jsdelivr.net/gh/colorfulnotion/xcm-global-registry/metadata/xcmgar.json';
 
 export const RPC_BLACK_LIST = [
+	'wss://polkadot-rpc.publicnode.com',
+	'wss://api2.zondax.ch/pas/node/rpc',
+	'wss://heiko-rpc.parallel.fi',
+	'wss://public-01.mainnet.bifrostnetwork.com/wss',
+	'wss://public-02.mainnet.bifrostnetwork.com/wss',
+	'wss://polkadex.public.curie.radiumblock.co/ws',
+	'wss://public-01.testnet.bifrostnetwork.com/wss',
+	'wss://public-02.testnet.bifrostnetwork.com/wss',
+	'wss://parachain-rpc.origin-trail.network',
+	'wss://polkadot-parallel-rpc.parallel.fi',
+	'wss://tinkernet-rpc.dwellir.com',
+	'wss://khala.api.onfinality.io/public-ws',
+	'wss://chainflip-rpc.dwellir.com',
+	'wss://khala.public.curie.radiumblock.co/ws',
 	'wss://polkadot-public-rpc.blockops.network/ws',
 	'wss://kusama-public-rpc.blockops.network/ws',
 	'wss://westend-rpc.blockops.network/ws',
