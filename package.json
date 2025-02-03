@@ -20,7 +20,7 @@
   "devDependencies": {
     "@polkadot/api": "^15.5.2",
     "@polkadot/apps-config": "^0.132.1",
-    "@substrate/dev": "^0.6.7",
+    "@substrate/dev": "^0.9.0",
     "node-fetch": "3.3.2"
   },
   "packageManager": "yarn@3.6.2"
