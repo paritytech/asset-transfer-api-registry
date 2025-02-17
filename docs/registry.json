@@ -621,6 +621,13 @@
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2034\"}}}"
         },
+        "ETH": {
+          "symbol": "ETH",
+          "name": "Ether",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}}]}}"
+        },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307835643364303166643664326164313136396231373931386562346631353363363631363238386562227d7d5d7d7d": {
           "symbol": "",
           "name": "",
