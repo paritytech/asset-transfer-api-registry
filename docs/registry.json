@@ -812,6 +812,10 @@
         "36": {
           "lpToken": "36",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"888\"}]}}]]"
+        },
+        "37": {
+          "lpToken": "37",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000075\"}]}}]]"
         }
       },
       "specName": "statemint"
@@ -7597,7 +7601,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "template-parachain"
+      "specName": "xcavate-parachain-runtime"
     },
     "4005": {
       "tokens": [
