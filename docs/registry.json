@@ -822,6 +822,10 @@
         "37": {
           "lpToken": "37",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000075\"}]}}]]"
+        },
+        "38": {
+          "lpToken": "38",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"1107\"}]}}]]"
         }
       },
       "specName": "statemint"
@@ -6947,6 +6951,7 @@
         "50000087": "EXMP",
         "50000088": "EXMP",
         "50000089": "EXMP",
+        "50000090": "EXMP",
         "88888888": "PAA",
         "123456789": "PUSH",
         "193000000": "SRCT",
