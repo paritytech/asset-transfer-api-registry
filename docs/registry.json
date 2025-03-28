@@ -449,7 +449,8 @@
         "50000102": "BROHHH",
         "50000103": "MPC",
         "50000104": "J",
-        "50000105": "DOLF"
+        "50000105": "DOLF",
+        "50000106": "ZEST"
       },
       "foreignAssetsInfo": {
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307839643339613564653330653537343433626666326138333037613432353663383739376133343937227d7d5d7d7d": {
@@ -3259,6 +3260,16 @@
           "decimals": 10,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2034},{\"accountKey20\":{\"network\":null,\"key\":\"0x02639ec01313c8775fae74f2dad1118c8a8a86da\"}}]}}}",
           "asset": "1001",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
+        },
+        {
+          "paraID": 2034,
+          "nativeChainID": "hydra",
+          "symbol": "atBTC",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2034},{\"accountKey20\":{\"network\":null,\"key\":\"0x69003a65189f6ed993d3bd3e2b74f1db39f405ce\"}}]}}}",
+          "asset": "1006",
           "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
           "originChainReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
         },
@@ -7031,6 +7042,7 @@
         "50000116": "TESTR",
         "50000117": "TEST",
         "50000118": "6576",
+        "50000119": "EXMP",
         "88888888": "PAA",
         "123456789": "PUSH",
         "193000000": "SRCT",
@@ -7356,6 +7368,14 @@
         "61": {
           "lpToken": "61",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000075\"}]}}]]"
+        },
+        "62": {
+          "lpToken": "62",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000105\"}]}}]]"
+        },
+        "63": {
+          "lpToken": "63",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000118\"}]}}]]"
         }
       },
       "specName": "westmint"
@@ -7484,7 +7504,8 @@
         "50000048": "EFI",
         "50000049": "MEF",
         "50000050": "NEON",
-        "50000051": "USDT"
+        "50000051": "USDT",
+        "50000052": "ATA"
       },
       "foreignAssetsInfo": {
         "ETH": {
