@@ -866,6 +866,10 @@
         "42": {
           "lpToken": "42",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"1\",\"interior\":{\"X1\":[{\"Parachain\":\"2039\"}]}}]]"
+        },
+        "43": {
+          "lpToken": "43",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"1\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x1abaea1f7c830bd89acc67ec4af516284b1bc33c\"}}]}}]]"
         }
       },
       "specName": "statemint"
