@@ -7403,6 +7403,10 @@
         "64": {
           "lpToken": "64",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000125\"}]}}]]"
+        },
+        "65": {
+          "lpToken": "65",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000104\"}]}}]]"
         }
       },
       "specName": "westmint"
