@@ -7090,6 +7090,14 @@
         "50000142": "KBX",
         "50000143": "KXX",
         "50000144": "ABE",
+        "50000145": "ANST",
+        "50000146": "BJK1",
+        "50000147": "PKT",
+        "50000148": "BJK2",
+        "50000149": "BJK3",
+        "50000150": "MKX",
+        "50000151": "KJN",
+        "50000152": "KateB",
         "88888888": "PAA",
         "123456789": "PUSH",
         "193000000": "SRCT",
@@ -7130,6 +7138,13 @@
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}]}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}]}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307837326336313065303565616166636466316661376132646131353337346565393065646231363230227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x72c610e05eaafcdf1fa7a2da15374ee90edb1620\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
         },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225831223a5b7b22476c6f62616c436f6e73656e737573223a22506f6c6b61646f74227d5d7d7d": {
           "symbol": "",
