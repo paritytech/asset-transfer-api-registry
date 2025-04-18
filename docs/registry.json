@@ -7151,6 +7151,12 @@
         "50000190": "ASDF",
         "50000191": "WWW",
         "50000192": "BNM",
+        "50000193": "RGO-1",
+        "50000194": "XXXO",
+        "50000195": "VICTORY",
+        "50000196": "LUCAS",
+        "50000197": "GHOST",
+        "50000198": "12345",
         "88888888": "PAA",
         "123456789": "PUSH",
         "193000000": "SRCT",
@@ -7523,6 +7529,22 @@
         "71": {
           "lpToken": "71",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000192\"}]}}]]"
+        },
+        "72": {
+          "lpToken": "72",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000194\"}]}}]]"
+        },
+        "73": {
+          "lpToken": "73",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000196\"}]}}]]"
+        },
+        "74": {
+          "lpToken": "74",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000197\"}]}}]]"
+        },
+        "75": {
+          "lpToken": "75",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000198\"}]}}]]"
         }
       },
       "specName": "westmint"
