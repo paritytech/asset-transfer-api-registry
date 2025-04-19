@@ -7157,6 +7157,16 @@
         "50000196": "LUCAS",
         "50000197": "GHOST",
         "50000198": "12345",
+        "50000199": "TRX",
+        "50000200": "TRX",
+        "50000201": "AAUD",
+        "50000202": "1AUD",
+        "50000203": "12AUD",
+        "50000204": "WAKE",
+        "50000205": "AAUD",
+        "50000206": "GOAL",
+        "50000207": "WAKE",
+        "50000208": "A1B2C3",
         "88888888": "PAA",
         "123456789": "PUSH",
         "193000000": "SRCT",
@@ -7545,6 +7555,26 @@
         "75": {
           "lpToken": "75",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000198\"}]}}]]"
+        },
+        "76": {
+          "lpToken": "76",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000199\"}]}}]]"
+        },
+        "77": {
+          "lpToken": "77",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000200\"}]}}]]"
+        },
+        "78": {
+          "lpToken": "78",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000201\"}]}}]]"
+        },
+        "79": {
+          "lpToken": "79",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000202\"}]}}]]"
+        },
+        "80": {
+          "lpToken": "80",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000208\"}]}}]]"
         }
       },
       "specName": "westmint"
