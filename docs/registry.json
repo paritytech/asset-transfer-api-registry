@@ -7176,6 +7176,11 @@
         "50000211": "TRL",
         "50000212": "TRL",
         "50000213": "FOF",
+        "50000214": "ARG",
+        "50000215": "ARI",
+        "50000216": "RFF",
+        "50000217": "BAA1",
+        "50000218": "BAA2",
         "88888888": "PAA",
         "123456789": "PUSH",
         "193000000": "SRCT",
@@ -7584,6 +7589,18 @@
         "80": {
           "lpToken": "80",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000208\"}]}}]]"
+        },
+        "81": {
+          "lpToken": "81",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000203\"}]}}]]"
+        },
+        "82": {
+          "lpToken": "82",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000217\"}]}}]]"
+        },
+        "83": {
+          "lpToken": "83",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000218\"}]}}]]"
         }
       },
       "specName": "westmint"
