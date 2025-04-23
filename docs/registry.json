@@ -462,7 +462,10 @@
         "50000115": "TESTV4",
         "50000116": "TESTV5",
         "50000117": "TEST6",
-        "50000118": "HELLOWORLD"
+        "50000118": "HELLOWORLD",
+        "50000119": "JAM",
+        "50000120": "gg",
+        "50000121": "EMBRE"
       },
       "foreignAssetsInfo": {
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a2231227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307839643339613564653330653537343433626666326138333037613432353663383739376133343937227d7d5d7d7d": {
@@ -7181,6 +7184,18 @@
         "50000216": "RFF",
         "50000217": "BAA1",
         "50000218": "BAA2",
+        "50000219": "CRO",
+        "50000220": "LET",
+        "50000221": "BAA4",
+        "50000222": "BAA5",
+        "50000223": "B11A",
+        "50000224": "CAA1",
+        "50000225": "CAA2",
+        "50000226": "CAA4",
+        "50000227": "CAA5",
+        "50000228": "CAA6",
+        "50000229": "D1",
+        "50000230": "DAA123",
         "88888888": "PAA",
         "123456789": "PUSH",
         "193000000": "SRCT",
@@ -7601,6 +7616,34 @@
         "83": {
           "lpToken": "83",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000218\"}]}}]]"
+        },
+        "84": {
+          "lpToken": "84",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000224\"}]}}]]"
+        },
+        "85": {
+          "lpToken": "85",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000225\"}]}}]]"
+        },
+        "86": {
+          "lpToken": "86",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000226\"}]}}]]"
+        },
+        "87": {
+          "lpToken": "87",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000227\"}]}}]]"
+        },
+        "88": {
+          "lpToken": "88",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000228\"}]}}]]"
+        },
+        "89": {
+          "lpToken": "89",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000229\"}]}}]]"
+        },
+        "90": {
+          "lpToken": "90",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000230\"}]}}]]"
         }
       },
       "specName": "westmint"
