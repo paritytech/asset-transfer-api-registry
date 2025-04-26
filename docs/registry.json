@@ -7198,6 +7198,10 @@
         "50000228": "CAA6",
         "50000229": "D1",
         "50000230": "DAA123",
+        "50000231": "OA",
+        "50000232": "ADAM",
+        "50000233": "ABEL",
+        "50000234": "AVA",
         "88888888": "PAA",
         "123456789": "PUSH",
         "193000000": "SRCT",
@@ -7646,6 +7650,22 @@
         "90": {
           "lpToken": "90",
           "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000230\"}]}}]]"
+        },
+        "91": {
+          "lpToken": "91",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000231\"}]}}]]"
+        },
+        "92": {
+          "lpToken": "92",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000232\"}]}}]]"
+        },
+        "93": {
+          "lpToken": "93",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000233\"}]}}]]"
+        },
+        "94": {
+          "lpToken": "94",
+          "pairInfo": "[[{\"parents\":\"1\",\"interior\":\"Here\"},{\"parents\":\"0\",\"interior\":{\"X2\":[{\"PalletInstance\":\"50\"},{\"GeneralIndex\":\"50000234\"}]}}]]"
         }
       },
       "specName": "westmint"
