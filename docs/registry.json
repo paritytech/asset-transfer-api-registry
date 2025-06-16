@@ -3672,25 +3672,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "polimec-mainnet",
-      "xcAssetsData": [
-        {
-          "paraID": 3344,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDT",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        },
-        {
-          "paraID": 3344,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDC",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        }
-      ]
+      "specName": "polimec-mainnet"
     },
     "3345": {
       "tokens": [
@@ -3771,7 +3753,17 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "jamton-runtime"
+      "specName": "jamton-runtime",
+      "xcAssetsData": [
+        {
+          "paraID": 3397,
+          "nativeChainID": "asset-hub-polkadot",
+          "symbol": "USDT",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
+        }
+      ]
     }
   },
   "kusama": {
@@ -6621,6 +6613,7 @@
         "50000247": "TNAX",
         "50000248": "MCT",
         "50000249": "WMT",
+        "50000250": "TST",
         "88888888": "PAA",
         "123456789": "PUSH",
         "193000000": "SRCT",
