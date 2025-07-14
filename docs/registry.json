@@ -2988,6 +2988,16 @@
         {
           "paraID": 2004,
           "nativeChainID": "moonbeam",
+          "symbol": "SQD",
+          "decimals": 18,
+          "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x2\":[{\"parachain\":2004},{\"accountKey20\":{\"network\":null,\"key\":\"0x9c4c6eaad9b926ba09f702f4ad880ef71998ef18\"}}]}}}",
+          "asset": "37",
+          "assetHubReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"1000\"}}}",
+          "originChainReserveLocation": "{\"parents\":\"1\",\"interior\":{\"X1\":{\"Parachain\":\"2004\"}}}"
+        },
+        {
+          "paraID": 2004,
+          "nativeChainID": "moonbeam",
           "symbol": "SOL",
           "decimals": 9,
           "xcmV1MultiLocation": "{\"v1\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":2004},{\"palletInstance\":110},{\"accountKey20\":{\"network\":null,\"key\":\"0x99fec54a5ad36d50a4bba3a41cab983a5bb86a7d\"}}]}}}",
@@ -3712,25 +3722,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "polimec-mainnet",
-      "xcAssetsData": [
-        {
-          "paraID": 3344,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDT",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        },
-        {
-          "paraID": 3344,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDC",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        }
-      ]
+      "specName": "polimec-mainnet"
     },
     "3345": {
       "tokens": [
@@ -3811,7 +3803,17 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "jamton-runtime"
+      "specName": "jamton-runtime",
+      "xcAssetsData": [
+        {
+          "paraID": 3397,
+          "nativeChainID": "asset-hub-polkadot",
+          "symbol": "USDT",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
+        }
+      ]
     }
   },
   "kusama": {
