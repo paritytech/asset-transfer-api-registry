@@ -22,7 +22,6 @@ import {
 import { addParasChainInfoToRelayRegistries } from './addParasChainInfoToRelayRegistries.js';
 import { createChainRegistryFromRelay } from './createChainRegistryFromRelay.js';
 import { fetchParaIds } from './fetchParaIds.js';
-import { fetchXcAssetsRegistryInfo } from './fetchXcAssetsRegistryInfo.js';
 import type { ParaIds, TokenRegistry } from './types.js';
 import { writeJson } from './util.js';
 
@@ -72,9 +71,6 @@ export const main = async (filePath: string, registry: TokenRegistry) => {
 		westendEndpoints,
 		paseoEndpoints,
 	);
-
-	// fetch xcAssets and add them to the registry
-	registry = await fetchXcAssetsRegistryInfo(registry);
 
 	writeJson(filePath, registry);
 };
