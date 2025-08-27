@@ -22,6 +22,7 @@ import {
 import { addParasChainInfoToRelayRegistries } from './addParasChainInfoToRelayRegistries.js';
 import { createChainRegistryFromRelay } from './createChainRegistryFromRelay.js';
 import { fetchParaIds } from './fetchParaIds.js';
+import { fetchParaspellRegistryInfo } from './fetchParaspellRegistry.js';
 import type { ParaIds, TokenRegistry } from './types.js';
 import { writeJson } from './util.js';
 
@@ -71,6 +72,9 @@ export const main = async (filePath: string, registry: TokenRegistry) => {
 		westendEndpoints,
 		paseoEndpoints,
 	);
+
+	// Integrate Paraspell registry data
+	registry = await fetchParaspellRegistryInfo(registry);
 
 	writeJson(filePath, registry);
 };

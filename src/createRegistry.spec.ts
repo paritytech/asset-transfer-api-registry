@@ -8,6 +8,7 @@ import { DEFAULT_REGISTRY, TEST_REGISTRY_FILE_PATH } from './consts';
 import { createChainRegistryFromRelay } from './createChainRegistryFromRelay.js';
 import { main } from './createRegistry.js';
 import { fetchParaIds } from './fetchParaIds';
+import { fetchParaspellRegistryInfo } from './fetchParaspellRegistry.js';
 import { getApi } from './getApi';
 import { adjustedMockKusamaRelayApi } from './testHelpers/adjustedMockKusamaRelayApi';
 import { adjustedmockPolkadotApi } from './testHelpers/adjustedMockPolkadotRelayApi';
@@ -180,6 +181,16 @@ vi.mocked(createChainRegistryFromRelay).mockResolvedValue({
 			specName: 'paseo',
 		},
 	},
+});
+
+vi.mock('./fetchParaspellRegistry', () => {
+	return {
+		fetchParaspellRegistryInfo: vi.fn(),
+	};
+});
+vi.mocked(fetchParaspellRegistryInfo).mockImplementation((registry) => {
+	// Return the registry unchanged for test purposes
+	return Promise.resolve(registry);
 });
 
 vi.mock('./getApi', () => {
