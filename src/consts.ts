@@ -15,8 +15,6 @@ const __dirname = path.dirname(__filename);
  */
 export const MAX_RETRIES = 5;
 export const WS_DISCONNECT_TIMEOUT_SECONDS = 3;
-export const XC_ASSET_CDN_URL =
-	'https://cdn.jsdelivr.net/gh/colorfulnotion/xcm-global-registry/metadata/xcmgar.json';
 
 export const RPC_BLACK_LIST = [
 	'wss://polkadot-rpc.publicnode.com',
