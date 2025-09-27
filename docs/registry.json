@@ -2933,25 +2933,7 @@
         }
       },
       "poolPairsInfo": {},
-      "specName": "bifrost_polkadot",
-      "xcAssetsData": [
-        {
-          "paraID": 2030,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDT",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        },
-        {
-          "paraID": 2030,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDC",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        }
-      ]
+      "specName": "bifrost_polkadot"
     },
     "2031": {
       "tokens": [
@@ -3217,6 +3199,11 @@
         "102": "2-Pool",
         "103": "3-Pool",
         "104": "2-Pool-WETH",
+        "110": "2-Pool-HUSDC",
+        "111": "2-Pool-HUSDT",
+        "112": "2-Pool-HUSDS",
+        "113": "2-Pool-HUSDe",
+        "222": "HOLLAR",
         "420": "GETH",
         "690": "2-Pool-GDOT",
         "1001": "aDOT",
@@ -3227,6 +3214,10 @@
         "1006": "atBTC",
         "1007": "aETH",
         "1008": "a3-Pool",
+        "1110": "HUSDC",
+        "1111": "HUSDT",
+        "1112": "HUSDS",
+        "1113": "HUSDe",
         "3370": "LAOS",
         "4200": "2-Pool-GETH",
         "252525": "EWT",
@@ -3514,6 +3505,13 @@
           "assetHubReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x34d5ffb83d14d82f87aaf2f13be895a3c814c2ad\"}}]}}",
           "originChainReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x34d5ffb83d14d82f87aaf2f13be895a3c814c2ad\"}}]}}"
         },
+        "222": {
+          "symbol": "HOLLAR",
+          "name": "HOLLAR",
+          "multiLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x531a654d1696ed52e7275a8cede955e82620f99a\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x531a654d1696ed52e7275a8cede955e82620f99a\"}}]}}",
+          "originChainReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x531a654d1696ed52e7275a8cede955e82620f99a\"}}]}}"
+        },
         "420": {
           "symbol": "GETH",
           "name": "GETH",
@@ -3576,6 +3574,34 @@
           "multiLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc09cf2f85367f3c2ab66e094283de3a499cb9108\"}}]}}",
           "assetHubReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc09cf2f85367f3c2ab66e094283de3a499cb9108\"}}]}}",
           "originChainReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0xc09cf2f85367f3c2ab66e094283de3a499cb9108\"}}]}}"
+        },
+        "1110": {
+          "symbol": "HUSDC",
+          "name": "HUSDC",
+          "multiLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x35774c305aaf441a102d47988d35f0f5428471b3\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x35774c305aaf441a102d47988d35f0f5428471b3\"}}]}}",
+          "originChainReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x35774c305aaf441a102d47988d35f0f5428471b3\"}}]}}"
+        },
+        "1111": {
+          "symbol": "HUSDT",
+          "name": "HUSDT",
+          "multiLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x1806860d27ee903c1ec7586d4f7d598d7591f124\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x1806860d27ee903c1ec7586d4f7d598d7591f124\"}}]}}",
+          "originChainReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x1806860d27ee903c1ec7586d4f7d598d7591f124\"}}]}}"
+        },
+        "1112": {
+          "symbol": "HUSDS",
+          "name": "HUSDS",
+          "multiLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x7e3ce0257506c3e1f96a2a9b25a9440959b0d453\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x7e3ce0257506c3e1f96a2a9b25a9440959b0d453\"}}]}}",
+          "originChainReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x7e3ce0257506c3e1f96a2a9b25a9440959b0d453\"}}]}}"
+        },
+        "1113": {
+          "symbol": "HUSDe",
+          "name": "HUSDe",
+          "multiLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x52e1311e26610e6662a1e5b5bd113130b6815213\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x52e1311e26610e6662a1e5b5bd113130b6815213\"}}]}}",
+          "originChainReserveLocation": "{\"parents\":1,\"interior\":{\"X2\":[{\"Parachain\":2034},{\"AccountKey20\":{\"network\":null,\"key\":\"0x52e1311e26610e6662a1e5b5bd113130b6815213\"}}]}}"
         },
         "3370": {
           "symbol": "LAOS",
@@ -3754,25 +3780,7 @@
         }
       },
       "poolPairsInfo": {},
-      "specName": "hydradx",
-      "xcAssetsData": [
-        {
-          "paraID": 2034,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDC",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        },
-        {
-          "paraID": 2034,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDT",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        }
-      ]
+      "specName": "hydradx"
     },
     "2035": {
       "tokens": [
@@ -4024,17 +4032,7 @@
         }
       },
       "poolPairsInfo": {},
-      "specName": "Darwinia2",
-      "xcAssetsData": [
-        {
-          "paraID": 2046,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDT",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        }
-      ]
+      "specName": "Darwinia2"
     },
     "2048": {
       "tokens": [
@@ -4887,17 +4885,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "jamton-runtime",
-      "xcAssetsData": [
-        {
-          "paraID": 3397,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDT",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        }
-      ]
+      "specName": "jamton-runtime"
     }
   },
   "kusama": {
