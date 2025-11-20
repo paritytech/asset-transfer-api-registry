@@ -2957,7 +2957,25 @@
         }
       },
       "poolPairsInfo": {},
-      "specName": "bifrost_polkadot"
+      "specName": "bifrost_polkadot",
+      "xcAssetsData": [
+        {
+          "paraID": 2030,
+          "nativeChainID": "asset-hub-polkadot",
+          "symbol": "USDT",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
+        },
+        {
+          "paraID": 2030,
+          "nativeChainID": "asset-hub-polkadot",
+          "symbol": "USDC",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
+        }
+      ]
     },
     "2031": {
       "tokens": [
@@ -3265,6 +3283,7 @@
         "1000746": "EURC.s",
         "1000752": "SOL",
         "1000753": "SUI",
+        "1000762": "BILL",
         "1000765": "tBTC",
         "1000766": "USDC",
         "1000767": "USDT",
@@ -3781,6 +3800,13 @@
           "assetHubReserveLocation": "{\"parents\":1,\"interior\":{\"X3\":[{\"Parachain\":2004},{\"PalletInstance\":110},{\"AccountKey20\":{\"network\":null,\"key\":\"0x484ecce6775143d3335ed2c7bcb22151c53b9f49\"}}]}}",
           "originChainReserveLocation": "{\"parents\":1,\"interior\":{\"X3\":[{\"Parachain\":2004},{\"PalletInstance\":110},{\"AccountKey20\":{\"network\":null,\"key\":\"0x484ecce6775143d3335ed2c7bcb22151c53b9f49\"}}]}}"
         },
+        "1000762": {
+          "symbol": "BILL",
+          "name": "BILL",
+          "multiLocation": "{\"parents\":1,\"interior\":{\"X3\":[{\"Parachain\":1000},{\"PalletInstance\":50},{\"GeneralIndex\":50000075}]}}",
+          "assetHubReserveLocation": "{\"parents\":1,\"interior\":{\"X3\":[{\"Parachain\":1000},{\"PalletInstance\":50},{\"GeneralIndex\":50000075}]}}",
+          "originChainReserveLocation": "{\"parents\":1,\"interior\":{\"X3\":[{\"Parachain\":1000},{\"PalletInstance\":50},{\"GeneralIndex\":50000075}]}}"
+        },
         "1000765": {
           "symbol": "tBTC",
           "name": "tBTC",
@@ -3853,7 +3879,25 @@
         }
       },
       "poolPairsInfo": {},
-      "specName": "hydradx"
+      "specName": "hydradx",
+      "xcAssetsData": [
+        {
+          "paraID": 2034,
+          "nativeChainID": "asset-hub-polkadot",
+          "symbol": "USDC",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
+        },
+        {
+          "paraID": 2034,
+          "nativeChainID": "asset-hub-polkadot",
+          "symbol": "USDT",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
+        }
+      ]
     },
     "2035": {
       "tokens": [
@@ -4105,7 +4149,17 @@
         }
       },
       "poolPairsInfo": {},
-      "specName": "Darwinia2"
+      "specName": "Darwinia2",
+      "xcAssetsData": [
+        {
+          "paraID": 2046,
+          "nativeChainID": "asset-hub-polkadot",
+          "symbol": "USDT",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
+        }
+      ]
     },
     "2048": {
       "tokens": [
@@ -4958,7 +5012,17 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "jamton-runtime"
+      "specName": "jamton-runtime",
+      "xcAssetsData": [
+        {
+          "paraID": 3397,
+          "nativeChainID": "asset-hub-polkadot",
+          "symbol": "USDT",
+          "decimals": 6,
+          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
+        }
+      ]
     }
   },
   "kusama": {
