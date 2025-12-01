@@ -4149,17 +4149,7 @@
         }
       },
       "poolPairsInfo": {},
-      "specName": "Darwinia2",
-      "xcAssetsData": [
-        {
-          "paraID": 2046,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDT",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        }
-      ]
+      "specName": "Darwinia2"
     },
     "2048": {
       "tokens": [
@@ -5020,17 +5010,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "jamton-runtime",
-      "xcAssetsData": [
-        {
-          "paraID": 3397,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDT",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        }
-      ]
+      "specName": "jamton-runtime"
     }
   },
   "kusama": {
@@ -9017,6 +8997,9 @@
         "50000316": "TAH",
         "50000317": "EFR36",
         "50000318": "EFR36",
+        "50000319": "KVT",
+        "50000320": "BMV",
+        "50000321": "BMV",
         "88888888": "PAA",
         "123456789": "PUSH",
         "193000000": "SRCT",
