@@ -4071,17 +4071,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "Darwinia2",
-      "xcAssetsData": [
-        {
-          "paraID": 2046,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDT",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        }
-      ]
+      "specName": "Darwinia2"
     },
     "2048": {
       "tokens": [
@@ -4684,17 +4674,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "jamton-runtime",
-      "xcAssetsData": [
-        {
-          "paraID": 3397,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDT",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        }
-      ]
+      "specName": "jamton-runtime"
     }
   },
   "kusama": {
@@ -8725,6 +8705,13 @@
           "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}]}}",
           "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
           "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}]}}"
+        },
+        "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307831633764346231393663623063376230316437343366626336313136613930323337396337323338227d7d5d7d7d": {
+          "symbol": "",
+          "name": "",
+          "multiLocation": "{\"parents\":\"2\",\"interior\":{\"X2\":[{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}},{\"AccountKey20\":{\"network\":null,\"key\":\"0x1c7d4b196cb0c7b01d743fbc6116a902379c7238\"}}]}}",
+          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}",
+          "originChainReserveLocation": "{\"parents\":\"2\",\"interior\":{\"X1\":{\"GlobalConsensus\":{\"Ethereum\":{\"chainId\":\"11155111\"}}}}}"
         },
         "0x7b22706172656e7473223a2232222c22696e746572696f72223a7b225832223a5b7b22476c6f62616c436f6e73656e737573223a7b22457468657265756d223a7b22636861696e4964223a223131313535313131227d7d7d2c7b224163636f756e744b65793230223a7b226e6574776f726b223a6e756c6c2c226b6579223a22307837326336313065303565616166636466316661376132646131353337346565393065646231363230227d7d5d7d7d": {
           "symbol": "",
