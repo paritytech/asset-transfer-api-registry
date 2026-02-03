@@ -1,3 +1,9 @@
+⚠️**Deprecated**⚠️: `asset-transfer-api` and `asset-transfer-api-registry` been deprecated and are no longer actively maintained.
+
+Please use [✨ParaSpell✨](https://paraspell.github.io/docs/) instead. The ParaSpell asset registry can be found [here](https://github.com/paraspell/xcm-tools/blob/main/packages/assets/src/maps/assets.json) or accessed directly as [a packaged via npm](https://www.npmjs.com/package/@paraspell/assets).
+
+Additional information can be found in [this GitHub issue](https://github.com/paritytech/asset-transfer-api/issues/652).
+
 <br /><br />
 
 <div align="center">
