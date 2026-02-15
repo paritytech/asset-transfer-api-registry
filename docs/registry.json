@@ -4684,17 +4684,7 @@
       "assetsInfo": {},
       "foreignAssetsInfo": {},
       "poolPairsInfo": {},
-      "specName": "jamton-runtime",
-      "xcAssetsData": [
-        {
-          "paraID": 3397,
-          "nativeChainID": "asset-hub-polkadot",
-          "symbol": "USDT",
-          "decimals": 6,
-          "xcmV1MultiLocation": "{\"v3\":{\"concrete\":{\"parents\":1,\"interior\":{\"x3\":[{\"parachain\":1000},{\"palletInstance\":50},{\"generalIndex\":1337}]}}}}",
-          "assetHubReserveLocation": "{\"parents\":\"0\",\"interior\":{\"Here\":\"\"}}"
-        }
-      ]
+      "specName": "jamton-runtime"
     }
   },
   "kusama": {
@@ -8688,6 +8678,7 @@
         "50000326": "new",
         "50000327": "new2",
         "50000328": "DOTUSDT",
+        "50000329": "MSC",
         "88888888": "PAA",
         "123456789": "PUSH",
         "193000000": "SRCT",
